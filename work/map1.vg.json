@@ -1,0 +1,117 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 760,
+  "height": 440,
+  "title": {
+    "text": "Manufacturing Businesses by SA2, Australia (2025)",
+    "subtitle": [
+      "92% of SA2s have fewer than 80 businesses; 2% have 160 or more.",
+      "Source: Australian Bureau of Statistics, Counts of Australian Businesses, 2025"
+    ],
+    "anchor": "start",
+    "fontSize": 18,
+    "subtitleFontSize": 11,
+    "subtitleColor": "#555555",
+    "subtitlePadding": 6,
+    "offset": 12
+  },
+
+  "projection": {
+    "type": "mercator"
+  },
+
+  "data": {
+    "url": "SA2_2021_AUST_GDA2020.json",
+    "format": {
+      "type": "topojson",
+      "feature": "SA2_2021_AUST_GDA2020"
+    }
+  },
+
+  "transform": [
+    {
+      "calculate": "toNumber(datum.properties.SA2_CODE21)",
+      "as": "SA2_CODE_JOIN"
+    },
+    {
+      "lookup": "SA2_CODE_JOIN",
+      "from": {
+        "data": {
+          "url": "manufacturing_sa2_2025.csv"
+        },
+        "key": "\uFEFFSA2 Code",
+        "fields": [
+          "SA2 Label",
+          "Total",
+          "Year"
+        ]
+      }
+    },
+    {
+      "calculate": "toNumber(datum.Total)",
+      "as": "TOTAL_NUM"
+    }
+  ],
+
+  "mark": {
+    "type": "geoshape",
+    "stroke": "white",
+    "strokeWidth": 0.2
+  },
+
+  "encoding": {
+    "color": {
+      "field": "TOTAL_NUM",
+      "type": "quantitative",
+      "title": "Manufacturing businesses",
+      "scale": {
+        "type": "threshold",
+        "domain": [5, 10, 20, 40, 80, 160],
+        "scheme": "blues"
+      },
+      "legend": {
+        "type": "symbol",
+        "orient": "bottom",
+        "direction": "horizontal",
+        "columns": 4,
+        "values": [0, 5, 10, 20, 40, 80, 160],
+        "labelExpr": "datum.value === 0 ? '0–4' : datum.value === 5 ? '5–9' : datum.value === 10 ? '10–19' : datum.value === 20 ? '20–39' : datum.value === 40 ? '40–79' : datum.value === 80 ? '80–159' : '160+'",
+        "symbolType": "square",
+        "symbolSize": 140,
+        "labelFontSize": 11,
+        "titleFontSize": 12,
+        "titleLimit": 240,
+        "titlePadding": 8,
+        "columnPadding": 18,
+        "rowPadding": 6
+      }
+    },
+
+    "tooltip": [
+      {
+        "field": "properties.SA2_NAME21",
+        "type": "nominal",
+        "title": "SA2"
+      },
+      {
+        "field": "TOTAL_NUM",
+        "type": "quantitative",
+        "title": "Manufacturing businesses",
+        "format": ",d"
+      },
+      {
+        "field": "Year",
+        "type": "nominal",
+        "title": "Year"
+      }
+    ]
+  },
+
+  "config": {
+    "background": "white",
+    "view": {
+      "stroke": null
+    },
+    "font": "sans-serif"
+  }
+}
