@@ -1,0 +1,2455 @@
+SA2_Code,SA2_Name,State,Manufacturing_Businesses,Population_2025,Businesses_per_10000,Year,Rate_Status
+101021007,Braidwood,New South Wales,23,4494,51.17935024477081,2025,valid
+101021008,Karabar,New South Wales,12,8409,14.270424545130217,2025,valid
+101021009,Queanbeyan,New South Wales,31,11251,27.553106390543064,2025,valid
+101021010,Queanbeyan - East,New South Wales,74,5111,144.78575621209157,2025,valid
+101021012,Queanbeyan West - Jerrabomberra,New South Wales,42,12735,32.97997644287397,2025,valid
+101021610,Googong,New South Wales,5,9323,5.363080553469913,2025,valid
+101021611,Queanbeyan Surrounds,New South Wales,48,18181,26.401188053462405,2025,valid
+101031013,Bombala,New South Wales,10,2474,40.42037186742118,2025,valid
+101031014,Cooma,New South Wales,20,6598,30.31221582297666,2025,valid
+101031015,Cooma Surrounds,New South Wales,22,3577,61.50405367626502,2025,valid
+101031016,Jindabyne - Berridale,New South Wales,23,8703,26.427668620016085,2025,valid
+101041017,Batemans Bay,New South Wales,25,8679,28.80516188500979,2025,valid
+101041018,Batemans Bay - South,New South Wales,14,9170,15.267175572519085,2025,valid
+101041019,Bega - Tathra,New South Wales,18,9070,19.845644983461963,2025,valid
+101041020,Bega-Eden Hinterland,New South Wales,38,9955,38.171772978402814,2025,valid
+101041021,Broulee - Tomakin,New South Wales,7,3951,17.71703366236396,2025,valid
+101041022,Deua - Wadbilliga,New South Wales,0,41,0.0,2025,valid
+101041023,Eden,New South Wales,16,3453,46.33651896901245,2025,valid
+101041024,Eurobodalla Hinterland,New South Wales,15,3788,39.5987328405491,2025,valid
+101041025,Merimbula - Tura Beach,New South Wales,35,11719,29.866029524703475,2025,valid
+101041026,Moruya - Tuross Head,New South Wales,37,8670,42.67589388696655,2025,valid
+101041027,Narooma - Bermagui,New South Wales,40,10087,39.655001487062556,2025,valid
+101051539,Goulburn,New South Wales,66,25647,25.73400397707334,2025,valid
+101051540,Goulburn Surrounds,New South Wales,49,14411,34.00180417736451,2025,valid
+101061541,Yass,New South Wales,17,6812,24.955960070463888,2025,valid
+101061542,Yass Surrounds,New South Wales,59,13346,44.20800239772217,2025,valid
+101061543,Young,New South Wales,45,10918,41.21633998900897,2025,valid
+101061544,Young Surrounds,New South Wales,19,7803,24.34960912469563,2025,valid
+102011028,Avoca Beach - Copacabana,New South Wales,13,7578,17.15492214304566,2025,valid
+102011029,Box Head - MacMasters Beach,New South Wales,26,11289,23.03126937726991,2025,valid
+102011030,Calga - Kulnura,New South Wales,98,4678,209.49123557075674,2025,valid
+102011031,Erina - Green Point,New South Wales,55,14644,37.55804425020486,2025,valid
+102011032,Gosford - Springfield,New South Wales,150,23282,64.42745468602354,2025,valid
+102011033,Kariong,New South Wales,8,6388,12.523481527864746,2025,valid
+102011034,Kincumber - Picketts Valley,New South Wales,18,7634,23.57872674875557,2025,valid
+102011035,Narara,New South Wales,10,7425,13.468013468013469,2025,valid
+102011036,Niagara Park - Lisarow,New South Wales,28,8264,33.88189738625363,2025,valid
+102011037,Point Clare - Koolewong,New South Wales,9,6697,13.438853217858744,2025,valid
+102011038,Saratoga - Davistown,New South Wales,20,7432,26.91065662002153,2025,valid
+102011039,Terrigal - North Avoca,New South Wales,19,15631,12.155332352376687,2025,valid
+102011040,Umina - Booker Bay - Patonga,New South Wales,40,25057,15.96360298519376,2025,valid
+102011041,Wamberal - Forresters Beach,New South Wales,32,10897,29.365880517573643,2025,valid
+102011042,Woy Woy - Blackwall,New South Wales,28,14566,19.22284772758479,2025,valid
+102011043,Wyoming,New South Wales,16,11329,14.123047047400476,2025,valid
+102021044,Bateau Bay - Killarney Vale,New South Wales,30,23090,12.9926375054136,2025,valid
+102021045,Blue Haven - San Remo,New South Wales,13,11723,11.08931160965623,2025,valid
+102021046,Budgewoi - Buff Point - Halekulani,New South Wales,12,10066,11.92131929266839,2025,valid
+102021047,Chittaway Bay - Tumbi Umbi,New South Wales,72,16559,43.480886526964184,2025,valid
+102021048,Gorokan - Kanwal - Charmhaven,New South Wales,24,22880,10.48951048951049,2025,valid
+102021049,Jilliby - Yarramalong,New South Wales,16,3627,44.11359250068927,2025,valid
+102021050,Lake Munmorah - Mannering Park,New South Wales,11,11084,9.92421508480693,2025,valid
+102021051,Ourimbah - Fountaindale,New South Wales,32,4934,64.85610052695581,2025,valid
+102021052,Summerland Point - Gwandalan,New South Wales,20,7094,28.1928390188892,2025,valid
+102021053,The Entrance,New South Wales,33,16336,20.200783545543583,2025,valid
+102021054,Toukley - Norah Head,New South Wales,18,9908,18.167137666532096,2025,valid
+102021055,Tuggerah - Kangy Angy,New South Wales,57,5360,106.34328358208955,2025,valid
+102021056,Warnervale - Wadalba,New South Wales,42,23023,18.242626938279113,2025,valid
+102021057,Wyong,New South Wales,43,9341,46.033615244620485,2025,valid
+103011059,Bathurst - East,New South Wales,35,13565,25.80169553999263,2025,valid
+103011060,Bathurst Surrounds,New South Wales,25,7094,35.2410487736115,2025,valid
+103011061,Oberon,New South Wales,17,4864,34.95065789473684,2025,valid
+103011612,Bathurst - South,New South Wales,33,10483,31.479538300104934,2025,valid
+103011613,Bathurst - West,New South Wales,44,14965,29.40193785499499,2025,valid
+103021062,Condobolin,New South Wales,44,6345,69.34594168636721,2025,valid
+103021063,Cowra,New South Wales,53,9130,58.05038335158817,2025,valid
+103021064,Cowra Surrounds,New South Wales,29,5778,50.19037729318103,2025,valid
+103021065,Forbes,New South Wales,44,10019,43.91655853877632,2025,valid
+103021066,Grenfell,New South Wales,15,3549,42.2654268808115,2025,valid
+103021067,Parkes (NSW),New South Wales,40,10998,36.37024913620658,2025,valid
+103021068,Parkes Surrounds,New South Wales,8,3079,25.982461838259173,2025,valid
+103021069,West Wyalong,New South Wales,21,5420,38.745387453874535,2025,valid
+103031070,Lithgow,New South Wales,22,12124,18.14582645991422,2025,valid
+103031071,Lithgow Surrounds,New South Wales,27,8544,31.601123595505616,2025,valid
+103031072,Mudgee,New South Wales,60,12965,46.27844195912071,2025,valid
+103031073,Mudgee Surrounds - East,New South Wales,11,3369,32.65063817156426,2025,valid
+103031074,Mudgee Surrounds - West,New South Wales,42,11482,36.578993206758405,2025,valid
+103031075,Wollangambe - Wollemi,New South Wales,0,0,,2025,zero_population
+103041076,Blayney,New South Wales,20,7855,25.46148949713558,2025,valid
+103041077,Orange,New South Wales,86,19154,44.89923775712645,2025,valid
+103041078,Orange - North,New South Wales,62,24059,25.76998212727046,2025,valid
+103041079,Orange Surrounds,New South Wales,75,12138,61.78942165101334,2025,valid
+104011080,Grafton,New South Wales,64,19905,32.15272544586787,2025,valid
+104011081,Grafton Surrounds,New South Wales,66,18099,36.46610309961876,2025,valid
+104011082,Maclean - Yamba - Iluka,New South Wales,43,18562,23.165607154401464,2025,valid
+104021083,Bellingen,New South Wales,24,6200,38.70967741935484,2025,valid
+104021084,Coffs Harbour - North,New South Wales,47,18960,24.789029535864977,2025,valid
+104021085,Coffs Harbour - South,New South Wales,52,11466,45.35147392290249,2025,valid
+104021086,Coramba - Nana Glen - Bucca,New South Wales,21,4124,50.921435499515034,2025,valid
+104021087,Dorrigo,New South Wales,18,3250,55.38461538461538,2025,valid
+104021088,Korora - Emerald Beach,New South Wales,19,11008,17.260174418604652,2025,valid
+104021089,Sawtell - Boambee,New South Wales,47,20581,22.836596861182645,2025,valid
+104021090,Urunga,New South Wales,15,4947,30.32140691328078,2025,valid
+104021091,Woolgoolga - Arrawarra,New South Wales,33,15229,21.669183794077092,2025,valid
+105011092,Bourke - Brewarrina,New South Wales,7,3420,20.467836257309944,2025,valid
+105011093,Cobar,New South Wales,9,4115,21.87120291616039,2025,valid
+105011094,Coonamble,New South Wales,15,4097,36.6121552355382,2025,valid
+105011095,Nyngan - Warren,New South Wales,17,4542,37.42844561867019,2025,valid
+105011096,Walgett - Lightning Ridge,New South Wales,10,5708,17.51927119831815,2025,valid
+105021097,Broken Hill,New South Wales,35,17515,19.982871824150727,2025,valid
+105021098,Far West,New South Wales,3,2302,13.032145960034754,2025,valid
+105031099,Coonabarabran,New South Wales,20,7948,25.163563160543532,2025,valid
+105031100,Dubbo - East,New South Wales,56,10736,52.16095380029807,2025,valid
+105031101,Dubbo - South,New South Wales,42,20712,20.278099652375435,2025,valid
+105031102,Dubbo - West,New South Wales,28,11004,25.445292620865143,2025,valid
+105031103,Dubbo Surrounds,New South Wales,32,6189,51.70463725965423,2025,valid
+105031104,Gilgandra,New South Wales,12,4426,27.112516945323094,2025,valid
+105031105,Narromine,New South Wales,23,6499,35.39006000923219,2025,valid
+105031106,Wellington,New South Wales,12,9159,13.101867016049786,2025,valid
+106011107,Branxton - Greta - Pokolbin,New South Wales,103,16413,62.75513312618047,2025,valid
+106011108,Cessnock,New South Wales,30,24745,12.12366134572641,2025,valid
+106011109,Cessnock Surrounds,New South Wales,40,9974,40.104271104872666,2025,valid
+106011110,Dungog,New South Wales,30,10102,29.69708968521085,2025,valid
+106011111,Kurri Kurri - Abermain,New South Wales,55,23407,23.497244414064166,2025,valid
+106011112,Singleton,New South Wales,43,17396,24.71832605196597,2025,valid
+106011113,Singleton Surrounds,New South Wales,29,5523,52.50769509324642,2025,valid
+106021114,Maitland,New South Wales,23,9805,23.45741968383478,2025,valid
+106021116,Maitland - North,New South Wales,18,9195,19.575856443719413,2025,valid
+106021614,East Maitland - Metford,New South Wales,37,18334,20.181084324206395,2025,valid
+106021615,Rutherford (North) - Aberglasslyn,New South Wales,30,19954,15.03457953292573,2025,valid
+106021616,Rutherford (South) - Telarah,New South Wales,61,9366,65.12919068972882,2025,valid
+106021617,Tenambit - East Maitland,New South Wales,18,10532,17.09077098366882,2025,valid
+106021618,Thornton - Millers Forest,New South Wales,51,19925,25.595984943538266,2025,valid
+106031119,Anna Bay,New South Wales,15,6868,21.840419336051255,2025,valid
+106031120,Lemon Tree Passage - Tanilba Bay,New South Wales,13,7065,18.400566171266806,2025,valid
+106031121,Nelson Bay Peninsula,New South Wales,67,22156,30.24011554432208,2025,valid
+106031122,Raymond Terrace,New South Wales,75,15345,48.87585532746823,2025,valid
+106031123,Seaham - Woodville,New South Wales,26,5899,44.07526699440583,2025,valid
+106031124,Tea Gardens - Hawks Nest,New South Wales,12,5786,20.73971655720705,2025,valid
+106031125,Williamtown - Medowie - Karuah,New South Wales,46,17178,26.77843753638375,2025,valid
+106041126,Muswellbrook,New South Wales,27,12595,21.437078205637157,2025,valid
+106041127,Muswellbrook Surrounds,New South Wales,14,4264,32.83302063789869,2025,valid
+106041128,Scone,New South Wales,23,5998,38.346115371790596,2025,valid
+106041129,Scone Surrounds,New South Wales,23,8425,27.29970326409496,2025,valid
+107011131,Dapto - Avondale,New South Wales,37,24842,14.894130907334352,2025,valid
+107011132,Horsley - Kembla Grange,New South Wales,16,14750,10.847457627118644,2025,valid
+107011133,Port Kembla Industrial,New South Wales,4,7,5714.285714285714,2025,valid
+107011134,Unanderra - Mount Kembla,New South Wales,102,15414,66.17360840794083,2025,valid
+107011545,Berkeley - Lake Heights - Cringila,New South Wales,35,14288,24.496080627099662,2025,valid
+107011546,Port Kembla - Warrawong,New South Wales,44,9681,45.44985022208449,2025,valid
+107011547,Windang - Primbee,New South Wales,5,4224,11.837121212121213,2025,valid
+107021135,Illawarra Catchment Reserve,New South Wales,0,5,0.0,2025,valid
+107031136,Albion Park - Macquarie Pass,New South Wales,35,23649,14.79978011755254,2025,valid
+107031137,Albion Park Rail,New South Wales,27,6883,39.22708121458666,2025,valid
+107031138,Kiama,New South Wales,20,9038,22.128789555211327,2025,valid
+107031139,Kiama Downs - Minnamurra,New South Wales,15,5923,25.32500422083404,2025,valid
+107031140,Kiama Hinterland - Gerringong,New South Wales,19,8121,23.396133481098385,2025,valid
+107031141,Shellharbour - Flinders,New South Wales,31,20964,14.787254340774663,2025,valid
+107031142,Shellharbour - Oak Flats,New South Wales,28,11007,25.438357408921597,2025,valid
+107031143,Warilla,New South Wales,36,20725,17.370325693606755,2025,valid
+107041144,Balgownie - Fairy Meadow,New South Wales,61,22303,27.350580639375867,2025,valid
+107041145,Corrimal - Tarrawanna - Bellambi,New South Wales,53,16704,31.728927203065133,2025,valid
+107041146,Figtree - Keiraville,New South Wales,31,23776,13.03835800807537,2025,valid
+107041147,Helensburgh,New South Wales,30,9174,32.701111837802486,2025,valid
+107041148,Thirroul - Austinmer - Coalcliff,New South Wales,27,12148,22.225880803424435,2025,valid
+107041150,Woonona - Bulli - Russell Vale,New South Wales,38,20974,18.11766949556594,2025,valid
+107041548,Wollongong - East,New South Wales,89,18274,48.70307540768305,2025,valid
+107041549,Wollongong - West,New South Wales,17,17595,9.66183574879227,2025,valid
+108011151,Bulahdelah - Stroud,New South Wales,24,5482,43.779642466253186,2025,valid
+108011152,Forster,New South Wales,26,15043,17.283786478760884,2025,valid
+108011153,Forster-Tuncurry Surrounds,New South Wales,25,7407,33.75185635209937,2025,valid
+108011154,Tuncurry,New South Wales,13,6229,20.870123615347566,2025,valid
+108021155,Kempsey,New South Wales,43,16272,26.42576204523107,2025,valid
+108021156,Kempsey Surrounds,New South Wales,16,9671,16.54430772412367,2025,valid
+108021157,Macksville - Scotts Head,New South Wales,20,5383,37.154003343860296,2025,valid
+108021158,Nambucca Heads,New South Wales,16,7304,21.90580503833516,2025,valid
+108021159,Nambucca Heads Surrounds,New South Wales,33,8550,38.59649122807018,2025,valid
+108021160,South West Rocks,New South Wales,12,6021,19.930244145490782,2025,valid
+108031161,Lord Howe Island,New South Wales,3,442,67.87330316742081,2025,valid
+108041162,Laurieton - Bonny Hills,New South Wales,43,19995,21.50537634408602,2025,valid
+108041164,Port Macquarie - West,New South Wales,87,23991,36.26359884956859,2025,valid
+108041165,Port Macquarie Surrounds,New South Wales,20,5331,37.51641343087601,2025,valid
+108041166,Wauchope,New South Wales,52,13754,37.80718336483932,2025,valid
+108041619,Port Macquarie - East,New South Wales,26,11908,21.83406113537118,2025,valid
+108041620,Port Macquarie - South,New South Wales,34,17470,19.461934745277617,2025,valid
+108051167,Gloucester,New South Wales,18,5379,33.46346904629113,2025,valid
+108051168,Old Bar - Manning Point - Red Head,New South Wales,27,13450,20.07434944237918,2025,valid
+108051169,Taree,New South Wales,59,21421,27.54306521637645,2025,valid
+108051170,Taree Surrounds,New South Wales,36,13626,26.42007926023778,2025,valid
+108051171,Wingham,New South Wales,14,5437,25.749494206363803,2025,valid
+109011172,Albury - East,New South Wales,68,20822,32.65776582460859,2025,valid
+109011173,Albury - North,New South Wales,33,10754,30.686256276734238,2025,valid
+109011174,Albury - South,New South Wales,49,10310,47.526673132880696,2025,valid
+109011175,Albury Surrounds,New South Wales,55,13394,41.06316261012394,2025,valid
+109011176,Lavington,New South Wales,46,15832,29.05507832238504,2025,valid
+109021177,Hay,New South Wales,11,2926,37.59398496240601,2025,valid
+109021178,Wentworth - Buronga,New South Wales,17,6904,24.623406720741595,2025,valid
+109021179,Wentworth-Balranald Region,New South Wales,16,3725,42.95302013422818,2025,valid
+109031180,Corowa,New South Wales,13,5618,23.13990744037024,2025,valid
+109031181,Corowa Surrounds,New South Wales,24,7654,31.35615364515286,2025,valid
+109031182,Deniliquin,New South Wales,43,7072,60.80316742081448,2025,valid
+109031183,Deniliquin Surrounds,New South Wales,27,7020,38.46153846153847,2025,valid
+109031184,Moama,New South Wales,34,8036,42.30960676953708,2025,valid
+109031185,Tocumwal - Finley - Jerilderie,New South Wales,39,10011,38.95714713814804,2025,valid
+110011186,Armidale,New South Wales,56,24436,22.917007693566866,2025,valid
+110011187,Armidale Surrounds - North,New South Wales,13,4692,27.706734867860185,2025,valid
+110011188,Armidale Surrounds - South,New South Wales,20,6033,33.15100281783524,2025,valid
+110011189,Walcha,New South Wales,12,3131,38.32641328648994,2025,valid
+110021190,Glen Innes,New South Wales,32,9069,35.285036939023044,2025,valid
+110021191,Inverell,New South Wales,31,12374,25.05252949733312,2025,valid
+110021192,Inverell Surrounds - East,New South Wales,16,5244,30.511060259344013,2025,valid
+110021193,Inverell Surrounds - West,New South Wales,12,5791,20.72180970471421,2025,valid
+110021194,Tenterfield,New South Wales,21,7188,29.215358931552586,2025,valid
+110031195,Moree,New South Wales,32,8020,39.9002493765586,2025,valid
+110031196,Moree Surrounds,New South Wales,14,5271,26.560424966799467,2025,valid
+110031197,Narrabri,New South Wales,28,6942,40.33419763756842,2025,valid
+110031198,Narrabri Surrounds,New South Wales,20,4602,43.459365493263796,2025,valid
+110041199,Gunnedah,New South Wales,43,10144,42.389589905362776,2025,valid
+110041200,Gunnedah Surrounds,New South Wales,14,4611,30.362177401865104,2025,valid
+110041201,Quirindi,New South Wales,21,7671,27.375831052014078,2025,valid
+110041202,Tamworth - East,New South Wales,31,22677,13.67023856771178,2025,valid
+110041203,Tamworth - North,New South Wales,43,16839,25.5359581922917,2025,valid
+110041204,Tamworth - West,New South Wales,60,6508,92.19422249539029,2025,valid
+110041205,Tamworth Surrounds,New South Wales,79,20158,39.19039587260641,2025,valid
+111011206,Belmont - Bennetts Green,New South Wales,51,17863,28.55063539159156,2025,valid
+111011207,Belmont South - Blacksmiths,New South Wales,14,5777,24.234031504240956,2025,valid
+111011208,Charlestown - Dudley,New South Wales,69,26087,26.449955916740137,2025,valid
+111011209,Glendale - Cardiff - Hillsborough,New South Wales,122,25569,47.71402870663694,2025,valid
+111011210,Mount Hutton - Windale,New South Wales,12,9686,12.389015073301671,2025,valid
+111011211,Redhead,New South Wales,17,3947,43.070686597415765,2025,valid
+111011212,Swansea - Caves Beach,New South Wales,22,13147,16.73385563246368,2025,valid
+111011213,Valentine - Eleebana,New South Wales,22,12537,17.548057749062774,2025,valid
+111011214,Warners Bay - Boolaroo,New South Wales,45,15675,28.708133971291865,2025,valid
+111021215,Bolton Point - Teralba,New South Wales,23,10625,21.64705882352941,2025,valid
+111021216,Bonnells Bay - Silverwater,New South Wales,19,10266,18.50769530488993,2025,valid
+111021217,Edgeworth - Cameron Park,New South Wales,34,18516,18.36249729963275,2025,valid
+111021218,Morisset - Cooranbong,New South Wales,74,21067,35.126026486922676,2025,valid
+111021219,Toronto - Awaba,New South Wales,51,14088,36.20102214650767,2025,valid
+111021220,Wangi Wangi - Rathmines,New South Wales,25,9710,25.746652935118437,2025,valid
+111021221,West Wallsend - Barnsley - Killingworth,New South Wales,15,7583,19.781089278649613,2025,valid
+111031222,Adamstown - Kotara,New South Wales,25,17554,14.241768257946907,2025,valid
+111031223,Beresfield - Hexham,New South Wales,53,8732,60.69628950984883,2025,valid
+111031224,Hamilton - Broadmeadow,New South Wales,41,13196,31.070021218551076,2025,valid
+111031225,Lambton - New Lambton,New South Wales,50,17852,28.00806632310105,2025,valid
+111031226,Maryland - Fletcher - Minmi,New South Wales,33,17672,18.673607967406067,2025,valid
+111031227,Mayfield - Warabrook,New South Wales,48,16026,29.95132909022838,2025,valid
+111031228,Merewether - The Junction,New South Wales,25,14975,16.69449081803005,2025,valid
+111031229,Newcastle - Cooks Hill,New South Wales,69,14632,47.156916347731,2025,valid
+111031230,Newcastle Port - Kooragang,New South Wales,17,28,6071.428571428571,2025,valid
+111031231,Shortland - Jesmond,New South Wales,20,14339,13.947974056768254,2025,valid
+111031232,Stockton - Fullerton Cove,New South Wales,10,9709,10.299721907508497,2025,valid
+111031233,Wallsend - Elermore Vale,New South Wales,26,21955,11.842404919152813,2025,valid
+111031234,Waratah - North Lambton,New South Wales,9,13151,6.84358603908448,2025,valid
+111031235,Wickham - Carrington - Tighes Hill,New South Wales,48,10395,46.17604617604618,2025,valid
+112011236,Ballina,New South Wales,75,18813,39.86605007175889,2025,valid
+112011237,Ballina Surrounds,New South Wales,94,19370,48.5286525554982,2025,valid
+112011238,Bangalow,New South Wales,36,7627,47.20073423364364,2025,valid
+112011239,Brunswick Heads - Ocean Shores,New South Wales,40,9765,40.9626216077829,2025,valid
+112011240,Byron Bay,New South Wales,92,11482,80.1254136909946,2025,valid
+112011241,Evans Head,New South Wales,16,6062,26.393929396238864,2025,valid
+112011242,Lennox Head - Skennars Head,New South Wales,30,10282,29.177202878817347,2025,valid
+112011243,Mullumbimby,New South Wales,72,9662,74.51873318153592,2025,valid
+112021244,Casino,New South Wales,30,12282,24.42598925256473,2025,valid
+112021245,Casino Surrounds,New South Wales,43,7634,56.326958344249405,2025,valid
+112021246,Goonellabah,New South Wales,26,14177,18.339564082669114,2025,valid
+112021247,Kyogle,New South Wales,45,7785,57.80346820809248,2025,valid
+112021248,Lismore,New South Wales,61,13679,44.59390306308941,2025,valid
+112021249,Lismore Surrounds,New South Wales,61,16160,37.74752475247524,2025,valid
+112031250,Kingscliff - Fingal Head,New South Wales,57,15489,36.80030989734651,2025,valid
+112031251,Murwillumbah,New South Wales,64,9510,67.29758149316508,2025,valid
+112031252,Murwillumbah Surrounds,New South Wales,50,10835,46.14674665436087,2025,valid
+112031253,Pottsville,New South Wales,50,14746,33.907500339075,2025,valid
+112031254,Tweed Heads,New South Wales,71,21576,32.90693362995921,2025,valid
+112031550,Banora Point,New South Wales,26,16796,15.479876160990713,2025,valid
+112031551,Terranora - North Tumbulgum,New South Wales,15,3455,43.41534008683068,2025,valid
+112031552,Tweed Heads South,New South Wales,63,8637,72.9419937478291,2025,valid
+113011256,Griffith (NSW),New South Wales,106,20774,51.02532011167806,2025,valid
+113011257,Griffith Surrounds,New South Wales,61,13139,46.42666869624781,2025,valid
+113011258,Leeton,New South Wales,43,10336,41.60216718266254,2025,valid
+113011259,Narrandera,New South Wales,24,5926,40.49949375632805,2025,valid
+113021260,Tumbarumba,New South Wales,8,3590,22.284122562674096,2025,valid
+113021261,Tumut,New South Wales,22,6609,33.28794068694205,2025,valid
+113021262,Tumut Surrounds,New South Wales,18,4797,37.5234521575985,2025,valid
+113031263,Cootamundra,New South Wales,24,7727,31.05991976187395,2025,valid
+113031264,Gundagai,New South Wales,19,3715,51.14401076716017,2025,valid
+113031265,Junee,New South Wales,17,6350,26.771653543307085,2025,valid
+113031266,Temora,New South Wales,17,6576,25.851581508515814,2025,valid
+113031267,Wagga Wagga - East,New South Wales,78,17035,45.78808335779278,2025,valid
+113031268,Wagga Wagga - North,New South Wales,20,6227,32.11819495744339,2025,valid
+113031269,Wagga Wagga - South,New South Wales,31,23259,13.3281740401565,2025,valid
+113031270,Wagga Wagga - West,New South Wales,72,11596,62.09037599172128,2025,valid
+113031271,Wagga Wagga Surrounds,New South Wales,52,18748,27.73629187113292,2025,valid
+114011272,Berry - Kangaroo Valley,New South Wales,27,9523,28.352409954846163,2025,valid
+114011273,Callala Bay - Currarong,New South Wales,6,3588,16.722408026755854,2025,valid
+114011274,Culburra Beach,New South Wales,10,5039,19.845207382417147,2025,valid
+114011275,Ettrema - Sassafras - Budawang,New South Wales,0,62,0.0,2025,valid
+114011276,Huskisson - Vincentia,New South Wales,22,5048,43.581616481774965,2025,valid
+114011277,North Nowra - Bomaderry,New South Wales,38,16548,22.963500120860527,2025,valid
+114011278,Nowra,New South Wales,81,23716,34.15415753078091,2025,valid
+114011279,St Georges Basin - Erowal Bay,New South Wales,21,15444,13.597513597513597,2025,valid
+114011280,Sussex Inlet - Berrara,New South Wales,12,4962,24.183796856106408,2025,valid
+114011281,Tomerong - Wandandian - Woollamia,New South Wales,14,3860,36.26943005181347,2025,valid
+114011282,Ulladulla,New South Wales,59,17567,33.58570046109182,2025,valid
+114011283,Ulladulla Surrounds,New South Wales,17,6047,28.11311394079709,2025,valid
+114021284,Bowral,New South Wales,63,13404,47.00089525514772,2025,valid
+114021285,Hill Top - Colo Vale,New South Wales,21,6602,31.808542865798245,2025,valid
+114021286,Mittagong,New South Wales,65,11381,57.112731745892276,2025,valid
+114021287,Moss Vale - Berrima,New South Wales,57,11142,51.15778136779752,2025,valid
+114021288,Robertson - Fitzroy Falls,New South Wales,19,3899,48.73044370351372,2025,valid
+114021289,Southern Highlands,New South Wales,42,7453,56.353146384006436,2025,valid
+115011290,Baulkham Hills - East,New South Wales,45,25268,17.809086591736584,2025,valid
+115011291,Baulkham Hills (West) - Bella Vista,New South Wales,133,23336,56.99348645869044,2025,valid
+115011294,Glenhaven,New South Wales,11,6375,17.254901960784313,2025,valid
+115011296,West Pennant Hills,New South Wales,25,12534,19.945747566618795,2025,valid
+115011553,Castle Hill - Central,New South Wales,78,8845,88.18541548897682,2025,valid
+115011554,Castle Hill - East,New South Wales,7,5305,13.195098963242225,2025,valid
+115011555,Castle Hill - North,New South Wales,42,12973,32.374932552223854,2025,valid
+115011556,Castle Hill - South,New South Wales,29,10965,26.447788417692657,2025,valid
+115011557,Castle Hill - West,New South Wales,7,5209,13.438279900172777,2025,valid
+115011558,Cherrybrook,New South Wales,34,19063,17.835597754812987,2025,valid
+115011621,Kellyville - East,New South Wales,41,17584,23.316651501364877,2025,valid
+115011622,Kellyville - West,New South Wales,29,14291,20.292491778042127,2025,valid
+115021297,Dural - Kenthurst - Wisemans Ferry,New South Wales,115,23005,49.98913279721799,2025,valid
+115021298,Galston - Laughtondale,New South Wales,31,5472,56.65204678362573,2025,valid
+115031299,Bilpin - Colo - St Albans,New South Wales,15,2781,53.93743257820928,2025,valid
+115031300,Kurrajong Heights - Ebenezer,New South Wales,151,22515,67.06640017765933,2025,valid
+115041301,Pitt Town - McGraths Hill,New South Wales,117,12591,92.92351679771264,2025,valid
+115041623,Box Hill - Nelson,New South Wales,35,26348,13.28374070138151,2025,valid
+115041624,North Kellyville,New South Wales,35,22370,15.645954403218598,2025,valid
+115041625,Rouse Hill - Beaumont Hills,New South Wales,35,18837,18.58045336306206,2025,valid
+116011303,Blacktown (East) - Kings Park,New South Wales,166,18408,90.17818339852239,2025,valid
+116011304,Blacktown (North) - Marayong,New South Wales,49,21468,22.8246692752003,2025,valid
+116011306,Doonside - Woodcroft,New South Wales,41,23958,17.11328157609149,2025,valid
+116011307,Lalor Park - Kings Langley,New South Wales,198,25958,76.27706294783881,2025,valid
+116011560,Blacktown - South,New South Wales,31,12845,24.13390424289607,2025,valid
+116011561,Blacktown - West,New South Wales,41,17931,22.86542858736267,2025,valid
+116011626,Seven Hills - Prospect,New South Wales,49,15220,32.19448094612352,2025,valid
+116011627,Toongabbie - West,New South Wales,13,12391,10.491485755790492,2025,valid
+116021309,Glenwood,New South Wales,36,15984,22.52252252252252,2025,valid
+116021562,Acacia Gardens,New South Wales,7,3735,18.741633199464523,2025,valid
+116021563,Quakers Hill,New South Wales,35,26132,13.393540486759528,2025,valid
+116021628,Kellyville Ridge - The Ponds,New South Wales,35,21774,16.074216956002573,2025,valid
+116021629,Marsden Park - Shanes Park,New South Wales,48,30461,15.7578543055054,2025,valid
+116021630,Riverstone,New South Wales,100,20068,49.83057604145904,2025,valid
+116021631,Schofields (West) - Colebee,New South Wales,20,14743,13.565760021705215,2025,valid
+116021632,Schofields - East,New South Wales,58,38569,15.037983873058675,2025,valid
+116021633,Stanhope Gardens - Parklea,New South Wales,18,13262,13.572613482129391,2025,valid
+116031313,Bidwill - Hebersham - Emerton,New South Wales,17,18979,8.957268559987355,2025,valid
+116031314,Glendenning - Dean Park,New South Wales,46,8317,55.308404472766625,2025,valid
+116031315,Hassall Grove - Plumpton,New South Wales,27,21657,12.46710070646904,2025,valid
+116031316,Lethbridge Park - Tregear,New South Wales,18,22894,7.862322005765703,2025,valid
+116031317,Mount Druitt - Whalan,New South Wales,50,24378,20.510296168676675,2025,valid
+116031318,Prospect Reservoir,New South Wales,80,16,50000.0,2025,valid
+116031319,Rooty Hill - Minchinbury,New South Wales,69,23226,29.70808576595195,2025,valid
+117011320,Banksmeadow,New South Wales,55,643,855.3654743390357,2025,valid
+117011321,Botany,New South Wales,124,13941,88.94627358152214,2025,valid
+117011323,Pagewood - Hillsdale - Daceyville,New South Wales,39,16683,23.37709045135767,2025,valid
+117011324,Port Botany Industrial,New South Wales,11,9,12222.222222222223,2025,valid
+117011325,Sydney Airport,New South Wales,3,23,1304.3478260869565,2025,valid
+117011634,Eastlakes,New South Wales,13,8871,14.654492165483035,2025,valid
+117011635,Mascot,New South Wales,85,22859,37.184478761100664,2025,valid
+117021327,Petersham - Stanmore,New South Wales,46,21224,21.67357708254806,2025,valid
+117021328,Sydenham - Tempe - St Peters,New South Wales,77,8976,85.78431372549021,2025,valid
+117021636,Marrickville - North,New South Wales,190,13274,143.1369594696399,2025,valid
+117021637,Marrickville - South,New South Wales,74,14583,50.744017006103,2025,valid
+117031329,Darlinghurst,New South Wales,46,11458,40.14662244719847,2025,valid
+117031330,Erskineville - Alexandria,New South Wales,140,21529,65.02856612011705,2025,valid
+117031331,Glebe - Forest Lodge,New South Wales,36,21805,16.509974776427423,2025,valid
+117031333,Potts Point - Woolloomooloo,New South Wales,42,19879,21.12782333115348,2025,valid
+117031336,Surry Hills,New South Wales,118,17184,68.66852886405958,2025,valid
+117031638,Camperdown - Darlington,New South Wales,23,9776,23.52700490998363,2025,valid
+117031639,Chippendale,New South Wales,16,9505,16.833245660178854,2025,valid
+117031640,Newtown (NSW),New South Wales,33,15576,21.1864406779661,2025,valid
+117031641,Pyrmont,New South Wales,51,13933,36.60374650111247,2025,valid
+117031642,Redfern,New South Wales,43,15731,27.334562329158985,2025,valid
+117031643,Rosebery - Beaconsfield,New South Wales,53,13993,37.876080897591656,2025,valid
+117031644,Sydney (North) - Millers Point,New South Wales,596,9305,640.5158516926383,2025,valid
+117031645,Sydney (South) - Haymarket,New South Wales,117,24758,47.25745213668309,2025,valid
+117031646,Ultimo,New South Wales,29,10534,27.5299031706854,2025,valid
+117031647,Waterloo,New South Wales,43,18631,23.079813214534916,2025,valid
+117031648,Zetland,New South Wales,18,14991,12.007204322593557,2025,valid
+118011339,Bondi - Tamarama - Bronte,New South Wales,55,20044,27.43963280782279,2025,valid
+118011340,Bondi Beach - North Bondi,New South Wales,48,22633,21.20797066230725,2025,valid
+118011341,Bondi Junction - Waverly,New South Wales,70,19148,36.557342803425946,2025,valid
+118011342,Centennial Park,New South Wales,0,0,,2025,zero_population
+118011344,Dover Heights,New South Wales,35,11520,30.381944444444446,2025,valid
+118011345,Paddington - Moore Park,New South Wales,52,15694,33.13368166178157,2025,valid
+118011346,Rose Bay - Vaucluse - Watsons Bay,New South Wales,32,11846,27.013337835556307,2025,valid
+118011347,Woollahra,New South Wales,9,7779,11.569610489780178,2025,valid
+118011649,Bellevue Hill,New South Wales,30,15094,19.875447197561947,2025,valid
+118011650,Double Bay - Darling Point,New South Wales,33,10216,32.30227094753328,2025,valid
+118021564,Kensington (NSW),New South Wales,16,14584,10.970927043335163,2025,valid
+118021565,Kingsford,New South Wales,19,17013,11.167930406159995,2025,valid
+118021566,Maroubra - North,New South Wales,21,10488,20.022883295194507,2025,valid
+118021567,Maroubra - South,New South Wales,17,11637,14.608576093494888,2025,valid
+118021568,Maroubra - West,New South Wales,19,10948,17.354767994154184,2025,valid
+118021569,Randwick - North,New South Wales,27,16678,16.18899148578966,2025,valid
+118021570,Randwick - South,New South Wales,16,13672,11.702750146284377,2025,valid
+118021651,Coogee - Clovelly,New South Wales,38,20337,18.68515513595909,2025,valid
+118021652,Malabar - La Perouse,New South Wales,14,11097,12.616022348382447,2025,valid
+118021653,Matraville - Chifley,New South Wales,41,14280,28.711484593837536,2025,valid
+118021654,South Coogee,New South Wales,9,5741,15.676711374325029,2025,valid
+119011354,Bass Hill - Georges Hall,New South Wales,61,24701,24.69535646330108,2025,valid
+119011355,Chullora,New South Wales,51,1524,334.6456692913386,2025,valid
+119011356,Condell Park,New South Wales,312,13581,229.73271482217802,2025,valid
+119011358,Padstow,New South Wales,81,17692,45.78340492878137,2025,valid
+119011360,Revesby,New South Wales,44,18775,23.435419440745676,2025,valid
+119011361,Yagoona - Birrong,New South Wales,67,23744,28.217654986522913,2025,valid
+119011571,Bankstown - North,New South Wales,47,18671,25.17272775962723,2025,valid
+119011572,Bankstown - South,New South Wales,167,19222,86.87961710540006,2025,valid
+119011655,Greenacre - North,New South Wales,66,15405,42.84323271665044,2025,valid
+119011656,Greenacre - South,New South Wales,44,13794,31.89792663476874,2025,valid
+119011657,Panania (North) - Milperra,New South Wales,31,11918,26.01107568383957,2025,valid
+119011658,Panania (South) - Picnic Point,New South Wales,29,16608,17.46146435452794,2025,valid
+119021362,Belmore - Belfield,New South Wales,52,21206,24.52136187871357,2025,valid
+119021366,Punchbowl,New South Wales,121,22463,53.866358010951345,2025,valid
+119021367,Roselands,New South Wales,26,15308,16.9845832244578,2025,valid
+119021573,Lakemba,New South Wales,34,17756,19.148456859653074,2025,valid
+119021574,Wiley Park,New South Wales,14,10697,13.087781621015239,2025,valid
+119021659,Campsie - North,New South Wales,21,12771,16.44350481559784,2025,valid
+119021660,Campsie - South,New South Wales,16,9592,16.680567139282736,2025,valid
+119021661,Canterbury - South,New South Wales,50,13386,37.35245779172269,2025,valid
+119021662,Earlwood,New South Wales,42,18194,23.084533362647026,2025,valid
+119021663,Kingsgrove - North,New South Wales,56,6545,85.56149732620321,2025,valid
+119031370,Narwee - Beverly Hills,New South Wales,40,14022,28.526601055484242,2025,valid
+119031371,Oatley - Hurstville Grove,New South Wales,22,12985,16.942626107046593,2025,valid
+119031372,Peakhurst - Lugarno,New South Wales,169,21067,80.22024967959368,2025,valid
+119031373,Riverwood,New South Wales,22,12414,17.72192685677461,2025,valid
+119031374,South Hurstville - Blakehurst,New South Wales,42,27385,15.336863246302721,2025,valid
+119031664,Hurstville - Central,New South Wales,36,14602,24.654156964799345,2025,valid
+119031665,Hurstville - North,New South Wales,13,12816,10.143570536828964,2025,valid
+119031666,Mortdale - Oatley,New South Wales,23,15297,15.035627900895602,2025,valid
+119031667,Penshurst,New South Wales,20,10142,19.719976336028395,2025,valid
+119041377,Kingsgrove (South) - Bardwell Park,New South Wales,38,13471,28.208744710860366,2025,valid
+119041378,Kogarah,New South Wales,41,15387,26.645869890167024,2025,valid
+119041379,Kogarah Bay - Carlton - Allawah,New South Wales,45,17669,25.46833437093214,2025,valid
+119041380,Monterey - Brighton-le-Sands - Kyeemagh,New South Wales,31,13655,22.702306847308677,2025,valid
+119041381,Rockdale - Banksia,New South Wales,61,23103,26.40349738129247,2025,valid
+119041382,Sans Souci - Ramsgate,New South Wales,46,17080,26.93208430913349,2025,valid
+119041668,Arncliffe - Bardwell Valley,New South Wales,57,18213,31.29632679953879,2025,valid
+119041669,Bexley - North,New South Wales,14,10184,13.747054202670856,2025,valid
+119041670,Bexley - South,New South Wales,29,16527,17.547044230652872,2025,valid
+119041671,Wolli Creek,New South Wales,30,12585,23.837902264600714,2025,valid
+120011383,Concord - Mortlake - Cabarita,New South Wales,70,24026,29.135103637725795,2025,valid
+120011385,Drummoyne - Rodd Point,New South Wales,47,19158,24.532832237185513,2025,valid
+120011386,Five Dock - Abbotsford,New South Wales,69,21449,32.169331903585245,2025,valid
+120011672,Concord West - North Strathfield,New South Wales,43,13453,31.963130900170967,2025,valid
+120011673,Rhodes,New South Wales,36,13094,27.493508477165115,2025,valid
+120021387,Balmain,New South Wales,47,16124,29.14909451748946,2025,valid
+120021389,Lilyfield - Rozelle,New South Wales,54,14218,37.98002532001688,2025,valid
+120021674,Annandale (NSW),New South Wales,35,10004,34.9860055977609,2025,valid
+120021675,Leichhardt,New South Wales,75,18357,40.85634907664651,2025,valid
+120031392,Canterbury (North) - Ashbury,New South Wales,28,12633,22.164173197181984,2025,valid
+120031393,Croydon Park - Enfield,New South Wales,48,18270,26.272577996715928,2025,valid
+120031394,Dulwich Hill - Lewisham,New South Wales,36,18826,19.12249017316477,2025,valid
+120031395,Haberfield - Summer Hill,New South Wales,38,14061,27.02510490007823,2025,valid
+120031396,Homebush,New South Wales,75,23511,31.899961720045937,2025,valid
+120031576,Strathfield South,New South Wales,27,3727,72.44432519452643,2025,valid
+120031676,Ashfield - North,New South Wales,8,12626,6.3361317915412645,2025,valid
+120031677,Ashfield - South,New South Wales,11,13056,8.425245098039216,2025,valid
+120031678,Burwood (NSW),New South Wales,38,18684,20.338257332476985,2025,valid
+120031679,Croydon,New South Wales,21,11360,18.485915492957744,2025,valid
+120031680,Strathfield - East,New South Wales,41,18724,21.89703054902799,2025,valid
+120031681,Strathfield - West,New South Wales,29,8936,32.452999104744855,2025,valid
+121011399,Chatswood (West) - Lane Cove North,New South Wales,36,23620,15.241320914479255,2025,valid
+121011401,St Leonards - Naremburn,New South Wales,104,13802,75.3513983480655,2025,valid
+121011682,Artarmon,New South Wales,15,9907,15.140809528616131,2025,valid
+121011683,Castle Cove - Northbridge,New South Wales,20,13592,14.714537963507945,2025,valid
+121011684,Chatswood - East,New South Wales,129,21644,59.60081315838107,2025,valid
+121011685,Greenwich - Riverview,New South Wales,26,13212,19.679079624583714,2025,valid
+121011686,Lane Cove,New South Wales,67,16705,40.10775217000898,2025,valid
+121011687,Willoughby,New South Wales,28,13771,20.33258296420013,2025,valid
+121021403,Asquith - Mount Colah,New South Wales,73,23527,31.02818038848982,2025,valid
+121021404,Berowra - Brooklyn - Cowan,New South Wales,31,11761,26.358302865402603,2025,valid
+121021406,Normanhurst - Thornleigh - Westleigh,New South Wales,48,19875,24.150943396226417,2025,valid
+121021577,Hornsby - East,New South Wales,90,12798,70.32348804500702,2025,valid
+121021578,Hornsby - West,New South Wales,24,10830,22.1606648199446,2025,valid
+121021579,Wahroonga (West) - Waitara,New South Wales,15,12544,11.957908163265307,2025,valid
+121031407,Gordon - Killara,New South Wales,64,23799,26.891886213706456,2025,valid
+121031408,Lindfield - Roseville,New South Wales,40,25620,15.6128024980484,2025,valid
+121031409,Pymble,New South Wales,42,18052,23.26612009749612,2025,valid
+121031410,St Ives,New South Wales,47,22932,20.495377638234782,2025,valid
+121031411,Turramurra,New South Wales,39,20593,18.938474238819015,2025,valid
+121031412,Wahroonga (East) - Warrawee,New South Wales,29,18232,15.90609916630101,2025,valid
+121041413,Cremorne - Cammeray,New South Wales,35,19870,17.61449421238047,2025,valid
+121041414,Crows Nest - Waverton,New South Wales,43,19092,22.52252252252252,2025,valid
+121041416,Neutral Bay - Kirribilli,New South Wales,44,18384,23.93385552654482,2025,valid
+121041417,North Sydney - Lavender Bay,New South Wales,110,13776,79.84901277584204,2025,valid
+121041688,Mosman - North,New South Wales,27,14409,18.738288569643974,2025,valid
+121041689,Mosman - South,New South Wales,22,14965,14.700968927497495,2025,valid
+122011418,Balgowlah - Clontarf - Seaforth,New South Wales,51,20936,24.359954145968665,2025,valid
+122011419,Manly - Fairlight,New South Wales,59,24569,24.01400138385771,2025,valid
+122021420,Avalon - Palm Beach,New South Wales,50,13161,37.991034115948636,2025,valid
+122021421,Bayview - Elanora Heights,New South Wales,51,11426,44.635042884649046,2025,valid
+122021422,Newport - Bilgola,New South Wales,61,13928,43.79666858127513,2025,valid
+122021690,Mona Vale - Warriewood (North),New South Wales,155,15134,102.41839566538918,2025,valid
+122021691,North Narrabeen - Warriewood (South),New South Wales,38,11191,33.95585738539898,2025,valid
+122031424,Beacon Hill - Narraweena,New South Wales,33,14642,22.537904657833632,2025,valid
+122031425,Cromer,New South Wales,74,8400,88.09523809523809,2025,valid
+122031427,Forestville - Killarney Heights,New South Wales,31,13533,22.906968151924925,2025,valid
+122031429,Freshwater - Brookvale,New South Wales,236,23383,100.9280246332806,2025,valid
+122031430,Manly Vale - Allambie Heights,New South Wales,56,17944,31.20820329915292,2025,valid
+122031432,Terrey Hills - Duffys Forest,New South Wales,31,3593,86.27887559142778,2025,valid
+122031692,Belrose,New South Wales,30,8738,34.33279926756695,2025,valid
+122031693,Collaroy - Collaroy Plateau,New South Wales,41,14229,28.81439314076885,2025,valid
+122031694,Dee Why (South) - North Curl Curl,New South Wales,33,9455,34.90216816499207,2025,valid
+122031695,Dee Why - North,New South Wales,25,19332,12.93192633974757,2025,valid
+122031696,Frenchs Forest - Oxford Falls,New South Wales,56,17765,31.52265690965381,2025,valid
+122031697,Narrabeen - Wheeler Heights,New South Wales,30,11297,26.555722758254404,2025,valid
+123011433,Camden - Ellis Lane,New South Wales,48,13365,35.91470258136925,2025,valid
+123011698,Currans Hill,New South Wales,103,7564,136.1713379164463,2025,valid
+123011699,Elderslie - Narellan,New South Wales,41,14984,27.362520021356115,2025,valid
+123011700,Harrington Park,New South Wales,34,11387,29.858610696408185,2025,valid
+123011701,Mount Annan,New South Wales,36,19565,18.400204446716074,2025,valid
+123011702,Spring Farm,New South Wales,15,11767,12.747514234724228,2025,valid
+123021436,Bradbury - Wedderburn,New South Wales,19,21000,9.047619047619047,2025,valid
+123021437,Campbelltown - Woodbine,New South Wales,69,25009,27.59006757567276,2025,valid
+123021438,Claymore - Eagle Vale - Raby,New South Wales,36,20468,17.588430721125658,2025,valid
+123021439,Holsworthy Military Area,New South Wales,0,3,0.0,2025,valid
+123021441,Leumeah - Minto Heights,New South Wales,22,17328,12.696214219759927,2025,valid
+123021443,Minto - St Andrews,New South Wales,149,22005,67.7118836628039,2025,valid
+123021444,Rosemeadow - Glen Alpine,New South Wales,27,22758,11.863959926179804,2025,valid
+123021703,Denham Court - Bardia,New South Wales,33,21375,15.43859649122807,2025,valid
+123021704,Glenfield,New South Wales,12,10758,11.154489682097045,2025,valid
+123021705,Ingleburn,New South Wales,201,17248,116.5352504638219,2025,valid
+123021706,Macquarie Fields,New South Wales,11,14551,7.559617895677273,2025,valid
+123031445,Bargo,New South Wales,24,6278,38.22873526600828,2025,valid
+123031446,Douglas Park - Appin,New South Wales,46,13313,34.55269285660632,2025,valid
+123031447,Picton - Tahmoor - Buxton,New South Wales,75,22603,33.18143609255409,2025,valid
+123031448,The Oaks - Oakdale,New South Wales,45,10429,43.148911688560744,2025,valid
+124011449,Blackheath - Megalong Valley,New South Wales,12,5872,20.435967302452315,2025,valid
+124011450,Blaxland - Warrimoo - Lapstone,New South Wales,33,19277,17.1188462935104,2025,valid
+124011451,Blue Mountains - North,New South Wales,0,9,0.0,2025,valid
+124011452,Katoomba - Leura,New South Wales,42,13569,30.95290736237011,2025,valid
+124011453,Lawson - Hazelbrook - Linden,New South Wales,43,11536,37.2746185852982,2025,valid
+124011454,Springwood - Winmalee,New South Wales,41,22366,18.33139586872932,2025,valid
+124011455,Wentworth Falls,New South Wales,13,6503,19.99077348915885,2025,valid
+124021456,Blue Mountains - South,New South Wales,0,7,0.0,2025,valid
+124031457,Cambridge Park,New South Wales,23,16414,14.01242841476788,2025,valid
+124031459,Emu Plains - Leonay,New South Wales,66,13936,47.3593570608496,2025,valid
+124031460,Glenmore Park - Regentville,New South Wales,42,21415,19.61242120009339,2025,valid
+124031461,Jamisontown - South Penrith,New South Wales,62,17749,34.93154543917967,2025,valid
+124031462,Kingswood - Werrington,New South Wales,49,28330,17.29615248852806,2025,valid
+124031463,Mulgoa - Luddenham - Orchard Hills,New South Wales,53,13282,39.90362897154043,2025,valid
+124031464,Penrith,New South Wales,100,20292,49.28050463236744,2025,valid
+124031465,Warragamba - Silverdale,New South Wales,48,7544,63.62672322375398,2025,valid
+124031707,Cranebrook - Castlereagh,New South Wales,30,17444,17.1978903921119,2025,valid
+124031708,Jordan Springs - Llandilo,New South Wales,34,15589,21.810250817884405,2025,valid
+124041466,Richmond - Clarendon,New South Wales,62,16743,37.030400764498594,2025,valid
+124041467,Windsor - Bligh Park,New South Wales,96,15477,62.027524714091875,2025,valid
+124041468,Yarramundi - Londonderry,New South Wales,46,7636,60.24096385542169,2025,valid
+124051469,Erskine Park,New South Wales,17,6450,26.35658914728682,2025,valid
+124051470,St Clair,New South Wales,58,20529,28.25271567051488,2025,valid
+124051580,Colyton - Oxley Park,New South Wales,11,13923,7.900596135890254,2025,valid
+124051581,St Marys - North St Marys,New South Wales,171,18757,91.16596470650957,2025,valid
+125011475,Rookwood Cemetery,New South Wales,0,5,0.0,2025,valid
+125011582,Auburn - Central,New South Wales,59,21706,27.181424490924165,2025,valid
+125011583,Auburn - North,New South Wales,47,12331,38.11531911442705,2025,valid
+125011584,Auburn - South,New South Wales,55,9372,58.685446009389665,2025,valid
+125011585,Berala,New South Wales,24,8895,26.981450252951095,2025,valid
+125011586,Lidcombe,New South Wales,179,24516,73.01354217653777,2025,valid
+125011587,Regents Park,New South Wales,51,5359,95.16700877029295,2025,valid
+125011709,Silverwater - Newington,New South Wales,155,9305,166.57710908113916,2025,valid
+125011710,Wentworth Point - Sydney Olympic Park,New South Wales,86,24852,34.604860775792694,2025,valid
+125021477,Ermington - Rydalmere,New South Wales,134,26956,49.71063956076569,2025,valid
+125021478,Oatlands - Dundas Valley,New South Wales,59,19493,30.267275432206432,2025,valid
+125021711,Carlingford - East,New South Wales,24,11981,20.031716885068025,2025,valid
+125021712,Carlingford - West,New South Wales,57,20946,27.212832999140645,2025,valid
+125031479,Chester Hill - Sefton,New South Wales,130,21806,59.6166192790975,2025,valid
+125031480,Fairfield - East,New South Wales,109,16405,66.4431575739104,2025,valid
+125031481,Granville - Clyde,New South Wales,91,25304,35.962693645273475,2025,valid
+125031483,Guildford - South Granville,New South Wales,120,24112,49.76775049767751,2025,valid
+125031484,Guildford West - Merrylands West,New South Wales,75,25002,29.997600191984642,2025,valid
+125031486,Smithfield Industrial,New South Wales,162,13,124615.38461538461,2025,valid
+125031487,Yennora Industrial,New South Wales,41,13,31538.46153846154,2025,valid
+125031713,Greystanes - South,New South Wales,39,16934,23.03058934687611,2025,valid
+125031714,Merrylands - Holroyd,New South Wales,49,27002,18.146803940448855,2025,valid
+125031715,Pemulwuy - Greystanes (North),New South Wales,41,11324,36.20628753090781,2025,valid
+125031716,South Wentworthville,New South Wales,14,7691,18.20309452606943,2025,valid
+125041489,North Parramatta,New South Wales,55,23781,23.127706992977586,2025,valid
+125041490,North Rocks,New South Wales,54,8764,61.61570059333638,2025,valid
+125041491,Northmead,New South Wales,37,21799,16.97325565392908,2025,valid
+125041493,Toongabbie - Constitution Hill,New South Wales,48,23933,20.055989637738687,2025,valid
+125041494,Winston Hills,New South Wales,24,11218,21.39418791228383,2025,valid
+125041588,Pendle Hill - Girraween,New South Wales,69,14465,47.70134808157622,2025,valid
+125041589,Wentworthville - Westmead,New South Wales,25,23845,10.484378276368211,2025,valid
+125041717,Parramatta - North,New South Wales,75,14904,50.32206119162641,2025,valid
+125041718,Parramatta - South,New South Wales,11,11279,9.752637645181311,2025,valid
+125041719,Rosehill - Harris Park,New South Wales,19,10229,18.574640727343827,2025,valid
+126011496,Pennant Hills - Cheltenham,New South Wales,39,22248,17.529665587918014,2025,valid
+126011720,Epping (East) - North Epping,New South Wales,20,15733,12.712133731646858,2025,valid
+126011721,Epping (NSW) - West,New South Wales,51,19790,25.77059120768065,2025,valid
+126021498,Gladesville - Huntleys Point,New South Wales,52,16256,31.988188976377952,2025,valid
+126021499,Hunters Hill - Woolwich,New South Wales,23,10034,22.92206497907116,2025,valid
+126021500,Macquarie Park - Marsfield,New South Wales,71,28886,24.57938101502458,2025,valid
+126021501,North Ryde - East Ryde,New South Wales,51,16577,30.76551848947337,2025,valid
+126021503,West Ryde - Meadowbank,New South Wales,50,22183,22.539782716494614,2025,valid
+126021590,Putney,New South Wales,15,4198,35.73130061934255,2025,valid
+126021722,Denistone,New South Wales,16,7196,22.234574763757642,2025,valid
+126021723,Eastwood,New South Wales,57,20278,28.109280994180885,2025,valid
+126021724,Ryde - North,New South Wales,40,21909,18.25733716737414,2025,valid
+126021725,Ryde - South,New South Wales,19,13318,14.266406367322421,2025,valid
+127011504,Ashcroft - Busby - Miller,New South Wales,24,18381,13.056960992329037,2025,valid
+127011505,Austral - Greendale,New South Wales,73,22535,32.39405369425338,2025,valid
+127011592,Badgerys Creek,New South Wales,0,23,0.0,2025,valid
+127011593,Cecil Hills,New South Wales,16,6831,23.42263211828429,2025,valid
+127011594,Green Valley,New South Wales,31,12813,24.194177788183875,2025,valid
+127011595,Hinchinbrook,New South Wales,25,13050,19.157088122605362,2025,valid
+127011596,Hoxton Park - Carnes Hill - Horningsea Park,New South Wales,32,14106,22.685382106904864,2025,valid
+127011597,West Hoxton - Middleton Grange,New South Wales,53,18072,29.32713590084108,2025,valid
+127011726,Cobbitty - Bringelly,New South Wales,12,6281,19.10523801942366,2025,valid
+127011727,Gledswood Hills - Gregory Hills,New South Wales,39,20313,19.19952739624871,2025,valid
+127011728,Leppington - Catherine Field,New South Wales,39,21103,18.4807847225513,2025,valid
+127011729,Oran Park,New South Wales,38,25695,14.788869429850164,2025,valid
+127021509,Bonnyrigg Heights - Bonnyrigg,New South Wales,50,17332,28.84837295176552,2025,valid
+127021510,Bossley Park - Abbotsbury,New South Wales,62,19638,31.571443120480698,2025,valid
+127021511,Cabramatta - Lansvale,New South Wales,111,24260,45.75432811211871,2025,valid
+127021512,Cabramatta West - Mount Pritchard,New South Wales,47,18491,25.417770807419824,2025,valid
+127021513,Canley Vale - Canley Heights,New South Wales,39,22512,17.32409381663113,2025,valid
+127021514,Edensor Park,New South Wales,19,10213,18.60374033095075,2025,valid
+127021515,Fairfield,New South Wales,56,19302,29.01253756087452,2025,valid
+127021516,Fairfield - West,New South Wales,47,22247,21.12644401492336,2025,valid
+127021517,Greenfield Park - Prairiewood,New South Wales,21,8772,23.939808481532147,2025,valid
+127021518,Horsley Park - Kemps Creek,New South Wales,31,4146,74.77086348287506,2025,valid
+127021519,Smithfield - Wetherill Park,New South Wales,106,20410,51.935325820676134,2025,valid
+127021520,St Johns Park - Wakeley,New South Wales,20,11224,17.818959372772632,2025,valid
+127021521,Wetherill Park Industrial,New South Wales,346,39,88717.94871794872,2025,valid
+127031522,Casula,New South Wales,44,17039,25.823111684958036,2025,valid
+127031523,Chipping Norton - Moorebank,New South Wales,234,22246,105.18744942911084,2025,valid
+127031524,Holsworthy - Wattle Grove,New South Wales,43,21386,20.10661180211353,2025,valid
+127031599,Lurnea - Cartwright,New South Wales,39,13737,28.39047827036471,2025,valid
+127031601,Warwick Farm,New South Wales,42,6453,65.08600650860065,2025,valid
+127031730,Edmondson Park,New South Wales,20,18038,11.08770373655616,2025,valid
+127031731,Liverpool - East,New South Wales,48,20573,23.331551062071647,2025,valid
+127031732,Liverpool - West,New South Wales,34,14906,22.809606869716895,2025,valid
+127031733,Prestons,New South Wales,156,15534,100.42487446890692,2025,valid
+128011529,Gymea - Grays Point,New South Wales,42,18888,22.236340533672173,2025,valid
+128011530,Miranda - Yowie Bay,New South Wales,79,22804,34.643045079810555,2025,valid
+128011531,Sylvania - Taren Point,New South Wales,91,16620,54.75330926594465,2025,valid
+128011602,Caringbah,New South Wales,157,14011,112.05481407465562,2025,valid
+128011603,Caringbah South,New South Wales,24,13833,17.34981565820863,2025,valid
+128011604,Cronulla - Kurnell - Bundeena,New South Wales,102,25614,39.82197235886624,2025,valid
+128011605,Lilli Pilli - Port Hacking - Dolans Bay,New South Wales,13,3437,37.82368344486471,2025,valid
+128011606,Woolooware - Burraneer,New South Wales,28,9989,28.03083391730904,2025,valid
+128021533,Heathcote - Waterfall,New South Wales,19,6720,28.273809523809522,2025,valid
+128021534,Illawong - Alfords Point,New South Wales,30,10621,28.245927878730818,2025,valid
+128021535,Menai - Lucas Heights - Woronora,New South Wales,41,20917,19.601281254482004,2025,valid
+128021536,Oyster Bay - Como - Jannali,New South Wales,51,22878,22.292158405455023,2025,valid
+128021537,Royal National Park,New South Wales,0,45,0.0,2025,valid
+128021538,Sutherland - Kirrawee,New South Wales,117,24903,46.982291290206,2025,valid
+128021607,Engadine,New South Wales,40,17844,22.416498542927595,2025,valid
+128021608,Loftus - Yarrawarrah,New South Wales,10,7464,13.397642015005358,2025,valid
+128021609,Woronora Heights,New South Wales,10,3586,27.88622420524261,2025,valid
+201011001,Alfredton,Victoria,54,20825,25.930372148859544,2025,valid
+201011002,Ballarat,Victoria,41,11668,35.13884127528282,2025,valid
+201011005,Buninyong,Victoria,7,7384,9.479956663055255,2025,valid
+201011006,Delacombe,Victoria,71,15255,46.54211733857752,2025,valid
+201011007,Smythes Creek,Victoria,24,4250,56.47058823529412,2025,valid
+201011008,Wendouree - Miners Rest,Victoria,80,15548,51.45356315924877,2025,valid
+201011481,Ballarat East - Warrenheip,Victoria,28,9771,28.65622761232218,2025,valid
+201011482,Ballarat North - Invermay,Victoria,38,15204,24.99342278347803,2025,valid
+201011483,Canadian - Mount Clear,Victoria,34,12518,27.16088832081802,2025,valid
+201011484,Sebastopol - Redan,Victoria,23,12766,18.016606611311296,2025,valid
+201021009,Bacchus Marsh Surrounds,Victoria,27,6770,39.881831610044316,2025,valid
+201021010,Creswick - Clunes,Victoria,25,8038,31.102264244837023,2025,valid
+201021011,Daylesford,Victoria,55,10342,53.18120286211565,2025,valid
+201021012,Gordon (Vic.),Victoria,11,6557,16.77596461796553,2025,valid
+201031013,Avoca,Victoria,17,3609,47.10446106954835,2025,valid
+201031014,Beaufort,Victoria,8,4816,16.611295681063122,2025,valid
+201031015,Golden Plains - North,Victoria,13,5021,25.89125672176857,2025,valid
+201031016,Maryborough (Vic.),Victoria,29,8229,35.2412200753433,2025,valid
+201031017,Maryborough Surrounds,Victoria,17,5714,29.751487574378718,2025,valid
+202011018,Bendigo,Victoria,52,14457,35.96873486892163,2025,valid
+202011019,California Gully - Eaglehawk,Victoria,23,13523,17.00806034164017,2025,valid
+202011020,East Bendigo - Kennington,Victoria,73,13941,52.363532027831575,2025,valid
+202011021,Flora Hill - Spring Gully,Victoria,16,9534,16.782043213761273,2025,valid
+202011022,Kangaroo Flat - Golden Square,Victoria,69,21369,32.28976554822407,2025,valid
+202011023,Maiden Gully,Victoria,17,5869,28.96575225762481,2025,valid
+202011024,Strathfieldsaye,Victoria,17,11705,14.52370781717215,2025,valid
+202011025,White Hills - Ascot,Victoria,39,16095,24.23112767940354,2025,valid
+202021026,Bendigo Surrounds - South,Victoria,25,9094,27.49065317791951,2025,valid
+202021027,Castlemaine,Victoria,51,11640,43.81443298969072,2025,valid
+202021028,Castlemaine Surrounds,Victoria,38,9675,39.27648578811369,2025,valid
+202021029,Heathcote,Victoria,27,5382,50.16722408026756,2025,valid
+202021030,Kyneton,Victoria,60,10665,56.258790436005626,2025,valid
+202021031,Woodend,Victoria,24,8084,29.688273132112815,2025,valid
+202031032,Bendigo Surrounds - North,Victoria,23,5505,41.78019981834696,2025,valid
+202031033,Loddon,Victoria,27,7231,37.33923385423869,2025,valid
+203011034,Bannockburn,Victoria,35,8395,41.69148302561048,2025,valid
+203011035,Golden Plains - South,Victoria,32,8954,35.73821755639938,2025,valid
+203011036,Winchelsea,Victoria,24,7079,33.90309365729623,2025,valid
+203021037,Belmont,Victoria,33,15227,21.672029946805015,2025,valid
+203021039,Geelong,Victoria,111,13719,80.90968729499234,2025,valid
+203021040,Geelong West - Hamlyn Heights,Victoria,37,22415,16.506803479812625,2025,valid
+203021042,Highton,Victoria,38,25794,14.732108242226875,2025,valid
+203021043,Lara,Victoria,51,23952,21.29258517034068,2025,valid
+203021044,Leopold,Victoria,21,13869,15.141682889898334,2025,valid
+203021045,Newcomb - Moolap,Victoria,84,15187,55.31046289589781,2025,valid
+203021046,Newtown (Vic.),Victoria,28,10393,26.94121043009718,2025,valid
+203021047,North Geelong - Bell Park,Victoria,108,15724,68.68481302467566,2025,valid
+203021485,Charlemont,Victoria,11,15110,7.27994705493051,2025,valid
+203021486,Corio - Lovely Banks,Victoria,44,18486,23.801795953694686,2025,valid
+203021487,Grovedale - Mount Duneed,Victoria,36,28585,12.594017841525275,2025,valid
+203021488,Norlane,Victoria,26,8833,29.435073021623456,2025,valid
+203031048,Clifton Springs,Victoria,35,17912,19.539973202322464,2025,valid
+203031049,Lorne - Anglesea,Victoria,21,6307,33.29633740288568,2025,valid
+203031051,Portarlington,Victoria,21,10874,19.312120654772855,2025,valid
+203031052,Point Lonsdale - Queenscliff,Victoria,7,6053,11.56451346439782,2025,valid
+203031053,Torquay,Victoria,88,26581,33.10635416274783,2025,valid
+203031489,Barwon Heads - Armstrong Creek,Victoria,26,15749,16.508984697441107,2025,valid
+203031490,Ocean Grove,Victoria,59,20792,28.37629857637553,2025,valid
+204011054,Alexandra,Victoria,31,6849,45.26208205577456,2025,valid
+204011055,Euroa,Victoria,33,6880,47.96511627906977,2025,valid
+204011056,Kilmore - Broadford,Victoria,65,16694,38.936144722654845,2025,valid
+204011057,Mansfield (Vic.),Victoria,51,11324,45.037089367714586,2025,valid
+204011058,Nagambie,Victoria,21,4936,42.544570502431114,2025,valid
+204011059,Seymour,Victoria,20,6911,28.939372015627264,2025,valid
+204011060,Seymour Surrounds,Victoria,18,4488,40.106951871657756,2025,valid
+204011061,Upper Yarra Valley,Victoria,0,236,0.0,2025,valid
+204011062,Yea,Victoria,14,4368,32.05128205128205,2025,valid
+204021063,Benalla,Victoria,32,10861,29.463217015007828,2025,valid
+204021064,Benalla Surrounds,Victoria,17,3809,44.631136781307426,2025,valid
+204021065,Rutherglen,Victoria,22,4120,53.398058252427184,2025,valid
+204021066,Wangaratta,Victoria,80,20019,39.96203606573755,2025,valid
+204021067,Wangaratta Surrounds,Victoria,74,10070,73.48560079443892,2025,valid
+204031068,Beechworth,Victoria,44,4962,88.67392180572351,2025,valid
+204031069,Bright - Mount Beauty,Victoria,34,8976,37.87878787878788,2025,valid
+204031070,Chiltern - Indigo Valley,Victoria,15,3257,46.0546515198035,2025,valid
+204031071,Myrtleford,Victoria,27,4635,58.25242718446602,2025,valid
+204031072,Towong,Victoria,25,6155,40.61738424045491,2025,valid
+204031073,West Wodonga,Victoria,39,15495,25.16940948693127,2025,valid
+204031075,Yackandandah,Victoria,16,5498,29.101491451436885,2025,valid
+204031491,Baranduda - Leneva,Victoria,45,14578,30.868431883660307,2025,valid
+204031492,Wodonga,Victoria,78,14644,53.26413548210871,2025,valid
+205011076,Drouin,Victoria,61,22118,27.579347138077583,2025,valid
+205011077,Mount Baw Baw Region,Victoria,27,6750,40.0,2025,valid
+205011078,Trafalgar (Vic.),Victoria,38,8618,44.093757252262705,2025,valid
+205011079,Warragul,Victoria,79,25392,31.112161310649025,2025,valid
+205021080,Alps - East,Victoria,0,0,,2025,zero_population
+205021081,Bairnsdale,Victoria,86,15917,54.03028208833323,2025,valid
+205021082,Bruthen - Omeo,Victoria,33,8651,38.145879089122644,2025,valid
+205021083,Lake King,Victoria,0,0,,2025,zero_population
+205021084,Lakes Entrance,Victoria,38,11331,33.53631630041479,2025,valid
+205021085,Orbost,Victoria,18,6727,26.757841534116245,2025,valid
+205021086,Paynesville,Victoria,25,7190,34.770514603616135,2025,valid
+205031087,Foster,Victoria,42,9631,43.60917869380127,2025,valid
+205031088,French Island,Victoria,3,133,225.56390977443607,2025,valid
+205031089,Korumburra,Victoria,47,10007,46.96712301389028,2025,valid
+205031090,Leongatha,Victoria,49,11699,41.88392170270963,2025,valid
+205031091,Phillip Island,Victoria,40,14795,27.036160865157147,2025,valid
+205031092,Wilsons Promontory,Victoria,0,15,0.0,2025,valid
+205031093,Wonthaggi - Inverloch,Victoria,68,29333,23.182081614563803,2025,valid
+205041094,Churchill,Victoria,23,12325,18.661257606490874,2025,valid
+205041095,Moe - Newborough,Victoria,34,17640,19.27437641723356,2025,valid
+205041096,Morwell,Victoria,55,14487,37.96507213363705,2025,valid
+205041098,Yallourn North - Glengarry,Victoria,11,4972,22.123893805309734,2025,valid
+205041493,Traralgon - East,Victoria,34,12362,27.503640187671895,2025,valid
+205041494,Traralgon - West,Victoria,22,17236,12.7639823624971,2025,valid
+205051099,Alps - West,Victoria,0,23,0.0,2025,valid
+205051100,Longford - Loch Sport,Victoria,14,4993,28.039254956939715,2025,valid
+205051101,Maffra,Victoria,54,15549,34.72892147404978,2025,valid
+205051102,Rosedale,Victoria,16,5020,31.872509960159363,2025,valid
+205051103,Sale,Victoria,46,15232,30.199579831932773,2025,valid
+205051104,Yarram,Victoria,18,5587,32.21764811168785,2025,valid
+206011106,Brunswick East,Victoria,32,14693,21.779078472742125,2025,valid
+206011107,Brunswick West,Victoria,20,15988,12.509382036527395,2025,valid
+206011109,Pascoe Vale South,Victoria,10,10907,9.168423947923351,2025,valid
+206011495,Brunswick - North,Victoria,47,15255,30.809570632579483,2025,valid
+206011496,Brunswick - South,Victoria,73,15366,47.50748405570741,2025,valid
+206011497,Coburg - East,Victoria,28,14457,19.367780314034725,2025,valid
+206011498,Coburg - West,Victoria,25,14989,16.678897858429515,2025,valid
+206021110,Alphington - Fairfield,Victoria,43,9749,44.107087906451945,2025,valid
+206021112,Thornbury,Victoria,60,20234,29.653059207274882,2025,valid
+206021499,Northcote - East,Victoria,29,15969,18.160185359133322,2025,valid
+206021500,Northcote - West,Victoria,35,11026,31.743152548521675,2025,valid
+206031113,Ascot Vale,Victoria,26,16398,15.855592145383582,2025,valid
+206031115,Flemington,Victoria,13,9935,13.085052843482636,2025,valid
+206031116,Moonee Ponds,Victoria,33,17965,18.369050932368495,2025,valid
+206031501,Essendon (West) - Aberfeldie,Victoria,35,17119,20.445119457912263,2025,valid
+206031502,Essendon - East,Victoria,28,13196,21.21855107608366,2025,valid
+206041117,Carlton,Victoria,54,25267,21.37174971306447,2025,valid
+206041118,Docklands,Victoria,74,19139,38.6645070275354,2025,valid
+206041119,East Melbourne,Victoria,20,5245,38.13155386081983,2025,valid
+206041120,Flemington Racecourse,Victoria,0,78,0.0,2025,valid
+206041121,Kensington (Vic.),Victoria,42,12423,33.808258874667956,2025,valid
+206041124,Parkville,Victoria,11,8280,13.285024154589372,2025,valid
+206041125,South Yarra - West,Victoria,17,6894,24.65912387583406,2025,valid
+206041127,West Melbourne - Industrial,Victoria,3,0,,2025,zero_population
+206041503,Melbourne CBD - East,Victoria,133,14266,93.22865554465163,2025,valid
+206041504,Melbourne CBD - North,Victoria,31,24296,12.759301942706617,2025,valid
+206041505,Melbourne CBD - West,Victoria,241,22163,108.739791544466,2025,valid
+206041506,North Melbourne,Victoria,61,19286,31.629161049465935,2025,valid
+206041507,Royal Botanic Gardens Victoria,Victoria,0,0,,2025,zero_population
+206041508,Southbank (West) - South Wharf,Victoria,28,8122,34.47426742181729,2025,valid
+206041509,Southbank - East,Victoria,21,19552,10.740589198036005,2025,valid
+206041510,West Melbourne - Residential,Victoria,31,9699,31.96205794411795,2025,valid
+206051128,Albert Park,Victoria,82,17253,47.52796615081436,2025,valid
+206051129,Elwood,Victoria,32,16056,19.930244145490782,2025,valid
+206051130,Port Melbourne,Victoria,32,16927,18.90470845394931,2025,valid
+206051134,St Kilda East,Victoria,31,17380,17.836593785960872,2025,valid
+206051511,Port Melbourne Industrial,Victoria,92,3148,292.24904701397713,2025,valid
+206051512,South Melbourne,Victoria,75,13132,57.11239719768504,2025,valid
+206051513,St Kilda - Central,Victoria,28,14012,19.982871824150727,2025,valid
+206051514,St Kilda - West,Victoria,30,16298,18.407166523499814,2025,valid
+206061135,Armadale,Victoria,24,10032,23.923444976076553,2025,valid
+206061136,Prahran - Windsor,Victoria,54,21112,25.57787040545661,2025,valid
+206061138,Toorak,Victoria,30,13610,22.04261572373255,2025,valid
+206061515,South Yarra - North,Victoria,43,13779,31.20690906451847,2025,valid
+206061516,South Yarra - South,Victoria,35,10440,33.524904214559385,2025,valid
+206071139,Abbotsford,Victoria,53,10316,51.37650252035672,2025,valid
+206071140,Carlton North - Princes Hill,Victoria,19,8828,21.522428636157677,2025,valid
+206071141,Collingwood,Victoria,66,11383,57.98120003514013,2025,valid
+206071142,Fitzroy,Victoria,53,12135,43.67531932426864,2025,valid
+206071143,Fitzroy North,Victoria,33,13749,24.001745581496838,2025,valid
+206071145,Clifton Hill - Alphington,Victoria,23,11419,20.14186881513267,2025,valid
+206071517,Richmond (South) - Cremorne,Victoria,91,19225,47.33420026007802,2025,valid
+206071518,Richmond - North,Victoria,41,15303,26.792132261648046,2025,valid
+207011146,Ashburton (Vic.),Victoria,12,8471,14.165978042734034,2025,valid
+207011147,Balwyn,Victoria,39,16868,23.120701920796776,2025,valid
+207011148,Balwyn North,Victoria,48,22454,21.37703749888661,2025,valid
+207011149,Camberwell,Victoria,69,22052,31.28967894068565,2025,valid
+207011150,Glen Iris - East,Victoria,44,17650,24.929178470254957,2025,valid
+207011152,Hawthorn East,Victoria,59,17541,33.63548258366114,2025,valid
+207011154,Kew East,Victoria,22,6759,32.549193667702326,2025,valid
+207011155,Surrey Hills (West) - Canterbury,Victoria,44,16229,27.111960071476986,2025,valid
+207011519,Hawthorn - North,Victoria,24,10910,21.998166819431713,2025,valid
+207011520,Hawthorn - South,Victoria,36,13562,26.544757410411446,2025,valid
+207011521,Kew - South,Victoria,23,12306,18.690069884609134,2025,valid
+207011522,Kew - West,Victoria,24,13799,17.3925646785999,2025,valid
+207021156,Bulleen,Victoria,31,11810,26.248941574936495,2025,valid
+207021157,Doncaster,Victoria,53,28353,18.692907276125982,2025,valid
+207021159,Templestowe,Victoria,41,17442,23.50647861483775,2025,valid
+207021160,Templestowe Lower,Victoria,31,14695,21.095610751956446,2025,valid
+207021424,Doncaster East - North,Victoria,26,16642,15.623122220886913,2025,valid
+207021425,Doncaster East - South,Victoria,34,16983,20.02002002002002,2025,valid
+207031161,Blackburn,Victoria,56,23732,23.59683128265633,2025,valid
+207031162,Blackburn South,Victoria,18,11072,16.257225433526013,2025,valid
+207031163,Box Hill,Victoria,58,27206,21.318826729397927,2025,valid
+207031164,Box Hill North,Victoria,32,19760,16.194331983805668,2025,valid
+207031165,Burwood (Vic.),Victoria,37,15480,23.901808785529717,2025,valid
+207031166,Burwood East,Victoria,13,12460,10.433386837881221,2025,valid
+207031167,Surrey Hills (East) - Mont Albert,Victoria,15,10776,13.919821826280623,2025,valid
+208011168,Beaumaris,Victoria,32,14486,22.0902940770399,2025,valid
+208011169,Brighton (Vic.),Victoria,55,24340,22.59654889071487,2025,valid
+208011170,Brighton East,Victoria,38,17486,21.731671051126614,2025,valid
+208011171,Highett (West) - Cheltenham,Victoria,74,13257,55.81956702119635,2025,valid
+208011172,Hampton,Victoria,38,19524,19.46322474902684,2025,valid
+208011173,Sandringham - Black Rock,Victoria,45,18071,24.901776326711303,2025,valid
+208021174,Bentleigh - McKinnon,Victoria,46,26966,17.05851813394645,2025,valid
+208021176,Carnegie,Victoria,30,21266,14.107025298598701,2025,valid
+208021177,Caulfield - North,Victoria,50,24635,20.296326364927946,2025,valid
+208021178,Caulfield - South,Victoria,37,19226,19.2447727036305,2025,valid
+208021179,Elsternwick,Victoria,36,12827,28.06579870585484,2025,valid
+208021180,Hughesdale,Victoria,16,8132,19.675356615838663,2025,valid
+208021181,Murrumbeena,Victoria,16,10126,15.800908552241754,2025,valid
+208021182,Ormond - Glen Huntly,Victoria,19,15157,12.535462162697105,2025,valid
+208021426,Bentleigh East - North,Victoria,36,17873,20.142113802942987,2025,valid
+208021427,Bentleigh East - South,Victoria,24,14949,16.05458559100943,2025,valid
+208031183,Aspendale Gardens - Waterways,Victoria,20,9063,22.067747986317993,2025,valid
+208031184,Braeside,Victoria,235,28,83928.57142857142,2025,valid
+208031185,Carrum - Patterson Lakes,Victoria,34,12478,27.247956403269754,2025,valid
+208031186,Chelsea - Bonbeach,Victoria,27,16058,16.814049072113587,2025,valid
+208031187,Chelsea Heights,Victoria,21,5445,38.56749311294766,2025,valid
+208031188,Highett (East) - Cheltenham,Victoria,137,26320,52.0516717325228,2025,valid
+208031189,Edithvale - Aspendale,Victoria,19,14365,13.226592412112774,2025,valid
+208031190,Mentone,Victoria,42,14155,29.671494171670787,2025,valid
+208031191,Moorabbin - Heatherton,Victoria,171,9826,174.02808874414816,2025,valid
+208031192,Moorabbin Airport,Victoria,17,26,6538.461538461538,2025,valid
+208031193,Mordialloc - Parkdale,Victoria,129,22437,57.49431742211526,2025,valid
+208041194,Malvern - Glen Iris,Victoria,61,21820,27.956003666361134,2025,valid
+208041195,Malvern East,Victoria,50,23996,20.836806134355722,2025,valid
+209011196,Bundoora - East,Victoria,27,10339,26.114711287358546,2025,valid
+209011197,Greensborough,Victoria,45,21386,21.041803048723462,2025,valid
+209011198,Heidelberg - Rosanna,Victoria,35,16925,20.6794682422452,2025,valid
+209011199,Heidelberg West,Victoria,139,17224,80.70134695773339,2025,valid
+209011200,Ivanhoe,Victoria,24,13188,18.198362147406733,2025,valid
+209011201,Ivanhoe East - Eaglemont,Victoria,23,8169,28.155220957277514,2025,valid
+209011202,Montmorency - Briar Hill,Victoria,35,17042,20.537495599108087,2025,valid
+209011203,Viewbank - Yallambie,Victoria,18,18993,9.47717580161112,2025,valid
+209011204,Watsonia,Victoria,14,9504,14.73063973063973,2025,valid
+209021205,Kingsbury,Victoria,14,12932,10.825858335910919,2025,valid
+209021428,Preston - East,Victoria,109,23403,46.57522539845319,2025,valid
+209021429,Preston - West,Victoria,20,13610,14.695077149155033,2025,valid
+209021523,Reservoir - North East,Victoria,24,16329,14.697776961234615,2025,valid
+209021524,Reservoir - North West,Victoria,18,9751,18.459645164598502,2025,valid
+209021525,Reservoir - South East,Victoria,24,14143,16.969525560347876,2025,valid
+209021526,Reservoir - South West,Victoria,106,15350,69.05537459283389,2025,valid
+209031209,Eltham,Victoria,73,23669,30.8420296590477,2025,valid
+209031210,Hurstbridge,Victoria,12,3521,34.08122692416927,2025,valid
+209031211,Kinglake,Victoria,19,4419,42.99615297578637,2025,valid
+209031212,Panton Hill - St Andrews,Victoria,24,5130,46.78362573099415,2025,valid
+209031213,Plenty - Yarrambat,Victoria,33,9579,34.45036016285625,2025,valid
+209031214,Research - North Warrandyte,Victoria,26,7039,36.93706492399488,2025,valid
+209031215,Wattle Glen - Diamond Creek,Victoria,32,14859,21.53576956726563,2025,valid
+209041216,Bundoora - North,Victoria,31,8014,38.68230596456201,2025,valid
+209041217,Bundoora - West,Victoria,11,6806,16.162209814869232,2025,valid
+209041220,Mill Park - North,Victoria,31,17610,17.603634298693922,2025,valid
+209041221,Mill Park - South,Victoria,18,11494,15.660344527579607,2025,valid
+209041223,Thomastown,Victoria,311,20595,151.0075260985676,2025,valid
+209041224,Wallan,Victoria,79,30342,26.036517039087734,2025,valid
+209041225,Whittlesea,Victoria,42,18174,23.109937273027402,2025,valid
+209041431,Epping - East,Victoria,18,13555,13.279232755440797,2025,valid
+209041432,Epping - South,Victoria,81,8322,97.3323720259553,2025,valid
+209041433,Epping (Vic.) - West,Victoria,74,12895,57.38658394726638,2025,valid
+209041435,South Morang - North,Victoria,20,13259,15.08409382306358,2025,valid
+209041436,South Morang - South,Victoria,18,13054,13.788876972575457,2025,valid
+209041437,Wollert,Victoria,55,36658,15.003546292760106,2025,valid
+209041527,Doreen - North,Victoria,24,17283,13.886478042006596,2025,valid
+209041528,Doreen - South,Victoria,23,11947,19.251694986189,2025,valid
+209041529,Lalor - East,Victoria,25,10253,24.383107383204916,2025,valid
+209041530,Lalor - West,Victoria,33,13925,23.6983842010772,2025,valid
+209041531,Mernda - North,Victoria,16,12061,13.265898350053892,2025,valid
+209041532,Mernda - South,Victoria,17,13854,12.2708243106684,2025,valid
+210011226,Airport West,Victoria,61,8783,69.45235113287032,2025,valid
+210011227,Essendon Airport,Victoria,9,14,6428.571428571429,2025,valid
+210011228,Keilor,Victoria,204,8732,233.623453962437,2025,valid
+210011230,Niddrie - Essendon West,Victoria,17,8048,21.123260437375745,2025,valid
+210011231,Strathmore,Victoria,21,10536,19.931662870159457,2025,valid
+210011533,Avondale Heights,Victoria,20,12861,15.550890288469013,2025,valid
+210011534,Keilor East,Victoria,25,15645,15.979546180888464,2025,valid
+210021232,Gisborne,Victoria,59,15959,36.96973494579861,2025,valid
+210021233,Macedon,Victoria,12,3615,33.19502074688796,2025,valid
+210021234,Riddells Creek,Victoria,13,4589,28.328611898016998,2025,valid
+210021235,Romsey,Victoria,54,11567,46.684533586928325,2025,valid
+210031236,Coburg North,Victoria,113,8932,126.51141961486789,2025,valid
+210031237,Fawkner,Victoria,34,15096,22.52252252252252,2025,valid
+210031439,Gowanbrae,Victoria,6,3215,18.662519440124417,2025,valid
+210031440,Hadfield,Victoria,7,6650,10.526315789473683,2025,valid
+210031535,Glenroy - East,Victoria,23,15762,14.592056845577973,2025,valid
+210031536,Glenroy - West,Victoria,11,9563,11.502666527240407,2025,valid
+210031537,Oak Park,Victoria,9,8559,10.515247108307046,2025,valid
+210031538,Pascoe Vale,Victoria,32,18674,17.136125093713183,2025,valid
+210041240,Sunbury,Victoria,34,15364,22.129653736006247,2025,valid
+210041539,Diggers Rest,Victoria,11,7434,14.796879203658865,2025,valid
+210041540,Sunbury - South,Victoria,48,17683,27.144715263247186,2025,valid
+210041541,Sunbury - West,Victoria,22,11497,19.135426633034704,2025,valid
+210051242,Broadmeadows,Victoria,57,14972,38.07106598984772,2025,valid
+210051243,Campbellfield - Coolaroo,Victoria,521,16386,317.95435127547904,2025,valid
+210051245,Gladstone Park - Westmeadows,Victoria,37,18285,20.23516543614985,2025,valid
+210051246,Greenvale - Bulla,Victoria,61,26757,22.79777254550211,2025,valid
+210051247,Meadow Heights,Victoria,24,14841,16.171417020416413,2025,valid
+210051248,Melbourne Airport,Victoria,10,130,769.2307692307693,2025,valid
+210051250,Tullamarine,Victoria,52,6727,77.30043109855805,2025,valid
+210051441,Craigieburn - Central,Victoria,21,8172,25.697503671071953,2025,valid
+210051442,Craigieburn - North,Victoria,24,12846,18.682858477347033,2025,valid
+210051443,Craigieburn - South,Victoria,92,24431,37.65707502762883,2025,valid
+210051445,Mickleham - Yuroke,Victoria,69,39389,17.517581050547108,2025,valid
+210051542,Craigieburn - North West,Victoria,20,11293,17.710085893916588,2025,valid
+210051543,Craigieburn - West,Victoria,26,14970,17.368069472277888,2025,valid
+210051544,Roxburgh Park (South) - Somerton,Victoria,86,9699,88.66893494174657,2025,valid
+210051545,Roxburgh Park - North,Victoria,21,15440,13.601036269430052,2025,valid
+211011251,Bayswater,Victoria,286,13388,213.62414102181057,2025,valid
+211011254,Knoxfield - Scoresby,Victoria,152,17232,88.2079851439183,2025,valid
+211011255,Lysterfield,Victoria,12,6622,18.12141347025068,2025,valid
+211011256,Rowville - Central,Victoria,50,15771,31.703760065943822,2025,valid
+211011257,Rowville - North,Victoria,57,7827,72.82483710233807,2025,valid
+211011258,Rowville - South,Victoria,21,10578,19.852524106636412,2025,valid
+211011259,Wantirna,Victoria,23,14634,15.716823834905016,2025,valid
+211011260,Wantirna South,Victoria,39,18475,21.10960757780785,2025,valid
+211011446,Boronia,Victoria,88,24763,35.5368897144934,2025,valid
+211011447,Ferntree Gully - North,Victoria,35,14538,24.07483835465676,2025,valid
+211011448,Ferntree Gully (South) - Upper Ferntree Gully,Victoria,73,15630,46.70505438259757,2025,valid
+211011449,The Basin,Victoria,12,4336,27.675276752767527,2025,valid
+211021261,Donvale - Park Orchards,Victoria,40,16894,23.677045104770926,2025,valid
+211021262,Warrandyte - Wonga Park,Victoria,28,10229,27.37315475608564,2025,valid
+211031263,Bayswater North,Victoria,171,12097,141.35736132925518,2025,valid
+211031265,Croydon Hills - Warranwood,Victoria,28,18457,15.170396055697026,2025,valid
+211031266,Ringwood,Victoria,84,19779,42.46928560594571,2025,valid
+211031267,Ringwood East,Victoria,37,22164,16.69373759249233,2025,valid
+211031268,Ringwood North,Victoria,11,9839,11.179997967273097,2025,valid
+211031450,Croydon - East,Victoria,50,17345,28.826751225136928,2025,valid
+211031451,Croydon - West,Victoria,25,14940,16.733601070950467,2025,valid
+211031452,Croydon South,Victoria,57,5147,110.74412278997475,2025,valid
+211041269,Forest Hill,Victoria,17,11256,15.103056147832268,2025,valid
+211041270,Mitcham (Vic.),Victoria,50,17496,28.577960676726107,2025,valid
+211041271,Nunawading,Victoria,58,13247,43.78349815052465,2025,valid
+211041272,Vermont,Victoria,31,11435,27.10975076519458,2025,valid
+211041273,Vermont South,Victoria,27,12250,22.04081632653061,2025,valid
+211051274,Belgrave - Selby,Victoria,32,9964,32.115616218386194,2025,valid
+211051275,Chirnside Park,Victoria,38,12603,30.151551217963977,2025,valid
+211051276,Healesville - Yarra Glen,Victoria,75,14116,53.131198639841315,2025,valid
+211051277,Kilsyth,Victoria,61,10692,57.05200149644594,2025,valid
+211051278,Lilydale - Coldstream,Victoria,100,20905,47.835446065534555,2025,valid
+211051279,Monbulk - Silvan,Victoria,33,5840,56.50684931506849,2025,valid
+211051280,Montrose,Victoria,26,6904,37.659327925840095,2025,valid
+211051281,Mooroolbark,Victoria,44,24395,18.03648288583726,2025,valid
+211051282,Mount Dandenong - Olinda,Victoria,25,9587,26.076979242724523,2025,valid
+211051283,Mount Evelyn,Victoria,33,10043,32.85870755750274,2025,valid
+211051284,Upwey - Tecoma,Victoria,19,9867,19.25610621262795,2025,valid
+211051285,Wandin - Seville,Victoria,49,7996,61.28064032016008,2025,valid
+211051286,Yarra Valley,Victoria,59,17087,34.52917422601978,2025,valid
+212011289,Emerald - Cockatoo,Victoria,90,19043,47.261460904269285,2025,valid
+212011546,Beaconsfield - Officer,Victoria,54,29524,18.290204579325295,2025,valid
+212011547,Bunyip - Garfield,Victoria,37,10366,35.69361373721783,2025,valid
+212011548,Koo Wee Rup,Victoria,36,12598,28.575964438799808,2025,valid
+212011549,Pakenham - North East,Victoria,33,16593,19.88790453805822,2025,valid
+212011550,Pakenham - North West,Victoria,24,10502,22.85278994477242,2025,valid
+212011551,Pakenham - South East,Victoria,63,6778,92.94777220419003,2025,valid
+212011552,Pakenham - South West,Victoria,107,28194,37.95133716393559,2025,valid
+212021293,Berwick - North,Victoria,63,23637,26.653128569615433,2025,valid
+212021295,Doveton,Victoria,33,12893,25.595284262778254,2025,valid
+212021297,Hallam,Victoria,181,12009,150.72029311349823,2025,valid
+212021299,Narre Warren North,Victoria,39,8237,47.3473351948525,2025,valid
+212021453,Endeavour Hills - North,Victoria,29,12175,23.81930184804928,2025,valid
+212021454,Endeavour Hills - South,Victoria,36,13539,26.58985153999557,2025,valid
+212021455,Narre Warren - North East,Victoria,22,13618,16.155088852988694,2025,valid
+212021456,Narre Warren - South West,Victoria,45,15484,29.06225781451821,2025,valid
+212021553,Berwick - South East,Victoria,45,20765,21.671081146159406,2025,valid
+212021554,Berwick - South West,Victoria,17,13243,12.836970474967906,2025,valid
+212031300,Cranbourne,Victoria,52,22708,22.899418707063592,2025,valid
+212031303,Cranbourne South,Victoria,57,27368,20.827243496053786,2025,valid
+212031304,Cranbourne West,Victoria,69,25490,27.069438995684582,2025,valid
+212031306,Lynbrook - Lyndhurst,Victoria,51,19545,26.093630084420568,2025,valid
+212031308,Pearcedale - Tooradin,Victoria,42,8272,50.77369439071566,2025,valid
+212031457,Narre Warren South - East,Victoria,25,13022,19.19827983412686,2025,valid
+212031458,Narre Warren South - West,Victoria,34,17083,19.90282737224141,2025,valid
+212031555,Clyde North - North,Victoria,22,13667,16.097168361747276,2025,valid
+212031556,Clyde North - South,Victoria,40,28328,14.12030499858797,2025,valid
+212031557,Cranbourne East - North,Victoria,54,25111,21.50451993150412,2025,valid
+212031558,Cranbourne East - South,Victoria,27,15590,17.31879409878127,2025,valid
+212031559,Cranbourne North - East,Victoria,26,13691,18.990577751807756,2025,valid
+212031560,Cranbourne North - West,Victoria,13,12313,10.557946885405668,2025,valid
+212031561,Hampton Park - East,Victoria,21,13393,15.679832748450684,2025,valid
+212031562,Hampton Park - West,Victoria,18,13748,13.092813500145475,2025,valid
+212041309,Clarinda - Oakleigh South,Victoria,63,11741,53.6581211140448,2025,valid
+212041310,Clayton South,Victoria,85,15349,55.37820053423676,2025,valid
+212041312,Dandenong North,Victoria,46,23391,19.665683382497544,2025,valid
+212041313,Dingley Village,Victoria,28,10770,25.998142989786444,2025,valid
+212041316,Noble Park North,Victoria,27,7593,35.559067562228364,2025,valid
+212041317,Springvale,Victoria,112,24468,45.774072257642636,2025,valid
+212041318,Springvale South,Victoria,16,13274,12.0536386921802,2025,valid
+212041459,Noble Park - East,Victoria,26,13935,18.65805525654826,2025,valid
+212041460,Noble Park - West,Victoria,48,20473,23.44551360328237,2025,valid
+212041563,Dandenong - North,Victoria,94,23327,40.29665194838599,2025,valid
+212041564,Dandenong - South,Victoria,826,10039,822.7911146528538,2025,valid
+212041565,Keysborough - North,Victoria,96,15067,63.71540452644853,2025,valid
+212041566,Keysborough - South,Victoria,73,17117,42.64766022083309,2025,valid
+212051319,Ashwood - Chadstone,Victoria,41,21139,19.39543024741,2025,valid
+212051321,Glen Waverley - East,Victoria,37,22820,16.21384750219106,2025,valid
+212051322,Glen Waverley - West,Victoria,42,23417,17.935687748217106,2025,valid
+212051323,Mount Waverley - North,Victoria,22,17492,12.577178138577635,2025,valid
+212051324,Mount Waverley - South,Victoria,74,20659,35.81973958081224,2025,valid
+212051325,Mulgrave,Victoria,104,21072,49.35459377372817,2025,valid
+212051326,Oakleigh - Huntingdale,Victoria,133,25427,52.30660321705274,2025,valid
+212051327,Wheelers Hill,Victoria,48,21281,22.55533104647338,2025,valid
+212051567,Clayton (North) - Notting Hill,Victoria,84,14911,56.33424988263698,2025,valid
+212051568,Clayton - Central,Victoria,50,15483,32.29348317509526,2025,valid
+213011328,Ardeer - Albion,Victoria,12,7955,15.08485229415462,2025,valid
+213011329,Cairnlea,Victoria,21,10035,20.926756352765324,2025,valid
+213011331,Delahey,Victoria,20,7859,25.44853034737244,2025,valid
+213011332,Keilor Downs,Victoria,21,13080,16.055045871559635,2025,valid
+213011333,Kings Park (Vic.),Victoria,18,13956,12.897678417884782,2025,valid
+213011334,St Albans - North,Victoria,40,21020,19.029495718363464,2025,valid
+213011335,St Albans - South,Victoria,20,17705,11.296243998870377,2025,valid
+213011336,Sunshine,Victoria,56,10151,55.16697862279579,2025,valid
+213011337,Sunshine North,Victoria,116,12751,90.97325699945102,2025,valid
+213011338,Sunshine West,Victoria,142,18693,75.9642646980153,2025,valid
+213011339,Sydenham,Victoria,24,12025,19.95841995841996,2025,valid
+213011340,Taylors Lakes,Victoria,42,16896,24.857954545454547,2025,valid
+213011569,Deer Park,Victoria,27,18368,14.699477351916377,2025,valid
+213011570,Derrimut,Victoria,85,8958,94.88725161866489,2025,valid
+213021341,Altona,Victoria,55,14428,38.120321596894925,2025,valid
+213021342,Altona Meadows,Victoria,24,18783,12.777511579619869,2025,valid
+213021343,Altona North,Victoria,67,16493,40.62329473109804,2025,valid
+213021344,Newport,Victoria,37,20328,18.201495474222746,2025,valid
+213021345,Seabrook,Victoria,6,4932,12.165450121654501,2025,valid
+213021346,Williamstown,Victoria,85,17102,49.70178926441352,2025,valid
+213031347,Braybrook,Victoria,63,20916,30.120481927710845,2025,valid
+213031348,Footscray,Victoria,41,20882,19.634134661430895,2025,valid
+213031349,Maribyrnong,Victoria,22,13960,15.759312320916905,2025,valid
+213031350,Seddon - Kingsville,Victoria,12,9748,12.310217480508822,2025,valid
+213031351,West Footscray - Tottenham,Victoria,58,13007,44.59137387560545,2025,valid
+213031352,Yarraville,Victoria,44,16159,27.22940776038121,2025,valid
+213041353,Bacchus Marsh,Victoria,70,27182,25.75233610477522,2025,valid
+213041358,Melton West,Victoria,37,22710,16.292382210479964,2025,valid
+213041359,Rockbank - Mount Cottrell,Victoria,116,35856,32.351628737170905,2025,valid
+213041360,Taylors Hill,Victoria,21,19874,10.566569387138976,2025,valid
+213041461,Burnside,Victoria,10,6635,15.071590052750565,2025,valid
+213041462,Burnside Heights,Victoria,6,6443,9.312432096849294,2025,valid
+213041463,Caroline Springs,Victoria,33,20934,15.763829177414731,2025,valid
+213041571,Brookfield,Victoria,11,10665,10.314111579934366,2025,valid
+213041572,Cobblebank - Strathtulloh,Victoria,16,12885,12.417539774932091,2025,valid
+213041573,Eynesbury - Exford,Victoria,3,4309,6.96217219772569,2025,valid
+213041574,Fraser Rise - Plumpton,Victoria,24,24739,9.701281377581957,2025,valid
+213041575,Hillside,Victoria,23,16173,14.221232919062635,2025,valid
+213041576,Kurunjang - Toolern Vale,Victoria,19,12082,15.725873199801358,2025,valid
+213041577,Melton,Victoria,36,8007,44.96065942300487,2025,valid
+213041578,Melton South - Weir Views,Victoria,17,22821,7.449279172691819,2025,valid
+213051361,Hoppers Crossing - North,Victoria,81,18359,44.120050111661854,2025,valid
+213051362,Hoppers Crossing - South,Victoria,22,18906,11.636517507669522,2025,valid
+213051363,Laverton,Victoria,100,12816,78.02746566791511,2025,valid
+213051368,Werribee - South,Victoria,69,17936,38.47011596788582,2025,valid
+213051464,Point Cook - East,Victoria,28,21797,12.84580446850484,2025,valid
+213051466,Point Cook - South,Victoria,30,20835,14.398848092152628,2025,valid
+213051467,Werribee - East,Victoria,18,19205,9.372559229367353,2025,valid
+213051468,Werribee - West,Victoria,32,32943,9.713747988950612,2025,valid
+213051579,Manor Lakes - Quandong,Victoria,12,13667,8.78027365186215,2025,valid
+213051580,Point Cook - North East,Victoria,31,14746,21.0226502102265,2025,valid
+213051581,Point Cook - North West,Victoria,6,10151,5.910747709585262,2025,valid
+213051582,Tarneit (West) - Mount Cottrell,Victoria,17,19169,8.86848557566905,2025,valid
+213051583,Tarneit - Central,Victoria,34,29246,11.62552143882924,2025,valid
+213051584,Tarneit - North,Victoria,12,15880,7.556675062972292,2025,valid
+213051585,Tarneit - South,Victoria,18,11864,15.171948752528658,2025,valid
+213051586,Truganina - North,Victoria,63,15384,40.95163806552262,2025,valid
+213051587,Truganina - South East,Victoria,20,10846,18.439977872026553,2025,valid
+213051588,Truganina - South West,Victoria,21,20395,10.296641333660212,2025,valid
+213051589,Wyndham Vale - North,Victoria,7,14515,4.822597313124354,2025,valid
+213051590,Wyndham Vale - South,Victoria,16,14135,11.319419879731162,2025,valid
+214011370,Carrum Downs,Victoria,255,23464,108.67712240027275,2025,valid
+214011371,Frankston,Victoria,60,25043,23.95879087968694,2025,valid
+214011372,Frankston North,Victoria,17,19794,8.588461149843386,2025,valid
+214011373,Frankston South,Victoria,39,19374,20.130071229482812,2025,valid
+214011374,Langwarrin,Victoria,68,25788,26.36885373041725,2025,valid
+214011375,Seaford (Vic.),Victoria,116,18305,63.370663753072925,2025,valid
+214011376,Skye - Sandhurst,Victoria,32,13601,23.527681788103816,2025,valid
+214021377,Dromana,Victoria,51,13925,36.62477558348294,2025,valid
+214021378,Flinders,Victoria,45,6064,74.2084432717678,2025,valid
+214021379,Hastings - Somers,Victoria,86,23795,36.14204664845556,2025,valid
+214021381,Mount Eliza,Victoria,61,19110,31.920460491889063,2025,valid
+214021382,Mount Martha,Victoria,53,20161,26.28837855265116,2025,valid
+214021383,Point Nepean,Victoria,50,20574,24.30251774083795,2025,valid
+214021384,Rosebud - McCrae,Victoria,67,23508,28.50093585162498,2025,valid
+214021385,Somerville,Victoria,106,19098,55.50319405173317,2025,valid
+214021591,Mornington - East,Victoria,68,15082,45.08685850682933,2025,valid
+214021592,Mornington - West,Victoria,23,10900,21.10091743119266,2025,valid
+215011386,Ararat,Victoria,10,8399,11.906179307060365,2025,valid
+215011387,Ararat Surrounds,Victoria,10,3181,31.436655139893116,2025,valid
+215011388,Horsham,Victoria,61,16882,36.13315957824902,2025,valid
+215011389,Horsham Surrounds,Victoria,12,3399,35.3045013239188,2025,valid
+215011390,Nhill Region,Victoria,20,6698,29.859659599880562,2025,valid
+215011391,St Arnaud,Victoria,12,3394,35.35651149086623,2025,valid
+215011392,Stawell,Victoria,29,8438,34.36833372837165,2025,valid
+215011393,West Wimmera,Victoria,7,2656,26.355421686746986,2025,valid
+215011394,Yarriambiack,Victoria,16,6246,25.61639449247518,2025,valid
+215021395,Irymple,Victoria,37,8079,45.79774724594628,2025,valid
+215021396,Merbein,Victoria,19,4971,38.221685777509556,2025,valid
+215021398,Mildura Surrounds,Victoria,16,3779,42.33924318602805,2025,valid
+215021399,Red Cliffs,Victoria,21,6055,34.68208092485549,2025,valid
+215021469,Mildura - North,Victoria,78,17718,44.02302742973247,2025,valid
+215021470,Mildura - South,Victoria,39,16707,23.343508708924404,2025,valid
+215031400,Buloke,Victoria,23,5891,39.04260736717026,2025,valid
+215031401,Gannawarra,Victoria,22,6522,33.731984053971175,2025,valid
+215031402,Kerang,Victoria,24,3784,63.424947145877375,2025,valid
+215031403,Robinvale,Victoria,9,3749,24.0064017071219,2025,valid
+215031404,Swan Hill,Victoria,69,10747,64.20396389690146,2025,valid
+215031405,Swan Hill Surrounds,Victoria,22,6467,34.01886500695841,2025,valid
+216011406,Echuca,Victoria,68,15357,44.279481669596926,2025,valid
+216011407,Kyabram,Victoria,58,10838,53.515408747001295,2025,valid
+216011408,Lockington - Gunbower,Victoria,16,3950,40.50632911392405,2025,valid
+216011409,Rochester,Victoria,20,3691,54.1858574911948,2025,valid
+216011410,Rushworth,Victoria,24,4210,57.00712589073635,2025,valid
+216021411,Cobram,Victoria,29,6626,43.76697856927256,2025,valid
+216021412,Moira,Victoria,11,2841,38.71876099964801,2025,valid
+216021413,Numurkah,Victoria,84,12446,67.49156355455568,2025,valid
+216021414,Yarrawonga,Victoria,31,8953,34.62526527420977,2025,valid
+216031415,Mooroopna,Victoria,18,8391,21.451555237754736,2025,valid
+216031416,Shepparton - North,Victoria,83,20312,40.86254430878299,2025,valid
+216031418,Shepparton Surrounds - East,Victoria,19,4055,46.855733662145504,2025,valid
+216031419,Shepparton Surrounds - West,Victoria,55,10346,53.16064179393002,2025,valid
+216031593,Kialla,Victoria,29,10295,28.169014084507044,2025,valid
+216031594,Shepparton - South East,Victoria,45,16334,27.549895922615402,2025,valid
+217011420,Glenelg (Vic.),Victoria,27,8773,30.776245298073636,2025,valid
+217011421,Hamilton (Vic.),Victoria,39,10299,37.86775415088844,2025,valid
+217011422,Portland,Victoria,35,11124,31.463502337288745,2025,valid
+217011423,Southern Grampians,Victoria,19,6205,30.6204673650282,2025,valid
+217031471,Camperdown,Victoria,13,3356,38.73659117997616,2025,valid
+217031472,Colac,Victoria,37,12558,29.46329033285555,2025,valid
+217031473,Colac Surrounds,Victoria,35,5670,61.72839506172839,2025,valid
+217031474,Corangamite - North,Victoria,19,5201,36.53143626225726,2025,valid
+217031475,Corangamite - South,Victoria,27,7089,38.08717731696995,2025,valid
+217031476,Otway,Victoria,7,3974,17.61449421238047,2025,valid
+217041477,Moyne - East,Victoria,24,7136,33.6322869955157,2025,valid
+217041478,Moyne - West,Victoria,36,10246,35.135662697638104,2025,valid
+217041479,Warrnambool - North,Victoria,50,23099,21.6459586995108,2025,valid
+217041480,Warrnambool - South,Victoria,71,13590,52.24429727740986,2025,valid
+301011001,Alexandra Hills,Queensland,28,17361,16.12810321986061,2025,valid
+301011002,Belmont - Gumdale,Queensland,28,7965,35.15379786566228,2025,valid
+301011003,Birkdale,Queensland,44,16024,27.458811782326514,2025,valid
+301011004,Capalaba,Queensland,147,19277,76.25667894381907,2025,valid
+301011005,Thorneside,Queensland,18,4020,44.776119402985074,2025,valid
+301011006,Wellington Point,Queensland,31,12391,25.018158340731176,2025,valid
+301021007,Cleveland,Queensland,80,16952,47.192071731949035,2025,valid
+301021008,Ormiston,Queensland,23,7042,32.661175802328884,2025,valid
+301021009,Redland Bay,Queensland,61,20283,30.07444658088054,2025,valid
+301021011,Sheldon - Mount Cotton,Queensland,42,8742,48.04392587508579,2025,valid
+301021012,Thornlands,Queensland,51,21863,23.327082285139277,2025,valid
+301021013,Victoria Point,Queensland,31,16134,19.214082062724682,2025,valid
+301021550,North Stradbroke Island,Queensland,4,2276,17.57469244288225,2025,valid
+301021551,Southern Moreton Bay Islands,Queensland,14,10466,13.376648194152493,2025,valid
+301031014,Brisbane Port - Lytton,Queensland,20,10,20000.0,2025,valid
+301031015,Manly - Lota,Queensland,25,8319,30.051688904916457,2025,valid
+301031016,Manly West,Queensland,25,12380,20.193861066235865,2025,valid
+301031017,Murarrie,Queensland,66,5204,126.82551883166795,2025,valid
+301031018,Tingalpa,Queensland,49,9404,52.10548702679711,2025,valid
+301031019,Wakerley,Queensland,34,9865,34.46528129751647,2025,valid
+301031020,Wynnum,Queensland,48,15505,30.9577555627217,2025,valid
+301031021,Wynnum West - Hemmant,Queensland,70,17027,41.111176366946616,2025,valid
+302011022,Bald Hills,Queensland,8,8412,9.510223490252022,2025,valid
+302011023,Bridgeman Downs,Queensland,23,11888,19.347240915208612,2025,valid
+302011024,Carseldine,Queensland,14,10472,13.36898395721925,2025,valid
+302011025,Everton Park,Queensland,20,11303,17.69441741130673,2025,valid
+302011026,McDowall,Queensland,11,8886,12.379023182534324,2025,valid
+302021027,Aspley,Queensland,18,13789,13.053883530350278,2025,valid
+302021028,Chermside,Queensland,15,12811,11.708687846382015,2025,valid
+302021029,Chermside West,Queensland,11,7050,15.602836879432624,2025,valid
+302021030,Geebung,Queensland,84,4655,180.45112781954887,2025,valid
+302021031,Kedron - Gordon Park,Queensland,33,15654,21.080873898045226,2025,valid
+302021032,Stafford,Queensland,34,7421,45.81592777253739,2025,valid
+302021033,Stafford Heights,Queensland,14,7356,19.032082653616097,2025,valid
+302021034,Wavell Heights,Queensland,24,11227,21.37703749888661,2025,valid
+302031035,Boondall,Queensland,17,10430,16.299137104506233,2025,valid
+302031036,Brisbane Airport,Queensland,23,131,1755.7251908396945,2025,valid
+302031037,Eagle Farm - Pinkenba,Queensland,80,2746,291.33284777858705,2025,valid
+302031038,Northgate - Virginia,Queensland,95,7591,125.14820181794231,2025,valid
+302031039,Nudgee - Banyo,Queensland,67,11757,56.987326698987836,2025,valid
+302031040,Nundah,Queensland,22,14812,14.852822036186875,2025,valid
+302041041,Bracken Ridge,Queensland,23,18847,12.203533718894255,2025,valid
+302041042,Brighton (Qld),Queensland,19,10213,18.60374033095075,2025,valid
+302041043,Deagon,Queensland,8,4034,19.831432821021316,2025,valid
+302041044,Sandgate - Shorncliffe,Queensland,17,6975,24.372759856630825,2025,valid
+302041045,Taigum - Fitzgibbon,Queensland,11,15445,7.12204596956944,2025,valid
+302041046,Zillmere,Queensland,14,10132,13.81760757994473,2025,valid
+303011047,Camp Hill,Queensland,37,13067,28.315604193770568,2025,valid
+303011048,Cannon Hill,Queensland,11,7746,14.200877872450297,2025,valid
+303011049,Carina,Queensland,17,12897,13.181360006202993,2025,valid
+303011050,Carina Heights,Queensland,9,7500,11.999999999999998,2025,valid
+303011051,Carindale,Queensland,35,17402,20.11263073209976,2025,valid
+303021052,Annerley,Queensland,22,13137,16.74659359062191,2025,valid
+303021053,Coorparoo,Queensland,45,19140,23.510971786833856,2025,valid
+303021054,Fairfield - Dutton Park,Queensland,7,5526,12.667390517553383,2025,valid
+303021055,Greenslopes,Queensland,20,11607,17.230981304385285,2025,valid
+303021056,Holland Park,Queensland,17,9279,18.32093975643927,2025,valid
+303021057,Holland Park West,Queensland,11,6779,16.226582091753947,2025,valid
+303021058,Woolloongabba,Queensland,24,10367,23.150381016687565,2025,valid
+303021059,Yeronga,Queensland,43,10950,39.269406392694066,2025,valid
+303031060,Eight Mile Plains,Queensland,56,16789,33.35517302996009,2025,valid
+303031061,Macgregor (Qld),Queensland,8,6684,11.968880909634949,2025,valid
+303031062,Mansfield (Qld),Queensland,40,9369,42.693990820791974,2025,valid
+303031063,Mount Gravatt,Queensland,28,17149,16.32748265204968,2025,valid
+303031064,Rochedale - Burbank,Queensland,36,13761,26.16088947024199,2025,valid
+303031065,Upper Mount Gravatt,Queensland,32,12276,26.06712284131639,2025,valid
+303031066,Wishart,Queensland,20,11870,16.849199663016005,2025,valid
+303041067,Coopers Plains,Queensland,72,6428,112.00995644057251,2025,valid
+303041068,Moorooka,Queensland,27,11885,22.717711400925534,2025,valid
+303041069,Robertson,Queensland,18,5745,31.33159268929504,2025,valid
+303041070,Salisbury - Nathan,Queensland,71,8341,85.12168804699675,2025,valid
+303041071,Tarragindi,Queensland,18,11785,15.273652948663555,2025,valid
+303051072,Algester,Queensland,12,10205,11.758941695247428,2025,valid
+303051073,Calamvale - Stretton,Queensland,47,25416,18.49228832231665,2025,valid
+303051074,Pallara - Willawong,Queensland,49,16586,29.54298806222115,2025,valid
+303051075,Parkinson - Drewvale,Queensland,40,17108,23.380874444704233,2025,valid
+303051076,Rocklea - Acacia Ridge,Queensland,244,10061,242.5206241924262,2025,valid
+303061077,Kuraby,Queensland,11,9507,11.570421794467233,2025,valid
+303061078,Runcorn,Queensland,24,15762,15.226494099733538,2025,valid
+303061079,Sunnybank,Queensland,23,10570,21.759697256385998,2025,valid
+303061080,Sunnybank Hills,Queensland,40,19742,20.26137169486374,2025,valid
+304011081,Jindalee - Mount Ommaney,Queensland,13,7925,16.40378548895899,2025,valid
+304011082,Middle Park - Jamboree Heights,Queensland,12,7411,16.192146808797734,2025,valid
+304011083,Riverhills,Queensland,4,4267,9.374267635340988,2025,valid
+304011084,Seventeen Mile Rocks - Sinnamon Park,Queensland,44,9886,44.507384179647985,2025,valid
+304011085,Westlake,Queensland,8,4502,17.769880053309638,2025,valid
+304021086,Bellbowrie - Moggill,Queensland,18,11211,16.055659620016055,2025,valid
+304021087,Brookfield - Kenmore Hills,Queensland,18,7202,24.99305748403221,2025,valid
+304021088,Chapel Hill,Queensland,22,11166,19.70266881604872,2025,valid
+304021089,Fig Tree Pocket,Queensland,8,4632,17.271157167530223,2025,valid
+304021090,Kenmore,Queensland,26,10170,25.565388397246807,2025,valid
+304021091,Pinjarra Hills - Pullenvale,Queensland,15,5885,25.48853016142736,2025,valid
+304031092,Chelmer - Graceville,Queensland,18,8015,22.457891453524642,2025,valid
+304031093,Corinda,Queensland,5,5686,8.793527963418924,2025,valid
+304031094,Indooroopilly,Queensland,28,15496,18.069179143004646,2025,valid
+304031095,Sherwood,Queensland,12,7050,17.02127659574468,2025,valid
+304031096,St Lucia,Queensland,9,15447,5.826374053214216,2025,valid
+304031097,Taringa,Queensland,14,10156,13.784954706577393,2025,valid
+304041098,Enoggera,Queensland,26,9945,26.143790849673202,2025,valid
+304041099,Enoggera Reservoir,Queensland,0,33,0.0,2025,valid
+304041100,Keperra,Queensland,6,7561,7.935458272715249,2025,valid
+304041101,Mitchelton,Queensland,15,9734,15.40990343127183,2025,valid
+304041102,Mount Coot-tha,Queensland,0,0,,2025,zero_population
+304041103,The Gap,Queensland,28,18230,15.359297860669226,2025,valid
+304041104,Upper Kedron - Ferny Grove,Queensland,17,12833,13.247097327203305,2025,valid
+305011105,Brisbane City,Queensland,172,17502,98.27448291623814,2025,valid
+305011106,Fortitude Valley,Queensland,36,11889,30.28009084027252,2025,valid
+305011107,Highgate Hill,Queensland,14,7335,19.0865712338105,2025,valid
+305011108,Kangaroo Point,Queensland,20,12206,16.385384237260364,2025,valid
+305011109,New Farm,Queensland,21,13880,15.129682997118156,2025,valid
+305011110,South Brisbane,Queensland,32,17517,18.267968259405148,2025,valid
+305011111,Spring Hill,Queensland,17,9361,18.16045294306164,2025,valid
+305011112,West End,Queensland,38,17928,21.195894689870595,2025,valid
+305021113,Balmoral,Queensland,8,4885,16.37666325486182,2025,valid
+305021114,Bulimba,Queensland,27,7925,34.06940063091483,2025,valid
+305021115,East Brisbane,Queensland,31,6833,45.36806673496268,2025,valid
+305021116,Hawthorne,Queensland,16,5702,28.06032970887408,2025,valid
+305021117,Morningside - Seven Hills,Queensland,54,16055,33.634381812519464,2025,valid
+305021118,Norman Park,Queensland,9,7414,12.139196115457244,2025,valid
+305031119,Albion,Queensland,33,5026,65.65857540787903,2025,valid
+305031120,Alderley,Queensland,9,7270,12.379642365887209,2025,valid
+305031121,Ascot,Queensland,17,6454,26.34025410598079,2025,valid
+305031122,Clayfield,Queensland,12,11773,10.192814066083411,2025,valid
+305031123,Grange,Queensland,9,4942,18.21125050586807,2025,valid
+305031124,Hamilton (Qld),Queensland,22,7408,29.697624190064797,2025,valid
+305031125,Hendra,Queensland,12,5204,23.059185242121444,2025,valid
+305031126,Kelvin Grove - Herston,Queensland,24,12531,19.152501795547042,2025,valid
+305031127,Newmarket,Queensland,8,5493,14.563990533406153,2025,valid
+305031128,Newstead - Bowen Hills,Queensland,71,21474,33.06323926608923,2025,valid
+305031129,Wilston,Queensland,4,4168,9.596928982725528,2025,valid
+305031130,Windsor,Queensland,25,8951,27.92984024131382,2025,valid
+305031131,Wooloowin - Lutwyche,Queensland,13,12298,10.570824524312897,2025,valid
+305041132,Ashgrove,Queensland,22,14911,14.7542083025954,2025,valid
+305041133,Auchenflower,Queensland,5,6222,8.036001285760205,2025,valid
+305041134,Bardon,Queensland,25,11168,22.38538681948424,2025,valid
+305041135,Paddington - Milton,Queensland,56,13364,41.903621670158635,2025,valid
+305041136,Red Hill (Qld),Queensland,10,6757,14.79946721918011,2025,valid
+305041137,Toowong,Queensland,18,13725,13.114754098360656,2025,valid
+306011138,Brinsmead,Queensland,10,5702,17.5377060680463,2025,valid
+306011139,Clifton Beach - Kewarra Beach,Queensland,31,12760,24.294670846394983,2025,valid
+306011140,Freshwater - Stratford,Queensland,17,3856,44.08713692946058,2025,valid
+306011141,Redlynch,Queensland,21,14877,14.115749142972374,2025,valid
+306011142,Trinity Beach - Smithfield,Queensland,34,19862,17.11811499345484,2025,valid
+306011143,Yorkeys Knob - Machans Beach,Queensland,15,6319,23.737933217281213,2025,valid
+306021144,Bentley Park,Queensland,18,9214,19.535489472541787,2025,valid
+306021145,Cairns City,Queensland,48,13599,35.29671299360247,2025,valid
+306021146,Earlville - Bayview Heights,Queensland,18,8723,20.635102602315715,2025,valid
+306021147,Edmonton,Queensland,28,12342,22.686760654675094,2025,valid
+306021148,Gordonvale - Trinity,Queensland,46,11413,40.30491544729694,2025,valid
+306021149,Kanimbla - Mooroobool,Queensland,18,10375,17.349397590361445,2025,valid
+306021150,Lamb Range,Queensland,0,6,0.0,2025,valid
+306021151,Manoora,Queensland,3,6323,4.744583267436344,2025,valid
+306021152,Manunda,Queensland,28,5321,52.62168765269686,2025,valid
+306021153,Mount Sheridan,Queensland,11,9042,12.165450121654501,2025,valid
+306021154,Westcourt - Bungalow,Queensland,115,6811,168.8445162237557,2025,valid
+306021155,White Rock,Queensland,11,5198,21.16198537899192,2025,valid
+306021156,Whitfield - Edge Hill,Queensland,16,8573,18.66324507173685,2025,valid
+306021157,Woree,Queensland,10,5252,19.04036557501904,2025,valid
+306031158,Babinda,Queensland,16,4765,33.57817418677859,2025,valid
+306031159,Innisfail,Queensland,35,9516,36.780159730979406,2025,valid
+306031160,Johnstone,Queensland,29,8281,35.019925129815235,2025,valid
+306031161,Tully,Queensland,33,11867,27.808207634617002,2025,valid
+306031162,Wooroonooran,Queensland,0,3,0.0,2025,valid
+306031163,Yarrabah,Queensland,0,2669,0.0,2025,valid
+306041164,Daintree,Queensland,30,7011,42.78990158322636,2025,valid
+306041165,Port Douglas,Queensland,27,6041,44.69458698890912,2025,valid
+306051166,Atherton,Queensland,46,12472,36.882617062219374,2025,valid
+306051167,Herberton,Queensland,17,5730,29.66841186736475,2025,valid
+306051168,Kuranda,Queensland,31,5033,61.59348301212001,2025,valid
+306051169,Malanda - Yungaburra,Queensland,33,9700,34.02061855670103,2025,valid
+306051170,Mareeba,Queensland,49,12752,38.42534504391468,2025,valid
+307011171,Balonne,Queensland,16,4350,36.7816091954023,2025,valid
+307011172,Chinchilla,Queensland,35,9159,38.21377879681188,2025,valid
+307011173,Goondiwindi,Queensland,39,6251,62.39001759718445,2025,valid
+307011174,Inglewood - Waggamba,Queensland,20,4179,47.85833931562575,2025,valid
+307011175,Miles - Wandoan,Queensland,12,4394,27.309968138370504,2025,valid
+307011176,Roma,Queensland,30,7083,42.35493434985175,2025,valid
+307011177,Roma Surrounds,Queensland,26,6287,41.35517735008748,2025,valid
+307011178,Tara,Queensland,13,4030,32.25806451612903,2025,valid
+307021179,Crows Nest - Rosalie,Queensland,46,9824,46.82410423452769,2025,valid
+307021180,Jondaryan,Queensland,37,7826,47.27830309225658,2025,valid
+307021181,Millmerran,Queensland,16,3351,47.74694121157864,2025,valid
+307021182,Pittsworth,Queensland,36,5951,60.494034616030916,2025,valid
+307021183,Wambo,Queensland,89,17853,49.85156556321066,2025,valid
+307031184,Clifton - Greenmount,Queensland,25,5433,46.01509295048776,2025,valid
+307031185,Southern Downs - East,Queensland,23,4630,49.676025917926566,2025,valid
+307031186,Southern Downs - West,Queensland,29,5347,54.23602019824201,2025,valid
+307031187,Stanthorpe,Queensland,27,5480,49.270072992700726,2025,valid
+307031188,Stanthorpe Surrounds,Queensland,46,6544,70.29339853300733,2025,valid
+307031189,Warwick,Queensland,70,16197,43.217879854294004,2025,valid
+308011190,Central Highlands - East,Queensland,11,7647,14.384726036354126,2025,valid
+308011191,Central Highlands - West,Queensland,28,7683,36.444097357802946,2025,valid
+308011192,Emerald,Queensland,46,15238,30.187688673054208,2025,valid
+308031205,Berserker,Queensland,15,7293,20.567667626491154,2025,valid
+308031206,Bouldercombe,Queensland,7,1972,35.496957403651116,2025,valid
+308031207,Emu Park,Queensland,11,6314,17.421602787456447,2025,valid
+308031208,Frenchville - Mount Archer,Queensland,14,9246,15.141682889898334,2025,valid
+308031209,Glenlee - Rockyview,Queensland,18,6002,29.990003332222592,2025,valid
+308031210,Gracemere,Queensland,22,13305,16.53513716647877,2025,valid
+308031211,Lakes Creek,Queensland,10,5037,19.853087155052613,2025,valid
+308031212,Mount Morgan,Queensland,0,3090,0.0,2025,valid
+308031213,Norman Gardens,Queensland,14,11288,12.402551381998583,2025,valid
+308031214,Park Avenue,Queensland,15,5538,27.085590465872155,2025,valid
+308031215,Parkhurst - Kawana,Queensland,32,8181,39.11502261337245,2025,valid
+308031216,Rockhampton - West,Queensland,14,6148,22.77163305139883,2025,valid
+308031217,Rockhampton City,Queensland,24,3345,71.74887892376681,2025,valid
+308031218,Rockhampton Surrounds - East,Queensland,13,3754,34.629728289824186,2025,valid
+308031219,Rockhampton Surrounds - North,Queensland,18,5054,35.61535417491096,2025,valid
+308031220,Rockhampton Surrounds - West,Queensland,12,3226,37.197768133911964,2025,valid
+308031221,Shoalwater Bay,Queensland,0,22,0.0,2025,valid
+308031222,The Range - Allenstown,Queensland,11,8125,13.538461538461538,2025,valid
+308031223,Yeppoon,Queensland,54,22522,23.97655625610514,2025,valid
+308041528,Banana,Queensland,27,9297,29.041626331074543,2025,valid
+308041529,Biloela,Queensland,16,5847,27.36446040704635,2025,valid
+308051530,Agnes Water - Miriam Vale,Queensland,30,8267,36.2888593201887,2025,valid
+308051531,Boyne Island - Tannum Sands,Queensland,23,10760,21.37546468401487,2025,valid
+308051532,Callemondah,Queensland,8,33,2424.2424242424245,2025,valid
+308051533,Clinton - New Auckland,Queensland,22,15311,14.368754490235778,2025,valid
+308051534,Gladstone,Queensland,35,6839,51.1770726714432,2025,valid
+308051535,Gladstone Hinterland,Queensland,30,12274,24.44190972788007,2025,valid
+308051536,Kin Kora - Sun Valley,Queensland,3,3581,8.377548170901983,2025,valid
+308051537,South Trees,Queensland,0,0,,2025,zero_population
+308051538,Telina - Toolooa,Queensland,16,6828,23.432923257176334,2025,valid
+308051539,West Gladstone,Queensland,7,5153,13.584319813700757,2025,valid
+309011224,Broadbeach Waters,Queensland,36,9109,39.52135250850807,2025,valid
+309011225,Burleigh Heads,Queensland,212,10055,210.84037792143212,2025,valid
+309011226,Burleigh Waters,Queensland,51,15180,33.59683794466403,2025,valid
+309011227,Mermaid Beach - Broadbeach,Queensland,64,16126,39.687461242713624,2025,valid
+309011228,Mermaid Waters,Queensland,45,14564,30.898104916231805,2025,valid
+309011229,Miami,Queensland,42,8531,49.23221193295041,2025,valid
+309021230,Coolangatta,Queensland,24,7204,33.31482509716824,2025,valid
+309021231,Currumbin - Tugun,Queensland,49,13477,36.35823996438376,2025,valid
+309021232,Currumbin Waters,Queensland,100,10220,97.84735812133071,2025,valid
+309021233,Elanora,Queensland,33,13343,24.7320692497939,2025,valid
+309021234,Palm Beach,Queensland,54,18678,28.911018310311597,2025,valid
+309031235,Arundel,Queensland,110,12056,91.24087591240875,2025,valid
+309031236,Biggera Waters,Queensland,59,11016,53.55846042120552,2025,valid
+309031237,Coombabah,Queensland,39,10815,36.061026352288486,2025,valid
+309031238,Labrador,Queensland,48,19745,24.309951886553556,2025,valid
+309031239,Paradise Point - Hollywell,Queensland,68,10736,63.338301043219076,2025,valid
+309031240,Runaway Bay,Queensland,49,9755,50.23065094823168,2025,valid
+309041241,Guanaba - Springbrook,Queensland,28,4687,59.73970556859398,2025,valid
+309041242,Tamborine - Canungra,Queensland,81,16855,48.05695639276179,2025,valid
+309051243,Currumbin Valley - Tallebudgera,Queensland,32,8112,39.447731755424066,2025,valid
+309051244,Mudgeeraba - Bonogin,Queensland,74,20770,35.62831006259027,2025,valid
+309051245,Reedy Creek - Andrews,Queensland,19,9610,19.771071800208116,2025,valid
+309061246,Carrara,Queensland,76,14340,52.998605299860536,2025,valid
+309061247,Highland Park,Queensland,32,8797,36.376037285438215,2025,valid
+309061248,Nerang - Mount Nathan,Queensland,127,22560,56.294326241134755,2025,valid
+309061249,Pacific Pines - Gaven,Queensland,56,19143,29.253513033484822,2025,valid
+309061250,Worongary - Tallai,Queensland,50,9211,54.28292259255238,2025,valid
+309071251,Coomera,Queensland,110,24313,45.243285485131416,2025,valid
+309071252,Helensvale,Queensland,77,21073,36.53964789066578,2025,valid
+309071253,Hope Island,Queensland,79,18253,43.28055662082946,2025,valid
+309071254,Jacobs Well - Alberton,Queensland,46,5608,82.02567760342369,2025,valid
+309071256,Oxenford - Maudsland,Queensland,75,19732,38.00932495438881,2025,valid
+309071552,Ormeau (East) - Stapylton,Queensland,117,12022,97.32157710863417,2025,valid
+309071553,Ormeau (West) - Yatala,Queensland,185,13037,141.9038122267393,2025,valid
+309071554,Pimpama - North,Queensland,21,13841,15.172314139151794,2025,valid
+309071555,Pimpama - South,Queensland,14,12833,10.909374269461544,2025,valid
+309071556,Upper Coomera (South) - Wongawallan,Queensland,39,12438,31.35552339604438,2025,valid
+309071557,Upper Coomera - North,Queensland,65,21884,29.70206543593493,2025,valid
+309071558,Willow Vale - Pimpama (West),Queensland,19,8721,21.786492374727672,2025,valid
+309081259,Clear Island Waters,Queensland,8,4570,17.5054704595186,2025,valid
+309081260,Merrimac,Queensland,22,7423,29.637612825003366,2025,valid
+309081262,Varsity Lakes,Queensland,60,18207,32.95435821387378,2025,valid
+309081559,Robina - East,Queensland,38,18355,20.70280577499319,2025,valid
+309081560,Robina - West,Queensland,21,9678,21.698698078115314,2025,valid
+309091263,Ashmore,Queensland,64,12809,49.96486845186978,2025,valid
+309091264,Molendinar,Queensland,149,6707,222.15595646339645,2025,valid
+309091265,Parkwood,Queensland,28,9135,30.65134099616858,2025,valid
+309091540,Southport - North,Queensland,118,20260,58.24284304047384,2025,valid
+309091541,Southport - South,Queensland,57,20247,28.15231886205364,2025,valid
+309101267,Benowa,Queensland,31,10728,28.89634601043997,2025,valid
+309101268,Bundall,Queensland,55,5048,108.95404120443742,2025,valid
+309101269,Main Beach,Queensland,15,4418,33.952014486192844,2025,valid
+309101561,Surfers Paradise - North,Queensland,41,14640,28.00546448087432,2025,valid
+309101562,Surfers Paradise - South,Queensland,33,17410,18.954623779437107,2025,valid
+310011271,Darra - Sumner,Queensland,137,5141,266.4851196265318,2025,valid
+310011272,Durack,Queensland,16,8813,18.15499829796891,2025,valid
+310011274,Inala - Richlands,Queensland,64,21884,29.24511058307439,2025,valid
+310011275,Oxley (Qld),Queensland,18,9434,19.079923680305278,2025,valid
+310011276,Wacol,Queensland,73,6975,104.6594982078853,2025,valid
+310011563,Doolandella,Queensland,18,9953,18.0849994976389,2025,valid
+310011564,Forest Lake - Ellen Grove,Queensland,50,24080,20.764119601328904,2025,valid
+310021277,Boonah,Queensland,66,13450,49.070631970260216,2025,valid
+310021278,Esk,Queensland,21,5236,40.106951871657756,2025,valid
+310021279,Lake Manchester - England Creek,Queensland,0,0,,2025,zero_population
+310021280,Lockyer Valley - East,Queensland,78,24138,32.31419338801889,2025,valid
+310021281,Lowood,Queensland,63,15478,40.7029331955033,2025,valid
+310021282,Rosewood,Queensland,47,16825,27.93462109955423,2025,valid
+310031283,Brassall,Queensland,12,13196,9.093664746892998,2025,valid
+310031284,Bundamba,Queensland,28,10405,26.910139356078812,2025,valid
+310031285,Churchill - Yamanto,Queensland,22,7182,30.63213589529379,2025,valid
+310031286,Ipswich - Central,Queensland,32,6923,46.22273580817565,2025,valid
+310031287,Ipswich - East,Queensland,37,19056,19.41645675902603,2025,valid
+310031288,Ipswich - North,Queensland,17,4680,36.324786324786324,2025,valid
+310031289,Karalee - Barellan Point,Queensland,20,7320,27.3224043715847,2025,valid
+310031290,Karana Downs,Queensland,19,6261,30.34659000159719,2025,valid
+310031291,Leichhardt - One Mile,Queensland,20,8911,22.44417012680956,2025,valid
+310031292,North Ipswich - Tivoli,Queensland,14,6671,20.986358866736623,2025,valid
+310031293,Raceview,Queensland,21,16382,12.818947625442558,2025,valid
+310031294,Ripley,Queensland,27,23459,11.509442005200562,2025,valid
+310031295,Riverview,Queensland,10,3168,31.565656565656564,2025,valid
+310041297,Camira - Gailes,Queensland,21,9794,21.44169899938738,2025,valid
+310041298,Carole Park,Queensland,70,7,100000.0,2025,valid
+310041299,Collingwood Park - Redbank,Queensland,18,14921,12.063534615642382,2025,valid
+310041300,Goodna,Queensland,13,11381,11.422546349178456,2025,valid
+310041301,New Chum,Queensland,3,3,10000.0,2025,valid
+310041302,Redbank Plains,Queensland,27,29057,9.292081082011219,2025,valid
+310041303,Springfield,Queensland,7,8537,8.19960173363008,2025,valid
+310041304,Springfield Lakes,Queensland,29,29522,9.823182711198427,2025,valid
+310041565,Augustine Heights - Brookwater,Queensland,14,10178,13.75515818431912,2025,valid
+310041566,Bellbird Park,Queensland,13,10949,11.873230432002922,2025,valid
+311011305,Beaudesert,Queensland,56,16642,33.64980170652566,2025,valid
+311021306,Beenleigh,Queensland,46,9004,51.08840515326522,2025,valid
+311021307,Eagleby,Queensland,15,14488,10.353395913859746,2025,valid
+311021308,Edens Landing - Holmview,Queensland,11,11432,9.622113365990202,2025,valid
+311021309,Mount Warren Park,Queensland,12,5964,20.12072434607646,2025,valid
+311021310,Wolffdene - Bahrs Scrub,Queensland,28,12765,21.934978456717587,2025,valid
+311031311,Boronia Heights - Park Ridge,Queensland,34,27073,12.558637757175047,2025,valid
+311031312,Browns Plains,Queensland,28,9517,29.42103604076915,2025,valid
+311031313,Chambers Flat - Logan Reserve,Queensland,22,16875,13.037037037037036,2025,valid
+311031314,Crestmead,Queensland,74,12895,57.38658394726638,2025,valid
+311031315,Greenbank Military Camp,Queensland,0,0,,2025,zero_population
+311031316,Hillcrest,Queensland,34,10043,33.85442596833615,2025,valid
+311031317,Marsden,Queensland,25,17494,14.29061392477421,2025,valid
+311031318,Munruben - Park Ridge South,Queensland,21,4565,46.00219058050383,2025,valid
+311031319,Regents Park - Heritage Park,Queensland,29,17206,16.854585609671044,2025,valid
+311041322,Logan Village,Queensland,63,9963,63.23396567299007,2025,valid
+311041567,Flagstone (East) - Riverbend,Queensland,15,7190,20.86230876216968,2025,valid
+311041568,Flagstone (West) - New Beith,Queensland,33,13360,24.700598802395213,2025,valid
+311041569,Greenbank - North Maclean,Queensland,32,12691,25.214719092270112,2025,valid
+311041570,Jimboomba - Glenlogan,Queensland,91,21545,42.23717799953585,2025,valid
+311041571,Yarrabilba,Queensland,18,15803,11.390242359045752,2025,valid
+311051323,Bethania - Waterford,Queensland,24,13108,18.3094293561184,2025,valid
+311051324,Cornubia - Carbrook,Queensland,42,9471,44.34589800443459,2025,valid
+311051325,Loganholme - Tanah Merah,Queensland,105,12700,82.67716535433071,2025,valid
+311051326,Loganlea,Queensland,65,12948,50.200803212851405,2025,valid
+311051327,Shailer Park,Queensland,35,12717,27.522214358732406,2025,valid
+311051328,Waterford West,Queensland,16,8569,18.671957054498773,2025,valid
+311061329,Daisy Hill,Queensland,13,7458,17.430946634486457,2025,valid
+311061330,Kingston (Qld),Queensland,28,11172,25.062656641604008,2025,valid
+311061331,Logan Central,Queensland,15,6653,22.546219750488504,2025,valid
+311061332,Rochedale South - Priestdale,Queensland,43,16053,26.786270479038187,2025,valid
+311061333,Slacks Creek,Queensland,80,10811,73.99870502266211,2025,valid
+311061334,Springwood,Queensland,29,10328,28.079008520526724,2025,valid
+311061335,Underwood,Queensland,89,7527,118.24099907001461,2025,valid
+311061336,Woodridge,Queensland,33,14127,23.35952431514122,2025,valid
+312011337,Bowen,Queensland,32,11266,28.40404757677969,2025,valid
+312011338,Broadsound - Nebo,Queensland,17,9190,18.498367791077257,2025,valid
+312011339,Clermont,Queensland,20,4068,49.16420845624385,2025,valid
+312011340,Collinsville,Queensland,14,4008,34.930139720558884,2025,valid
+312011341,Moranbah,Queensland,14,9928,14.101531023368251,2025,valid
+312021342,Andergrove - Beaconsfield,Queensland,29,17169,16.89090803191799,2025,valid
+312021343,East Mackay,Queensland,15,3820,39.26701570680628,2025,valid
+312021344,Eimeo - Rural View,Queensland,31,14911,20.79002079002079,2025,valid
+312021345,Eungella Hinterland,Queensland,0,9,0.0,2025,valid
+312021346,Mackay,Queensland,36,4154,86.66345690900337,2025,valid
+312021347,Mackay Harbour,Queensland,11,676,162.72189349112426,2025,valid
+312021348,Mount Pleasant - Glenella,Queensland,41,12060,33.99668325041459,2025,valid
+312021349,North Mackay,Queensland,17,6418,26.48800249298847,2025,valid
+312021350,Ooralea - Bakers Creek,Queensland,52,6600,78.7878787878788,2025,valid
+312021351,Pioneer Valley,Queensland,30,9449,31.749391469996826,2025,valid
+312021352,Sarina,Queensland,34,12500,27.200000000000003,2025,valid
+312021353,Seaforth - Calen,Queensland,41,8785,46.6704610130905,2025,valid
+312021354,Shoal Point - Bucasia,Queensland,12,6590,18.20940819423369,2025,valid
+312021355,Slade Point,Queensland,13,3669,35.43199781956937,2025,valid
+312021356,South Mackay,Queensland,16,7251,22.065921941801133,2025,valid
+312021357,Walkerston - Eton,Queensland,38,8749,43.43353526117271,2025,valid
+312021358,West Mackay,Queensland,15,6443,23.281080242123235,2025,valid
+312031359,Airlie - Whitsundays,Queensland,73,16597,43.983852503464476,2025,valid
+312031360,Cape Conway,Queensland,0,0,,2025,zero_population
+312031361,Proserpine,Queensland,45,9503,47.35346732610755,2025,valid
+313011362,Beachmere - Sandstone Point,Queensland,30,17733,16.917611233293858,2025,valid
+313011363,Bribie Island,Queensland,34,22215,15.304974116587891,2025,valid
+313021364,Burpengary - East,Queensland,26,9216,28.211805555555554,2025,valid
+313021366,Caboolture - South,Queensland,27,27798,9.712928987696957,2025,valid
+313021367,Elimbah,Queensland,14,4645,30.139935414424112,2025,valid
+313021368,Morayfield - East,Queensland,28,13813,20.270759429522915,2025,valid
+313021369,Wamuran,Queensland,19,4522,42.016806722689076,2025,valid
+313021572,Caboolture - East,Queensland,74,19929,37.13181795373576,2025,valid
+313021573,Caboolture - West,Queensland,36,14884,24.18704649287826,2025,valid
+313031370,Kilcoy,Queensland,21,6216,33.78378378378378,2025,valid
+313031371,Woodford - D'Aguilar,Queensland,39,10806,36.091060521932256,2025,valid
+313041372,Burpengary,Queensland,47,19133,24.564887890032924,2025,valid
+313041373,Deception Bay,Queensland,72,25304,28.4539993676889,2025,valid
+313041374,Morayfield,Queensland,17,7826,21.722463582928697,2025,valid
+313041375,Narangba,Queensland,76,23657,32.12579786109819,2025,valid
+313041376,Upper Caboolture,Queensland,15,3597,41.70141784820684,2025,valid
+313051377,Clontarf,Queensland,106,8876,119.42316358720143,2025,valid
+313051378,Margate - Woody Point,Queensland,20,12649,15.81152660289351,2025,valid
+313051379,Redcliffe,Queensland,30,11134,26.944494341656185,2025,valid
+313051380,Rothwell - Kippa-Ring,Queensland,46,17562,26.19291652431386,2025,valid
+313051574,Moreton Island,Queensland,0,339,0.0,2025,valid
+313051575,Scarborough - Newport,Queensland,37,18187,20.3442019024578,2025,valid
+314011382,Albany Creek,Queensland,34,17369,19.575105072255166,2025,valid
+314011383,Cashmere,Queensland,39,21462,18.17165222253285,2025,valid
+314011384,Dayboro,Queensland,60,10103,59.38830050480055,2025,valid
+314011385,Eatons Hill,Queensland,23,7984,28.80761523046092,2025,valid
+314011386,The Hills District,Queensland,57,26166,21.783994496675074,2025,valid
+314011387,Samford Valley,Queensland,51,13239,38.522547020167686,2025,valid
+314021389,Murrumba Downs - Griffin,Queensland,34,27130,12.53225211942499,2025,valid
+314021576,Dakabin,Queensland,8,6194,12.915724895059734,2025,valid
+314021577,Kallangur,Queensland,32,23466,13.636751044063752,2025,valid
+314021578,Mango Hill,Queensland,14,17874,7.832606019917199,2025,valid
+314021579,North Lakes,Queensland,42,24527,17.123985811554615,2025,valid
+314031391,Bray Park,Queensland,19,10810,17.576318223866792,2025,valid
+314031392,Lawnton,Queensland,34,8120,41.87192118226601,2025,valid
+314031393,Petrie,Queensland,20,9202,21.734405564007822,2025,valid
+314031394,Strathpine - Brendale,Queensland,230,15313,150.19917716972506,2025,valid
+315011395,Aurukun,Queensland,0,1165,0.0,2025,valid
+315011396,Cape York,Queensland,8,8515,9.395184967704052,2025,valid
+315011397,Croydon - Etheridge,Queensland,3,1000,30.0,2025,valid
+315011398,Kowanyama - Pormpuraaw,Queensland,0,1805,0.0,2025,valid
+315011399,Northern Peninsula,Queensland,3,2944,10.190217391304348,2025,valid
+315011400,Tablelands,Queensland,19,6420,29.595015576323988,2025,valid
+315011401,Torres,Queensland,4,3490,11.46131805157593,2025,valid
+315011402,Torres Strait Islands,Queensland,0,4298,0.0,2025,valid
+315011403,Weipa,Queensland,7,4297,16.290435187340005,2025,valid
+315021404,Carpentaria,Queensland,10,5284,18.925056775170326,2025,valid
+315021405,Mount Isa,Queensland,49,18162,26.979407554234115,2025,valid
+315021406,Mount Isa Surrounds,Queensland,10,4325,23.121387283236995,2025,valid
+315021407,Northern Highlands,Queensland,10,3183,31.416902293433868,2025,valid
+315031408,Barcaldine - Blackall,Queensland,16,4912,32.57328990228013,2025,valid
+315031409,Charleville,Queensland,14,4004,34.96503496503497,2025,valid
+315031410,Far Central West,Queensland,12,2227,53.88414907947912,2025,valid
+315031411,Far South West,Queensland,4,2791,14.331780723754925,2025,valid
+315031412,Longreach,Queensland,18,3741,48.115477145148354,2025,valid
+316011413,Buderim - North,Queensland,167,20127,82.97312068365876,2025,valid
+316011414,Buderim - South,Queensland,52,18362,28.319355190066442,2025,valid
+316011415,Mountain Creek,Queensland,17,12397,13.712995079454707,2025,valid
+316011416,Sippy Downs,Queensland,21,12683,16.557596783095484,2025,valid
+316021417,Aroona - Currimundi,Queensland,25,10328,24.206041828040277,2025,valid
+316021418,Buddina - Minyama,Queensland,30,7410,40.48582995951417,2025,valid
+316021419,Caloundra - Kings Beach,Queensland,17,7094,23.963913166055825,2025,valid
+316021421,Golden Beach - Pelican Waters,Queensland,28,14293,19.590009095361367,2025,valid
+316021422,Moffat Beach - Battery Hill,Queensland,33,8303,39.74467060098759,2025,valid
+316021423,Parrearra - Warana,Queensland,77,11379,67.66851217154407,2025,valid
+316021424,Wurtulla - Birtinya,Queensland,42,11624,36.13214039917412,2025,valid
+316021580,Caloundra West - Baringa,Queensland,79,23872,33.093163538873995,2025,valid
+316021581,Meridan Plains - Little Mountain (North),Queensland,48,15068,31.85558800106185,2025,valid
+316031425,Coolum Beach,Queensland,50,17064,29.301453352086263,2025,valid
+316031426,Marcoola - Mudjimba,Queensland,54,12672,42.61363636363636,2025,valid
+316031427,Maroochydore - Kuluin,Queensland,72,25797,27.91022211885103,2025,valid
+316031428,Mooloolaba - Alexandra Headland,Queensland,47,13101,35.875124036333105,2025,valid
+316051434,Noosa Heads,Queensland,21,5319,39.48110547095319,2025,valid
+316051435,Noosaville,Queensland,95,9634,98.60909279634627,2025,valid
+316051437,Sunshine Beach,Queensland,20,7524,26.581605528973952,2025,valid
+316051438,Tewantin,Queensland,31,10660,29.08067542213884,2025,valid
+316051543,Peregian Beach - Marcus Beach,Queensland,23,4374,52.58344764517604,2025,valid
+316051544,Peregian Springs,Queensland,25,11924,20.966118752096612,2025,valid
+316061439,Beerwah,Queensland,33,9938,33.20587643389012,2025,valid
+316061440,Caloundra Hinterland,Queensland,44,9352,47.04875962360992,2025,valid
+316061441,Glass House Mountains,Queensland,26,7309,35.57258174852921,2025,valid
+316061442,Landsborough,Queensland,74,21628,34.21490660255225,2025,valid
+316061443,Maroochy Hinterland,Queensland,24,7415,32.36682400539447,2025,valid
+316061444,Palmwoods,Queensland,67,13537,49.4939794636921,2025,valid
+316071545,Bli Bli,Queensland,30,11935,25.136154168412233,2025,valid
+316071546,Diddillibah - Rosemount,Queensland,19,4731,40.16064257028112,2025,valid
+316071547,Eumundi - Yandina,Queensland,174,13729,126.73901959356108,2025,valid
+316071548,Nambour,Queensland,75,24674,30.396368647158955,2025,valid
+316081549,Noosa Hinterland,Queensland,117,26251,44.56973067692659,2025,valid
+317011445,Cambooya - Wyreema,Queensland,32,8905,35.93486805165637,2025,valid
+317011446,Darling Heights,Queensland,18,16382,10.987669393236478,2025,valid
+317011447,Drayton - Harristown,Queensland,54,11514,46.89942678478374,2025,valid
+317011448,Gatton,Queensland,23,8897,25.851410587838597,2025,valid
+317011449,Gowrie (Qld),Queensland,31,8154,38.01815060093205,2025,valid
+317011450,Highfields,Queensland,52,16630,31.268791340950088,2025,valid
+317011451,Lockyer Valley - West,Queensland,63,13029,48.35367257655998,2025,valid
+317011452,Middle Ridge,Queensland,17,8113,20.954024405275486,2025,valid
+317011453,Newtown (Qld),Queensland,23,10761,21.373478301273114,2025,valid
+317011454,North Toowoomba - Harlaxton,Queensland,36,6596,54.578532443905395,2025,valid
+317011455,Rangeville,Queensland,10,8887,11.252391133115788,2025,valid
+317011456,Toowoomba - Central,Queensland,49,14434,33.947623666343354,2025,valid
+317011457,Toowoomba - East,Queensland,15,10831,13.849136737143384,2025,valid
+317011458,Toowoomba - West,Queensland,94,17905,52.49930187098576,2025,valid
+317011459,Wilsonton,Queensland,80,14669,54.53677823982549,2025,valid
+318011460,Ayr,Queensland,33,9234,35.73749187784275,2025,valid
+318011461,Burdekin,Queensland,31,7980,38.847117794486216,2025,valid
+318011462,Charters Towers,Queensland,22,8172,26.921194322075376,2025,valid
+318011463,Dalrymple,Queensland,15,3916,38.30439223697651,2025,valid
+318011464,Ingham,Queensland,17,4471,38.02281368821293,2025,valid
+318011465,Ingham Surrounds,Queensland,20,6723,29.748624126134164,2025,valid
+318011466,Palm Island,Queensland,3,2335,12.84796573875803,2025,valid
+318021467,Aitkenvale,Queensland,14,4848,28.877887788778875,2025,valid
+318021468,Annandale (Qld),Queensland,12,10353,11.590843233845263,2025,valid
+318021469,Belgian Gardens - Pallarenda,Queensland,6,3190,18.808777429467085,2025,valid
+318021470,Bohle Plains,Queensland,27,10466,25.797821517294096,2025,valid
+318021471,Condon - Rasmussen,Queensland,10,11457,8.728288382648163,2025,valid
+318021472,Cranbrook,Queensland,10,6096,16.404199475065617,2025,valid
+318021474,Douglas,Queensland,8,8318,9.61769656167348,2025,valid
+318021475,Garbutt - West End,Queensland,76,6605,115.06434519303558,2025,valid
+318021476,Gulliver - Currajong - Vincent,Queensland,31,7872,39.380081300813,2025,valid
+318021477,Heatley,Queensland,6,4023,14.914243102162564,2025,valid
+318021478,Hermit Park - Rosslea,Queensland,7,5752,12.169680111265647,2025,valid
+318021479,Hyde Park - Pimlico,Queensland,10,4743,21.083702298123548,2025,valid
+318021480,Kelso,Queensland,12,11180,10.73345259391771,2025,valid
+318021481,Kirwan - East,Queensland,8,7924,10.095911155981828,2025,valid
+318021482,Kirwan - West,Queensland,18,15115,11.908699966920278,2025,valid
+318021483,Magnetic Island,Queensland,7,2658,26.335590669676446,2025,valid
+318021484,Mount Louisa,Queensland,53,10932,48.48152213684596,2025,valid
+318021485,Mundingburra,Queensland,7,3551,19.712756969867645,2025,valid
+318021486,Northern Beaches,Queensland,24,7196,33.35186214563646,2025,valid
+318021487,Oonoonba,Queensland,14,7544,18.55779427359491,2025,valid
+318021488,South Townsville - Railway Estate,Queensland,26,5618,46.27981488074048,2025,valid
+318021489,Townsville - South,Queensland,14,5861,23.886708752772563,2025,valid
+318021490,Townsville City - North Ward,Queensland,25,9589,26.071540306601314,2025,valid
+318021491,Wulguru - Roseneath,Queensland,16,6403,24.98828674059035,2025,valid
+318021582,Burdell - Mount Low,Queensland,27,22202,12.161066570579226,2025,valid
+318021583,Deeragun - Jensen,Queensland,12,6770,17.725258493353028,2025,valid
+319011492,Ashfield - Kepnock,Queensland,9,5891,15.277542013240536,2025,valid
+319011493,Bargara - Burnett Heads,Queensland,54,21697,24.88823339632207,2025,valid
+319011494,Branyan - Kensington,Queensland,20,5969,33.506449991623384,2025,valid
+319011495,Bundaberg,Queensland,22,6611,33.277870216306155,2025,valid
+319011496,Bundaberg East - Kalkie,Queensland,35,5981,58.51864236749707,2025,valid
+319011497,Bundaberg North - Gooburrum,Queensland,22,7935,27.72526780088217,2025,valid
+319011498,Bundaberg Surrounds - North,Queensland,35,10016,34.94408945686901,2025,valid
+319011499,Bundaberg Surrounds - South,Queensland,42,12134,34.61348277567167,2025,valid
+319011500,Millbank - Avoca,Queensland,8,7848,10.193679918450561,2025,valid
+319011501,Svensson Heights - Norville,Queensland,45,6028,74.65162574651626,2025,valid
+319011502,Walkervale - Avenell Heights,Queensland,18,11323,15.896847125320146,2025,valid
+319021503,Gayndah - Mundubbera,Queensland,24,6721,35.708971879184645,2025,valid
+319021504,Gin Gin,Queensland,18,5851,30.763971970603315,2025,valid
+319021505,Kingaroy,Queensland,26,11059,23.51026313409892,2025,valid
+319021506,Kingaroy Surrounds - North,Queensland,35,10038,34.86750348675035,2025,valid
+319021507,Kingaroy Surrounds - South,Queensland,16,4469,35.80219288431416,2025,valid
+319021508,Monto - Eidsvold,Queensland,14,3841,36.4488414475397,2025,valid
+319021509,Nanango,Queensland,23,10843,21.21184174121553,2025,valid
+319021510,North Burnett,Queensland,0,13,0.0,2025,valid
+319031511,Cooloola,Queensland,17,7148,23.78287632904309,2025,valid
+319031512,Gympie - North,Queensland,56,15512,36.101083032490976,2025,valid
+319031513,Gympie - South,Queensland,16,9079,17.623086242978303,2025,valid
+319031514,Gympie Surrounds,Queensland,108,22707,47.56242568370987,2025,valid
+319031515,Kilkivan,Queensland,17,3959,42.94013639808032,2025,valid
+319041516,Booral - River Heads,Queensland,30,7887,38.03727653100038,2025,valid
+319041517,Craignish - Dundowran Beach,Queensland,25,6235,40.0962309542903,2025,valid
+319041518,Pialba - Eli Waters,Queensland,44,17754,24.783147459727385,2025,valid
+319041519,Point Vernon,Queensland,6,5985,10.025062656641603,2025,valid
+319041520,Torquay - Scarness - Kawungan,Queensland,14,16715,8.375710439724799,2025,valid
+319041521,Urangan - Wondunna,Queensland,33,16623,19.85201227215304,2025,valid
+319051522,Burrum - Fraser,Queensland,10,11970,8.35421888053467,2025,valid
+319051523,Granville,Queensland,11,3227,34.08738766656337,2025,valid
+319051524,Maryborough (Qld),Queensland,74,19255,38.431576213970395,2025,valid
+319051525,Maryborough Surrounds - South,Queensland,26,11170,23.276633840644585,2025,valid
+319051526,Tinana,Queensland,19,6176,30.764248704663213,2025,valid
+401011001,Adelaide,South Australia,284,22657,125.34757470097541,2025,valid
+401011002,North Adelaide,South Australia,28,7516,37.253858435337946,2025,valid
+401021003,Adelaide Hills,South Australia,33,7256,45.47960308710034,2025,valid
+401021004,Aldgate - Stirling,South Australia,66,19039,34.66568622301592,2025,valid
+401021005,Hahndorf - Echunga,South Australia,36,4698,76.62835249042145,2025,valid
+401021006,Lobethal - Woodside,South Australia,71,9996,71.02841136454582,2025,valid
+401021007,Mount Barker,South Australia,69,26939,25.613422918445377,2025,valid
+401021008,Mount Barker Surrounds,South Australia,36,7402,48.63550391786004,2025,valid
+401021009,Nairne,South Australia,12,5787,20.73613271124935,2025,valid
+401021010,Uraidla - Summertown,South Australia,49,6484,75.57063541024058,2025,valid
+401031011,Burnside - Wattle Park,South Australia,52,20275,25.647348951911223,2025,valid
+401031012,Beaumont - Glen Osmond,South Australia,29,10664,27.19429857464366,2025,valid
+401031013,Toorak Gardens,South Australia,72,17318,41.575239635061784,2025,valid
+401041014,Athelstone,South Australia,24,9995,24.0120060030015,2025,valid
+401041015,Paradise - Newton,South Australia,53,22979,23.064537186126465,2025,valid
+401041016,Rostrevor - Magill,South Australia,57,26237,21.725044784083547,2025,valid
+401051017,Norwood (SA),South Australia,108,12253,88.14167958867216,2025,valid
+401051018,Payneham - Felixstow,South Australia,57,14111,40.39401885054213,2025,valid
+401051019,St Peters - Marden,South Australia,62,14481,42.81472274014226,2025,valid
+401061020,Nailsworth - Broadview,South Australia,11,6561,16.765736930345984,2025,valid
+401061021,Prospect,South Australia,37,16898,21.89608237661262,2025,valid
+401061022,Walkerville,South Australia,26,8673,29.97809293208809,2025,valid
+401071023,Goodwood - Millswood,South Australia,81,18506,43.769588241651356,2025,valid
+401071024,Unley - Parkside,South Australia,93,22225,41.84476940382452,2025,valid
+402011025,Gawler - North,South Australia,45,10364,43.419529139328446,2025,valid
+402011026,Gawler - South,South Australia,39,24176,16.13170086035738,2025,valid
+402011027,Lewiston - Two Wells,South Australia,25,8175,30.581039755351682,2025,valid
+402021028,Craigmore - Blakeview,South Australia,21,21288,9.864712514092446,2025,valid
+402021029,Davoren Park,South Australia,41,20448,20.0508607198748,2025,valid
+402021030,Elizabeth,South Australia,29,11567,25.07132359298003,2025,valid
+402021031,Elizabeth East,South Australia,12,14479,8.287865184059672,2025,valid
+402021032,Munno Para West - Angle Vale,South Australia,27,24343,11.0914842049049,2025,valid
+402021033,One Tree Hill,South Australia,14,2520,55.55555555555556,2025,valid
+402021034,Smithfield - Elizabeth North,South Australia,16,13041,12.268997776244152,2025,valid
+402021035,Virginia - Waterloo Corner,South Australia,27,8799,30.68530514831231,2025,valid
+402031036,Enfield - Blair Athol,South Australia,104,28231,36.83893592150473,2025,valid
+402031038,Windsor Gardens,South Australia,66,24000,27.5,2025,valid
+402031175,Northgate - Northfield,South Australia,28,19797,14.14355710461181,2025,valid
+402031176,Valley View - Gilles Plains,South Australia,18,10965,16.415868673050614,2025,valid
+402041039,Dry Creek - North,South Australia,0,0,,2025,zero_population
+402041040,Ingle Farm,South Australia,22,16270,13.521819299323909,2025,valid
+402041041,Para Hills,South Australia,44,15507,28.374282582059717,2025,valid
+402041042,Parafield,South Australia,7,18,3888.888888888889,2025,valid
+402041043,Parafield Gardens,South Australia,35,18589,18.82833934047017,2025,valid
+402041044,Paralowie,South Australia,29,18572,15.614904156795175,2025,valid
+402041046,Salisbury,South Australia,78,19146,40.7395800689439,2025,valid
+402041047,Salisbury East,South Australia,43,19226,22.365546655570583,2025,valid
+402041048,Salisbury North,South Australia,83,18931,43.843431408800384,2025,valid
+402041171,Mawson Lakes - Globe Derby Park,South Australia,62,15002,41.32782295693907,2025,valid
+402041172,Pooraka - Cavan,South Australia,82,8457,96.96109731583304,2025,valid
+402051049,Golden Grove,South Australia,37,10411,35.53933339736817,2025,valid
+402051050,Greenwith,South Australia,11,9356,11.75716117999145,2025,valid
+402051051,Highbury - Dernancourt,South Australia,21,11781,17.825311942959,2025,valid
+402051052,Hope Valley - Modbury,South Australia,68,18423,36.91038375943115,2025,valid
+402051053,Modbury Heights,South Australia,31,19813,15.646292838035633,2025,valid
+402051054,Redwood Park,South Australia,33,16959,19.458694498496374,2025,valid
+402051055,St Agnes - Ridgehaven,South Australia,34,13531,25.127485034365534,2025,valid
+403011056,Brighton (SA),South Australia,33,15899,20.756022391345365,2025,valid
+403011057,Glenelg (SA),South Australia,84,21791,38.54802441374879,2025,valid
+403021058,Edwardstown,South Australia,106,15449,68.61285520098387,2025,valid
+403021059,Hallett Cove,South Australia,18,12873,13.982754602656724,2025,valid
+403021060,Marino - Seaview Downs,South Australia,24,10209,23.508668821627978,2025,valid
+403021061,Mitchell Park,South Australia,42,18165,23.121387283236995,2025,valid
+403021062,Morphettville,South Australia,13,17758,7.320644216691069,2025,valid
+403021063,Sheidow Park - Trott Park,South Australia,16,10468,15.284677111196025,2025,valid
+403021064,Warradale,South Australia,28,18058,15.505593088935653,2025,valid
+403031065,Belair,South Australia,14,4895,28.600612870275793,2025,valid
+403031066,Bellevue Heights,South Australia,12,8661,13.855213023900243,2025,valid
+403031067,Blackwood,South Australia,28,13858,20.204935777168423,2025,valid
+403031068,Colonel Light Gardens,South Australia,57,16212,35.15914137675796,2025,valid
+403031069,Mitcham (SA),South Australia,28,17169,16.308462927369096,2025,valid
+403031070,Panorama,South Australia,43,9097,47.268330218753434,2025,valid
+403041071,Aberfoyle Park,South Australia,21,11778,17.82985226693836,2025,valid
+403041072,Aldinga,South Australia,44,17041,25.820080981163077,2025,valid
+403041073,Christie Downs,South Australia,9,9700,9.278350515463917,2025,valid
+403041074,Christies Beach,South Australia,26,11690,22.241231822070144,2025,valid
+403041075,Clarendon,South Australia,18,2899,62.09037599172128,2025,valid
+403041076,Coromandel Valley,South Australia,11,4655,23.63050483351235,2025,valid
+403041077,Flagstaff Hill,South Australia,16,11370,14.07211961301671,2025,valid
+403041078,Hackham - Onkaparinga Hills,South Australia,29,7376,39.31670281995662,2025,valid
+403041079,Hackham West - Huntfield Heights,South Australia,3,8128,3.690944881889764,2025,valid
+403041080,Happy Valley,South Australia,27,14526,18.587360594795538,2025,valid
+403041081,Happy Valley Reservoir,South Australia,0,0,,2025,zero_population
+403041082,Lonsdale,South Australia,175,26,67307.69230769231,2025,valid
+403041083,McLaren Vale,South Australia,107,8779,121.88176329878118,2025,valid
+403041084,Morphett Vale - East,South Australia,17,14198,11.973517396816453,2025,valid
+403041085,Morphett Vale - West,South Australia,16,10622,15.063076633402373,2025,valid
+403041086,Reynella,South Australia,22,10848,20.28023598820059,2025,valid
+403041088,Willunga,South Australia,40,3784,105.70824524312897,2025,valid
+403041089,Woodcroft,South Australia,20,11743,17.031422975389592,2025,valid
+403041177,Seaford - Seaford Meadows,South Australia,34,15439,22.02215169376255,2025,valid
+403041178,Seaford Rise - Moana,South Australia,20,11600,17.241379310344826,2025,valid
+404011090,Beverley,South Australia,61,9852,61.91636215996752,2025,valid
+404011091,Flinders Park,South Australia,48,18112,26.5017667844523,2025,valid
+404011092,Henley Beach,South Australia,33,16888,19.54050213169114,2025,valid
+404011093,Hindmarsh - Brompton,South Australia,110,20466,53.74767907749438,2025,valid
+404011094,Royal Park - Hendon - Albert Park,South Australia,55,6898,79.73325601623658,2025,valid
+404011095,Seaton - Grange,South Australia,23,18429,12.480329914808182,2025,valid
+404011096,West Lakes,South Australia,29,15989,18.137469510288323,2025,valid
+404011097,Woodville - Cheltenham,South Australia,105,20577,51.02784662487243,2025,valid
+404021098,Dry Creek - South,South Australia,0,0,,2025,zero_population
+404021099,Largs Bay - Semaphore,South Australia,20,15765,12.686330478908975,2025,valid
+404021100,North Haven,South Australia,39,15635,24.944035817077072,2025,valid
+404021101,Port Adelaide,South Australia,73,12874,56.70343327637099,2025,valid
+404021102,The Parks,South Australia,253,21444,117.98171982839024,2025,valid
+404021103,Torrens Island,South Australia,0,5,0.0,2025,valid
+404031104,Adelaide Airport,South Australia,6,3,20000.0,2025,valid
+404031105,Fulham,South Australia,7,3219,21.745883814849332,2025,valid
+404031106,Lockleys,South Australia,29,14336,20.228794642857146,2025,valid
+404031107,Plympton,South Australia,97,28617,33.89593598210854,2025,valid
+404031108,Richmond (SA),South Australia,115,18520,62.09503239740821,2025,valid
+404031109,West Beach,South Australia,8,5487,14.579916165482048,2025,valid
+405011110,Barossa - Angaston,South Australia,87,6896,126.1600928074246,2025,valid
+405011111,Light,South Australia,86,10631,80.89549430909605,2025,valid
+405011112,Lyndoch,South Australia,27,6981,38.67640739149119,2025,valid
+405011113,Mallala,South Australia,11,3561,30.890199382196013,2025,valid
+405011114,Nuriootpa,South Australia,58,7893,73.48283288990244,2025,valid
+405011115,Tanunda,South Australia,79,4757,166.07105318478034,2025,valid
+405021116,Clare,South Australia,26,4185,62.12664277180406,2025,valid
+405021117,Gilbert Valley,South Australia,46,5198,88.49557522123894,2025,valid
+405021118,Goyder,South Australia,15,4152,36.127167630057805,2025,valid
+405021119,Wakefield - Barunga West,South Australia,22,9786,22.48109544246883,2025,valid
+405031120,Jamestown,South Australia,16,4724,33.86960203217612,2025,valid
+405031121,Peterborough - Mount Remarkable,South Australia,18,5410,33.271719038817004,2025,valid
+405031122,Port Pirie,South Australia,17,14195,11.976047904191617,2025,valid
+405031123,Port Pirie Surrounds,South Australia,9,3433,26.21613748907661,2025,valid
+405041124,Kadina,South Australia,15,5776,25.969529085872576,2025,valid
+405041125,Moonta,South Australia,16,5858,27.31307613519973,2025,valid
+405041126,Wallaroo,South Australia,13,4971,26.151679742506538,2025,valid
+405041127,Yorke Peninsula - North,South Australia,31,7755,39.97421018697615,2025,valid
+405041128,Yorke Peninsula - South,South Australia,11,4489,24.50434395188238,2025,valid
+406011129,Ceduna,South Australia,12,2854,42.046250875963565,2025,valid
+406011130,Eyre Peninsula,South Australia,26,7232,35.951327433628315,2025,valid
+406011131,Kimba - Cleve - Franklin Harbour,South Australia,13,4362,29.802842732691428,2025,valid
+406011132,Le Hunte - Elliston,South Australia,5,2207,22.655188038060714,2025,valid
+406011133,Port Lincoln,South Australia,70,17064,41.02203469292077,2025,valid
+406011134,West Coast (SA),South Australia,17,3895,43.64569961489089,2025,valid
+406011135,Western,South Australia,0,144,0.0,2025,valid
+406011136,Whyalla,South Australia,24,21641,11.090060533247078,2025,valid
+406011137,Whyalla - North,South Australia,0,0,,2025,zero_population
+406021138,APY Lands,South Australia,0,2668,0.0,2025,valid
+406021139,Coober Pedy,South Australia,3,1526,19.65923984272608,2025,valid
+406021140,Quorn - Lake Gilles,South Australia,4,2170,18.433179723502302,2025,valid
+406021141,Outback,South Australia,4,1939,20.62919030428056,2025,valid
+406021142,Port Augusta,South Australia,14,14134,9.905193151266449,2025,valid
+406021143,Roxby Downs,South Australia,5,4089,12.22792858889704,2025,valid
+407011144,Goolwa - Port Elliot,South Australia,42,13711,30.632338997884908,2025,valid
+407011145,Kangaroo Island,South Australia,30,5212,57.559478127398314,2025,valid
+407011146,Strathalbyn,South Australia,28,8670,32.29527104959631,2025,valid
+407011147,Strathalbyn Surrounds,South Australia,56,8615,65.00290191526408,2025,valid
+407011148,Victor Harbor,South Australia,47,17189,27.343068241317123,2025,valid
+407011149,Yankalilla,South Australia,28,6998,40.01143183766791,2025,valid
+407021150,Grant,South Australia,18,6505,27.671022290545736,2025,valid
+407021151,Kingston - Robe,South Australia,18,4041,44.54342984409799,2025,valid
+407021152,Millicent,South Australia,13,5410,24.029574861367838,2025,valid
+407021154,Naracoorte,South Australia,23,6455,35.63129357087529,2025,valid
+407021155,Naracoorte Surrounds,South Australia,8,2475,32.323232323232325,2025,valid
+407021156,Penola,South Australia,27,3192,84.58646616541353,2025,valid
+407021157,Tatiara,South Australia,27,7088,38.09255079006772,2025,valid
+407021158,Wattle Range,South Australia,15,3676,40.80522306855278,2025,valid
+407021173,Mount Gambier - East,South Australia,43,15591,27.58001411070489,2025,valid
+407021174,Mount Gambier - West,South Australia,57,15284,37.29390211986391,2025,valid
+407031159,Barmera,South Australia,25,6662,37.52626838787151,2025,valid
+407031160,Berri,South Australia,14,4176,33.524904214559385,2025,valid
+407031161,Karoonda - Lameroo,South Australia,10,2944,33.96739130434783,2025,valid
+407031162,Loxton,South Australia,23,5715,40.24496937882764,2025,valid
+407031163,Loxton Surrounds,South Australia,8,1817,44.028618602091356,2025,valid
+407031164,Mannum,South Australia,30,7012,42.783799201369085,2025,valid
+407031165,Murray Bridge,South Australia,62,19938,31.09639883639282,2025,valid
+407031166,Murray Bridge Surrounds,South Australia,17,3993,42.574505384422736,2025,valid
+407031167,Renmark,South Australia,15,4733,31.69237270230298,2025,valid
+407031168,Renmark Surrounds,South Australia,22,5541,39.70402454430608,2025,valid
+407031169,The Coorong,South Australia,15,5638,26.605179141539555,2025,valid
+407031170,Waikerie,South Australia,30,6793,44.16310908287944,2025,valid
+501011001,Augusta,Western Australia,65,8090,80.34610630407911,2025,valid
+501011003,Busselton Surrounds,Western Australia,140,14066,99.53078344945258,2025,valid
+501011004,Margaret River,Western Australia,72,12077,59.617454665893845,2025,valid
+501011293,Busselton - East,Western Australia,52,10199,50.98539072458084,2025,valid
+501011294,Busselton - West,Western Australia,56,21758,25.737659711370533,2025,valid
+501021005,Australind - Leschenault,Western Australia,36,21751,16.55096317410694,2025,valid
+501021007,Capel,Western Australia,23,6027,38.161606105856976,2025,valid
+501021008,College Grove - Carey Park,Western Australia,4,7602,5.261773217574323,2025,valid
+501021009,Collie,Western Australia,19,9561,19.872398284698253,2025,valid
+501021010,Dardanup,Western Australia,32,3734,85.69898232458489,2025,valid
+501021011,Davenport,Western Australia,47,11,42727.27272727273,2025,valid
+501021012,Eaton - Pelican Point,Western Australia,22,13513,16.280618663509216,2025,valid
+501021014,Harvey,Western Australia,44,10457,42.077077555704314,2025,valid
+501021015,East Bunbury - Glen Iris,Western Australia,25,7991,31.28519584532599,2025,valid
+501021016,Waroona,Western Australia,13,4665,27.867095391211144,2025,valid
+501021251,Dalyellup,Western Australia,14,11081,12.634238787113075,2025,valid
+501021252,Gelorup - Stratham,Western Australia,17,3224,52.72952853598015,2025,valid
+501021253,South Bunbury - Bunbury,Western Australia,35,13623,25.691844674447626,2025,valid
+501021254,Withers - Usher,Western Australia,3,5536,5.41907514450867,2025,valid
+501031017,Bridgetown - Boyup Brook,Western Australia,34,7931,42.86975160761568,2025,valid
+501031018,Donnybrook - Balingup,Western Australia,27,6698,40.310540459838755,2025,valid
+501031019,Manjimup,Western Australia,29,5661,51.227698286521814,2025,valid
+501031020,Pemberton,Western Australia,30,5706,52.576235541535226,2025,valid
+502011021,Dawesville - Bouvard,Western Australia,29,10844,26.742899299151603,2025,valid
+502011022,Falcon - Wannanup,Western Australia,23,11288,20.3756201275691,2025,valid
+502011023,Greenfields,Western Australia,45,11011,40.86822268640451,2025,valid
+502011024,Halls Head - Erskine,Western Australia,21,22657,9.268658692677759,2025,valid
+502011025,Mandurah,Western Australia,29,11777,24.624267640315868,2025,valid
+502011026,Mandurah - East,Western Australia,24,7984,30.060120240480963,2025,valid
+502011027,Mandurah - North,Western Australia,30,26873,11.163621478807727,2025,valid
+502011028,Mandurah - South,Western Australia,21,12932,16.23878750386638,2025,valid
+502011029,Pinjarra,Western Australia,35,12136,28.83981542518128,2025,valid
+503011030,City Beach,Western Australia,13,7443,17.466075507187963,2025,valid
+503011031,Claremont (WA),Western Australia,28,10961,25.545114496852477,2025,valid
+503011032,Cottesloe,Western Australia,22,8958,24.55905336012503,2025,valid
+503011033,Floreat,Western Australia,11,9505,11.57285639137296,2025,valid
+503011034,Mosman Park - Peppermint Grove,Western Australia,24,12310,19.496344435418358,2025,valid
+503011035,Nedlands - Dalkeith - Crawley,Western Australia,44,22236,19.78773160640403,2025,valid
+503011036,Swanbourne - Mount Claremont,Western Australia,21,10651,19.7164585484931,2025,valid
+503021037,Kings Park (WA),Western Australia,3,50,600.0,2025,valid
+503021038,Mount Hawthorn - Leederville,Western Australia,48,13402,35.815549917922695,2025,valid
+503021039,Mount Lawley - Inglewood,Western Australia,37,19150,19.321148825065276,2025,valid
+503021040,North Perth,Western Australia,29,10997,26.37082840774757,2025,valid
+503021042,Subiaco - Shenton Park,Western Australia,80,20645,38.75030273674013,2025,valid
+503021043,Wembley - West Leederville - Glendalough,Western Australia,57,21965,25.95037559754154,2025,valid
+503021295,East Perth,Western Australia,33,14495,22.76647119696447,2025,valid
+503021296,Perth (North) - Highgate,Western Australia,60,13732,43.69356248179435,2025,valid
+503021297,Perth (West) - Northbridge,Western Australia,209,15890,131.529263687854,2025,valid
+504011044,Bassendean - Eden Hill - Ashfield,Western Australia,68,17413,39.05128352380405,2025,valid
+504011045,Bayswater - Embleton - Bedford,Western Australia,167,27178,61.446758407535505,2025,valid
+504011046,Maylands,Western Australia,21,15435,13.605442176870747,2025,valid
+504011047,Morley,Western Australia,79,25432,31.063227430009437,2025,valid
+504011048,Noranda,Western Australia,16,8567,18.676316096649938,2025,valid
+504021049,Chidlow,Western Australia,9,5661,15.898251192368841,2025,valid
+504021050,Glen Forrest - Darlington,Western Australia,26,7828,33.21410321921308,2025,valid
+504021051,Helena Valley - Koongamia,Western Australia,14,6662,21.014710297208044,2025,valid
+504021052,Malmalling - Reservoir,Western Australia,0,11,0.0,2025,valid
+504021053,Mundaring,Western Australia,51,14517,35.13122545980575,2025,valid
+504021054,Swan View - Greenmount - Midvale,Western Australia,66,14691,44.92546457014498,2025,valid
+504031055,Avon Valley National Park,Western Australia,0,7,0.0,2025,valid
+504031056,Ballajura,Western Australia,63,19879,31.691734996730215,2025,valid
+504031057,Beechboro,Western Australia,36,26928,13.36898395721925,2025,valid
+504031058,Bullsbrook,Western Australia,39,7112,54.83689538807649,2025,valid
+504031060,Gidgegannup,Western Australia,21,3235,64.91499227202473,2025,valid
+504031061,Hazelmere - Guildford,Western Australia,23,7590,30.303030303030305,2025,valid
+504031062,Lockridge - Kiara,Western Australia,30,14768,20.314192849404115,2025,valid
+504031063,Malaga,Western Australia,317,23,137826.08695652173,2025,valid
+504031064,Melaleuca - Lexia,Western Australia,0,0,,2025,zero_population
+504031065,Middle Swan - Herne Hill,Western Australia,23,6580,34.954407294832826,2025,valid
+504031066,Midland - Guildford,Western Australia,69,12249,56.33112907176096,2025,valid
+504031067,Stratton - Jane Brook,Western Australia,18,7819,23.020846655582556,2025,valid
+504031068,The Vines,Western Australia,51,16074,31.728256812243377,2025,valid
+504031069,Walyunga National Park,Western Australia,0,0,,2025,zero_population
+504031298,Aveley,Western Australia,29,19348,14.988629315691544,2025,valid
+504031299,Brabham - Henley Brook,Western Australia,26,17755,14.643762320473106,2025,valid
+504031300,Ellenbrook,Western Australia,33,21882,15.08088840142583,2025,valid
+505011070,Craigie - Beldon,Western Australia,13,11907,10.917947425883934,2025,valid
+505011071,Currambine - Kinross,Western Australia,29,15022,19.305019305019304,2025,valid
+505011072,Duncraig,Western Australia,27,17630,15.314804310833805,2025,valid
+505011073,Greenwood - Warwick,Western Australia,26,15038,17.28953318260407,2025,valid
+505011074,Heathridge - Connolly,Western Australia,22,11852,18.562267971650353,2025,valid
+505011075,Hillarys,Western Australia,36,12127,29.68582501855364,2025,valid
+505011076,Iluka - Burns Beach,Western Australia,34,11228,30.281439258995366,2025,valid
+505011077,Joondalup - Edgewater,Western Australia,43,15713,27.36587538980462,2025,valid
+505011078,Kingsley,Western Australia,30,13888,21.601382488479263,2025,valid
+505011079,Mullaloo - Kallaroo,Western Australia,22,12947,16.99235344095157,2025,valid
+505011080,Ocean Reef,Western Australia,20,8985,22.259321090706734,2025,valid
+505011081,Padbury,Western Australia,10,9714,10.294420424130122,2025,valid
+505011082,Sorrento - Marmion,Western Australia,26,11187,23.241262179315274,2025,valid
+505011083,Woodvale,Western Australia,26,10293,25.259885358981833,2025,valid
+505021084,Balcatta - Hamersley,Western Australia,104,18025,57.69764216366158,2025,valid
+505021085,Balga - Mirrabooka,Western Australia,27,23741,11.372730719009308,2025,valid
+505021087,Herdsman,Western Australia,0,0,,2025,zero_population
+505021088,Innaloo - Doubleview,Western Australia,41,20721,19.786689831571834,2025,valid
+505021089,Karrinyup - Gwelup - Carine,Western Australia,50,24578,20.34339653348523,2025,valid
+505021090,Nollamara - Westminster,Western Australia,31,23030,13.460703430308294,2025,valid
+505021091,Osborne Park Industrial,Western Australia,184,290,6344.827586206897,2025,valid
+505021092,Scarborough,Western Australia,37,20490,18.05758906783797,2025,valid
+505021093,Stirling - Osborne Park,Western Australia,64,16322,39.210881019482905,2025,valid
+505021094,Trigg - North Beach - Watermans Bay,Western Australia,17,8951,18.992291364093397,2025,valid
+505021095,Tuart Hill - Joondanna,Western Australia,19,14673,12.948953860832821,2025,valid
+505021096,Wembley Downs - Churchlands - Woodlands,Western Australia,24,16742,14.335204873969657,2025,valid
+505021097,Yokine - Coolbinia - Menora,Western Australia,23,18844,12.205476544258119,2025,valid
+505021301,Dianella - North,Western Australia,43,12840,33.48909657320873,2025,valid
+505021302,Dianella - South,Western Australia,29,15055,19.262703420790437,2025,valid
+505031098,Alexander Heights - Koondoola,Western Australia,28,12443,22.502611910311018,2025,valid
+505031099,Butler - Merriwa - Ridgewood,Western Australia,28,26000,10.769230769230768,2025,valid
+505031100,Carramar,Western Australia,37,22088,16.751177109742848,2025,valid
+505031101,Clarkson,Western Australia,23,15921,14.446328748194208,2025,valid
+505031102,Girrawheen,Western Australia,16,10268,15.582391897156214,2025,valid
+505031104,Marangaroo,Western Australia,19,10923,17.39448869358235,2025,valid
+505031105,Mindarie - Quinns Rocks - Jindalee,Western Australia,58,24757,23.427717413256858,2025,valid
+505031106,Neerabup National Park,Western Australia,0,4,0.0,2025,valid
+505031107,Tapping - Ashby - Sinagra,Western Australia,31,15154,20.456645110201926,2025,valid
+505031255,Alkimos - Eglinton,Western Australia,19,22493,8.447072422531454,2025,valid
+505031256,Carabooda - Pinjar,Western Australia,7,784,89.28571428571428,2025,valid
+505031257,Two Rocks,Western Australia,9,5214,17.26121979286536,2025,valid
+505031258,Yanchep,Western Australia,30,14322,20.94679514034353,2025,valid
+505031303,Hocking - Pearsall,Western Australia,60,14858,40.38228563736707,2025,valid
+505031304,Landsdale,Western Australia,23,17852,12.883710508626486,2025,valid
+505031305,Madeley - Darch,Western Australia,369,15551,237.2837759629606,2025,valid
+505031306,Wanneroo - Sinagra,Western Australia,48,16627,28.8687075239069,2025,valid
+506011110,Armadale - Wungong - Brookdale,Western Australia,52,28839,18.031138388987134,2025,valid
+506011111,Ashendon - Lesley,Western Australia,0,3,0.0,2025,valid
+506011112,Camillo - Champion Lakes,Western Australia,8,6978,11.464603038119805,2025,valid
+506011114,Kelmscott,Western Australia,50,11381,43.93287057376329,2025,valid
+506011115,Mount Nasura - Mount Richon - Bedfordale,Western Australia,35,9050,38.67403314917127,2025,valid
+506011116,Roleystone,Western Australia,29,7831,37.03230749584983,2025,valid
+506011117,Seville Grove,Western Australia,21,12981,16.177490177952393,2025,valid
+506011307,Harrisdale,Western Australia,19,14125,13.451327433628318,2025,valid
+506011308,Piara Waters - Forrestdale,Western Australia,82,21815,37.58881503552602,2025,valid
+506021118,Belmont - Ascot - Redcliffe,Western Australia,70,16787,41.69893369869542,2025,valid
+506021119,East Victoria Park - Carlisle,Western Australia,58,19989,29.01595877732753,2025,valid
+506021120,Kewdale Commercial,Western Australia,48,0,,2025,zero_population
+506021121,Perth Airport,Western Australia,6,23,2608.695652173913,2025,valid
+506021123,Victoria Park - Lathlain - Burswood,Western Australia,60,18736,32.02391118701964,2025,valid
+506021309,Cloverdale,Western Australia,18,10126,17.776022121271975,2025,valid
+506021310,Kewdale,Western Australia,12,8443,14.212957479568873,2025,valid
+506021311,Rivervale,Western Australia,29,12842,22.582152312723874,2025,valid
+506031124,Bentley - Wilson - St James,Western Australia,48,24479,19.608644143960127,2025,valid
+506031125,Canning Vale - West,Western Australia,29,10715,27.0648623425105,2025,valid
+506031126,Canning Vale Commercial,Western Australia,156,5,312000.0,2025,valid
+506031127,Cannington - Queens Park,Western Australia,50,24673,20.265067077372027,2025,valid
+506031128,Parkwood - Ferndale - Lynwood,Western Australia,39,15304,25.48353371667538,2025,valid
+506031129,Riverton - Shelley - Rossmoyne,Western Australia,32,16102,19.873307663644265,2025,valid
+506031130,Welshpool,Western Australia,176,15,117333.33333333333,2025,valid
+506031131,Willetton,Western Australia,82,21691,37.80369738601263,2025,valid
+506041132,Beckenham - Kenwick - Langford,Western Australia,82,23337,35.137335561554615,2025,valid
+506041133,Canning Vale - East,Western Australia,57,27381,20.817355100251998,2025,valid
+506041134,Gosnells,Western Australia,27,23945,11.275840467738568,2025,valid
+506041135,Huntingdale - Southern River,Western Australia,51,26277,19.408608288617422,2025,valid
+506041136,Maddington - Orange Grove - Martin,Western Australia,139,17572,79.10311859776918,2025,valid
+506041137,Thornlie,Western Australia,42,25963,16.176867080075493,2025,valid
+506051138,Forrestfield - Wattle Grove,Western Australia,66,22766,28.990600017570063,2025,valid
+506051139,High Wycombe,Western Australia,28,13368,20.945541591861158,2025,valid
+506051140,Kalamunda - Maida Vale - Gooseberry Hill,Western Australia,34,16453,20.66492432990944,2025,valid
+506051141,Lesmurdie - Bickley - Carmel,Western Australia,71,12420,57.1658615136876,2025,valid
+506061142,Byford,Western Australia,58,27064,21.430682825894177,2025,valid
+506061143,Mundijong,Western Australia,51,8298,61.46059291395517,2025,valid
+506061144,Serpentine - Jarrahdale,Western Australia,23,5195,44.27333974975939,2025,valid
+506071145,Como,Western Australia,27,16221,16.645089698538932,2025,valid
+506071146,Manning - Waterford,Western Australia,20,13108,15.257857796765334,2025,valid
+506071147,South Perth - Kensington,Western Australia,48,19447,24.682470303902917,2025,valid
+507011148,Banjup,Western Australia,70,26778,26.14086190156098,2025,valid
+507011150,Bibra Industrial,Western Australia,188,21,89523.80952380953,2025,valid
+507011151,Bibra Lake,Western Australia,0,0,,2025,zero_population
+507011152,Coogee,Western Australia,36,11074,32.50857865270002,2025,valid
+507011153,Coolbellup,Western Australia,24,9639,24.898848428260195,2025,valid
+507011154,Hamilton Hill,Western Australia,52,13081,39.75231251433377,2025,valid
+507011155,Henderson,Western Australia,63,9,70000.0,2025,valid
+507011158,North Coogee,Western Australia,14,4965,28.197381671701912,2025,valid
+507011159,South Lake - Cockburn Central,Western Australia,55,13071,42.07788233493994,2025,valid
+507011160,Spearwood,Western Australia,24,12932,18.558614290133,2025,valid
+507011161,Success - Hammond Park,Western Australia,36,21561,16.696813691387227,2025,valid
+507011163,Yangebup,Western Australia,48,8395,57.176891006551514,2025,valid
+507011259,Beeliar - Wattleup,Western Australia,31,12870,24.087024087024087,2025,valid
+507011260,Jandakot,Western Australia,53,2693,196.80653546230968,2025,valid
+507021164,East Fremantle,Western Australia,30,8426,35.60408260147163,2025,valid
+507021165,Fremantle,Western Australia,100,20429,48.95002202750991,2025,valid
+507021166,Fremantle - South,Western Australia,61,17250,35.36231884057971,2025,valid
+507021167,O'Connor (WA),Western Australia,92,7,131428.57142857142,2025,valid
+507031169,Wellard (West) - Bertram,Western Australia,39,23219,16.796589000387613,2025,valid
+507031170,Calista,Western Australia,16,7882,20.29941639177874,2025,valid
+507031172,Hope Valley - Postans,Western Australia,5,80,625.0,2025,valid
+507031173,Kwinana Industrial,Western Australia,44,25,17600.0,2025,valid
+507031174,Parmelia - Orelia,Western Australia,12,12669,9.47193937958797,2025,valid
+507031261,Casuarina - Wandi,Western Australia,28,13547,20.668782756329815,2025,valid
+507041175,Applecross - Ardross,Western Australia,51,13261,38.45863811175628,2025,valid
+507041176,Bateman,Western Australia,5,4183,11.953143676786993,2025,valid
+507041177,Bicton - Palmyra,Western Australia,41,16510,24.83343428225318,2025,valid
+507041178,Booragoon,Western Australia,66,17792,37.09532374100719,2025,valid
+507041179,Bull Creek,Western Australia,16,8712,18.365472910927455,2025,valid
+507041180,Leeming,Western Australia,29,11692,24.803284296955184,2025,valid
+507041181,Melville,Western Australia,60,19369,30.977334916619338,2025,valid
+507041182,Murdoch - Kardinya,Western Australia,35,14419,24.27352798391012,2025,valid
+507041183,Willagee,Western Australia,13,6253,20.79002079002079,2025,valid
+507041184,Winthrop,Western Australia,14,6641,21.081162475530792,2025,valid
+507051186,Cooloongup,Western Australia,6,9132,6.570302233902759,2025,valid
+507051187,Port Kennedy,Western Australia,38,14778,25.713899039112192,2025,valid
+507051188,Rockingham,Western Australia,79,18827,41.96101343814734,2025,valid
+507051189,Rockingham Lakes,Western Australia,0,3,0.0,2025,valid
+507051190,Safety Bay - Shoalwater,Western Australia,26,13307,19.538588712707597,2025,valid
+507051191,Singleton - Golden Bay - Secret Harbour,Western Australia,37,26403,14.013559065257736,2025,valid
+507051192,Waikiki,Western Australia,20,13674,14.626298083954952,2025,valid
+507051193,Warnbro,Western Australia,20,11897,16.810960746406657,2025,valid
+507051312,Baldivis - North,Western Australia,21,17460,12.027491408934708,2025,valid
+507051313,Baldivis - South,Western Australia,52,31709,16.399129584660507,2025,valid
+507051314,Karnup,Western Australia,4,2744,14.577259475218659,2025,valid
+509011225,Albany,Western Australia,56,16077,34.832369223113766,2025,valid
+509011226,Albany Surrounds,Western Australia,19,4021,47.25192738124845,2025,valid
+509011227,Bayonet Head - Lower King,Western Australia,12,5767,20.808045777700713,2025,valid
+509011228,Denmark,Western Australia,49,6858,71.44940215806358,2025,valid
+509011229,Gnowangerup,Western Australia,21,3078,68.2261208576998,2025,valid
+509011230,Katanning,Western Australia,10,4840,20.66115702479339,2025,valid
+509011231,Kojonup,Western Australia,20,4269,46.849379245725,2025,valid
+509011232,Little Grove - Elleker,Western Australia,18,3995,45.05632040050063,2025,valid
+509011233,McKail - Willyung,Western Australia,53,12448,42.577120822622106,2025,valid
+509011234,Plantagenet,Western Australia,20,5793,34.52442603141723,2025,valid
+509011235,Stirling Range National Park,Western Australia,0,0,,2025,zero_population
+509021236,Chittering,Western Australia,39,7039,55.40559738599232,2025,valid
+509021237,Cunderdin,Western Australia,24,3796,63.224446786090624,2025,valid
+509021238,Dowerin,Western Australia,11,3974,27.679919476597888,2025,valid
+509021239,Gingin - Dandaragan,Western Australia,38,10674,35.60052463931047,2025,valid
+509021240,Merredin,Western Australia,15,5291,28.350028350028353,2025,valid
+509021241,Moora,Western Australia,20,4701,42.54413954477771,2025,valid
+509021242,Mukinbudin,Western Australia,9,3086,29.16396629941672,2025,valid
+509021243,Northam,Western Australia,40,12758,31.352876626430476,2025,valid
+509021244,Toodyay,Western Australia,18,5251,34.27918491715864,2025,valid
+509021245,York - Beverley,Western Australia,14,5492,25.491624180626363,2025,valid
+509031246,Brookton,Western Australia,15,3690,40.650406504065046,2025,valid
+509031247,Kulin,Western Australia,11,4452,24.707996406109615,2025,valid
+509031248,Murray,Western Australia,14,2586,54.13766434648105,2025,valid
+509031249,Narrogin,Western Australia,9,4562,19.72818939061815,2025,valid
+509031250,Wagin,Western Australia,24,5119,46.88415706192616,2025,valid
+510011262,Broome,Western Australia,49,16506,29.686174724342663,2025,valid
+510011263,Derby - West Kimberley,Western Australia,8,8675,9.221902017291066,2025,valid
+510011264,Halls Creek,Western Australia,0,4265,0.0,2025,valid
+510011265,Kununurra,Western Australia,20,8441,23.69387513327805,2025,valid
+510011266,Roebuck,Western Australia,3,2675,11.214953271028037,2025,valid
+510021267,East Pilbara,Western Australia,0,6402,0.0,2025,valid
+510021268,Newman,Western Australia,3,4704,6.377551020408163,2025,valid
+510021269,Port Hedland,Western Australia,12,4318,27.79064381658175,2025,valid
+510021270,South Hedland,Western Australia,12,12982,9.24356801725466,2025,valid
+510031271,Ashburton (WA),Western Australia,6,8335,7.198560287942412,2025,valid
+510031272,Karratha,Western Australia,52,19659,26.450989368736966,2025,valid
+510031273,Roebourne,Western Australia,12,5770,20.797227036395146,2025,valid
+511011274,Esperance,Western Australia,58,12580,46.10492845786964,2025,valid
+511011275,Esperance Surrounds,Western Australia,12,4396,27.297543221110104,2025,valid
+511021276,Carnarvon,Western Australia,15,5306,28.269883151149642,2025,valid
+511021277,Exmouth,Western Australia,14,5419,25.83502491234545,2025,valid
+511031278,Boulder,Western Australia,27,7756,34.81175863847344,2025,valid
+511031279,Kalgoorlie,Western Australia,52,13686,37.99503141896829,2025,valid
+511031280,Kalgoorlie - North,Western Australia,10,9574,10.444955086693128,2025,valid
+511031281,Kalgoorlie Airport,Western Australia,0,0,,2025,zero_population
+511031282,Kambalda - Coolgardie - Norseman,Western Australia,8,4865,16.44398766700925,2025,valid
+511031283,Leinster - Leonora,Western Australia,3,5226,5.7405281285878305,2025,valid
+511031284,Trafalgar (WA),Western Australia,0,0,,2025,zero_population
+511041285,Geraldton,Western Australia,62,12410,49.959709911361806,2025,valid
+511041286,Geraldton - East,Western Australia,21,8599,24.42144435399465,2025,valid
+511041287,Geraldton - North,Western Australia,25,9890,25.278058645096056,2025,valid
+511041288,Geraldton - South,Western Australia,14,11205,12.494422132976348,2025,valid
+511041289,Irwin,Western Australia,16,3899,41.03616311874839,2025,valid
+511041290,Meekatharra,Western Australia,0,3384,0.0,2025,valid
+511041291,Morawa,Western Australia,10,4149,24.10219329959026,2025,valid
+511041292,Northampton - Mullewa - Greenough,Western Australia,19,5962,31.86850050318685,2025,valid
+601011001,Bridgewater - Gagebrook,Tasmania,12,8732,13.742556115437472,2025,valid
+601011002,Brighton - Pontville,Tasmania,14,7008,19.977168949771688,2025,valid
+601011003,Old Beach - Otago,Tasmania,7,5286,13.242527430949679,2025,valid
+601021004,Bellerive - Rosny,Tasmania,12,6561,18.289894833104707,2025,valid
+601021005,Cambridge,Tasmania,65,8883,73.17347742879657,2025,valid
+601021006,Geilston Bay - Risdon,Tasmania,6,3642,16.474464579901152,2025,valid
+601021007,Howrah - Tranmere,Tasmania,18,12105,14.869888475836431,2025,valid
+601021008,Lindisfarne - Rose Bay,Tasmania,11,7804,14.095335725269093,2025,valid
+601021009,Mornington - Warrane,Tasmania,24,5034,47.67580452920143,2025,valid
+601021010,Risdon Vale,Tasmania,6,3799,15.793629902605948,2025,valid
+601021011,Rokeby,Tasmania,12,9227,13.00531050178823,2025,valid
+601021012,South Arm,Tasmania,11,4679,23.509296858303056,2025,valid
+601031013,Austins Ferry - Granton,Tasmania,11,4675,23.52941176470588,2025,valid
+601031014,Berriedale - Chigwell,Tasmania,7,5916,11.83231913455037,2025,valid
+601031015,Claremont (Tas.),Tasmania,7,8592,8.147113594040968,2025,valid
+601031016,Derwent Park - Lutana,Tasmania,50,4570,109.40919037199124,2025,valid
+601031017,Glenorchy,Tasmania,34,12209,27.848308624784995,2025,valid
+601031018,Montrose - Rosetta,Tasmania,15,4990,30.060120240480963,2025,valid
+601031019,Moonah,Tasmania,45,5554,81.0226863521786,2025,valid
+601031020,New Norfolk,Tasmania,9,7713,11.668611435239205,2025,valid
+601031021,West Moonah,Tasmania,4,4227,9.462976105985332,2025,valid
+601041022,Kingston - Huntingfield,Tasmania,55,14371,38.271519031382645,2025,valid
+601041023,Kingston Beach - Blackmans Bay,Tasmania,32,11344,28.208744710860366,2025,valid
+601041024,Margate - Snug,Tasmania,47,8751,53.70814764026968,2025,valid
+601041025,Mount Wellington,Tasmania,0,0,,2025,zero_population
+601041026,Taroona - Bonnet Hill,Tasmania,4,3615,11.065006915629322,2025,valid
+601051027,Hobart,Tasmania,99,9325,106.16621983914209,2025,valid
+601051028,Lenah Valley - Mount Stuart,Tasmania,21,9146,22.960857205335667,2025,valid
+601051029,Mount Nelson - Dynnyrne,Tasmania,7,5259,13.310515307092604,2025,valid
+601051030,New Town,Tasmania,16,6476,24.706609017912292,2025,valid
+601051031,Sandy Bay,Tasmania,23,12587,18.27282116469373,2025,valid
+601051032,South Hobart - Fern Tree,Tasmania,19,6752,28.139810426540283,2025,valid
+601051033,West Hobart,Tasmania,17,6415,26.500389711613405,2025,valid
+601061034,Dodges Ferry - Lewisham,Tasmania,33,9122,36.17627713220785,2025,valid
+601061035,Sorell - Richmond,Tasmania,28,10881,25.73292895873541,2025,valid
+602011036,Invermay,Tasmania,33,3460,95.37572254335261,2025,valid
+602011037,Kings Meadows - Punchbowl,Tasmania,14,4994,28.033640368442132,2025,valid
+602011038,Launceston,Tasmania,61,5365,113.69990680335508,2025,valid
+602011039,Legana,Tasmania,13,5118,25.400547088706528,2025,valid
+602011040,Mowbray,Tasmania,11,4136,26.595744680851062,2025,valid
+602011041,Newnham - Mayfield,Tasmania,16,10070,15.888778550148958,2025,valid
+602011042,Newstead,Tasmania,13,5476,23.739956172388606,2025,valid
+602011043,Norwood (Tas.),Tasmania,6,3844,15.608740894901144,2025,valid
+602011044,Prospect Vale - Blackstone,Tasmania,12,6949,17.268671751331127,2025,valid
+602011045,Ravenswood,Tasmania,0,3950,0.0,2025,valid
+602011046,Riverside,Tasmania,12,7535,15.925680159256801,2025,valid
+602011047,South Launceston,Tasmania,7,4784,14.63210702341137,2025,valid
+602011048,Summerhill - Prospect,Tasmania,8,4989,16.035277610743638,2025,valid
+602011049,Trevallyn,Tasmania,13,4874,26.67213787443578,2025,valid
+602011050,Waverley - St Leonards,Tasmania,9,4107,21.91380569758948,2025,valid
+602011051,West Launceston,Tasmania,8,4220,18.95734597156398,2025,valid
+602011052,Youngtown - Relbia,Tasmania,8,5294,15.11144692104269,2025,valid
+602021053,Beauty Point - Beaconsfield,Tasmania,10,4216,23.719165085388994,2025,valid
+602021054,Deloraine,Tasmania,43,6372,67.4827369742624,2025,valid
+602021055,Grindelwald - Lanena,Tasmania,27,6416,42.08229426433915,2025,valid
+602021056,Hadspen - Carrick,Tasmania,16,3828,41.797283176593524,2025,valid
+602021057,Westbury,Tasmania,19,4740,40.08438818565401,2025,valid
+602031058,Dilston - Lilydale,Tasmania,13,4589,28.328611898016998,2025,valid
+602031059,George Town,Tasmania,29,7465,38.84795713328868,2025,valid
+602031060,Longford,Tasmania,19,4684,40.563620836891545,2025,valid
+602031061,Northern Midlands,Tasmania,11,3883,28.328611898016998,2025,valid
+602031062,Perth - Evandale,Tasmania,33,5816,56.740027510316374,2025,valid
+602031064,St Helens - Scamander,Tasmania,29,7219,40.17176894306691,2025,valid
+602031099,Flinders and Cape Barren Islands,Tasmania,6,924,64.93506493506494,2025,valid
+602031100,Scottsdale - Bridport,Tasmania,40,7076,56.52911249293386,2025,valid
+603011065,Central Highlands,Tasmania,16,2494,64.15396952686447,2025,valid
+603011066,Derwent Valley,Tasmania,10,3464,28.868360277136258,2025,valid
+603011067,Southern Midlands,Tasmania,28,6998,40.01143183766791,2025,valid
+603011068,Wilderness - East,Tasmania,0,7,0.0,2025,valid
+603021069,Bruny Island - Kettering,Tasmania,25,3633,68.81365262868152,2025,valid
+603021070,Cygnet,Tasmania,26,5216,49.84662576687116,2025,valid
+603021071,Geeveston - Dover,Tasmania,15,4408,34.029038112522684,2025,valid
+603021072,Huonville - Franklin,Tasmania,40,10266,38.96356906292617,2025,valid
+603031073,Forestier - Tasman,Tasmania,12,2738,43.82761139517896,2025,valid
+603031074,Triabunna - Bicheno,Tasmania,34,5303,64.1146520837262,2025,valid
+604011075,Acton - Upper Burnie,Tasmania,5,3371,14.832393948383269,2025,valid
+604011076,Burnie - Ulverstone Surrounds,Tasmania,13,5426,23.95871728713601,2025,valid
+604011077,Burnie - Wivenhoe,Tasmania,17,3675,46.25850340136055,2025,valid
+604011078,Parklands - Camdale,Tasmania,24,7034,34.119988626670455,2025,valid
+604011079,Penguin - Sulphur Creek,Tasmania,12,5573,21.53238830073569,2025,valid
+604011080,Romaine - Havenview,Tasmania,7,3627,19.299696719051557,2025,valid
+604011081,Somerset,Tasmania,10,4169,23.986567522187578,2025,valid
+604011082,Ulverstone,Tasmania,27,7156,37.73057574063723,2025,valid
+604011083,West Ulverstone,Tasmania,8,4615,17.33477789815818,2025,valid
+604011084,Wynyard,Tasmania,14,6767,20.688636027781882,2025,valid
+604021085,Devonport,Tasmania,37,14775,25.042301184433164,2025,valid
+604021086,East Devonport,Tasmania,9,5308,16.955538809344386,2025,valid
+604021087,Latrobe,Tasmania,20,5786,34.566194262011756,2025,valid
+604021088,Miandetta - Don,Tasmania,8,3794,21.085925144965735,2025,valid
+604021089,Port Sorell,Tasmania,17,6896,24.651972157772622,2025,valid
+604021090,Quoiba - Spreyton,Tasmania,32,3275,97.70992366412214,2025,valid
+604021091,Sheffield - Railton,Tasmania,25,6911,36.174215019534074,2025,valid
+604021092,Turners Beach - Forth,Tasmania,7,3700,18.91891891891892,2025,valid
+604031093,King Island,Tasmania,10,1647,60.71645415907711,2025,valid
+604031094,North West,Tasmania,18,4400,40.909090909090914,2025,valid
+604031095,Smithton,Tasmania,18,3886,46.32012352032939,2025,valid
+604031096,Waratah,Tasmania,16,3980,40.20100502512563,2025,valid
+604031097,West Coast (Tas.),Tasmania,4,4320,9.25925925925926,2025,valid
+604031098,Wilderness - West,Tasmania,0,0,,2025,zero_population
+701011001,Darwin Airport,Northern Territory,0,20,0.0,2025,valid
+701011002,Darwin City,Northern Territory,17,8597,19.774339886006747,2025,valid
+701011003,East Point,Northern Territory,0,0,,2025,zero_population
+701011004,Fannie Bay - The Gardens,Northern Territory,3,4037,7.431260837255388,2025,valid
+701011005,Larrakeyah,Northern Territory,7,4731,14.796026210103573,2025,valid
+701011006,Ludmilla - The Narrows,Northern Territory,3,2766,10.84598698481562,2025,valid
+701011007,Parap,Northern Territory,6,3175,18.89763779527559,2025,valid
+701011008,Stuart Park,Northern Territory,8,4674,17.115960633290545,2025,valid
+701011009,Woolner - Bayview - Winnellie,Northern Territory,68,3021,225.09102946044356,2025,valid
+701021010,Alawa,Northern Territory,3,2267,13.233348037053375,2025,valid
+701021011,Anula,Northern Territory,3,2583,11.614401858304298,2025,valid
+701021012,Berrimah,Northern Territory,31,2871,107.9763148728666,2025,valid
+701021013,Brinkin - Nakara,Northern Territory,8,3522,22.714366837024418,2025,valid
+701021014,Buffalo Creek,Northern Territory,0,0,,2025,zero_population
+701021015,Charles Darwin,Northern Territory,0,3,0.0,2025,valid
+701021016,Coconut Grove,Northern Territory,10,3100,32.25806451612903,2025,valid
+701021017,East Arm,Northern Territory,9,23,3913.04347826087,2025,valid
+701021018,Jingili,Northern Territory,3,1990,15.07537688442211,2025,valid
+701021019,Karama,Northern Territory,6,5050,11.881188118811881,2025,valid
+701021020,Leanyer,Northern Territory,5,5119,9.767532721234616,2025,valid
+701021021,Lyons (NT),Northern Territory,5,7442,6.7186240257995165,2025,valid
+701021022,Malak - Marrara,Northern Territory,13,4729,27.489955593148657,2025,valid
+701021023,Millner,Northern Territory,5,2718,18.39587932303164,2025,valid
+701021024,Moil,Northern Territory,3,2164,13.863216266173753,2025,valid
+701021025,Nightcliff,Northern Territory,3,4343,6.907667510937141,2025,valid
+701021026,Rapid Creek,Northern Territory,5,3564,14.029180695847362,2025,valid
+701021027,Tiwi,Northern Territory,3,2641,11.359333585762968,2025,valid
+701021028,Wagaman,Northern Territory,0,2118,0.0,2025,valid
+701021029,Wanguri,Northern Territory,3,1940,15.463917525773196,2025,valid
+701021030,Wulagi,Northern Territory,5,2738,18.261504747991236,2025,valid
+701031031,Howard Springs,Northern Territory,17,6308,26.94990488268865,2025,valid
+701031032,Humpty Doo,Northern Territory,34,9513,35.74056554189004,2025,valid
+701031033,Koolpinyah,Northern Territory,0,14,0.0,2025,valid
+701031034,Virginia,Northern Territory,13,3759,34.583665868582074,2025,valid
+701031035,Weddell,Northern Territory,22,4738,46.433094132545385,2025,valid
+701041036,Bakewell,Northern Territory,7,3417,20.48580626280363,2025,valid
+701041037,Driver,Northern Territory,4,2989,13.382402141184341,2025,valid
+701041038,Durack - Marlow Lagoon,Northern Territory,20,5073,39.424403705893944,2025,valid
+701041039,Gray,Northern Territory,0,3479,0.0,2025,valid
+701041040,Moulden,Northern Territory,3,3268,9.179926560587516,2025,valid
+701041041,Palmerston - North,Northern Territory,19,4949,38.39159426146696,2025,valid
+701041042,Palmerston - South,Northern Territory,10,9070,11.025358324145534,2025,valid
+701041043,Rosebery - Bellamack,Northern Territory,7,7223,9.691264017721169,2025,valid
+701041044,Woodroffe,Northern Territory,4,3538,11.305822498586771,2025,valid
+702011045,Charles,Northern Territory,19,4882,38.91847603441213,2025,valid
+702011046,East Side,Northern Territory,4,6544,6.112469437652812,2025,valid
+702011047,Flynn (NT),Northern Territory,4,5355,7.469654528478057,2025,valid
+702011048,Larapinta,Northern Territory,6,5878,10.207553589656344,2025,valid
+702011049,Mount Johns,Northern Territory,3,5069,5.918327086210298,2025,valid
+702011050,Petermann - Simpson,Northern Territory,0,2337,0.0,2025,valid
+702011051,Ross,Northern Territory,9,3147,28.59866539561487,2025,valid
+702011052,Sandover - Plenty,Northern Territory,0,4728,0.0,2025,valid
+702011053,Tanami,Northern Territory,3,3399,8.8261253309797,2025,valid
+702011054,Yuendumu - Anmatjere,Northern Territory,0,2095,0.0,2025,valid
+702021055,Barkly,Northern Territory,0,2596,0.0,2025,valid
+702021056,Tennant Creek,Northern Territory,3,3587,8.363534987454697,2025,valid
+702031057,Alligator,Northern Territory,5,4892,10.220768601798854,2025,valid
+702031058,Daly,Northern Territory,0,2221,0.0,2025,valid
+702031059,Thamarrurr,Northern Territory,0,2459,0.0,2025,valid
+702031060,Tiwi Islands,Northern Territory,0,2767,0.0,2025,valid
+702031061,West Arnhem,Northern Territory,0,6377,0.0,2025,valid
+702041062,Anindilyakwa,Northern Territory,0,2977,0.0,2025,valid
+702041063,East Arnhem,Northern Territory,0,8130,0.0,2025,valid
+702041064,Nhulunbuy,Northern Territory,4,3806,10.509721492380452,2025,valid
+702051065,Elsey,Northern Territory,3,2695,11.131725417439704,2025,valid
+702051066,Gulf,Northern Territory,3,4915,6.103763987792472,2025,valid
+702051067,Katherine,Northern Territory,28,11269,24.846925193007365,2025,valid
+702051068,Victoria River,Northern Territory,0,3147,0.0,2025,valid
+801011001,Aranda,Australian Capital Territory,0,2643,0.0,2025,valid
+801011002,Belconnen,Australian Capital Territory,11,9592,11.46788990825688,2025,valid
+801011003,Bruce,Australian Capital Territory,5,8119,6.15839389087326,2025,valid
+801011004,Charnwood,Australian Capital Territory,3,3078,9.746588693957115,2025,valid
+801011005,Cook,Australian Capital Territory,3,2962,10.12829169480081,2025,valid
+801011006,Dunlop,Australian Capital Territory,5,7282,6.866245536940401,2025,valid
+801011007,Evatt,Australian Capital Territory,5,5549,9.010632546404757,2025,valid
+801011008,Florey,Australian Capital Territory,3,4768,6.291946308724832,2025,valid
+801011009,Flynn (ACT),Australian Capital Territory,0,3710,0.0,2025,valid
+801011010,Fraser,Australian Capital Territory,4,2139,18.700327255726975,2025,valid
+801011011,Giralang,Australian Capital Territory,4,3456,11.574074074074073,2025,valid
+801011012,Gooromon,Australian Capital Territory,0,4,0.0,2025,valid
+801011013,Hawker,Australian Capital Territory,3,3007,9.976720984369804,2025,valid
+801011014,Higgins,Australian Capital Territory,3,3363,8.920606601248885,2025,valid
+801011015,Holt,Australian Capital Territory,7,6047,11.57598809326939,2025,valid
+801011016,Kaleen,Australian Capital Territory,9,7776,11.574074074074073,2025,valid
+801011017,Latham,Australian Capital Territory,6,3763,15.944724953494552,2025,valid
+801011018,Lawson,Australian Capital Territory,0,2913,0.0,2025,valid
+801011019,Macgregor (ACT),Australian Capital Territory,8,6975,11.469534050179211,2025,valid
+801011020,Macquarie,Australian Capital Territory,5,3231,15.475085112968122,2025,valid
+801011021,McKellar,Australian Capital Territory,3,2619,11.45475372279496,2025,valid
+801011022,Melba,Australian Capital Territory,5,3424,14.602803738317757,2025,valid
+801011023,Page,Australian Capital Territory,0,2991,0.0,2025,valid
+801011024,Scullin,Australian Capital Territory,0,3052,0.0,2025,valid
+801011025,Spence,Australian Capital Territory,0,2535,0.0,2025,valid
+801011026,Weetangera,Australian Capital Territory,6,2848,21.06741573033708,2025,valid
+801011111,Molonglo Corridor,Australian Capital Territory,0,16,0.0,2025,valid
+801011142,Macnamara,Australian Capital Territory,0,40,0.0,2025,valid
+801011143,Strathnairn,Australian Capital Territory,3,2208,13.58695652173913,2025,valid
+801011144,West Belconnen,Australian Capital Territory,3,22,1363.6363636363635,2025,valid
+801031031,Hume,Australian Capital Territory,29,394,736.0406091370559,2025,valid
+801031032,Kowen,Australian Capital Territory,0,23,0.0,2025,valid
+801031113,Canberra East,Australian Capital Territory,11,1226,89.7226753670473,2025,valid
+801031114,Canberra Airport,Australian Capital Territory,0,128,0.0,2025,valid
+801031115,Majura,Australian Capital Territory,3,263,114.06844106463879,2025,valid
+801041034,Amaroo,Australian Capital Territory,3,5985,5.012531328320802,2025,valid
+801041035,Bonner,Australian Capital Territory,5,7448,6.713211600429646,2025,valid
+801041036,Casey,Australian Capital Territory,7,6731,10.399643440796316,2025,valid
+801041037,Crace,Australian Capital Territory,4,4821,8.297033810412778,2025,valid
+801041038,Forde,Australian Capital Territory,3,4457,6.730984967466906,2025,valid
+801041039,Franklin,Australian Capital Territory,8,7520,10.638297872340425,2025,valid
+801041040,Gungahlin,Australian Capital Territory,8,9555,8.372579801151229,2025,valid
+801041043,Hall,Australian Capital Territory,0,291,0.0,2025,valid
+801041044,Harrison,Australian Capital Territory,3,8023,3.739249657235448,2025,valid
+801041045,Mitchell,Australian Capital Territory,38,8,47500.0,2025,valid
+801041046,Ngunnawal,Australian Capital Territory,11,11188,9.831962817304253,2025,valid
+801041047,Nicholls,Australian Capital Territory,10,6507,15.36806516059628,2025,valid
+801041048,Palmerston,Australian Capital Territory,6,5537,10.83619288423334,2025,valid
+801041116,Gungahlin - East,Australian Capital Territory,0,0,,2025,zero_population
+801041117,Gungahlin - West,Australian Capital Territory,0,0,,2025,zero_population
+801041118,Jacka,Australian Capital Territory,0,733,0.0,2025,valid
+801041119,Kenny,Australian Capital Territory,0,18,0.0,2025,valid
+801041120,Moncrieff,Australian Capital Territory,5,6031,8.2904990880451,2025,valid
+801041121,Taylor,Australian Capital Territory,3,5512,5.44267053701016,2025,valid
+801041122,Throsby,Australian Capital Territory,4,3765,10.624169986719787,2025,valid
+801051049,Acton,Australian Capital Territory,0,3616,0.0,2025,valid
+801051050,Ainslie,Australian Capital Territory,6,5469,10.970927043335163,2025,valid
+801051051,Braddon,Australian Capital Territory,10,7488,13.354700854700855,2025,valid
+801051053,Civic,Australian Capital Territory,18,5361,33.57582540570789,2025,valid
+801051054,Dickson,Australian Capital Territory,11,4179,26.32208662359416,2025,valid
+801051055,Downer,Australian Capital Territory,4,4556,8.779631255487269,2025,valid
+801051056,Hackett,Australian Capital Territory,3,3345,8.968609865470851,2025,valid
+801051057,Lyneham,Australian Capital Territory,8,6013,13.304506901712955,2025,valid
+801051058,O'Connor (ACT),Australian Capital Territory,5,5921,8.444519506840061,2025,valid
+801051060,Turner,Australian Capital Territory,4,4888,8.183306055646481,2025,valid
+801051061,Watson,Australian Capital Territory,10,7377,13.555645926528399,2025,valid
+801051123,Black Mountain,Australian Capital Territory,0,0,,2025,zero_population
+801051124,Campbell,Australian Capital Territory,6,5365,11.183597390493942,2025,valid
+801051125,Duntroon,Australian Capital Territory,0,2367,0.0,2025,valid
+801051126,Parkes (ACT) - North,Australian Capital Territory,0,332,0.0,2025,valid
+801051127,Reid,Australian Capital Territory,3,2013,14.903129657228018,2025,valid
+801051128,Russell,Australian Capital Territory,0,0,,2025,zero_population
+801061062,Deakin,Australian Capital Territory,9,3247,27.71789344009855,2025,valid
+801061063,Forrest,Australian Capital Territory,4,1944,20.5761316872428,2025,valid
+801061064,Griffith (ACT),Australian Capital Territory,8,5826,13.731548232063165,2025,valid
+801061066,Lake Burley Griffin,Australian Capital Territory,0,0,,2025,zero_population
+801061067,Narrabundah,Australian Capital Territory,7,7014,9.98003992015968,2025,valid
+801061068,Parkes (ACT) - South,Australian Capital Territory,0,4,0.0,2025,valid
+801061069,Red Hill (ACT),Australian Capital Territory,7,3619,19.342359767891683,2025,valid
+801061070,Yarralumla,Australian Capital Territory,3,3154,9.511731135066583,2025,valid
+801061129,Barton,Australian Capital Territory,0,2144,0.0,2025,valid
+801061130,Fyshwick,Australian Capital Territory,84,59,14237.28813559322,2025,valid
+801061131,Kingston (ACT),Australian Capital Territory,5,7472,6.691648822269807,2025,valid
+801071071,Banks,Australian Capital Territory,3,5038,5.954743946010321,2025,valid
+801071072,Bonython,Australian Capital Territory,4,3740,10.695187165775401,2025,valid
+801071073,Calwell,Australian Capital Territory,12,5520,21.73913043478261,2025,valid
+801071074,Chisholm,Australian Capital Territory,7,5277,13.265112753458403,2025,valid
+801071075,Conder,Australian Capital Territory,0,4914,0.0,2025,valid
+801071076,Fadden,Australian Capital Territory,0,3014,0.0,2025,valid
+801071077,Gilmore,Australian Capital Territory,3,2722,11.021307861866275,2025,valid
+801071078,Gordon (ACT),Australian Capital Territory,6,7783,7.709109597841449,2025,valid
+801071079,Gowrie (ACT),Australian Capital Territory,5,3100,16.129032258064516,2025,valid
+801071080,Greenway,Australian Capital Territory,5,5565,8.984725965858042,2025,valid
+801071081,Isabella Plains,Australian Capital Territory,5,4324,11.56336725254394,2025,valid
+801071082,Kambah,Australian Capital Territory,13,15878,8.187429147247764,2025,valid
+801071083,Macarthur,Australian Capital Territory,0,1387,0.0,2025,valid
+801071084,Monash,Australian Capital Territory,7,5657,12.374049849743681,2025,valid
+801071085,Mount Taylor,Australian Capital Territory,0,0,,2025,zero_population
+801071086,Oxley (ACT),Australian Capital Territory,0,1713,0.0,2025,valid
+801071087,Richardson,Australian Capital Territory,5,3060,16.33986928104575,2025,valid
+801071088,Theodore,Australian Capital Territory,4,3726,10.735373054213634,2025,valid
+801071089,Tuggeranong,Australian Capital Territory,0,40,0.0,2025,valid
+801071090,Wanniassa,Australian Capital Territory,16,7731,20.695899624886817,2025,valid
+801071132,Tuggeranong - West,Australian Capital Territory,0,10,0.0,2025,valid
+801081091,Chapman,Australian Capital Territory,3,2881,10.413051023950016,2025,valid
+801081092,Duffy,Australian Capital Territory,3,3514,8.537279453614115,2025,valid
+801081093,Fisher,Australian Capital Territory,3,3334,8.998200359928015,2025,valid
+801081094,Holder,Australian Capital Territory,3,2895,10.362694300518134,2025,valid
+801081095,Rivett,Australian Capital Territory,3,3431,8.743806470416787,2025,valid
+801081096,Stirling,Australian Capital Territory,0,2167,0.0,2025,valid
+801081097,Waramanga,Australian Capital Territory,3,2749,10.913059294288832,2025,valid
+801081098,Weston,Australian Capital Territory,4,4027,9.932952570151478,2025,valid
+801081133,Scrivener,Australian Capital Territory,0,72,0.0,2025,valid
+801091099,Chifley,Australian Capital Territory,0,2785,0.0,2025,valid
+801091100,Curtin,Australian Capital Territory,3,5585,5.371530886302597,2025,valid
+801091101,Farrer,Australian Capital Territory,9,3816,23.58490566037736,2025,valid
+801091102,Garran,Australian Capital Territory,4,3732,10.718113612004288,2025,valid
+801091103,Hughes,Australian Capital Territory,0,3149,0.0,2025,valid
+801091104,Isaacs,Australian Capital Territory,3,2402,12.489592006661116,2025,valid
+801091105,Lyons (ACT),Australian Capital Territory,0,3310,0.0,2025,valid
+801091106,Mawson,Australian Capital Territory,5,3526,14.180374361883153,2025,valid
+801091107,O'Malley,Australian Capital Territory,3,977,30.706243602865914,2025,valid
+801091108,Pearce,Australian Capital Territory,4,2713,14.74382602285293,2025,valid
+801091109,Phillip,Australian Capital Territory,8,7135,11.212333566923615,2025,valid
+801091110,Torrens,Australian Capital Territory,3,2470,12.145748987854251,2025,valid
+801101134,Arboretum,Australian Capital Territory,0,10,0.0,2025,valid
+801101135,Coombs,Australian Capital Territory,3,6159,4.870920603994155,2025,valid
+801101136,Denman Prospect,Australian Capital Territory,3,5503,5.451571869889151,2025,valid
+801101137,Molonglo,Australian Capital Territory,0,0,,2025,zero_population
+801101139,Wright,Australian Capital Territory,3,4757,6.306495690561278,2025,valid
+801101145,Molonglo - East,Australian Capital Territory,0,3,0.0,2025,valid
+801101146,Whitlam,Australian Capital Territory,0,1632,0.0,2025,valid
+801111140,ACT - South West,Australian Capital Territory,4,561,71.301247771836,2025,valid
+801111141,Namadgi,Australian Capital Territory,0,67,0.0,2025,valid
+901011001,Christmas Island,Other Territories,,1889,,2025,missing_business_total
+901021002,Cocos (Keeling) Islands,Other Territories,0,626,0.0,2025,valid
+901031003,Jervis Bay,Other Territories,0,305,0.0,2025,valid
+901041004,Norfolk Island,Other Territories,,2193,,2025,missing_business_total

@@ -1,0 +1,22 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Microsoft Excel temporary lock files
+~$*.xlsx
+~$*.xls
+
+# Large raw source datasets (keep cleaned web data in work/data/)
+*.xlsx
+*.xls
+*.docx
+*.pdf
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local backup / temp
+*.tmp
+*.bak

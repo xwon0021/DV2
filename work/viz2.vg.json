@@ -1,0 +1,154 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Proportional-symbol map of manufacturing business counts by SA2. The companion controller injects the selected study-area data, fitted geography and responsive dimensions.",
+  "width": 720,
+  "height": 500,
+  "padding": { "left": 0, "right": 0, "top": 0, "bottom": 0 },
+  "autosize": { "type": "pad", "contains": "padding" },
+  "background": "transparent",
+  "signals": [
+    { "name": "mapZoom", "value": 1 },
+    { "name": "mapPan", "value": [0, 0] },
+    {
+      "name": "selectedCode",
+      "value": "",
+      "on": [{ "events": "@dots:click", "update": "datum.SA2_Code" }]
+    },
+    {
+      "name": "hoveredCode",
+      "value": "",
+      "on": [
+        { "events": "@dots:mouseover", "update": "datum.SA2_Code" },
+        { "events": "@dots:mouseout", "update": "''" }
+      ]
+    }
+  ],
+  "data": [
+    {
+      "name": "land",
+      "values": [],
+      "transform": [{ "type": "geopath", "projection": "base", "as": "cachedPath" }]
+    },
+    {
+      "name": "points",
+      "values": [],
+      "transform": [
+        {
+          "type": "geopoint",
+          "projection": "projection",
+          "fields": ["Longitude", "Latitude"],
+          "as": ["px", "py"]
+        },
+        {
+          "type": "collect",
+          "sort": { "field": "Manufacturing_Businesses", "order": "descending" }
+        }
+      ]
+    }
+  ],
+  "projections": [
+    {
+      "name": "base",
+      "type": "mercator",
+      "fit": { "type": "FeatureCollection", "features": [] },
+      "extent": [[28, 28], [692, 472]]
+    },
+    {
+      "name": "projection",
+      "type": "mercator",
+      "scale": {
+        "signal": "(scale('base',[1,0])[0]-scale('base',[0,0])[0])*180/PI*mapZoom"
+      },
+      "translate": {
+        "signal": "[width/2+(scale('base',[0,0])[0]-width/2)*mapZoom+mapPan[0],height/2+(scale('base',[0,0])[1]-height/2)*mapZoom+mapPan[1]]"
+      }
+    }
+  ],
+  "scales": [
+    {
+      "name": "countSize",
+      "type": "linear",
+      "domain": [0, 826],
+      "range": [0, 810],
+      "zero": true
+    }
+  ],
+  "legends": [
+    {
+      "size": "countSize",
+      "title": "Circle area · manufacturing businesses",
+      "values": [25, 200, 800],
+      "orient": "bottom",
+      "direction": "horizontal",
+      "symbolFillColor": "#A855D6",
+      "symbolStrokeColor": "#ffffff",
+      "symbolFillOpacity": 0.42,
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "offset": 12
+    }
+  ],
+  "marks": [
+    {
+      "type": "path",
+      "from": { "data": "land" },
+      "clip": true,
+      "encode": {
+        "update": {
+          "path": { "field": "cachedPath" },
+          "scaleX": { "signal": "mapZoom" },
+          "scaleY": { "signal": "mapZoom" },
+          "x": { "signal": "width/2*(1-mapZoom)+mapPan[0]" },
+          "y": { "signal": "height/2*(1-mapZoom)+mapPan[1]" },
+          "fill": { "value": "#f0f3f6" },
+          "stroke": { "value": "#ADBCC8" },
+          "strokeWidth": { "signal": "0.55/mapZoom" }
+        }
+      }
+    },
+    {
+      "type": "symbol",
+      "name": "dots",
+      "from": { "data": "points" },
+      "clip": true,
+      "encode": {
+        "update": {
+          "x": { "field": "px" },
+          "y": { "field": "py" },
+          "size": { "scale": "countSize", "field": "Manufacturing_Businesses" },
+          "shape": { "value": "circle" },
+          "fill": { "signal": "datum.SA2_Code===selectedCode ? '#C62828' : '#A855D6'" },
+          "fillOpacity": { "signal": "datum.Manufacturing_Businesses>0 ? 0.42 : 0" },
+          "stroke": { "signal": "datum.SA2_Code===selectedCode || datum.SA2_Code===hoveredCode ? '#C62828' : '#ffffff'" },
+          "strokeWidth": { "signal": "datum.SA2_Code===selectedCode || datum.SA2_Code===hoveredCode ? 2 : 0.2" },
+          "cursor": { "value": "pointer" },
+          "tooltip": {
+            "signal": "{'SA2':datum.SA2_Name,'State':datum.State,'Manufacturing businesses':format(datum.Manufacturing_Businesses,',d'),'Year':datum.Year}"
+          }
+        }
+      }
+    },
+    {
+      "type": "symbol",
+      "name": "selectionOutline",
+      "from": { "data": "points" },
+      "clip": true,
+      "interactive": false,
+      "encode": {
+        "update": {
+          "x": { "field": "px" },
+          "y": { "field": "py" },
+          "size": { "signal": "scale('countSize',datum.Manufacturing_Businesses)+55" },
+          "fill": { "value": "transparent" },
+          "stroke": { "value": "#C62828" },
+          "strokeWidth": { "value": 1 },
+          "opacity": { "signal": "datum.SA2_Code===selectedCode ? 1 : 0" }
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Arial, sans-serif",
+    "legend": { "labelColor": "#20312F", "titleColor": "#20312F" }
+  }
+}
