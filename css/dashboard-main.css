@@ -1,0 +1,263 @@
+/* ==========================================================================
+   FIT3179 - Data Visualisation 2
+   Dashboard Main: Typography, Colors, Tokens, Masthead & Base Structure
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+  --ink: #172c3f;
+  --muted: #596b7a;
+  --line: #dce4eb;
+  --paper: #FAF9F5;
+  --card: #ffffff;
+  --navy: #173b5e;
+  --amber: #D8891C;
+  --purple-primary: #7B3FB1;
+  --purple-light: #A855D6;
+  --highlight-red: #C62828;
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-sans: Arial, Helvetica, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--paper);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.55;
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #245b85;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--navy);
+}
+
+/* Base Container Widths */
+.masthead, main, .page-footer {
+  width: min(1120px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+/* ==========================================================================
+   Editorial Masthead
+   ========================================================================== */
+.editorial-masthead {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  column-gap: 80px;
+  padding: 72px 0 34px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.editorial-masthead > .eyebrow {
+  grid-column: 1 / -1;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  color: var(--purple-primary);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.editorial-masthead h1 {
+  grid-column: 1;
+  font-family: var(--font-serif);
+  font-size: clamp(3.2rem, 7.5vw, 6.2rem);
+  line-height: .96;
+  letter-spacing: -.045em;
+  font-weight: 500;
+  margin: 0;
+}
+
+.editorial-masthead .hero-copy {
+  grid-column: 2;
+  grid-row: 2 / 4;
+  align-self: end;
+}
+
+.hero-copy .standfirst {
+  margin: 0 0 20px;
+  font-family: var(--font-serif);
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.hero-copy .method-note {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.55;
+  max-width: 48ch;
+}
+
+.editorial-masthead .byline {
+  margin-top: 24px;
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* Chapter Navigation Index */
+.chapter-index {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 32px;
+  margin-top: 44px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.chapter-index a {
+  color: var(--ink);
+  text-decoration: none;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.chapter-index a:hover {
+  color: var(--purple-primary);
+  border-bottom-color: var(--purple-primary);
+}
+
+/* ==========================================================================
+   Story Sections & Typography Hierarchy
+   ========================================================================== */
+.story-section {
+  padding: 80px 0 10px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 850px;
+  padding: 0 0 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-number {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  color: #6e8da6;
+  line-height: 1;
+  margin-top: 4px;
+}
+
+.section-heading h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
+  line-height: 1.08;
+  letter-spacing: -.03em;
+  font-weight: 500;
+  margin: 0;
+}
+
+.section-heading .eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  color: var(--purple-primary);
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+.story-prose-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px 40px;
+  margin: 24px 0 36px;
+}
+
+.section-intro {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 17.5px;
+  line-height: 1.6;
+  color: #334e68;
+}
+
+.story-transition {
+  max-width: 680px;
+  margin: 40px auto 60px 5%;
+  font-family: var(--font-serif);
+  color: var(--ink);
+  font-size: 19.5px;
+  line-height: 1.55;
+  font-style: italic;
+  padding-left: 20px;
+  border-left: 3px solid #cbd5e1;
+}
+
+/* ==========================================================================
+   Page Footer
+   ========================================================================== */
+.page-footer {
+  margin-top: 90px;
+  padding: 50px 0 60px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.page-footer .data-summary h2 {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+
+.source-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px 36px;
+  margin-bottom: 30px;
+}
+
+.source-summary-grid p {
+  margin: 0;
+  font-size: 12.5px;
+  color: #486581;
+}
+
+.source-summary-grid strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+@media (max-width: 860px) {
+  .editorial-masthead {
+    grid-template-columns: 1fr;
+    row-gap: 28px;
+    padding: 48px 0 24px;
+  }
+  .editorial-masthead .hero-copy {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .story-transition {
+    margin: 30px 0 40px;
+    font-size: 17px;
+  }
+}

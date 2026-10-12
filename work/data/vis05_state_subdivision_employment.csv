@@ -1,0 +1,121 @@
+State,State_Code,ANZSIC_Code,Subdivision,Subdivision_Short,Employment_2024_25,State_Total_Employment_2024_25,Employment_Share_pct,Year
+Manufacturing,NSW,11,Food product manufacturing,Food,69509,272407,25.51659832530001,2024-25
+Manufacturing,NSW,12,Beverage and tobacco product manufacturing,Beverage/tobacco,9831,272407,3.608938096304427,2024-25
+Manufacturing,NSW,13,"Textile, leather, clothing and footwear manufacturing",Textiles/clothing,7491,272407,2.7499293336808526,2024-25
+Manufacturing,NSW,14,Wood product manufacturing,Wood,17780,272407,6.526998204891944,2024-25
+Manufacturing,NSW,15,"Pulp, paper and converted paper product manufacturing",Pulp/paper,4031,272407,1.4797710778357385,2024-25
+Manufacturing,NSW,16,Printing (including the reproduction of recorded media),Printing,9095,272407,3.3387541436159864,2024-25
+Manufacturing,NSW,17,Petroleum and coal product manufacturing,Petroleum/coal,766,272407,0.2811968855425888,2024-25
+Manufacturing,NSW,18,Basic chemical and chemical product manufacturing,Basic chemicals,16104,272407,5.9117423561068545,2024-25
+Manufacturing,NSW,19,Polymer product and rubber product manufacturing,Polymer/rubber,11822,272407,4.339829740058075,2024-25
+Manufacturing,NSW,20,Non-metallic mineral product manufacturing,Non-metal minerals,12573,272407,4.61552015917359,2024-25
+Manufacturing,NSW,21,Primary metal and metal product manufacturing,Primary metals,10430,272407,3.8288296556255896,2024-25
+Manufacturing,NSW,22,Fabricated metal product manufacturing,Fabricated metals,31884,272407,11.704545037388908,2024-25
+Manufacturing,NSW,23,Transport equipment manufacturing,Transport equip.,20358,272407,7.473376234825096,2024-25
+Manufacturing,NSW,24,Machinery and equipment manufacturing,Machinery equip.,39639,272407,14.551388180186265,2024-25
+Manufacturing,NSW,25,Furniture and other manufacturing,Furniture/other,11094,272407,4.072582569464074,2024-25
+Manufacturing,VIC,11,Food product manufacturing,Food,70297,252446,27.84635129889164,2024-25
+Manufacturing,VIC,12,Beverage and tobacco product manufacturing,Beverage/tobacco,9564,252446,3.7885329931945844,2024-25
+Manufacturing,VIC,13,"Textile, leather, clothing and footwear manufacturing",Textiles/clothing,8236,252446,3.262479896690777,2024-25
+Manufacturing,VIC,14,Wood product manufacturing,Wood,11649,252446,4.614452199678347,2024-25
+Manufacturing,VIC,15,"Pulp, paper and converted paper product manufacturing",Pulp/paper,5490,252446,2.1747225149140808,2024-25
+Manufacturing,VIC,16,Printing (including the reproduction of recorded media),Printing,7396,252446,2.9297354681793335,2024-25
+Manufacturing,VIC,17,Petroleum and coal product manufacturing,Petroleum/coal,1527,252446,0.6048818361154464,2024-25
+Manufacturing,VIC,18,Basic chemical and chemical product manufacturing,Basic chemicals,16496,252446,6.534466777053311,2024-25
+Manufacturing,VIC,19,Polymer product and rubber product manufacturing,Polymer/rubber,14889,252446,5.897894995365346,2024-25
+Manufacturing,VIC,20,Non-metallic mineral product manufacturing,Non-metal minerals,10939,252446,4.333203932722245,2024-25
+Manufacturing,VIC,21,Primary metal and metal product manufacturing,Primary metals,7595,252446,3.008564207790973,2024-25
+Manufacturing,VIC,22,Fabricated metal product manufacturing,Fabricated metals,27492,252446,10.890249795995976,2024-25
+Manufacturing,VIC,23,Transport equipment manufacturing,Transport equip.,23439,252446,9.284757928428258,2024-25
+Manufacturing,VIC,24,Machinery and equipment manufacturing,Machinery equip.,26366,252446,10.444213812062777,2024-25
+Manufacturing,VIC,25,Furniture and other manufacturing,Furniture/other,11068,252446,4.384303969957932,2024-25
+Manufacturing,QLD,11,Food product manufacturing,Food,49266,180944,27.2272084180741,2024-25
+Manufacturing,QLD,12,Beverage and tobacco product manufacturing,Beverage/tobacco,4629,180944,2.5582500663188608,2024-25
+Manufacturing,QLD,13,"Textile, leather, clothing and footwear manufacturing",Textiles/clothing,4148,180944,2.292421964806791,2024-25
+Manufacturing,QLD,14,Wood product manufacturing,Wood,9687,180944,5.353590061013352,2024-25
+Manufacturing,QLD,15,"Pulp, paper and converted paper product manufacturing",Pulp/paper,1860,180944,1.0279423468034308,2024-25
+Manufacturing,QLD,16,Printing (including the reproduction of recorded media),Printing,3763,180944,2.079648952161995,2024-25
+Manufacturing,QLD,17,Petroleum and coal product manufacturing,Petroleum/coal,825,180944,0.4559421699531347,2024-25
+Manufacturing,QLD,18,Basic chemical and chemical product manufacturing,Basic chemicals,8387,180944,4.635135732602352,2024-25
+Manufacturing,QLD,19,Polymer product and rubber product manufacturing,Polymer/rubber,7420,180944,4.100716243699709,2024-25
+Manufacturing,QLD,20,Non-metallic mineral product manufacturing,Non-metal minerals,8483,180944,4.688190821469626,2024-25
+Manufacturing,QLD,21,Primary metal and metal product manufacturing,Primary metals,7516,180944,4.153771332566982,2024-25
+Manufacturing,QLD,22,Fabricated metal product manufacturing,Fabricated metals,28331,180944,15.657330444778495,2024-25
+Manufacturing,QLD,23,Transport equipment manufacturing,Transport equip.,21107,180944,11.664935007516137,2024-25
+Manufacturing,QLD,24,Machinery and equipment manufacturing,Machinery equip.,18723,180944,10.347400300645504,2024-25
+Manufacturing,QLD,25,Furniture and other manufacturing,Furniture/other,6799,180944,3.7575161375895303,2024-25
+Manufacturing,WA,11,Food product manufacturing,Food,16196,98555,16.433463548272538,2024-25
+Manufacturing,WA,12,Beverage and tobacco product manufacturing,Beverage/tobacco,6000,98555,6.087971183603065,2024-25
+Manufacturing,WA,13,"Textile, leather, clothing and footwear manufacturing",Textiles/clothing,2129,98555,2.160215108315154,2024-25
+Manufacturing,WA,14,Wood product manufacturing,Wood,3570,98555,3.6223428542438234,2024-25
+Manufacturing,WA,15,"Pulp, paper and converted paper product manufacturing",Pulp/paper,,98555,,2024-25
+Manufacturing,WA,16,Printing (including the reproduction of recorded media),Printing,1988,98555,2.017147785500482,2024-25
+Manufacturing,WA,17,Petroleum and coal product manufacturing,Petroleum/coal,,98555,,2024-25
+Manufacturing,WA,18,Basic chemical and chemical product manufacturing,Basic chemicals,6448,98555,6.5425396986454265,2024-25
+Manufacturing,WA,19,Polymer product and rubber product manufacturing,Polymer/rubber,3598,98555,3.6507533864339705,2024-25
+Manufacturing,WA,20,Non-metallic mineral product manufacturing,Non-metal minerals,5922,98555,6.0088275582162245,2024-25
+Manufacturing,WA,21,Primary metal and metal product manufacturing,Primary metals,9830,98555,9.974126122469688,2024-25
+Manufacturing,WA,22,Fabricated metal product manufacturing,Fabricated metals,15604,98555,15.8327837248237,2024-25
+Manufacturing,WA,23,Transport equipment manufacturing,Transport equip.,10503,98555,10.656993556897163,2024-25
+Manufacturing,WA,24,Machinery and equipment manufacturing,Machinery equip.,12246,98555,12.425549185733855,2024-25
+Manufacturing,WA,25,Furniture and other manufacturing,Furniture/other,3700,98555,3.7542488965552225,2024-25
+Manufacturing,SA,11,Food product manufacturing,Food,17374,68433,25.388336036707436,2024-25
+Manufacturing,SA,12,Beverage and tobacco product manufacturing,Beverage/tobacco,8086,68433,11.81593675565882,2024-25
+Manufacturing,SA,13,"Textile, leather, clothing and footwear manufacturing",Textiles/clothing,1957,68433,2.859731416129645,2024-25
+Manufacturing,SA,14,Wood product manufacturing,Wood,3214,68433,4.696564522964067,2024-25
+Manufacturing,SA,15,"Pulp, paper and converted paper product manufacturing",Pulp/paper,1434,68433,2.095480250756214,2024-25
+Manufacturing,SA,16,Printing (including the reproduction of recorded media),Printing,1156,68433,1.6892434936361111,2024-25
+Manufacturing,SA,17,Petroleum and coal product manufacturing,Petroleum/coal,54,68433,0.0789092981456315,2024-25
+Manufacturing,SA,18,Basic chemical and chemical product manufacturing,Basic chemicals,1964,68433,2.869960399222597,2024-25
+Manufacturing,SA,19,Polymer product and rubber product manufacturing,Polymer/rubber,2313,68433,3.3799482705712154,2024-25
+Manufacturing,SA,20,Non-metallic mineral product manufacturing,Non-metal minerals,2820,68433,4.120818903160756,2024-25
+Manufacturing,SA,21,Primary metal and metal product manufacturing,Primary metals,3006,68433,4.392617596773486,2024-25
+Manufacturing,SA,22,Fabricated metal product manufacturing,Fabricated metals,7711,68433,11.267955518536379,2024-25
+Manufacturing,SA,23,Transport equipment manufacturing,Transport equip.,7956,68433,11.625969926789708,2024-25
+Manufacturing,SA,24,Machinery and equipment manufacturing,Machinery equip.,7283,68433,10.6425262665673,2024-25
+Manufacturing,SA,25,Furniture and other manufacturing,Furniture/other,2105,68433,3.0760013443806353,2024-25
+Manufacturing,TAS,11,Food product manufacturing,Food,7439,19864,37.44965767217076,2024-25
+Manufacturing,TAS,12,Beverage and tobacco product manufacturing,Beverage/tobacco,1523,19864,7.6671365283930735,2024-25
+Manufacturing,TAS,13,"Textile, leather, clothing and footwear manufacturing",Textiles/clothing,342,19864,1.721707611759968,2024-25
+Manufacturing,TAS,14,Wood product manufacturing,Wood,1387,19864,6.982480869915425,2024-25
+Manufacturing,TAS,15,"Pulp, paper and converted paper product manufacturing",Pulp/paper,,19864,,2024-25
+Manufacturing,TAS,16,Printing (including the reproduction of recorded media),Printing,338,19864,1.7015706806282722,2024-25
+Manufacturing,TAS,17,Petroleum and coal product manufacturing,Petroleum/coal,,19864,,2024-25
+Manufacturing,TAS,18,Basic chemical and chemical product manufacturing,Basic chemicals,495,19864,2.4919452275473217,2024-25
+Manufacturing,TAS,19,Polymer product and rubber product manufacturing,Polymer/rubber,661,19864,3.3276278695126864,2024-25
+Manufacturing,TAS,20,Non-metallic mineral product manufacturing,Non-metal minerals,846,19864,4.258960934353604,2024-25
+Manufacturing,TAS,21,Primary metal and metal product manufacturing,Primary metals,1569,19864,7.898711236407571,2024-25
+Manufacturing,TAS,22,Fabricated metal product manufacturing,Fabricated metals,2109,19864,10.617196939186469,2024-25
+Manufacturing,TAS,23,Transport equipment manufacturing,Transport equip.,1110,19864,5.587998389045509,2024-25
+Manufacturing,TAS,24,Machinery and equipment manufacturing,Machinery equip.,976,19864,4.913411196133709,2024-25
+Manufacturing,TAS,25,Furniture and other manufacturing,Furniture/other,587,19864,2.9550946435763192,2024-25
+Manufacturing,NT,11,Food product manufacturing,Food,447,3541,12.623552668737645,2024-25
+Manufacturing,NT,12,Beverage and tobacco product manufacturing,Beverage/tobacco,86,3541,2.4286924597571304,2024-25
+Manufacturing,NT,13,"Textile, leather, clothing and footwear manufacturing",Textiles/clothing,97,3541,2.7393391697260663,2024-25
+Manufacturing,NT,14,Wood product manufacturing,Wood,148,3541,4.179610279582039,2024-25
+Manufacturing,NT,15,"Pulp, paper and converted paper product manufacturing",Pulp/paper,,3541,,2024-25
+Manufacturing,NT,16,Printing (including the reproduction of recorded media),Printing,92,3541,2.5981361197401864,2024-25
+Manufacturing,NT,17,Petroleum and coal product manufacturing,Petroleum/coal,15,3541,0.42360914995763904,2024-25
+Manufacturing,NT,18,Basic chemical and chemical product manufacturing,Basic chemicals,,3541,,2024-25
+Manufacturing,NT,19,Polymer product and rubber product manufacturing,Polymer/rubber,116,3541,3.275910759672409,2024-25
+Manufacturing,NT,20,Non-metallic mineral product manufacturing,Non-metal minerals,291,3541,8.218017509178198,2024-25
+Manufacturing,NT,21,Primary metal and metal product manufacturing,Primary metals,100,3541,2.824060999717594,2024-25
+Manufacturing,NT,22,Fabricated metal product manufacturing,Fabricated metals,940,3541,26.546173397345385,2024-25
+Manufacturing,NT,23,Transport equipment manufacturing,Transport equip.,617,3541,17.424456368257555,2024-25
+Manufacturing,NT,24,Machinery and equipment manufacturing,Machinery equip.,218,3541,6.156452979384355,2024-25
+Manufacturing,NT,25,Furniture and other manufacturing,Furniture/other,293,3541,8.27449872917255,2024-25
+Manufacturing,ACT,11,Food product manufacturing,Food,963,4578,21.035386631716907,2024-25
+Manufacturing,ACT,12,Beverage and tobacco product manufacturing,Beverage/tobacco,142,4578,3.101791175185671,2024-25
+Manufacturing,ACT,13,"Textile, leather, clothing and footwear manufacturing",Textiles/clothing,129,4578,2.8178243774574048,2024-25
+Manufacturing,ACT,14,Wood product manufacturing,Wood,377,4578,8.235037134119704,2024-25
+Manufacturing,ACT,15,"Pulp, paper and converted paper product manufacturing",Pulp/paper,,4578,,2024-25
+Manufacturing,ACT,16,Printing (including the reproduction of recorded media),Printing,208,4578,4.54346876365225,2024-25
+Manufacturing,ACT,17,Petroleum and coal product manufacturing,Petroleum/coal,,4578,,2024-25
+Manufacturing,ACT,18,Basic chemical and chemical product manufacturing,Basic chemicals,,4578,,2024-25
+Manufacturing,ACT,19,Polymer product and rubber product manufacturing,Polymer/rubber,60,4578,1.310615989515072,2024-25
+Manufacturing,ACT,20,Non-metallic mineral product manufacturing,Non-metal minerals,280,4578,6.116207951070336,2024-25
+Manufacturing,ACT,21,Primary metal and metal product manufacturing,Primary metals,55,4578,1.2013979903888161,2024-25
+Manufacturing,ACT,22,Fabricated metal product manufacturing,Fabricated metals,682,4578,14.89733508082132,2024-25
+Manufacturing,ACT,23,Transport equipment manufacturing,Transport equip.,281,4578,6.138051550895588,2024-25
+Manufacturing,ACT,24,Machinery and equipment manufacturing,Machinery equip.,998,4578,21.799912625600697,2024-25
+Manufacturing,ACT,25,Furniture and other manufacturing,Furniture/other,317,4578,6.924421144604631,2024-25

@@ -1,0 +1,277 @@
+/* ==========================================================================
+   FIT3179 - Data Visualisation 2
+   Dashboard Controls: Dropdowns, Buttons, Sliders, Timeline Playback
+   ========================================================================== */
+
+/* Universal Form Controls Reset & Base Style */
+select, input, button {
+  font-family: inherit;
+  font-size: 13.5px;
+  color: var(--ink);
+  transition: all 0.15s ease;
+}
+
+button {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--amber) !important;
+  outline-offset: 2px !important;
+}
+
+/* Direct Controls Container (Horizontal bar above charts) */
+.direct-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.chart-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 14px;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+
+.chart-controls > label {
+  display: flex;
+  flex: 1 1 180px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 5px;
+  min-width: 0;
+  margin: 0;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #334e68;
+}
+
+.chart-controls select,
+.chart-controls input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 40px;
+  padding: 6px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: var(--ink);
+}
+
+.chart-controls select:hover,
+.chart-controls input:hover {
+  border-color: #94a3b8;
+}
+
+.chart-controls > button {
+  flex: 0 0 auto;
+  min-height: 40px;
+  padding: 6px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background-color: #f8fafc;
+  font-weight: 600;
+  color: #334e68;
+  white-space: nowrap;
+}
+
+.chart-controls > button:hover {
+  background-color: #f1f5f9;
+  border-color: #94a3b8;
+  color: var(--ink);
+}
+
+/* Map Navigation Bar (Zoom Slider, Reset, Scale indicator) */
+.map-navigation {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  font-size: 12.5px;
+  color: #486581;
+}
+
+.map-navigation label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.map-navigation input[type="range"] {
+  width: 130px;
+  accent-color: var(--purple-primary);
+  cursor: pointer;
+}
+
+.map-navigation button {
+  padding: 5px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  background: #ffffff;
+  font-weight: 500;
+  color: #334e68;
+  font-size: 12px;
+}
+
+.map-navigation button:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+.map-navigation output {
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--purple-primary);
+  min-width: 32px;
+}
+
+/* V2 Linked Map Filters */
+.v2-c .filters {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) auto;
+  gap: 12px;
+  align-items: end;
+  margin: 10px 0 16px;
+}
+
+.v2-c .filters label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #334e68;
+}
+
+.v2-c .filters select,
+.v2-c .filters input {
+  display: block;
+  width: 100%;
+  min-height: 40px;
+  padding: 6px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.v2-c .filters button {
+  min-height: 40px;
+  padding: 6px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #f8fafc;
+  font-weight: 600;
+  color: #334e68;
+}
+
+.v2-c .filters button:hover:not(:disabled) {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+.v2-c button:disabled,
+.v2-c select:disabled,
+.v2-c input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Fig 09 Race Chart Playback Controls */
+.race-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.race-playback-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.race-playback-controls button {
+  min-height: 36px;
+  padding: 4px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  font-weight: 600;
+  color: #334e68;
+}
+
+.race-playback-controls button:hover:not(:disabled) {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+#race-play {
+  background: var(--purple-primary);
+  border-color: var(--purple-primary);
+  color: #ffffff;
+}
+
+#race-play:hover:not(:disabled) {
+  background: #6a349c;
+  border-color: #6a349c;
+}
+
+.race-playback-controls label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #486581;
+  margin-left: 6px;
+}
+
+.race-playback-controls input[type="range"] {
+  flex: 1 1 120px;
+  min-width: 100px;
+  accent-color: var(--purple-primary);
+  cursor: pointer;
+}
+
+.race-playback-controls output {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--purple-primary);
+  min-width: 65px;
+}
+
+@media (min-width: 900px) {
+  .figure-9 .race-controls {
+    display: grid;
+    grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr);
+    gap: 16px;
+    align-items: end;
+  }
+}
+
+@media (max-width: 640px) {
+  .chart-controls > label {
+    flex-basis: 100%;
+  }
+  .chart-controls > button {
+    width: 100%;
+  }
+  .v2-c .filters {
+    grid-template-columns: 1fr;
+  }
+}

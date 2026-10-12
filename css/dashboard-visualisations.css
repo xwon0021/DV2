@@ -1,0 +1,478 @@
+/* ==========================================================================
+   FIT3179 - Data Visualisation 2
+   Dashboard Visualisations: Chart Styling, Legends, Isotype, & Key Findings
+   ========================================================================== */
+
+/* ==========================================================================
+   VISUAL HIERARCHY: KEY FINDINGS & CALLOUT CARDS
+   Key takeaways are bold, prominent and unmissable.
+   ========================================================================== */
+
+.key-finding-card,
+.matrix-finding {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 18px;
+  border-radius: 8px;
+  border-left: 4px solid var(--purple-primary);
+  background: #fbf9fd;
+  border-top: 1px solid #f1e8f8;
+  border-right: 1px solid #f1e8f8;
+  border-bottom: 1px solid #f1e8f8;
+  margin: 16px 0 20px;
+}
+
+.key-finding-card.caveat-card {
+  border-left-color: var(--amber);
+  background: #fffdfa;
+  border-top-color: #fef3c7;
+  border-right-color: #fef3c7;
+  border-bottom-color: #fef3c7;
+}
+
+.finding-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--purple-primary);
+}
+
+.key-finding-card.caveat-card .finding-tag {
+  color: #b45309;
+}
+
+.key-finding-card p,
+.matrix-finding p {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: #1e293b;
+}
+
+.key-finding-card p strong,
+.matrix-finding p strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+/* Inline finding button */
+.matrix-finding {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.matrix-finding button {
+  padding: 6px 14px;
+  border: 1px solid #d8b4fe;
+  border-radius: 6px;
+  background: #ffffff;
+  color: var(--purple-primary);
+  font-weight: 600;
+  font-size: 12.5px;
+  white-space: nowrap;
+}
+
+.matrix-finding button:hover {
+  background: #f3e8ff;
+  border-color: var(--purple-primary);
+}
+
+/* Sleek Navigation Hint Badge */
+.navigation-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 4px 0 14px;
+}
+
+.navigation-badge .badge-icon {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* Secondary Methodological and Context Notes */
+.method-note,
+.caveat,
+.note {
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: #64748b;
+  margin: 10px 0;
+}
+
+.caveat strong {
+  color: #334e68;
+}
+
+.interaction-hint {
+  font-size: 12.5px;
+  color: #64748b;
+  margin: 6px 0;
+}
+
+/* ==========================================================================
+   FIGURE 01 & 02: CHOROPLETH LEGEND & LINKED MAP
+   ========================================================================== */
+.rate-legend-wrap {
+  margin: 14px 0 10px;
+}
+
+.legend-title {
+  margin: 0 0 8px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #334e68;
+}
+
+.rate-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.rate-legend button.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 38px;
+  padding: 4px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  font-size: 11.5px;
+  color: #334e68;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.rate-legend button.legend-item[aria-pressed="true"] {
+  border-color: var(--amber);
+  background: #fffaf0;
+  font-weight: 700;
+  color: var(--ink);
+  box-shadow: 0 0 0 1px var(--amber);
+}
+
+.rate-legend button.legend-item:hover {
+  border-color: #94a3b8;
+  background: #f8fafc;
+}
+
+.swatch {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.missing-key {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  color: #64748b;
+  margin-top: 8px;
+}
+
+.swatch.missing {
+  background: #e2e8f0;
+}
+
+/* Tooltip Connector for Choropleth */
+.v1-tooltip-connector {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+  display: none;
+  overflow: hidden;
+}
+
+#map1 svg path.v1-tooltip-pinned {
+  stroke: var(--amber) !important;
+  stroke-width: 2px !important;
+}
+
+/* Figure 02 Ranking Bars */
+.v2-c .scope {
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 8px 0;
+  color: #475569;
+}
+
+.v2-c button.bar-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 95px 44px;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  padding: 6px 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  min-height: 36px;
+  font-size: 12.5px;
+  cursor: pointer;
+}
+
+.v2-c .bar-name {
+  color: #334e68;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.v2-c .track {
+  height: 8px;
+  background: #ede9fe;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.v2-c .bar {
+  display: block;
+  height: 100%;
+  background: var(--purple-light);
+  border-radius: 4px;
+}
+
+.v2-c .bar-row:hover .bar,
+.v2-c .bar-row.active .bar {
+  background: var(--highlight-red);
+}
+
+.v2-c .bar-row.active .bar-name {
+  font-weight: 700;
+  color: var(--highlight-red);
+}
+
+.v2-c .bar-value {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-size: 11.5px;
+  color: #64748b;
+}
+
+.v2-c .selected {
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  margin-top: 16px;
+}
+
+.v2-c .selected strong {
+  font-family: var(--font-serif);
+  font-size: 19px;
+  color: var(--ink);
+}
+
+/* ==========================================================================
+   FIGURE 03: NPI FACILITY MAP & STATS
+   ========================================================================== */
+.facility-composition {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.stat-number {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 4.5vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--purple-primary);
+  margin: 0 0 6px;
+}
+
+.stat-label {
+  font-size: 13px;
+  line-height: 1.45;
+  color: #334e68;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.stat-caveat {
+  font-size: 11.5px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* ==========================================================================
+   FIGURE 08: EMPLOYMENT MILESTONES STATS
+   ========================================================================== */
+.employment-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 40px;
+  margin: 16px 0 24px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.employment-stats > div {
+  flex: 1 1 140px;
+}
+
+.period-feedback {
+  font-weight: 600;
+  font-size: 13.5px;
+  color: #334e68;
+  margin: 10px 0;
+}
+
+/* ==========================================================================
+   FIGURE 11: DOMESTIC CHORD INSIGHT
+   ========================================================================== */
+.chord-insight {
+  padding: 20px 24px;
+  border-radius: 10px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.insight-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin: 0 0 6px;
+}
+
+.connection-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 8px 0;
+}
+
+/* ==========================================================================
+   FIGURE 12: ISOTYPE PICTOGRAM & TOOLTIP
+   ========================================================================== */
+#people-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 18px 0 24px;
+}
+
+.isotype-row {
+  display: grid;
+  grid-template-columns: minmax(140px, 1.3fr) minmax(0, 3fr) 52px;
+  gap: 14px;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.isotype-row:hover,
+.isotype-row.active {
+  border-color: var(--purple-primary);
+  background: #faf5ff;
+  box-shadow: 0 2px 8px rgba(123, 63, 177, 0.08);
+}
+
+.isotype-row .statement {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.35;
+}
+
+.isotype-row .qualifier {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  color: #64748b;
+  margin-top: 3px;
+}
+
+.isotype-row .icons {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex-wrap: wrap;
+}
+
+.isotype-row .icons svg {
+  width: 17px;
+  height: 20px;
+  display: block;
+}
+
+.isotype-row .percent {
+  font-family: var(--font-serif);
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--purple-primary);
+  text-align: right;
+}
+
+/* Floating Isotype Tooltip */
+#people-tip {
+  position: fixed;
+  z-index: 1000;
+  max-width: 340px;
+  padding: 14px 18px;
+  border-radius: 8px;
+  background: #1e293b;
+  color: #f8fafc;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+#people-tip strong {
+  display: block;
+  font-size: 14px;
+  color: #f1f5f9;
+  margin-bottom: 6px;
+}
+
+#people-tip p {
+  margin: 4px 0;
+  color: #cbd5e1;
+}
+
+@media (max-width: 720px) {
+  .isotype-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .isotype-row .percent {
+    text-align: left;
+  }
+  .facility-composition {
+    grid-template-columns: 1fr;
+  }
+}
