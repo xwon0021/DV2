@@ -1,0 +1,53 @@
+ANZSIC_Code,Subdivision,Subdivision_Short,Employment_2024_25,Wages_2024_25_millions,Sales_2024_25_millions,IVA_2024_25_millions,Dimension,Dimension_Order,Dimension_Unit,Normalised_Value
+11,Food product manufacturing,Food,231491.0,16827.0,137164.0,31279.0,Employment,1,no.,1.0
+11,Food product manufacturing,Food,231491.0,16827.0,137164.0,31279.0,Wages and salaries,2,$m,1.0
+11,Food product manufacturing,Food,231491.0,16827.0,137164.0,31279.0,Sales and service income,3,$m,1.0
+11,Food product manufacturing,Food,231491.0,16827.0,137164.0,31279.0,Industry value added,4,$m,1.0
+12,Beverage and tobacco product manufacturing,Beverage/tobacco,39861.0,3237.0,22997.0,6124.0,Employment,1,no.,0.07627715059724083
+12,Beverage and tobacco product manufacturing,Beverage/tobacco,39861.0,3237.0,22997.0,6124.0,Wages and salaries,2,$m,0.12044527862274286
+12,Beverage and tobacco product manufacturing,Beverage/tobacco,39861.0,3237.0,22997.0,6124.0,Sales and service income,3,$m,0.12100797634812602
+12,Beverage and tobacco product manufacturing,Beverage/tobacco,39861.0,3237.0,22997.0,6124.0,Industry value added,4,$m,0.13446650380208514
+13,"Textile, leather, clothing and footwear manufacturing",Textiles/clothing,24529.0,1376.0,7280.0,2216.0,Employment,1,no.,0.0023716100918757892
+13,"Textile, leather, clothing and footwear manufacturing",Textiles/clothing,24529.0,1376.0,7280.0,2216.0,Wages and salaries,2,$m,0.0
+13,"Textile, leather, clothing and footwear manufacturing",Textiles/clothing,24529.0,1376.0,7280.0,2216.0,Sales and service income,3,$m,0.0
+13,"Textile, leather, clothing and footwear manufacturing",Textiles/clothing,24529.0,1376.0,7280.0,2216.0,Industry value added,4,$m,0.0
+14,Wood product manufacturing,Wood,47813.0,3396.0,17278.0,6543.0,Employment,1,no.,0.11460853972446904
+14,Wood product manufacturing,Wood,47813.0,3396.0,17278.0,6543.0,Wages and salaries,2,$m,0.1307358747006666
+14,Wood product manufacturing,Wood,47813.0,3396.0,17278.0,6543.0,Sales and service income,3,$m,0.07697637892273106
+14,Wood product manufacturing,Wood,47813.0,3396.0,17278.0,6543.0,Industry value added,4,$m,0.14888346006950418
+16,Printing (including the reproduction of recorded media),Printing,24037.0,1701.0,7335.0,2880.0,Employment,1,no.,0.0
+16,Printing (including the reproduction of recorded media),Printing,24037.0,1701.0,7335.0,2880.0,Wages and salaries,2,$m,0.021034237266196364
+16,Printing (including the reproduction of recorded media),Printing,24037.0,1701.0,7335.0,2880.0,Sales and service income,3,$m,0.0004234547750300268
+16,Printing (including the reproduction of recorded media),Printing,24037.0,1701.0,7335.0,2880.0,Industry value added,4,$m,0.022846918762687955
+18,Basic chemical and chemical product manufacturing,Basic chemicals,50028.0,5856.0,41950.0,10986.0,Employment,1,no.,0.12528560548362527
+18,Basic chemical and chemical product manufacturing,Basic chemicals,50028.0,5856.0,41950.0,10986.0,Wages and salaries,2,$m,0.28994887062326063
+18,Basic chemical and chemical product manufacturing,Basic chemicals,50028.0,5856.0,41950.0,10986.0,Sales and service income,3,$m,0.2669304918234732
+18,Basic chemical and chemical product manufacturing,Basic chemicals,50028.0,5856.0,41950.0,10986.0,Industry value added,4,$m,0.3017582493204418
+19,Polymer product and rubber product manufacturing,Polymer/rubber,40878.0,3501.0,18679.0,5909.0,Employment,1,no.,0.08117944218959383
+19,Polymer product and rubber product manufacturing,Polymer/rubber,40878.0,3501.0,18679.0,5909.0,Wages and salaries,2,$m,0.13753155135589928
+19,Polymer product and rubber product manufacturing,Polymer/rubber,40878.0,3501.0,18679.0,5909.0,Sales and service income,3,$m,0.087762926919405
+19,Polymer product and rubber product manufacturing,Polymer/rubber,40878.0,3501.0,18679.0,5909.0,Industry value added,4,$m,0.12706878161235935
+20,Non-metallic mineral product manufacturing,Non-metal minerals,42155.0,4146.0,26749.0,8822.0,Employment,1,no.,0.08733502366789746
+20,Non-metallic mineral product manufacturing,Non-metal minerals,42155.0,4146.0,26749.0,8822.0,Wages and salaries,2,$m,0.17927642223804285
+20,Non-metallic mineral product manufacturing,Non-metal minerals,42155.0,4146.0,26749.0,8822.0,Sales and service income,3,$m,0.14989529118290168
+20,Non-metallic mineral product manufacturing,Non-metal minerals,42155.0,4146.0,26749.0,8822.0,Industry value added,4,$m,0.22729931528059732
+21,Primary metal and metal product manufacturing,Primary metals,40101.0,4951.0,93436.0,9378.0,Employment,1,no.,0.07743403356888756
+21,Primary metal and metal product manufacturing,Primary metals,40101.0,4951.0,93436.0,9378.0,Wages and salaries,2,$m,0.23137660992815998
+21,Primary metal and metal product manufacturing,Primary metals,40101.0,4951.0,93436.0,9378.0,Sales and service income,3,$m,0.6633303563179452
+21,Primary metal and metal product manufacturing,Primary metals,40101.0,4951.0,93436.0,9378.0,Industry value added,4,$m,0.24643016894333
+22,Fabricated metal product manufacturing,Fabricated metals,114752.0,8786.0,44235.0,15972.0,Employment,1,no.,0.43727766155388664
+22,Fabricated metal product manufacturing,Fabricated metals,114752.0,8786.0,44235.0,15972.0,Wages and salaries,2,$m,0.47958060966927707
+22,Fabricated metal product manufacturing,Fabricated metals,114752.0,8786.0,44235.0,15972.0,Sales and service income,3,$m,0.2845231129315389
+22,Fabricated metal product manufacturing,Fabricated metals,114752.0,8786.0,44235.0,15972.0,Industry value added,4,$m,0.47331658810171007
+23,Transport equipment manufacturing,Transport equip.,85371.0,8388.0,42031.0,13955.0,Employment,1,no.,0.29565108409575136
+23,Transport equipment manufacturing,Transport equip.,85371.0,8388.0,42031.0,13955.0,Wages and salaries,2,$m,0.4538217591094428
+23,Transport equipment manufacturing,Transport equip.,85371.0,8388.0,42031.0,13955.0,Sales and service income,3,$m,0.26755412521942656
+23,Transport equipment manufacturing,Transport equip.,85371.0,8388.0,42031.0,13955.0,Industry value added,4,$m,0.40391563155902693
+24,Machinery and equipment manufacturing,Machinery equip.,106448.0,11150.0,53980.0,20100.0,Employment,1,no.,0.3972495107349099
+24,Machinery and equipment manufacturing,Machinery equip.,106448.0,11150.0,53980.0,20100.0,Wages and salaries,2,$m,0.6325804155070869
+24,Machinery and equipment manufacturing,Machinery equip.,106448.0,11150.0,53980.0,20100.0,Sales and service income,3,$m,0.3595515998891318
+24,Machinery and equipment manufacturing,Machinery equip.,106448.0,11150.0,53980.0,20100.0,Industry value added,4,$m,0.6153528541444448
+25,Furniture and other manufacturing,Furniture/other,35963.0,2127.0,9850.0,3713.0,Employment,1,no.,0.05748744299941192
+25,Furniture and other manufacturing,Furniture/other,35963.0,2127.0,9850.0,3713.0,Wages and salaries,2,$m,0.048605268267426054
+25,Furniture and other manufacturing,Furniture/other,35963.0,2127.0,9850.0,3713.0,Sales and service income,3,$m,0.01978688676049398
+25,Furniture and other manufacturing,Furniture/other,35963.0,2127.0,9850.0,3713.0,Industry value added,4,$m,0.05150879124660221

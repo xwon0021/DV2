@@ -1,0 +1,173 @@
+[
+  {
+    "Year_Order": 0,
+    "Financial_Year": "2006–07",
+    "Total_Thousands": 1005.4999999999999,
+    "Published_Total_Thousands": 1005.5,
+    "Share_Sum": 100.00000000000003,
+    "Subdivisions": 15,
+    "Rounding_Gap_Thousands": -1.1368683772161603e-13
+  },
+  {
+    "Year_Order": 1,
+    "Financial_Year": "2007–08",
+    "Total_Thousands": 1005.0000000000001,
+    "Published_Total_Thousands": 1005,
+    "Share_Sum": 100.0,
+    "Subdivisions": 15,
+    "Rounding_Gap_Thousands": 1.1368683772161603e-13
+  },
+  {
+    "Year_Order": 2,
+    "Financial_Year": "2008–09",
+    "Total_Thousands": 974.5,
+    "Published_Total_Thousands": 974.5,
+    "Share_Sum": 100.0,
+    "Subdivisions": 15,
+    "Rounding_Gap_Thousands": 0.0
+  },
+  {
+    "Year_Order": 3,
+    "Financial_Year": "2009–10",
+    "Total_Thousands": 954.2,
+    "Published_Total_Thousands": 954.2,
+    "Share_Sum": 99.99999999999999,
+    "Subdivisions": 15,
+    "Rounding_Gap_Thousands": 0.0
+  },
+  {
+    "Year_Order": 4,
+    "Financial_Year": "2010–11",
+    "Total_Thousands": 939.4,
+    "Published_Total_Thousands": 939.3,
+    "Share_Sum": 100.0,
+    "Subdivisions": 15,
+    "Rounding_Gap_Thousands": 0.10000000000002274
+  },
+  {
+    "Year_Order": 5,
+    "Financial_Year": "2011–12",
+    "Total_Thousands": 936.5,
+    "Published_Total_Thousands": 936.6,
+    "Share_Sum": 100.0,
+    "Subdivisions": 15,
+    "Rounding_Gap_Thousands": -0.10000000000002274
+  },
+  {
+    "Year_Order": 6,
+    "Financial_Year": "2012–13",
+    "Total_Thousands": 896.0000000000001,
+    "Published_Total_Thousands": 895.9,
+    "Share_Sum": 100.00000000000001,
+    "Subdivisions": 15,
+    "Rounding_Gap_Thousands": 0.10000000000013642
+  },
+  {
+    "Year_Order": 7,
+    "Financial_Year": "2013–14",
+    "Total_Thousands": 878.6999999999999,
+    "Published_Total_Thousands": 878.6,
+    "Share_Sum": 100.0,
+    "Subdivisions": 15,
+    "Rounding_Gap_Thousands": 0.09999999999990905
+  },
+  {
+    "Year_Order": 8,
+    "Financial_Year": "2014–15",
+    "Total_Thousands": 854.1,
+    "Published_Total_Thousands": 854.1,
+    "Share_Sum": 100.0,
+    "Subdivisions": 15,
+    "Rounding_Gap_Thousands": 0.0
+  },
+  {
+    "Year_Order": 9,
+    "Financial_Year": "2015–16",
+    "Total_Thousands": 837.5,
+    "Published_Total_Thousands": 837.3,
+    "Share_Sum": 100.0,
+    "Subdivisions": 15,
+    "Rounding_Gap_Thousands": 0.20000000000004547
+  },
+  {
+    "Year_Order": 10,
+    "Financial_Year": "2016–17",
+    "Total_Thousands": 830.0999999999998,
+    "Published_Total_Thousands": 830.3,
+    "Share_Sum": 100.00000000000001,
+    "Subdivisions": 15,
+    "Rounding_Gap_Thousands": -0.20000000000015916
+  },
+  {
+    "Year_Order": 11,
+    "Financial_Year": "2017–18",
+    "Total_Thousands": 836.5,
+    "Published_Total_Thousands": 836.5,
+    "Share_Sum": 99.99999999999999,
+    "Subdivisions": 15,
+    "Rounding_Gap_Thousands": 0.0
+  },
+  {
+    "Year_Order": 12,
+    "Financial_Year": "2018–19",
+    "Total_Thousands": 844.1,
+    "Published_Total_Thousands": 844.1,
+    "Share_Sum": 100.00000000000001,
+    "Subdivisions": 15,
+    "Rounding_Gap_Thousands": 0.0
+  },
+  {
+    "Year_Order": 13,
+    "Financial_Year": "2019–20",
+    "Total_Thousands": 830.2,
+    "Published_Total_Thousands": 830.2,
+    "Share_Sum": 100.0,
+    "Subdivisions": 15,
+    "Rounding_Gap_Thousands": 0.0
+  },
+  {
+    "Year_Order": 14,
+    "Financial_Year": "2020–21",
+    "Total_Thousands": 839.3,
+    "Published_Total_Thousands": 839.4,
+    "Share_Sum": 100.00000000000003,
+    "Subdivisions": 15,
+    "Rounding_Gap_Thousands": -0.10000000000002274
+  },
+  {
+    "Year_Order": 15,
+    "Financial_Year": "2021–22",
+    "Total_Thousands": 865.3,
+    "Published_Total_Thousands": 865.2,
+    "Share_Sum": 100.0,
+    "Subdivisions": 15,
+    "Rounding_Gap_Thousands": 0.09999999999990905
+  },
+  {
+    "Year_Order": 16,
+    "Financial_Year": "2022–23",
+    "Total_Thousands": 892.9000000000001,
+    "Published_Total_Thousands": 892.9,
+    "Share_Sum": 100.0,
+    "Subdivisions": 15,
+    "Rounding_Gap_Thousands": 1.1368683772161603e-13
+  },
+  {
+    "Year_Order": 17,
+    "Financial_Year": "2023–24",
+    "Total_Thousands": 899.4,
+    "Published_Total_Thousands": 899.3,
+    "Share_Sum": 99.99999999999999,
+    "Subdivisions": 15,
+    "Rounding_Gap_Thousands": 0.10000000000002274
+  },
+  {
+    "Year_Order": 18,
+    "Financial_Year": "2024–25",
+    "Total_Thousands": 900.8,
+    "Published_Total_Thousands": 900.8,
+    "Share_Sum": 100.0,
+    "Subdivisions": 15,
+    "Rounding_Gap_Thousands": 0.0
+  }
+]

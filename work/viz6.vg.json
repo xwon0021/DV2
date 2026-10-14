@@ -1,0 +1,124 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 650,
+  "data": {
+    "url": "work/data/vis06_sales_vs_iva_growth.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "Sales_Growth_pct": "number",
+        "IVA_Growth_pct": "number",
+        "ANZSIC_Code": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "fold": [
+        "Sales_Growth_pct",
+        "IVA_Growth_pct"
+      ],
+      "as": [
+        "Measure",
+        "Growth"
+      ]
+    },
+    {
+      "filter": "isValid(datum.Growth)"
+    },
+    {
+      "calculate": "datum.Measure === 'Sales_Growth_pct' ? 'Sales / service income' : 'Industry value added'",
+      "as": "Measure_Label"
+    }
+  ],
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 2
+  },
+  "encoding": {
+    "x": {
+      "field": "Growth",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          -15,
+          30
+        ]
+      },
+      "title": "Year-on-year growth (%)"
+    },
+    "y": {
+      "field": "Subdivision_Short",
+      "type": "nominal",
+      "sort": {
+        "field": "ANZSIC_Code",
+        "op": "min",
+        "order": "ascending"
+      },
+      "axis": {
+        "title": null,
+        "labelLimit": 200
+      }
+    },
+    "yOffset": {
+      "field": "Measure_Label",
+      "sort": [
+        "Sales / service income",
+        "Industry value added"
+      ]
+    },
+    "color": {
+      "field": "Measure_Label",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Sales / service income",
+          "Industry value added"
+        ],
+        "range": [
+          "#188FB8",
+          "#C77570"
+        ]
+      },
+      "legend": {
+        "orient": "bottom",
+        "title": null
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Subdivision",
+        "title": "Subdivision"
+      },
+      {
+        "field": "Measure_Label",
+        "title": "Measure"
+      },
+      {
+        "field": "Growth",
+        "title": "2023–24 to2024–25 growth (%)",
+        "format": ".2f"
+      }
+    ]
+  },
+  "config": {
+    "background": "transparent",
+    "view": {
+      "stroke": null
+    },
+    "font": "Arial, sans-serif",
+    "axis": {
+      "labelColor": "#43596c",
+      "titleColor": "#43596c",
+      "gridColor": "#edf1f4",
+      "domainColor": "#ccd6de",
+      "tickColor": "#ccd6de"
+    },
+    "legend": {
+      "labelColor": "#43596c",
+      "titleColor": "#43596c",
+      "labelFontSize": 11
+    }
+  }
+}

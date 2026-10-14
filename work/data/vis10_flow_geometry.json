@@ -1,0 +1,1314 @@
+[
+  {
+    "Key": "Victoria|United States",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          144.54969422288644,
+          -36.558632910105445
+        ],
+        [
+          -99.69842767199692,
+          37.2463645
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "New South Wales|United States",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.3464134959354,
+          -32.831008318242894
+        ],
+        [
+          -99.69842767199692,
+          37.2463645
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Queensland|United States",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          143.04972192913647,
+          -19.934043445173025
+        ],
+        [
+          -99.69842767199692,
+          37.2463645
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "New South Wales|New Zealand",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.3464134959354,
+          -32.831008318242894
+        ],
+        [
+          171.2343512211096,
+          -43.595473
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Victoria|New Zealand",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          144.54969422288644,
+          -36.558632910105445
+        ],
+        [
+          171.2343512211096,
+          -43.595473
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "New South Wales|China",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.3464134959354,
+          -32.831008318242894
+        ],
+        [
+          98.603916726155,
+          36.903673
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "New South Wales|Japan",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.3464134959354,
+          -32.831008318242894
+        ],
+        [
+          139.83685527015206,
+          37.496925000000005
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Queensland|Papua New Guinea",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          143.04972192913647,
+          -19.934043445173025
+        ],
+        [
+          144.3617871447388,
+          -6.6399035
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "South Australia|Malaysia",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          136.94852398320575,
+          -32.028945609523404
+        ],
+        [
+          114.61303041372067,
+          3.937319
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Queensland|Indonesia",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          143.04972192913647,
+          -19.934043445173025
+        ],
+        [
+          113.32522939651643,
+          0.1049055
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Queensland|Japan",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          143.04972192913647,
+          -19.934043445173025
+        ],
+        [
+          139.83685527015206,
+          37.496925000000005
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Queensland|Republic of Korea",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          143.04972192913647,
+          -19.934043445173025
+        ],
+        [
+          128.01105076761786,
+          36.4604515
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "South Australia|China",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          136.94852398320575,
+          -32.028945609523404
+        ],
+        [
+          98.603916726155,
+          36.903673
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "South Australia|United States",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          136.94852398320575,
+          -32.028945609523404
+        ],
+        [
+          -99.69842767199692,
+          37.2463645
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Queensland|Taiwan",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          143.04972192913647,
+          -19.934043445173025
+        ],
+        [
+          120.8279180795297,
+          23.6166495
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Queensland|United Kingdom",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          143.04972192913647,
+          -19.934043445173025
+        ],
+        [
+          -1.9116522800980051,
+          54.3140935
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Victoria|China",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          144.54969422288644,
+          -36.558632910105445
+        ],
+        [
+          98.603916726155,
+          36.903673
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "New South Wales|United Kingdom",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.3464134959354,
+          -32.831008318242894
+        ],
+        [
+          -1.9116522800980051,
+          54.3140935
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Queensland|China",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          143.04972192913647,
+          -19.934043445173025
+        ],
+        [
+          98.603916726155,
+          36.903673
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Queensland|New Zealand",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          143.04972192913647,
+          -19.934043445173025
+        ],
+        [
+          171.2343512211096,
+          -43.595473
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "New South Wales|Vietnam",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.3464134959354,
+          -32.831008318242894
+        ],
+        [
+          107.8528546123636,
+          15.962429
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Queensland|Malaysia",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          143.04972192913647,
+          -19.934043445173025
+        ],
+        [
+          114.61303041372067,
+          3.937319
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "New South Wales|Republic of Korea",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.3464134959354,
+          -32.831008318242894
+        ],
+        [
+          128.01105076761786,
+          36.4604515
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Western Australia|India",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          121.20205022824229,
+          -24.438804061150037
+        ],
+        [
+          80.2265066642212,
+          21.7867495
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "New South Wales|Thailand",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.3464134959354,
+          -32.831008318242894
+        ],
+        [
+          101.69302326657181,
+          13.032381
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "New South Wales|Hong Kong (SAR of China)",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.3464134959354,
+          -32.831008318242894
+        ],
+        [
+          114.0559971563725,
+          22.4112
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Western Australia|United Kingdom",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          121.20205022824229,
+          -24.438804061150037
+        ],
+        [
+          -1.9116522800980051,
+          54.3140935
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Victoria|Japan",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          144.54969422288644,
+          -36.558632910105445
+        ],
+        [
+          139.83685527015206,
+          37.496925000000005
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Queensland|India",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          143.04972192913647,
+          -19.934043445173025
+        ],
+        [
+          80.2265066642212,
+          21.7867495
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "South Australia|Thailand",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          136.94852398320575,
+          -32.028945609523404
+        ],
+        [
+          101.69302326657181,
+          13.032381
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Victoria|Republic of Korea",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          144.54969422288644,
+          -36.558632910105445
+        ],
+        [
+          128.01105076761786,
+          36.4604515
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "New South Wales|Malaysia",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.3464134959354,
+          -32.831008318242894
+        ],
+        [
+          114.61303041372067,
+          3.937319
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Western Australia|Republic of Korea",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          121.20205022824229,
+          -24.438804061150037
+        ],
+        [
+          128.01105076761786,
+          36.4604515
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Western Australia|United States",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          121.20205022824229,
+          -24.438804061150037
+        ],
+        [
+          -99.69842767199692,
+          37.2463645
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Victoria|Taiwan",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          144.54969422288644,
+          -36.558632910105445
+        ],
+        [
+          120.8279180795297,
+          23.6166495
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Victoria|Germany",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          144.54969422288644,
+          -36.558632910105445
+        ],
+        [
+          10.48122641050086,
+          51.085126
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Western Australia|Japan",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          121.20205022824229,
+          -24.438804061150037
+        ],
+        [
+          139.83685527015206,
+          37.496925000000005
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "New South Wales|United Arab Emirates",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.3464134959354,
+          -32.831008318242894
+        ],
+        [
+          55.1371142644784,
+          24.352618
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "New South Wales|India",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.3464134959354,
+          -32.831008318242894
+        ],
+        [
+          80.2265066642212,
+          21.7867495
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "New South Wales|Netherlands",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.3464134959354,
+          -32.831008318242894
+        ],
+        [
+          5.516406825024923,
+          52.105632
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "South Australia|Vietnam",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          136.94852398320575,
+          -32.028945609523404
+        ],
+        [
+          107.8528546123636,
+          15.962429
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "New South Wales|Indonesia",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.3464134959354,
+          -32.831008318242894
+        ],
+        [
+          113.32522939651643,
+          0.1049055
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "New South Wales|Philippines",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.3464134959354,
+          -32.831008318242894
+        ],
+        [
+          120.73289441577094,
+          15.583889
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Queensland|Thailand",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          143.04972192913647,
+          -19.934043445173025
+        ],
+        [
+          101.69302326657181,
+          13.032381
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "New South Wales|Singapore",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.3464134959354,
+          -32.831008318242894
+        ],
+        [
+          103.83054181081911,
+          1.364549
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Victoria|Vietnam",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          144.54969422288644,
+          -36.558632910105445
+        ],
+        [
+          107.8528546123636,
+          15.962429
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Victoria|Thailand",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          144.54969422288644,
+          -36.558632910105445
+        ],
+        [
+          101.69302326657181,
+          13.032381
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Victoria|Malaysia",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          144.54969422288644,
+          -36.558632910105445
+        ],
+        [
+          114.61303041372067,
+          3.937319
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Tasmania|Taiwan",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.6725000324509,
+          -42.14222721855924
+        ],
+        [
+          120.8279180795297,
+          23.6166495
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Tasmania|Republic of Korea",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.6725000324509,
+          -42.14222721855924
+        ],
+        [
+          128.01105076761786,
+          36.4604515
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "South Australia|Taiwan",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          136.94852398320575,
+          -32.028945609523404
+        ],
+        [
+          120.8279180795297,
+          23.6166495
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "New South Wales|Italy",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.3464134959354,
+          -32.831008318242894
+        ],
+        [
+          12.692034656122244,
+          42.4924865
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Queensland|Vietnam",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          143.04972192913647,
+          -19.934043445173025
+        ],
+        [
+          107.8528546123636,
+          15.962429
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Victoria|United Arab Emirates",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          144.54969422288644,
+          -36.558632910105445
+        ],
+        [
+          55.1371142644784,
+          24.352618
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Victoria|Singapore",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          144.54969422288644,
+          -36.558632910105445
+        ],
+        [
+          103.83054181081911,
+          1.364549
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "South Australia|Indonesia",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          136.94852398320575,
+          -32.028945609523404
+        ],
+        [
+          113.32522939651643,
+          0.1049055
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Queensland|Germany",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          143.04972192913647,
+          -19.934043445173025
+        ],
+        [
+          10.48122641050086,
+          51.085126
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Tasmania|Vietnam",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.6725000324509,
+          -42.14222721855924
+        ],
+        [
+          107.8528546123636,
+          15.962429
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Victoria|United Kingdom",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          144.54969422288644,
+          -36.558632910105445
+        ],
+        [
+          -1.9116522800980051,
+          54.3140935
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "New South Wales|Taiwan",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.3464134959354,
+          -32.831008318242894
+        ],
+        [
+          120.8279180795297,
+          23.6166495
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Western Australia|China",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          121.20205022824229,
+          -24.438804061150037
+        ],
+        [
+          98.603916726155,
+          36.903673
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Queensland|Singapore",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          143.04972192913647,
+          -19.934043445173025
+        ],
+        [
+          103.83054181081911,
+          1.364549
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Tasmania|Indonesia",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.6725000324509,
+          -42.14222721855924
+        ],
+        [
+          113.32522939651643,
+          0.1049055
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "New South Wales|Switzerland",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.3464134959354,
+          -32.831008318242894
+        ],
+        [
+          8.427000864027601,
+          46.811949999999996
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Western Australia|Indonesia",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          121.20205022824229,
+          -24.438804061150037
+        ],
+        [
+          113.32522939651643,
+          0.1049055
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Tasmania|United States",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.6725000324509,
+          -42.14222721855924
+        ],
+        [
+          -99.69842767199692,
+          37.2463645
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "New South Wales|Papua New Guinea",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.3464134959354,
+          -32.831008318242894
+        ],
+        [
+          144.3617871447388,
+          -6.6399035
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "South Australia|New Zealand",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          136.94852398320575,
+          -32.028945609523404
+        ],
+        [
+          171.2343512211096,
+          -43.595473
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "New South Wales|Germany",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.3464134959354,
+          -32.831008318242894
+        ],
+        [
+          10.48122641050086,
+          51.085126
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Victoria|Hong Kong (SAR of China)",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          144.54969422288644,
+          -36.558632910105445
+        ],
+        [
+          114.0559971563725,
+          22.4112
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "New South Wales|Canada",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.3464134959354,
+          -32.831008318242894
+        ],
+        [
+          -110.43087416114284,
+          56.83692
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Western Australia|Belgium",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          121.20205022824229,
+          -24.438804061150037
+        ],
+        [
+          4.842477663218122,
+          50.4982105
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Queensland|United Arab Emirates",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          143.04972192913647,
+          -19.934043445173025
+        ],
+        [
+          55.1371142644784,
+          24.352618
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Victoria|Indonesia",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          144.54969422288644,
+          -36.558632910105445
+        ],
+        [
+          113.32522939651643,
+          0.1049055
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "New South Wales|Belgium",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.3464134959354,
+          -32.831008318242894
+        ],
+        [
+          4.842477663218122,
+          50.4982105
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "New South Wales|Spain",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.3464134959354,
+          -32.831008318242894
+        ],
+        [
+          -3.4765254824881637,
+          39.8994765
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Tasmania|Malaysia",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.6725000324509,
+          -42.14222721855924
+        ],
+        [
+          114.61303041372067,
+          3.937319
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Tasmania|Thailand",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          146.6725000324509,
+          -42.14222721855924
+        ],
+        [
+          101.69302326657181,
+          13.032381
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Victoria|Switzerland",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          144.54969422288644,
+          -36.558632910105445
+        ],
+        [
+          8.427000864027601,
+          46.811949999999996
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Western Australia|New Zealand",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          121.20205022824229,
+          -24.438804061150037
+        ],
+        [
+          171.2343512211096,
+          -43.595473
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Northern Territory|Timor-Leste",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          133.498162403195,
+          -18.55575039886989
+        ],
+        [
+          125.76397869670151,
+          -8.8810765
+        ]
+      ]
+    }
+  },
+  {
+    "Key": "Australian Capital Territory|United Arab Emirates",
+    "Geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          148.9563596442593,
+          -35.522513720023255
+        ],
+        [
+          55.1371142644784,
+          24.352618
+        ]
+      ]
+    }
+  }
+]

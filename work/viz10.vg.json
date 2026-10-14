@@ -1,0 +1,647 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "width": 960,
+  "height": 470,
+  "padding": 5,
+  "autosize": {
+    "type": "none",
+    "contains": "padding"
+  },
+  "background": "#EAF2F6",
+  "signals": [
+    {
+      "name": "selectedState",
+      "value": "",
+      "on": [
+        {
+          "events": "@originDots:click",
+          "update": "datum.State"
+        }
+      ]
+    },
+    {
+      "name": "hoverState",
+      "value": "",
+      "on": [
+        {
+          "events": "@originDots:mouseover",
+          "update": "datum.State"
+        },
+        {
+          "events": "@originDots:mouseout",
+          "update": "''"
+        }
+      ]
+    },
+    {
+      "name": "selectedFlow",
+      "value": "",
+      "on": [
+        {
+          "events": "@flowLines:click, @flowHitTarget:click",
+          "update": "datum.Key"
+        },
+        {
+          "events": "@originDots:click",
+          "update": "''"
+        }
+      ]
+    },
+    {
+      "name": "hoverFlow",
+      "value": "",
+      "on": [
+        {
+          "events": "@flowLines:mouseover, @flowHitTarget:mouseover",
+          "update": "datum.Key"
+        },
+        {
+          "events": "@flowLines:mouseout, @flowHitTarget:mouseout",
+          "update": "''"
+        }
+      ]
+    },
+    {
+      "name": "activeState",
+      "update": "hoverState || selectedState"
+    },
+    {
+      "name": "mapZoom",
+      "value": 1
+    },
+    {
+      "name": "panEnabled",
+      "value": false
+    },
+    {
+      "name": "panStart",
+      "value": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "on": [
+        {
+          "events": "pointerdown",
+          "update": "[x(),y(),mapPan[0],mapPan[1]]"
+        }
+      ]
+    },
+    {
+      "name": "mapPan",
+      "value": [
+        0,
+        0
+      ],
+      "on": [
+        {
+          "events": "[pointerdown, window:pointerup] > window:pointermove",
+          "update": "panEnabled ? [panStart[2]+x()-panStart[0],panStart[3]+y()-panStart[1]] : mapPan"
+        }
+      ]
+    }
+  ],
+  "data": [
+    {
+      "name": "sphere",
+      "values": [
+        {
+          "type": "Sphere"
+        }
+      ]
+    },
+    {
+      "name": "world",
+      "url": "work/data/world_display.geojson",
+      "format": {
+        "type": "json",
+        "property": "features"
+      },
+      "transform": [
+        {
+          "type": "formula",
+          "as": "geometry",
+          "expr": "datum.properties.Code === 'HRV' ? {type: 'MultiPolygon', coordinates: slice(datum.geometry.coordinates, 0, 4)} : datum.geometry"
+        }
+      ]
+    },
+    {
+      "name": "geometry",
+      "url": "work/data/vis10_flow_geometry.json"
+    },
+    {
+      "name": "flows",
+      "url": "work/data/vis10_state_export_flows.json",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.Source !== 'Australian Capital Territory'"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.Source+'|'+datum.Target",
+          "as": "Key"
+        },
+        {
+          "type": "lookup",
+          "from": "geometry",
+          "key": "Key",
+          "fields": [
+            "Key"
+          ],
+          "values": [
+            "Geometry"
+          ]
+        },
+        {
+          "type": "geopath",
+          "projection": "worldProjection",
+          "field": "Geometry",
+          "as": "path"
+        }
+      ]
+    },
+    {
+      "name": "origins",
+      "url": "work/data/vis10_origins.json",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.State !== 'Australian Capital Territory'"
+        },
+        {
+          "type": "geopoint",
+          "projection": "worldProjection",
+          "fields": [
+            "Longitude",
+            "Latitude"
+          ],
+          "as": [
+            "px",
+            "py"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "destinations",
+      "url": "work/data/vis10_destinations.json",
+      "transform": [
+        {
+          "type": "geopoint",
+          "projection": "worldProjection",
+          "fields": [
+            "Longitude",
+            "Latitude"
+          ],
+          "as": [
+            "px",
+            "py"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "visibleFlows",
+      "source": "flows",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "!selectedState || datum.Source === selectedState"
+        }
+      ]
+    },
+    {
+      "name": "selectedFlowHit",
+      "source": "visibleFlows",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.Key === selectedFlow"
+        }
+      ]
+    },
+    {
+      "name": "rateLookup",
+      "url": "work/data/vis10_state_rate_lookup.json"
+    },
+    {
+      "name": "stateRates",
+      "url": "work/data/SA2_2021_AUST_GDA2020_web.json",
+      "format": {
+        "type": "topojson",
+        "feature": "SA2_2021_AUST_GDA2020"
+      },
+      "transform": [
+        {
+          "type": "lookup",
+          "from": "rateLookup",
+          "key": "SA2_Code",
+          "fields": [
+            "properties.SA2_CODE21"
+          ],
+          "values": [
+            "State",
+            "Rate"
+          ],
+          "as": [
+            "State",
+            "Rate"
+          ]
+        },
+        {
+          "type": "filter",
+          "expr": "isValid(datum.Rate)"
+        }
+      ]
+    },
+    {
+      "name": "arrowFlow",
+      "source": "visibleFlows",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.Key === selectedFlow"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.Geometry.coordinates[length(datum.Geometry.coordinates)-2][0]",
+          "as": "PrevLon"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.Geometry.coordinates[length(datum.Geometry.coordinates)-2][1]",
+          "as": "PrevLat"
+        },
+        {
+          "type": "geopoint",
+          "projection": "worldProjection",
+          "fields": [
+            "Target_Longitude",
+            "Target_Latitude"
+          ],
+          "as": [
+            "tipX",
+            "tipY"
+          ]
+        },
+        {
+          "type": "geopoint",
+          "projection": "worldProjection",
+          "fields": [
+            "PrevLon",
+            "PrevLat"
+          ],
+          "as": [
+            "prevX",
+            "prevY"
+          ]
+        }
+      ]
+    }
+  ],
+  "projections": [
+    {
+      "name": "worldProjection",
+      "type": "equalEarth",
+      "rotate": [
+        -150,
+        0,
+        0
+      ],
+      "scale": {
+        "signal": "mapZoom * min((width-20)/5.5,(height-28)/2.65)"
+      },
+      "translate": {
+        "signal": "[width/2+mapPan[0],height/2+mapPan[1]]"
+      }
+    }
+  ],
+  "scales": [
+    {
+      "name": "flowWidth",
+      "type": "linear",
+      "domain": [
+        0,
+        3666953.4660000005
+      ],
+      "range": [
+        0,
+        9
+      ],
+      "zero": true
+    },
+    {
+      "name": "stateRate",
+      "type": "linear",
+      "domain": [
+        94.46381775787714,
+        359.66920083146533
+      ],
+      "range": [
+        "#deebf7",
+        "#2171b5"
+      ],
+      "zero": false
+    }
+  ],
+  "marks": [
+    {
+      "type": "shape",
+      "from": {
+        "data": "sphere"
+      },
+      "encode": {
+        "update": {
+          "fill": {
+            "value": "#D4EAF7"
+          },
+          "stroke": {
+            "value": "#7A8D9E"
+          },
+          "strokeWidth": {
+            "value": 0.9
+          }
+        }
+      },
+      "transform": [
+        {
+          "type": "geoshape",
+          "projection": "worldProjection"
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "from": {
+        "data": "world"
+      },
+      "encode": {
+        "update": {
+          "fill": {
+            "value": "#EDE6D2"
+          },
+          "stroke": {
+            "value": "#8999a8"
+          },
+          "strokeWidth": {
+            "value": 0.55
+          }
+        }
+      },
+      "transform": [
+        {
+          "type": "geoshape",
+          "projection": "worldProjection"
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "from": {
+        "data": "stateRates"
+      },
+      "encode": {
+        "update": {
+          "fill": {
+            "signal": "isValid(datum.Rate) ? scale('stateRate',datum.Rate) : '#d9dde2'"
+          },
+          "tooltip": {
+            "signal": "{'State':datum.State,'Manufacturing employment per 10,000 residents':format(datum.Rate,'.1f'),'Reference':'2024\u201325 employment / 2025 population'}"
+          }
+        }
+      },
+      "transform": [
+        {
+          "type": "geoshape",
+          "projection": "worldProjection"
+        }
+      ]
+    },
+    {
+      "name": "flowLines",
+      "type": "path",
+      "from": {
+        "data": "visibleFlows"
+      },
+      "encode": {
+        "update": {
+          "path": {
+            "field": "path"
+          },
+          "fill": {
+            "value": null
+          },
+          "stroke": {
+            "signal": "datum.Key === hoverFlow || datum.Key === selectedFlow || (activeState && datum.Source === activeState) ? '#D8891C' : '#173b5e'"
+          },
+          "strokeWidth": {
+            "scale": "flowWidth",
+            "field": "Value_AUD_thousands"
+          },
+          "strokeOpacity": {
+            "signal": "hoverFlow || selectedFlow ? (datum.Key === (hoverFlow || selectedFlow) ? .95 : .22) : activeState ? (datum.Source === activeState ? .85 : .22) : .42"
+          },
+          "zindex": {
+            "signal": "datum.Key === selectedFlow || (selectedState && datum.Source === selectedState) ? 1 : 0"
+          },
+          "cursor": {
+            "value": "pointer"
+          },
+          "description": {
+            "signal": "datum.Source + ' to ' + datum.Target + ', 2025 manufactured exports'"
+          },
+          "tooltip": {
+            "signal": "{'Connection': datum.Source + ' \u2192 ' + datum.Target, 'Export value': 'A$' + format(datum.Value_AUD_thousands / 1000000, '.3f') + 'bn', 'Period / classification': '2025 \u00b7 STM + ETM manufactured merchandise', 'Basis': 'Recorded state-of-origin Export; source A$000', 'Geography': 'Area anchors, not ports; connections, not shipping routes'}"
+          }
+        }
+      }
+    },
+    {
+      "name": "flowHitTarget",
+      "type": "path",
+      "from": {
+        "data": "selectedFlowHit"
+      },
+      "encode": {
+        "update": {
+          "path": {
+            "field": "path"
+          },
+          "fill": {
+            "value": null
+          },
+          "stroke": {
+            "value": "#ffffff"
+          },
+          "strokeWidth": {
+            "value": 8
+          },
+          "strokeOpacity": {
+            "value": 0
+          },
+          "cursor": {
+            "value": "pointer"
+          },
+          "aria": {
+            "value": false
+          },
+          "tooltip": {
+            "signal": "{'Connection': datum.Source + ' \u2192 ' + datum.Target, 'Export value': 'A$' + format(datum.Value_AUD_thousands / 1000000, '.3f') + 'bn', 'Period / classification': '2025 \u00b7 STM + ETM manufactured merchandise', 'Basis': 'Recorded state-of-origin Export; source A$000', 'Geography': 'Area anchors, not ports; connections, not shipping routes'}"
+          }
+        }
+      }
+    },
+    {
+      "type": "symbol",
+      "from": {
+        "data": "destinations"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "field": "px"
+          },
+          "y": {
+            "field": "py"
+          },
+          "size": {
+            "value": 18
+          },
+          "fill": {
+            "value": "#596b7a"
+          },
+          "stroke": {
+            "value": "white"
+          },
+          "strokeWidth": {
+            "value": 0.5
+          },
+          "tooltip": {
+            "signal": "{'Destination country': datum.Country, 'Position': 'Representative country area point, not a port'}"
+          }
+        }
+      }
+    },
+    {
+      "name": "originDots",
+      "type": "symbol",
+      "from": {
+        "data": "origins"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "field": "px"
+          },
+          "y": {
+            "field": "py"
+          },
+          "size": {
+            "value": 40
+          },
+          "fill": {
+            "signal": "datum.State === activeState ? '#D8891C' : '#173b5e'"
+          },
+          "stroke": {
+            "value": "white"
+          },
+          "strokeWidth": {
+            "value": 0.7
+          },
+          "cursor": {
+            "value": "pointer"
+          },
+          "description": {
+            "signal": "datum.State + ' export origin'"
+          },
+          "tooltip": {
+            "signal": "{'Origin': datum.State, 'Basis': 'Recorded state of production/manufacturing origin, not loading port', 'Year': 2025}"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "destinations"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "field": "px"
+          },
+          "y": {
+            "field": "py"
+          },
+          "dy": {
+            "value": -8
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fill": {
+            "value": "#405466"
+          },
+          "align": {
+            "value": "center"
+          },
+          "text": {
+            "field": "Country"
+          },
+          "opacity": {
+            "signal": "(selectedFlow || hoverFlow) && datum.Country === split(selectedFlow || hoverFlow,'|')[1] ? 1 : 0"
+          }
+        }
+      }
+    },
+    {
+      "name": "selectedDirection",
+      "type": "symbol",
+      "from": {
+        "data": "arrowFlow"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "field": "tipX"
+          },
+          "y": {
+            "field": "tipY"
+          },
+          "shape": {
+            "value": "triangle"
+          },
+          "angle": {
+            "signal": "atan2(datum.tipY-datum.prevY,datum.tipX-datum.prevX)*180/PI+90"
+          },
+          "size": {
+            "value": 100
+          },
+          "fill": {
+            "value": "#D8891C"
+          },
+          "stroke": {
+            "value": "#734818"
+          },
+          "strokeWidth": {
+            "value": 0.5
+          },
+          "tooltip": {
+            "signal": "{'Direction':datum.Source+' \u2192 '+datum.Target,'Export value (A$ billion)':format(datum.Value_AUD_thousands/1e6,'.3f'),'Year':2025,'Meaning':'Origin \u2192 destination direction, not a shipping route'}"
+          }
+        }
+      }
+    }
+  ],
+  "legends": [
+    {
+      "fill": "stateRate",
+      "title": "Employment / 10,000 residents",
+      "orient": "bottom",
+      "type": "gradient",
+      "format": ".0f"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "State": "New South Wales",
+    "Longitude": 146.3464134959354,
+    "Latitude": -32.831008318242894,
+    "Method": "Point on surface of state polygon dissolved from ABS 2021 SA2 geometry",
+    "Reference": "work/SA2_2021_AUST_GDA2020.json",
+    "SA2_polygons": 727,
+    "Short": "NSW"
+  },
+  {
+    "State": "Victoria",
+    "Longitude": 144.54969422288644,
+    "Latitude": -36.558632910105445,
+    "Method": "Point on surface of state polygon dissolved from ABS 2021 SA2 geometry",
+    "Reference": "work/SA2_2021_AUST_GDA2020.json",
+    "SA2_polygons": 610,
+    "Short": "VIC"
+  },
+  {
+    "State": "Queensland",
+    "Longitude": 143.04972192913647,
+    "Latitude": -19.934043445173025,
+    "Method": "Point on surface of state polygon dissolved from ABS 2021 SA2 geometry",
+    "Reference": "work/SA2_2021_AUST_GDA2020.json",
+    "SA2_polygons": 1570,
+    "Short": "QLD"
+  },
+  {
+    "State": "South Australia",
+    "Longitude": 136.94852398320575,
+    "Latitude": -32.028945609523404,
+    "Method": "Point on surface of state polygon dissolved from ABS 2021 SA2 geometry",
+    "Reference": "work/SA2_2021_AUST_GDA2020.json",
+    "SA2_polygons": 347,
+    "Short": "SA"
+  },
+  {
+    "State": "Western Australia",
+    "Longitude": 121.20205022824229,
+    "Latitude": -24.438804061150037,
+    "Method": "Point on surface of state polygon dissolved from ABS 2021 SA2 geometry",
+    "Reference": "work/SA2_2021_AUST_GDA2020.json",
+    "SA2_polygons": 2525,
+    "Short": "WA"
+  },
+  {
+    "State": "Tasmania",
+    "Longitude": 146.6725000324509,
+    "Latitude": -42.14222721855924,
+    "Method": "Point on surface of state polygon dissolved from ABS 2021 SA2 geometry",
+    "Reference": "work/SA2_2021_AUST_GDA2020.json",
+    "SA2_polygons": 419,
+    "Short": "TAS"
+  },
+  {
+    "State": "Northern Territory",
+    "Longitude": 133.498162403195,
+    "Latitude": -18.55575039886989,
+    "Method": "Point on surface of state polygon dissolved from ABS 2021 SA2 geometry",
+    "Reference": "work/SA2_2021_AUST_GDA2020.json",
+    "SA2_polygons": 315,
+    "Short": "NT"
+  },
+  {
+    "State": "Australian Capital Territory",
+    "Longitude": 148.9563596442593,
+    "Latitude": -35.522513720023255,
+    "Method": "Point on surface of state polygon dissolved from ABS 2021 SA2 geometry",
+    "Reference": "work/SA2_2021_AUST_GDA2020.json",
+    "SA2_polygons": 134,
+    "Short": "ACT"
+  }
+]

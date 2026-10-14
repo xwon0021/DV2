@@ -1,0 +1,335 @@
+[
+  {
+    "Source": "A",
+    "Target": "C",
+    "Value_AUD_millions": 48858.091300000044,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Agriculture, Forestry and Fishing",
+    "Target_Name": "Manufacturing"
+  },
+  {
+    "Source": "B",
+    "Target": "C",
+    "Value_AUD_millions": 53722.693600000006,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Mining",
+    "Target_Name": "Manufacturing"
+  },
+  {
+    "Source": "C",
+    "Target": "A",
+    "Value_AUD_millions": 6786.1717000000035,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Manufacturing",
+    "Target_Name": "Agriculture, Forestry and Fishing"
+  },
+  {
+    "Source": "C",
+    "Target": "B",
+    "Value_AUD_millions": 12409.893399999994,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Manufacturing",
+    "Target_Name": "Mining"
+  },
+  {
+    "Source": "C",
+    "Target": "C",
+    "Value_AUD_millions": 56668.02250000006,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Manufacturing",
+    "Target_Name": "Manufacturing"
+  },
+  {
+    "Source": "C",
+    "Target": "D",
+    "Value_AUD_millions": 2849.7412000000013,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Manufacturing",
+    "Target_Name": "Electricity, Gas, Water and Waste Services"
+  },
+  {
+    "Source": "C",
+    "Target": "E",
+    "Value_AUD_millions": 74214.59070000002,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Manufacturing",
+    "Target_Name": "Construction"
+  },
+  {
+    "Source": "C",
+    "Target": "F",
+    "Value_AUD_millions": 4887.694800000003,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Manufacturing",
+    "Target_Name": "Wholesale Trade"
+  },
+  {
+    "Source": "C",
+    "Target": "G",
+    "Value_AUD_millions": 5080.518300000001,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Manufacturing",
+    "Target_Name": "Retail Trade"
+  },
+  {
+    "Source": "C",
+    "Target": "H",
+    "Value_AUD_millions": 19508.33129999999,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Manufacturing",
+    "Target_Name": "Accommodation and Food Services"
+  },
+  {
+    "Source": "C",
+    "Target": "I",
+    "Value_AUD_millions": 9133.368299999995,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Manufacturing",
+    "Target_Name": "Transport, Postal and Warehousing"
+  },
+  {
+    "Source": "C",
+    "Target": "J",
+    "Value_AUD_millions": 3148.0977000000016,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Manufacturing",
+    "Target_Name": "Information Media and Telecommunications"
+  },
+  {
+    "Source": "C",
+    "Target": "K",
+    "Value_AUD_millions": 870.0494000000002,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Manufacturing",
+    "Target_Name": "Financial and Insurance Services"
+  },
+  {
+    "Source": "C",
+    "Target": "L",
+    "Value_AUD_millions": 2081.5062999999996,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Manufacturing",
+    "Target_Name": "Rental, Hiring and Real Estate Services"
+  },
+  {
+    "Source": "C",
+    "Target": "M",
+    "Value_AUD_millions": 5127.711700000002,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Manufacturing",
+    "Target_Name": "Professional, Scientific and Technical Services"
+  },
+  {
+    "Source": "C",
+    "Target": "N",
+    "Value_AUD_millions": 1788.8993999999998,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Manufacturing",
+    "Target_Name": "Administrative and Support Services"
+  },
+  {
+    "Source": "C",
+    "Target": "O",
+    "Value_AUD_millions": 5093.910999999998,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Manufacturing",
+    "Target_Name": "Public Administration and Safety"
+  },
+  {
+    "Source": "C",
+    "Target": "P",
+    "Value_AUD_millions": 3073.368500000001,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Manufacturing",
+    "Target_Name": "Education and Training"
+  },
+  {
+    "Source": "C",
+    "Target": "Q",
+    "Value_AUD_millions": 9116.296800000004,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Manufacturing",
+    "Target_Name": "Health Care and Social Assistance"
+  },
+  {
+    "Source": "C",
+    "Target": "R",
+    "Value_AUD_millions": 2561.9635,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Manufacturing",
+    "Target_Name": "Arts and Recreation Services"
+  },
+  {
+    "Source": "C",
+    "Target": "S",
+    "Value_AUD_millions": 5500.036400000001,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Manufacturing",
+    "Target_Name": "Other Services"
+  },
+  {
+    "Source": "D",
+    "Target": "C",
+    "Value_AUD_millions": 8756.469500000005,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Electricity, Gas, Water and Waste Services",
+    "Target_Name": "Manufacturing"
+  },
+  {
+    "Source": "E",
+    "Target": "C",
+    "Value_AUD_millions": 5630.9308,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Construction",
+    "Target_Name": "Manufacturing"
+  },
+  {
+    "Source": "F",
+    "Target": "C",
+    "Value_AUD_millions": 15988.113800000001,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Wholesale Trade",
+    "Target_Name": "Manufacturing"
+  },
+  {
+    "Source": "G",
+    "Target": "C",
+    "Value_AUD_millions": 5478.444500000002,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Retail Trade",
+    "Target_Name": "Manufacturing"
+  },
+  {
+    "Source": "H",
+    "Target": "C",
+    "Value_AUD_millions": 2757.3391,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Accommodation and Food Services",
+    "Target_Name": "Manufacturing"
+  },
+  {
+    "Source": "I",
+    "Target": "C",
+    "Value_AUD_millions": 24584.612599999993,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Transport, Postal and Warehousing",
+    "Target_Name": "Manufacturing"
+  },
+  {
+    "Source": "J",
+    "Target": "C",
+    "Value_AUD_millions": 4809.4644,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Information Media and Telecommunications",
+    "Target_Name": "Manufacturing"
+  },
+  {
+    "Source": "K",
+    "Target": "C",
+    "Value_AUD_millions": 6468.4234000000015,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Financial and Insurance Services",
+    "Target_Name": "Manufacturing"
+  },
+  {
+    "Source": "L",
+    "Target": "C",
+    "Value_AUD_millions": 4245.339199999999,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Rental, Hiring and Real Estate Services",
+    "Target_Name": "Manufacturing"
+  },
+  {
+    "Source": "M",
+    "Target": "C",
+    "Value_AUD_millions": 18802.1422,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Professional, Scientific and Technical Services",
+    "Target_Name": "Manufacturing"
+  },
+  {
+    "Source": "N",
+    "Target": "C",
+    "Value_AUD_millions": 7537.420900000001,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Administrative and Support Services",
+    "Target_Name": "Manufacturing"
+  },
+  {
+    "Source": "O",
+    "Target": "C",
+    "Value_AUD_millions": 2671.0318,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Public Administration and Safety",
+    "Target_Name": "Manufacturing"
+  },
+  {
+    "Source": "P",
+    "Target": "C",
+    "Value_AUD_millions": 275.88690000000014,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Education and Training",
+    "Target_Name": "Manufacturing"
+  },
+  {
+    "Source": "Q",
+    "Target": "C",
+    "Value_AUD_millions": 519.2707999999997,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Health Care and Social Assistance",
+    "Target_Name": "Manufacturing"
+  },
+  {
+    "Source": "R",
+    "Target": "C",
+    "Value_AUD_millions": 181.9779999999999,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Arts and Recreation Services",
+    "Target_Name": "Manufacturing"
+  },
+  {
+    "Source": "S",
+    "Target": "C",
+    "Value_AUD_millions": 3173.468399999999,
+    "Year": "2023–24",
+    "Unit": "A$ million",
+    "Source_Name": "Other Services",
+    "Target_Name": "Manufacturing"
+  }
+]

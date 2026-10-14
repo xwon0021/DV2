@@ -1,0 +1,38 @@
+[
+  {
+    "Label": "Want to buy more",
+    "Statement": "73% of Australians want to buy more Australian-made products to reduce Australia’s reliance on imports",
+    "Percentage": 73,
+    "Qualifier": "Reason: to reduce Australia’s reliance on imports",
+    "Order": 0,
+    "Period": "March 2025",
+    "Source": "Roy Morgan Research; Australian Made Campaign Ltd"
+  },
+  {
+    "Label": "Intend to buy more",
+    "Statement": "In the next 12 months, 67% of Aussies intend to buy more Australian-made products",
+    "Percentage": 67,
+    "Qualifier": "In the next 12 months",
+    "Order": 1,
+    "Period": "March 2025",
+    "Source": "Roy Morgan Research; Australian Made Campaign Ltd"
+  },
+  {
+    "Label": "Have been looking to buy more",
+    "Statement": "In the last 12 months, 63% of Aussies have been looking to buy more Australian-made products",
+    "Percentage": 63,
+    "Qualifier": "In the last 12 months",
+    "Order": 2,
+    "Period": "March 2025",
+    "Source": "Roy Morgan Research; Australian Made Campaign Ltd"
+  },
+  {
+    "Label": "More likely with known origin",
+    "Statement": "84% of Australians are more likely to buy a product if they know its Australian Made",
+    "Percentage": 84,
+    "Qualifier": "Conditional reported likelihood; source wording retained",
+    "Order": 3,
+    "Period": "March 2025",
+    "Source": "Roy Morgan Research; Australian Made Campaign Ltd"
+  }
+]
