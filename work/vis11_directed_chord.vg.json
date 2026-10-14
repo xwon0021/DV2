@@ -1,0 +1,276 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "width": 900,
+  "height": 710,
+  "padding": 5,
+  "autosize": {
+    "type": "none",
+    "contains": "padding"
+  },
+  "background": "transparent",
+  "signals": [
+    {
+      "name": "radius",
+      "update": "min(230,(width-500)/2)"
+    },
+    {
+      "name": "cx",
+      "update": "width/2"
+    },
+    {
+      "name": "cy",
+      "update": "height/2"
+    },
+    {
+      "name": "selectedIndustry",
+      "value": "",
+      "on": [
+        {
+          "events": "@industryArcs:click, @industryLabels:click",
+          "update": "datum.Code"
+        }
+      ]
+    },
+    {
+      "name": "hoverIndustry",
+      "value": "",
+      "on": [
+        {
+          "events": "@industryArcs:mouseover, @industryLabels:mouseover",
+          "update": "datum.Code"
+        },
+        {
+          "events": "@industryArcs:mouseout, @industryLabels:mouseout",
+          "update": "''"
+        }
+      ]
+    },
+    {
+      "name": "activeIndustry",
+      "update": "hoverIndustry || selectedIndustry"
+    },
+    {
+      "name": "selectedEdge",
+      "value": "",
+      "on": [
+        {
+          "events": "@directedRibbons:click",
+          "update": "datum.Key"
+        },
+        {
+          "events": "@industryArcs:click, @industryLabels:click",
+          "update": "''"
+        }
+      ]
+    },
+    {
+      "name": "hoverEdge",
+      "value": "",
+      "on": [
+        {
+          "events": "@directedRibbons:mouseover",
+          "update": "datum.Key"
+        },
+        {
+          "events": "@directedRibbons:mouseout",
+          "update": "''"
+        }
+      ]
+    },
+    {
+      "name": "activeEdge",
+      "update": "hoverEdge || (hoverIndustry ? '' : selectedEdge)"
+    }
+  ],
+  "data": [
+    {
+      "name": "layout",
+      "url": "work/data/vis11_directed_layout.json"
+    },
+    {
+      "name": "edges",
+      "url": "work/data/vis11_domestic_edges.json",
+      "transform": [
+        {
+          "type": "formula",
+          "expr": "datum.Source+'|'+datum.Target",
+          "as": "Key"
+        },
+        {
+          "type": "lookup",
+          "from": "layout",
+          "key": "Key",
+          "fields": [
+            "Key"
+          ],
+          "values": [
+            "Path"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "nodes",
+      "url": "work/data/vis11_division_nodes.json"
+    }
+  ],
+  "marks": [
+    {
+      "name": "directedRibbons",
+      "type": "path",
+      "from": {
+        "data": "edges"
+      },
+      "encode": {
+        "update": {
+          "path": {
+            "field": "Path"
+          },
+          "x": {
+            "signal": "cx"
+          },
+          "y": {
+            "signal": "cy"
+          },
+          "scaleX": {
+            "signal": "radius"
+          },
+          "scaleY": {
+            "signal": "radius"
+          },
+          "fill": {
+            "signal": "datum.Key === activeEdge || (activeIndustry && (datum.Source === activeIndustry || datum.Target === activeIndustry)) ? '#D8891C' : '#526e84'"
+          },
+          "fillOpacity": {
+            "signal": "activeEdge ? (datum.Key === activeEdge ? .9 : .25) : activeIndustry ? (datum.Source === activeIndustry || datum.Target === activeIndustry ? .8 : .25) : .5"
+          },
+          "stroke": {
+            "value": "#ffffff"
+          },
+          "strokeWidth": {
+            "value": 0.45
+          },
+          "zindex": {
+            "signal": "datum.Key === selectedEdge ? 1 : 0"
+          },
+          "cursor": {
+            "value": "pointer"
+          },
+          "description": {
+            "signal": "'Supplier ' + datum.Source_Name + ' to user ' + datum.Target_Name + (datum.Source === datum.Target ? ', manufacturing self-use' : '')"
+          },
+          "tooltip": {
+            "signal": "{'Supplier \u2192 User': datum.Source_Name + ' \u2192 ' + datum.Target_Name, 'Domestic intermediate use': 'A$' + format(datum.Value_AUD_millions / 1000, '.3f') + 'bn', 'Period / prices': '2023\u201324 \u00b7 basic prices', 'Scope': datum.Source === datum.Target ? 'Manufacturing self-use; domestic industry accounting' : 'Domestic industry accounting; not company supply chains', 'Source unit': 'A$ million'}"
+          }
+        }
+      }
+    },
+    {
+      "name": "industryArcs",
+      "type": "arc",
+      "from": {
+        "data": "nodes"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "cx"
+          },
+          "y": {
+            "signal": "cy"
+          },
+          "innerRadius": {
+            "signal": "radius*1.08"
+          },
+          "outerRadius": {
+            "signal": "radius*1.14"
+          },
+          "startAngle": {
+            "field": "Start"
+          },
+          "endAngle": {
+            "field": "End"
+          },
+          "fill": {
+            "signal": "datum.Code === activeIndustry ? '#D8891C' : '#173b5e'"
+          },
+          "cursor": {
+            "value": "pointer"
+          },
+          "description": {
+            "signal": "datum.Name + ' industry division'"
+          },
+          "tooltip": {
+            "signal": "{'Division': datum.Name, 'Supplies in this scope': 'A$' + format(datum.Out_AUD_millions / 1000, '.3f') + 'bn', 'Uses in this scope': 'A$' + format(datum.In_AUD_millions / 1000, '.3f') + 'bn', 'Year': '2023\u201324', 'Arc': 'Space allocated to ribbon endpoints, not industry output'}"
+          }
+        }
+      }
+    },
+    {
+      "type": "path",
+      "from": {
+        "data": "nodes"
+      },
+      "encode": {
+        "update": {
+          "path": {
+            "signal": "'M'+(cx+sin(datum.Mid)*radius*1.16)+','+(cy-cos(datum.Mid)*radius*1.16)+'L'+(cx+datum.Side*(radius*1.22))+','+(cy+datum.LabelY*radius)+'L'+(datum.Side > 0 ? width-208 : 208)+','+(cy+datum.LabelY*radius)"
+          },
+          "stroke": {
+            "value": "#aab8c4"
+          },
+          "strokeWidth": {
+            "value": 0.7
+          },
+          "fill": {
+            "value": null
+          }
+        }
+      }
+    },
+    {
+      "name": "industryLabels",
+      "type": "text",
+      "from": {
+        "data": "nodes"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "datum.Side > 0 ? width-203 : 203"
+          },
+          "y": {
+            "signal": "cy+datum.LabelY*radius"
+          },
+          "align": {
+            "signal": "datum.Side > 0 ? 'left' : 'right'"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "text": {
+            "field": "Short"
+          },
+          "fontSize": {
+            "value": 13
+          },
+          "fontWeight": {
+            "signal": "datum.Code === 'C' ? 'bold' : 'normal'"
+          },
+          "fill": {
+            "signal": "datum.Code === activeIndustry ? '#A76312' : '#24394c'"
+          },
+          "cursor": {
+            "value": "pointer"
+          },
+          "description": {
+            "signal": "datum.Name"
+          },
+          "tooltip": {
+            "signal": "{'Division': datum.Name, 'Scope': 'Domestic intermediate-use connections with manufacturing, 2023\u201324'}"
+          }
+        }
+      }
+    }
+  ]
+}

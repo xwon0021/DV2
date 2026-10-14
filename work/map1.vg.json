@@ -1,117 +1,260 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 760,
-  "height": 440,
-  "title": {
-    "text": "Manufacturing Businesses by SA2, Australia (2025)",
-    "subtitle": [
-      "92% of SA2s have fewer than 80 businesses; 2% have 160 or more.",
-      "Source: Australian Bureau of Statistics, Counts of Australian Businesses, 2025"
-    ],
-    "anchor": "start",
-    "fontSize": 18,
-    "subtitleFontSize": 11,
-    "subtitleColor": "#555555",
-    "subtitlePadding": 6,
-    "offset": 12
-  },
-
+  "width": "container",
+  "height": 650,
   "projection": {
     "type": "mercator"
   },
-
   "data": {
-    "url": "SA2_2021_AUST_GDA2020.json",
+    "url": "work/data/SA2_2021_AUST_GDA2020_web.json",
     "format": {
       "type": "topojson",
       "feature": "SA2_2021_AUST_GDA2020"
     }
   },
-
   "transform": [
     {
-      "calculate": "toNumber(datum.properties.SA2_CODE21)",
-      "as": "SA2_CODE_JOIN"
-    },
-    {
-      "lookup": "SA2_CODE_JOIN",
+      "lookup": "properties.SA2_CODE21",
       "from": {
         "data": {
-          "url": "manufacturing_sa2_2025.csv"
+          "url": "work/data/vis01_sa2_rate.csv",
+          "format": {
+            "type": "csv",
+            "parse": {
+              "SA2_Code": "string",
+              "Manufacturing_Businesses": "number",
+              "Population_2025": "number",
+              "Businesses_per_10000": "number",
+              "Year": "number"
+            }
+          }
         },
-        "key": "\uFEFFSA2 Code",
+        "key": "SA2_Code",
         "fields": [
-          "SA2 Label",
-          "Total",
-          "Year"
+          "SA2_Name",
+          "State",
+          "Manufacturing_Businesses",
+          "Population_2025",
+          "Businesses_per_10000",
+          "Year",
+          "Rate_Status"
         ]
       }
     },
     {
-      "calculate": "toNumber(datum.Total)",
-      "as": "TOTAL_NUM"
+      "calculate": "datum.Rate_Status === 'valid' ? datum.Businesses_per_10000 : null",
+      "as": "Businesses_per_10000"
+    },
+    {
+      "calculate": "datum.Rate_Status === 'missing_business_total' || !isValid(datum.Rate_Status) ? null : datum.Manufacturing_Businesses",
+      "as": "Manufacturing_Businesses"
+    },
+    {
+      "calculate": "datum.Rate_Status === 'valid' ? format(datum.Businesses_per_10000, ',.1f') : 'Unavailable (missing count or zero population)'",
+      "as": "Rate_Display"
+    },
+    {
+      "calculate": "isValid(datum.SA2_Name) ? datum.SA2_Name : datum.properties.SA2_NAME21",
+      "as": "SA2_Display"
+    },
+    {
+      "calculate": "isValid(datum.State) ? datum.State : 'Unavailable (no linked record)'",
+      "as": "State_Display"
+    },
+    {
+      "calculate": "isValid(datum.Manufacturing_Businesses) ? format(datum.Manufacturing_Businesses, ',.0f') : 'Unavailable'",
+      "as": "Count_Display"
+    },
+    {
+      "calculate": "isValid(datum.Population_2025) ? format(datum.Population_2025, ',.0f') : 'Unavailable'",
+      "as": "Population_Display"
+    },
+    {
+      "calculate": "isValid(datum.Year) ? datum.Year : 'Not linked'",
+      "as": "Year_Display"
+    },
+    {
+      "calculate": "isValid(datum.Businesses_per_10000) ? (datum.Businesses_per_10000 < 16.619744185432076 ? 0 : (datum.Businesses_per_10000 < 25.69467417275979 ? 1 : (datum.Businesses_per_10000 < 38.732133634894126 ? 2 : (datum.Businesses_per_10000 < 58.332291739375385 ? 3 : (datum.Businesses_per_10000 < 89.35125844791428 ? 4 : (datum.Businesses_per_10000 < 6010.714285714259 ? 5 : (6))))))) : null",
+      "as": "Rate_Class"
     }
   ],
-
-  "mark": {
-    "type": "geoshape",
-    "stroke": "white",
-    "strokeWidth": 0.2
-  },
-
-  "encoding": {
-    "color": {
-      "field": "TOTAL_NUM",
-      "type": "quantitative",
-      "title": "Manufacturing businesses",
-      "scale": {
-        "type": "threshold",
-        "domain": [5, 10, 20, 40, 80, 160],
-        "scheme": "blues"
-      },
-      "legend": {
-        "type": "symbol",
-        "orient": "bottom",
-        "direction": "horizontal",
-        "columns": 4,
-        "values": [0, 5, 10, 20, 40, 80, 160],
-        "labelExpr": "datum.value === 0 ? '0–4' : datum.value === 5 ? '5–9' : datum.value === 10 ? '10–19' : datum.value === 20 ? '20–39' : datum.value === 40 ? '40–79' : datum.value === 80 ? '80–159' : '160+'",
-        "symbolType": "square",
-        "symbolSize": 140,
-        "labelFontSize": 11,
-        "titleFontSize": 12,
-        "titleLimit": 240,
-        "titlePadding": 8,
-        "columnPadding": 18,
-        "rowPadding": 6
-      }
-    },
-
-    "tooltip": [
-      {
-        "field": "properties.SA2_NAME21",
-        "type": "nominal",
-        "title": "SA2"
-      },
-      {
-        "field": "TOTAL_NUM",
-        "type": "quantitative",
-        "title": "Manufacturing businesses",
-        "format": ",d"
-      },
-      {
-        "field": "Year",
-        "type": "nominal",
-        "title": "Year"
-      }
-    ]
-  },
-
   "config": {
-    "background": "white",
+    "background": "transparent",
     "view": {
       "stroke": null
     },
-    "font": "sans-serif"
-  }
+    "font": "Arial, sans-serif"
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#ffffff",
+        "strokeWidth": 0.24
+      },
+      "encoding": {
+        "color": {
+          "condition": {
+            "test": "selectedRateClass >= 0",
+            "value": "#BCC4CC"
+          },
+          "value": "#e4e8ec"
+        },
+        "tooltip": [
+          {
+            "field": "SA2_Display",
+            "type": "nominal",
+            "title": "SA2"
+          },
+          {
+            "field": "State_Display",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "Count_Display",
+            "type": "nominal",
+            "title": "Manufacturing businesses"
+          },
+          {
+            "field": "Population_Display",
+            "type": "nominal",
+            "title": "Population (2025)"
+          },
+          {
+            "field": "Rate_Display",
+            "type": "nominal",
+            "title": "Businesses per 10,000 residents"
+          },
+          {
+            "field": "Year_Display",
+            "type": "nominal",
+            "title": "Business-count year"
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "!isValid(datum.Businesses_per_10000)"
+        }
+      ]
+    },
+    {
+      "transform": [
+        {
+          "filter": "isValid(datum.Businesses_per_10000)"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#ffffff",
+        "strokeWidth": 0.24
+      },
+      "encoding": {
+        "color": {
+          "field": "Businesses_per_10000",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [
+              16.619744185432076,
+              25.69467417275979,
+              38.732133634894126,
+              58.332291739375385,
+              89.35125844791428,
+              6010.714285714259
+            ],
+            "range": [
+              "#F1F5F9",
+              "#C7E4EB",
+              "#83C8D6",
+              "#3D9CB8",
+              "#22749D",
+              "#185078",
+              "#102E55"
+            ]
+          },
+          "legend": null,
+          "condition": {
+            "test": "selectedRateClass >= 0 && datum.Rate_Class !== selectedRateClass",
+            "value": "#E6E8EB"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "SA2_Display",
+            "type": "nominal",
+            "title": "SA2"
+          },
+          {
+            "field": "State_Display",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "Count_Display",
+            "type": "nominal",
+            "title": "Manufacturing businesses"
+          },
+          {
+            "field": "Population_Display",
+            "type": "nominal",
+            "title": "Population (2025)"
+          },
+          {
+            "field": "Rate_Display",
+            "type": "nominal",
+            "title": "Businesses per 10,000 residents"
+          },
+          {
+            "field": "Year_Display",
+            "type": "nominal",
+            "title": "Business-count year"
+          }
+        ],
+        "stroke": {
+          "condition": {
+            "param": "rateHover",
+            "empty": false,
+            "value": "#A76312"
+          },
+          "value": "#ffffff"
+        },
+        "strokeWidth": {
+          "condition": [
+            {
+              "test": "selectedRateClass >= 0 && datum.Rate_Class === selectedRateClass && rateHover.SA2_Display && indexof(rateHover.SA2_Display, datum.SA2_Display) >= 0",
+              "value": 3
+            },
+            {
+              "param": "rateHover",
+              "empty": false,
+              "value": 1.25
+            }
+          ],
+          "value": 0.24
+        }
+      },
+      "params": [
+        {
+          "name": "rateHover",
+          "select": {
+            "type": "point",
+            "fields": [
+              "SA2_Display"
+            ],
+            "on": "pointerover",
+            "clear": "pointerout",
+            "toggle": false
+          }
+        }
+      ]
+    }
+  ],
+  "params": [
+    {
+      "name": "selectedRateClass",
+      "value": -1
+    }
+  ]
 }

@@ -1,0 +1,238 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "background": "transparent",
+    "view": {
+      "stroke": null
+    },
+    "font": "Arial",
+    "axis": {
+      "labelColor": "#43596c",
+      "titleColor": "#43596c",
+      "gridColor": "#edf1f4",
+      "labelFontSize": 11,
+      "titleFontSize": 11
+    }
+  },
+  "data": {
+    "url": "work/data/vis08_national_employment_overview.json"
+  },
+  "vconcat": [
+    {
+      "width": "container",
+      "height": 280,
+      "encoding": {
+        "x": {
+          "field": "Date",
+          "type": "temporal",
+          "axis": {
+            "title": "Financial year ending June",
+            "format": "%Y",
+            "tickCount": {
+              "expr": "span(domain('concat_0_x')) < 6 * 365.25 * 86400000 ? {interval: 'year', step: 1} : {interval: 'year', step: 5}"
+            }
+          },
+          "scale": {
+            "domain": {
+              "param": "brush"
+            }
+          }
+        },
+        "y": {
+          "field": "Employment_Thousands",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              1100
+            ]
+          },
+          "axis": {
+            "title": "Employment (thousands)",
+            "tickCount": 5
+          }
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "area",
+            "color": "#0C92C4",
+            "opacity": 0.09,
+            "clip": true
+          }
+        },
+        {
+          "mark": {
+            "type": "line",
+            "color": "#0C92C4",
+            "strokeWidth": 2.5,
+            "clip": true
+          }
+        },
+        {
+          "mark": {
+            "type": "point",
+            "filled": true,
+            "color": "#0C92C4",
+            "size": 50,
+            "clip": true
+          },
+          "encoding": {
+            "tooltip": [
+              {
+                "field": "Financial_Year_Display",
+                "title": "Financial year"
+              },
+              {
+                "field": "Employment_Thousands",
+                "title": "Employment at June end (thousands)",
+                "format": ",.1f"
+              }
+            ],
+            "stroke": {
+              "condition": {
+                "param": "employmentPoint",
+                "empty": false,
+                "value": "#A76312"
+              },
+              "value": "#0C92C4"
+            },
+            "strokeWidth": {
+              "condition": {
+                "param": "employmentPoint",
+                "empty": false,
+                "value": 3
+              },
+              "value": 1
+            }
+          },
+          "params": [
+            {
+              "name": "employmentPoint",
+              "select": {
+                "type": "point",
+                "fields": [
+                  "Financial_Year"
+                ],
+                "toggle": false,
+                "clear": false,
+                "nearest": true
+              }
+            }
+          ]
+        },
+        {
+          "transform": [
+            {
+              "filter": "datum.Year_Order == 13"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "center",
+            "dy": 20,
+            "fontSize": 11,
+            "color": "#43596c",
+            "clip": true
+          },
+          "encoding": {
+            "text": {
+              "datum": "2019\u20132020 minimum: 830.2k"
+            }
+          }
+        },
+        {
+          "transform": [
+            {
+              "filter": "datum.Year_Order == 18"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dy": -18,
+            "fontSize": 11,
+            "color": "#43596c",
+            "clip": true
+          },
+          "encoding": {
+            "text": {
+              "datum": "2024\u20132025: 900.8k"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "width": "container",
+      "height": 90,
+      "params": [
+        {
+          "name": "brush",
+          "select": {
+            "type": "interval",
+            "encodings": [
+              "x"
+            ],
+            "mark": {
+              "fill": "#A76312",
+              "fillOpacity": 0.14,
+              "stroke": "#A76312",
+              "strokeWidth": 2
+            }
+          }
+        }
+      ],
+      "mark": {
+        "type": "area",
+        "color": "#0C92C4",
+        "opacity": 0.25
+      },
+      "encoding": {
+        "x": {
+          "field": "Date",
+          "type": "temporal",
+          "axis": {
+            "title": "Drag to select years",
+            "format": "%Y",
+            "tickCount": 5
+          }
+        },
+        "y": {
+          "field": "Employment_Thousands",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              1100
+            ]
+          },
+          "axis": {
+            "title": null,
+            "tickCount": 3,
+            "grid": false,
+            "format": ",.0f"
+          }
+        }
+      },
+      "name": "employmentOverview"
+    }
+  ],
+  "params": [
+    {
+      "name": "periodStart",
+      "value": null
+    },
+    {
+      "name": "periodEnd",
+      "value": null
+    }
+  ],
+  "transform": [
+    {
+      "calculate": "substring(datum.Financial_Year, 0, 4) + '\u2013' + format(toNumber(substring(datum.Financial_Year, 0, 4)) + 1, 'd')",
+      "as": "Financial_Year_Display"
+    }
+  ]
+}

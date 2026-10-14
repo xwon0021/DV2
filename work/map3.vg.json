@@ -1,0 +1,171 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "width": 960,
+  "height": 470,
+  "padding": 5,
+  "autosize": {
+    "type": "none",
+    "contains": "padding"
+  },
+  "background": "transparent",
+  "signals": [
+    {
+      "name": "selectedFacility",
+      "value": null,
+      "on": [
+        {
+          "events": "@facilityDots:click",
+          "update": "datum.Facility_ID"
+        }
+      ]
+    },
+    {
+      "name": "hoverFacility",
+      "value": null,
+      "on": [
+        {
+          "events": "@facilityDots:mouseover",
+          "update": "datum.Facility_ID"
+        },
+        {
+          "events": "@facilityDots:mouseout",
+          "update": "null"
+        }
+      ]
+    },
+    {
+      "name": "stateFilter",
+      "value": ""
+    },
+    {
+      "name": "industryFilter",
+      "value": ""
+    },
+    {
+      "name": "searchName",
+      "value": ""
+    }
+  ],
+  "data": [
+    {
+      "name": "land",
+      "url": "work/data/australia_display.geojson",
+      "format": {
+        "type": "json",
+        "property": "features"
+      }
+    },
+    {
+      "name": "facilities",
+      "url": "work/data/vis03_npi_facilities.json"
+    },
+    {
+      "name": "visibleFacilities",
+      "source": "facilities",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "(!stateFilter || datum.State === stateFilter) && (!industryFilter || datum.Industry === industryFilter)"
+        },
+        {
+          "type": "geopoint",
+          "projection": "australia",
+          "fields": [
+            "Longitude",
+            "Latitude"
+          ],
+          "as": [
+            "px",
+            "py"
+          ]
+        }
+      ]
+    }
+  ],
+  "projections": [
+    {
+      "name": "australia",
+      "type": "mercator",
+      "fit": {
+        "signal": "data('land')"
+      },
+      "extent": {
+        "signal": "[[12,12],[width-12,height-12]]"
+      }
+    }
+  ],
+  "marks": [
+    {
+      "type": "shape",
+      "from": {
+        "data": "land"
+      },
+      "encode": {
+        "update": {
+          "fill": {
+            "value": "#f0f3f6"
+          },
+          "stroke": {
+            "value": "#c9d2dc"
+          },
+          "strokeWidth": {
+            "value": 0.8
+          }
+        }
+      },
+      "transform": [
+        {
+          "type": "geoshape",
+          "projection": "australia"
+        }
+      ]
+    },
+    {
+      "name": "facilityDots",
+      "type": "symbol",
+      "from": {
+        "data": "visibleFacilities"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "field": "px"
+          },
+          "y": {
+            "field": "py"
+          },
+          "shape": {
+            "value": "circle"
+          },
+          "size": {
+            "value": 24
+          },
+          "fill": {
+            "signal": "datum.Facility_ID === hoverFacility || datum.Facility_ID === selectedFacility || (searchName && indexof(lower(datum.Facility_Name), lower(searchName)) >= 0) ? '#D8891C' : '#7B3FB1'"
+          },
+          "fillOpacity": {
+            "signal": "!searchName || (searchName && indexof(lower(datum.Facility_Name), lower(searchName)) >= 0) || datum.Facility_ID === selectedFacility ? 0.85 : 0.3"
+          },
+          "stroke": {
+            "value": "white"
+          },
+          "strokeWidth": {
+            "value": 0.3
+          },
+          "zindex": {
+            "signal": "datum.Facility_ID === selectedFacility ? 1 : 0"
+          },
+          "cursor": {
+            "value": "pointer"
+          },
+          "description": {
+            "signal": "datum.Facility_Name + ', ' + datum.State + ', ' + datum.Industry + ', NPI 2024/2025 reporting facility'"
+          },
+          "tooltip": {
+            "signal": "{'Facility': datum.Facility_Name, 'State / territory': datum.State, 'Primary industry': datum.Industry, 'Reporting period': datum.Reporting_Period, 'Coverage': 'NPI reporting facility, not all manufacturers or certified facilities', 'Source ID': datum.Facility_ID}"
+          }
+        }
+      }
+    }
+  ]
+}

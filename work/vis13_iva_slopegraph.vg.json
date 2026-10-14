@@ -1,0 +1,577 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "width": 900,
+  "height": 600,
+  "padding": 5,
+  "autosize": {
+    "type": "none",
+    "contains": "padding"
+  },
+  "background": "transparent",
+  "signals": [
+    {
+      "name": "hoverCode",
+      "value": null,
+      "on": [
+        {
+          "events": "@slopes:mouseover, @endpoints:mouseover, @labels:mouseover, @rightEndpoints:mouseover, @rightLabels:mouseover",
+          "update": "datum.Code"
+        },
+        {
+          "events": "@slopes:mouseout, @endpoints:mouseout, @labels:mouseout, @rightEndpoints:mouseout, @rightLabels:mouseout",
+          "update": "null"
+        }
+      ]
+    },
+    {
+      "name": "focusCode",
+      "value": null
+    }
+  ],
+  "data": [
+    {
+      "name": "iva",
+      "values": [
+        {
+          "Code": "11",
+          "Subdivision": "Food product manufacturing",
+          "Short": "Food",
+          "IVA_2023_24": 28931.0,
+          "IVA_2024_25": 31279.0,
+          "Absolute_Change": 2348.0,
+          "Percentage_Change": 8.115861878262072,
+          "Unit": "A$ million",
+          "Percentage_Display": "+8.1%",
+          "LeftLabelY": 114.54411764705883,
+          "RightLabelY": 80.01470588235293,
+          "Highlight": true
+        },
+        {
+          "Code": "12",
+          "Subdivision": "Beverage and tobacco product manufacturing",
+          "Short": "Beverage/tobacco",
+          "IVA_2023_24": 5798.0,
+          "IVA_2024_25": 6124.0,
+          "Absolute_Change": 326.0,
+          "Percentage_Change": 5.622628492583649,
+          "Unit": "A$ million",
+          "Percentage_Display": "+5.6%",
+          "LeftLabelY": 425,
+          "RightLabelY": 400,
+          "Highlight": false
+        },
+        {
+          "Code": "13",
+          "Subdivision": "Textile, leather, clothing and footwear manufacturing",
+          "Short": "Textiles/clothing",
+          "IVA_2023_24": 2552.0,
+          "IVA_2024_25": 2216.0,
+          "Absolute_Change": -336.0,
+          "Percentage_Change": -13.166144200626958,
+          "Unit": "A$ million",
+          "Percentage_Display": "-13.2%",
+          "LeftLabelY": 525,
+          "RightLabelY": 525,
+          "Highlight": true
+        },
+        {
+          "Code": "14",
+          "Subdivision": "Wood product manufacturing",
+          "Short": "Wood",
+          "IVA_2023_24": 6375.0,
+          "IVA_2024_25": 6543.0,
+          "Absolute_Change": 168.0,
+          "Percentage_Change": 2.635294117647059,
+          "Unit": "A$ million",
+          "Percentage_Display": "+2.6%",
+          "LeftLabelY": 375,
+          "RightLabelY": 375,
+          "Highlight": false
+        },
+        {
+          "Code": "15",
+          "Subdivision": "Pulp, paper and converted paper product manufacturing",
+          "Short": "Pulp/paper",
+          "IVA_2023_24": 2747.0,
+          "IVA_2024_25": 2774.0,
+          "Absolute_Change": 27.0,
+          "Percentage_Change": 0.9828904259191846,
+          "Unit": "A$ million",
+          "Percentage_Display": "+1.0%",
+          "LeftLabelY": 475,
+          "RightLabelY": 500,
+          "Highlight": false
+        },
+        {
+          "Code": "16",
+          "Subdivision": "Printing (including the reproduction of recorded media)",
+          "Short": "Printing",
+          "IVA_2023_24": 2732.0,
+          "IVA_2024_25": 2880.0,
+          "Absolute_Change": 148.0,
+          "Percentage_Change": 5.417276720351391,
+          "Unit": "A$ million",
+          "Percentage_Display": "+5.4%",
+          "LeftLabelY": 500,
+          "RightLabelY": 475,
+          "Highlight": false
+        },
+        {
+          "Code": "17",
+          "Subdivision": "Petroleum and coal product manufacturing",
+          "Short": "Petroleum/coal",
+          "IVA_2023_24": 1526.0,
+          "IVA_2024_25": 1323.0,
+          "Absolute_Change": -203.0,
+          "Percentage_Change": -13.302752293577983,
+          "Unit": "A$ million",
+          "Percentage_Display": "-13.3%",
+          "LeftLabelY": 550,
+          "RightLabelY": 550,
+          "Highlight": false
+        },
+        {
+          "Code": "18",
+          "Subdivision": "Basic chemical and chemical product manufacturing",
+          "Short": "Basic chemicals",
+          "IVA_2023_24": 9914.0,
+          "IVA_2024_25": 10986.0,
+          "Absolute_Change": 1072.0,
+          "Percentage_Change": 10.812991728868267,
+          "Unit": "A$ million",
+          "Percentage_Display": "+10.8%",
+          "LeftLabelY": 300,
+          "RightLabelY": 300,
+          "Highlight": false
+        },
+        {
+          "Code": "19",
+          "Subdivision": "Polymer product and rubber product manufacturing",
+          "Short": "Polymer/rubber",
+          "IVA_2023_24": 5843.0,
+          "IVA_2024_25": 5909.0,
+          "Absolute_Change": 66.0,
+          "Percentage_Change": 1.1295567345541675,
+          "Unit": "A$ million",
+          "Percentage_Display": "+1.1%",
+          "LeftLabelY": 400,
+          "RightLabelY": 425,
+          "Highlight": false
+        },
+        {
+          "Code": "20",
+          "Subdivision": "Non-metallic mineral product manufacturing",
+          "Short": "Non-metal minerals",
+          "IVA_2023_24": 8547.0,
+          "IVA_2024_25": 8822.0,
+          "Absolute_Change": 275.0,
+          "Percentage_Change": 3.2175032175032174,
+          "Unit": "A$ million",
+          "Percentage_Display": "+3.2%",
+          "LeftLabelY": 350,
+          "RightLabelY": 350,
+          "Highlight": false
+        },
+        {
+          "Code": "21",
+          "Subdivision": "Primary metal and metal product manufacturing",
+          "Short": "Primary metals",
+          "IVA_2023_24": 9683.0,
+          "IVA_2024_25": 9378.0,
+          "Absolute_Change": -305.0,
+          "Percentage_Change": -3.1498502530207575,
+          "Unit": "A$ million",
+          "Percentage_Display": "-3.1%",
+          "LeftLabelY": 325,
+          "RightLabelY": 325,
+          "Highlight": false
+        },
+        {
+          "Code": "22",
+          "Subdivision": "Fabricated metal product manufacturing",
+          "Short": "Fabricated metals",
+          "IVA_2023_24": 14864.0,
+          "IVA_2024_25": 15972.0,
+          "Absolute_Change": 1108.0,
+          "Percentage_Change": 7.454251883745963,
+          "Unit": "A$ million",
+          "Percentage_Display": "+7.5%",
+          "LeftLabelY": 250,
+          "RightLabelY": 250,
+          "Highlight": false
+        },
+        {
+          "Code": "23",
+          "Subdivision": "Transport equipment manufacturing",
+          "Short": "Transport equip.",
+          "IVA_2023_24": 13080.0,
+          "IVA_2024_25": 13955.0,
+          "Absolute_Change": 875.0,
+          "Percentage_Change": 6.689602446483181,
+          "Unit": "A$ million",
+          "Percentage_Display": "+6.7%",
+          "LeftLabelY": 275,
+          "RightLabelY": 275,
+          "Highlight": false
+        },
+        {
+          "Code": "24",
+          "Subdivision": "Machinery and equipment manufacturing",
+          "Short": "Machinery equip.",
+          "IVA_2023_24": 19363.0,
+          "IVA_2024_25": 20100.0,
+          "Absolute_Change": 737.0,
+          "Percentage_Change": 3.8062283737024223,
+          "Unit": "A$ million",
+          "Percentage_Display": "+3.8%",
+          "LeftLabelY": 225,
+          "RightLabelY": 225,
+          "Highlight": false
+        },
+        {
+          "Code": "25",
+          "Subdivision": "Furniture and other manufacturing",
+          "Short": "Furniture/other",
+          "IVA_2023_24": 3770.0,
+          "IVA_2024_25": 3713.0,
+          "Absolute_Change": -57.0,
+          "Percentage_Change": -1.5119363395225465,
+          "Unit": "A$ million",
+          "Percentage_Display": "-1.5%",
+          "LeftLabelY": 450,
+          "RightLabelY": 450,
+          "Highlight": false
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "y",
+      "type": "linear",
+      "domain": [
+        0,
+        34000
+      ],
+      "range": [
+        540,
+        40
+      ],
+      "zero": true
+    }
+  ],
+  "marks": [
+    {
+      "name": "slopes",
+      "type": "rule",
+      "from": {
+        "data": "iva"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "value": 240
+          },
+          "x2": {
+            "signal": "width-240"
+          },
+          "y": {
+            "scale": "y",
+            "field": "IVA_2023_24"
+          },
+          "y2": {
+            "scale": "y",
+            "field": "IVA_2024_25"
+          },
+          "stroke": {
+            "signal": "((hoverCode || focusCode) ? datum.Code === (hoverCode || focusCode) : datum.Highlight) ? '#D8891C' : '#718699'"
+          },
+          "strokeWidth": {
+            "signal": "datum.Highlight || datum.Code === (hoverCode || focusCode) ? 3 : 1.5"
+          },
+          "opacity": {
+            "signal": "!(hoverCode || focusCode) || datum.Code === (hoverCode || focusCode) ? 1 : 0.45"
+          },
+          "tooltip": {
+            "signal": "{'Subdivision':datum.Subdivision,'2023\u201324 IVA (A$ million)':format(datum.IVA_2023_24,',.0f'),'2024\u201325 IVA (A$ million)':format(datum.IVA_2024_25,',.0f'),'Absolute change (A$ million)':format(datum.Absolute_Change,'+,.0f'),'Percentage change':datum.Percentage_Display,'Unit':datum.Unit}"
+          }
+        }
+      }
+    },
+    {
+      "type": "rule",
+      "from": {
+        "data": "iva"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "240"
+          },
+          "x2": {
+            "signal": "218"
+          },
+          "y": {
+            "scale": "y",
+            "field": "IVA_2023_24"
+          },
+          "y2": {
+            "field": "LeftLabelY"
+          },
+          "stroke": {
+            "signal": "((hoverCode || focusCode) ? datum.Code === (hoverCode || focusCode) : datum.Highlight) ? '#D8891C' : '#718699'"
+          },
+          "opacity": {
+            "signal": "!(hoverCode || focusCode) || datum.Code === (hoverCode || focusCode) ? 1 : 0.45"
+          }
+        }
+      }
+    },
+    {
+      "name": "endpoints",
+      "type": "symbol",
+      "from": {
+        "data": "iva"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "240"
+          },
+          "y": {
+            "scale": "y",
+            "field": "IVA_2023_24"
+          },
+          "size": {
+            "value": 45
+          },
+          "fill": {
+            "signal": "((hoverCode || focusCode) ? datum.Code === (hoverCode || focusCode) : datum.Highlight) ? '#D8891C' : '#718699'"
+          },
+          "opacity": {
+            "signal": "!(hoverCode || focusCode) || datum.Code === (hoverCode || focusCode) ? 1 : 0.45"
+          },
+          "tooltip": {
+            "signal": "{'Subdivision':datum.Subdivision,'2023\u201324 IVA (A$ million)':format(datum.IVA_2023_24,',.0f'),'2024\u201325 IVA (A$ million)':format(datum.IVA_2024_25,',.0f'),'Absolute change (A$ million)':format(datum.Absolute_Change,'+,.0f'),'Percentage change':datum.Percentage_Display,'Unit':datum.Unit}"
+          }
+        }
+      }
+    },
+    {
+      "name": "labels",
+      "type": "text",
+      "from": {
+        "data": "iva"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "218-5"
+          },
+          "y": {
+            "field": "LeftLabelY"
+          },
+          "align": {
+            "value": "right"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "text": {
+            "signal": "datum.Short + ' \u00b7 ' + format(datum.IVA_2023_24,',.0f')"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fill": {
+            "signal": "((hoverCode || focusCode) ? datum.Code === (hoverCode || focusCode) : datum.Highlight) ? '#A76312' : '#718699'"
+          },
+          "opacity": {
+            "signal": "!(hoverCode || focusCode) || datum.Code === (hoverCode || focusCode) ? 1 : 0.45"
+          },
+          "tooltip": {
+            "signal": "{'Subdivision':datum.Subdivision,'2023\u201324 IVA (A$ million)':format(datum.IVA_2023_24,',.0f'),'2024\u201325 IVA (A$ million)':format(datum.IVA_2024_25,',.0f'),'Absolute change (A$ million)':format(datum.Absolute_Change,'+,.0f'),'Percentage change':datum.Percentage_Display,'Unit':datum.Unit}"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "240"
+          },
+          "y": {
+            "value": 18
+          },
+          "align": {
+            "value": "center"
+          },
+          "text": {
+            "value": "2023\u201324"
+          },
+          "fontSize": {
+            "value": 15
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "value": "#173b5e"
+          }
+        }
+      }
+    },
+    {
+      "type": "rule",
+      "from": {
+        "data": "iva"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "width-240"
+          },
+          "x2": {
+            "signal": "width-218"
+          },
+          "y": {
+            "scale": "y",
+            "field": "IVA_2024_25"
+          },
+          "y2": {
+            "field": "RightLabelY"
+          },
+          "stroke": {
+            "signal": "((hoverCode || focusCode) ? datum.Code === (hoverCode || focusCode) : datum.Highlight) ? '#D8891C' : '#718699'"
+          },
+          "opacity": {
+            "signal": "!(hoverCode || focusCode) || datum.Code === (hoverCode || focusCode) ? 1 : 0.45"
+          }
+        }
+      }
+    },
+    {
+      "name": "rightEndpoints",
+      "type": "symbol",
+      "from": {
+        "data": "iva"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "width-240"
+          },
+          "y": {
+            "scale": "y",
+            "field": "IVA_2024_25"
+          },
+          "size": {
+            "value": 45
+          },
+          "fill": {
+            "signal": "((hoverCode || focusCode) ? datum.Code === (hoverCode || focusCode) : datum.Highlight) ? '#D8891C' : '#718699'"
+          },
+          "opacity": {
+            "signal": "!(hoverCode || focusCode) || datum.Code === (hoverCode || focusCode) ? 1 : 0.45"
+          },
+          "tooltip": {
+            "signal": "{'Subdivision':datum.Subdivision,'2023\u201324 IVA (A$ million)':format(datum.IVA_2023_24,',.0f'),'2024\u201325 IVA (A$ million)':format(datum.IVA_2024_25,',.0f'),'Absolute change (A$ million)':format(datum.Absolute_Change,'+,.0f'),'Percentage change':datum.Percentage_Display,'Unit':datum.Unit}"
+          }
+        }
+      }
+    },
+    {
+      "name": "rightLabels",
+      "type": "text",
+      "from": {
+        "data": "iva"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "width-218+5"
+          },
+          "y": {
+            "field": "RightLabelY"
+          },
+          "align": {
+            "value": "left"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "text": {
+            "signal": "datum.Short + ' \u00b7 ' + format(datum.IVA_2024_25,',.0f')"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fill": {
+            "signal": "((hoverCode || focusCode) ? datum.Code === (hoverCode || focusCode) : datum.Highlight) ? '#A76312' : '#718699'"
+          },
+          "opacity": {
+            "signal": "!(hoverCode || focusCode) || datum.Code === (hoverCode || focusCode) ? 1 : 0.45"
+          },
+          "tooltip": {
+            "signal": "{'Subdivision':datum.Subdivision,'2023\u201324 IVA (A$ million)':format(datum.IVA_2023_24,',.0f'),'2024\u201325 IVA (A$ million)':format(datum.IVA_2024_25,',.0f'),'Absolute change (A$ million)':format(datum.Absolute_Change,'+,.0f'),'Percentage change':datum.Percentage_Display,'Unit':datum.Unit}"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "width-240"
+          },
+          "y": {
+            "value": 18
+          },
+          "align": {
+            "value": "center"
+          },
+          "text": {
+            "value": "2024\u201325"
+          },
+          "fontSize": {
+            "value": 15
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "value": "#173b5e"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "width/2"
+          },
+          "y": {
+            "value": 584
+          },
+          "align": {
+            "value": "center"
+          },
+          "text": {
+            "value": "Industry value added \u00b7 A$ million \u00b7 common vertical scale"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fill": {
+            "value": "#173b5e"
+          }
+        }
+      }
+    }
+  ]
+}

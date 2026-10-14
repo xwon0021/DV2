@@ -1,0 +1,347 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 470,
+  "data": {
+    "url": "work/data/vis09_employment_rank_bump.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "Year_Order": "number",
+        "Employment_Thousands": "number",
+        "Rank": "number"
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeCap": "round",
+        "strokeWidth": 1.8,
+        "color": "#8297a8",
+        "opacity": 0.74
+      },
+      "encoding": {
+        "x": {
+          "field": "Financial_Year",
+          "type": "ordinal",
+          "sort": {
+            "field": "Year_Order",
+            "order": "ascending"
+          },
+          "scale": {
+            "padding": 0.5
+          },
+          "axis": {
+            "title": "Financial year (June end)",
+            "values": [
+              "2006\u201307",
+              "2009\u201310",
+              "2012\u201313",
+              "2015\u201316",
+              "2018\u201319",
+              "2021\u201322",
+              "2024\u201325"
+            ],
+            "labelAngle": -38,
+            "labelLimit": 78,
+            "labelFontSize": 12,
+            "grid": false
+          }
+        },
+        "y": {
+          "field": "Rank",
+          "type": "quantitative",
+          "title": "Employment rank (1 = highest)",
+          "scale": {
+            "domain": [
+              1,
+              15
+            ],
+            "reverse": true
+          },
+          "axis": {
+            "values": [
+              1,
+              3,
+              5,
+              7,
+              9,
+              11,
+              13,
+              15
+            ],
+            "format": "d",
+            "grid": true
+          }
+        },
+        "detail": {
+          "field": "Subdivision",
+          "type": "nominal"
+        },
+        "order": {
+          "field": "Year_Order",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "Subdivision",
+            "type": "nominal",
+            "title": "Subdivision"
+          },
+          {
+            "field": "Financial_Year",
+            "type": "ordinal",
+            "title": "Financial year"
+          },
+          {
+            "field": "Rank_Display",
+            "type": "nominal",
+            "title": "Rank among all 15"
+          },
+          {
+            "field": "Employment_Thousands",
+            "type": "quantitative",
+            "title": "Employment (thousands)",
+            "format": ",.1f"
+          }
+        ],
+        "color": {
+          "condition": [
+            {
+              "test": "focusSubdivision && datum.Subdivision === focusSubdivision",
+              "value": "#D8891C"
+            },
+            {
+              "param": "hoverSubdivision",
+              "empty": false,
+              "value": "#D8891C"
+            }
+          ],
+          "value": "#8297a8"
+        },
+        "opacity": {
+          "condition": [
+            {
+              "param": "hoverSubdivision",
+              "empty": false,
+              "value": 1
+            },
+            {
+              "test": "!focusSubdivision || datum.Subdivision === focusSubdivision",
+              "value": 0.85
+            }
+          ],
+          "value": 0.45
+        },
+        "strokeWidth": {
+          "condition": [
+            {
+              "test": "focusSubdivision && datum.Subdivision === focusSubdivision",
+              "value": 3.2
+            },
+            {
+              "param": "hoverSubdivision",
+              "empty": false,
+              "value": 3.2
+            }
+          ],
+          "value": 1.8
+        }
+      },
+      "params": [
+        {
+          "name": "hoverSubdivision",
+          "select": {
+            "type": "point",
+            "fields": [
+              "Subdivision"
+            ],
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ]
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 18,
+        "color": "#8297a8"
+      },
+      "encoding": {
+        "x": {
+          "field": "Financial_Year",
+          "type": "ordinal",
+          "sort": {
+            "field": "Year_Order",
+            "order": "ascending"
+          },
+          "scale": {
+            "padding": 0.5
+          }
+        },
+        "y": {
+          "field": "Rank",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1,
+              15
+            ],
+            "reverse": true
+          }
+        },
+        "detail": {
+          "field": "Subdivision",
+          "type": "nominal"
+        },
+        "tooltip": [
+          {
+            "field": "Subdivision",
+            "type": "nominal",
+            "title": "Subdivision"
+          },
+          {
+            "field": "Financial_Year",
+            "type": "ordinal",
+            "title": "Financial year"
+          },
+          {
+            "field": "Rank_Display",
+            "type": "nominal",
+            "title": "Rank among all 15"
+          },
+          {
+            "field": "Employment_Thousands",
+            "type": "quantitative",
+            "title": "Employment (thousands)",
+            "format": ",.1f"
+          }
+        ],
+        "color": {
+          "condition": [
+            {
+              "test": "focusSubdivision && datum.Subdivision === focusSubdivision",
+              "value": "#D8891C"
+            },
+            {
+              "param": "hoverSubdivision",
+              "empty": false,
+              "value": "#D8891C"
+            }
+          ],
+          "value": "#8297a8"
+        },
+        "opacity": {
+          "condition": [
+            {
+              "param": "hoverSubdivision",
+              "empty": false,
+              "value": 1
+            },
+            {
+              "test": "!focusSubdivision || datum.Subdivision === focusSubdivision",
+              "value": 0.85
+            }
+          ],
+          "value": 0.45
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.Financial_Year === '2024\u201325'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 5,
+        "fontSize": 13,
+        "fontWeight": 600,
+        "color": "#526b7e"
+      },
+      "encoding": {
+        "x": {
+          "field": "Financial_Year",
+          "type": "ordinal",
+          "sort": {
+            "field": "Year_Order",
+            "order": "ascending"
+          },
+          "scale": {
+            "padding": 0.5
+          }
+        },
+        "y": {
+          "field": "Rank",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1,
+              15
+            ],
+            "reverse": true
+          }
+        },
+        "text": {
+          "field": "Subdivision_Short",
+          "type": "nominal"
+        },
+        "color": {
+          "condition": [
+            {
+              "test": "focusSubdivision && datum.Subdivision === focusSubdivision",
+              "value": "#A76312"
+            },
+            {
+              "param": "hoverSubdivision",
+              "empty": false,
+              "value": "#A76312"
+            }
+          ],
+          "value": "#8297a8"
+        },
+        "opacity": {
+          "condition": [
+            {
+              "param": "hoverSubdivision",
+              "empty": false,
+              "value": 1
+            },
+            {
+              "test": "!focusSubdivision || datum.Subdivision === focusSubdivision",
+              "value": 0.85
+            }
+          ],
+          "value": 0.45
+        }
+      }
+    }
+  ],
+  "config": {
+    "background": "transparent",
+    "view": {
+      "stroke": null
+    },
+    "font": "Arial, sans-serif",
+    "axis": {
+      "labelColor": "#43596c",
+      "titleColor": "#43596c",
+      "gridColor": "#edf1f4",
+      "domainColor": "#ccd6de",
+      "tickColor": "#ccd6de"
+    }
+  },
+  "params": [
+    {
+      "name": "focusSubdivision",
+      "value": ""
+    }
+  ]
+}

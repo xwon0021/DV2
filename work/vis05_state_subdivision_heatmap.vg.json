@@ -1,0 +1,232 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 500,
+  "data": {
+    "url": "work/data/vis05_state_subdivision_employment.csv",
+    "format": {
+      "type": "csv",
+      "parse": null
+    },
+    "name": "matrixRows"
+  },
+  "config": {
+    "background": "transparent",
+    "view": {
+      "stroke": null
+    },
+    "font": "Arial, sans-serif"
+  },
+  "transform": [
+    {
+      "calculate": "datum.Employment_2024_25 === '' || !isValid(datum.Employment_2024_25) ? null : toNumber(datum.Employment_2024_25)",
+      "as": "Employment_2024_25"
+    },
+    {
+      "calculate": "datum.State_Total_Employment_2024_25 === '' || !isValid(datum.State_Total_Employment_2024_25) ? null : toNumber(datum.State_Total_Employment_2024_25)",
+      "as": "State_Total_Employment_2024_25"
+    },
+    {
+      "calculate": "datum.Employment_Share_pct === '' || !isValid(datum.Employment_Share_pct) ? null : toNumber(datum.Employment_Share_pct)",
+      "as": "Employment_Share_pct"
+    },
+    {
+      "calculate": "'June 2025'",
+      "as": "Tooltip_Period"
+    },
+    {
+      "calculate": "isValid(datum.Employment_2024_25) ? format(datum.Employment_2024_25, ',d') : 'Suppressed or unavailable'",
+      "as": "Employment_Display"
+    },
+    {
+      "calculate": "isValid(datum.Employment_Share_pct) ? format(datum.Employment_Share_pct, '.2f') + '%' : 'Suppressed or unavailable'",
+      "as": "Share_Display"
+    },
+    {
+      "calculate": "{'NSW':'New South Wales','VIC':'Victoria','QLD':'Queensland','WA':'Western Australia','SA':'South Australia','TAS':'Tasmania','NT':'Northern Territory','ACT':'Australian Capital Territory'}[datum.State_Code]",
+      "as": "State_Display"
+    }
+  ],
+  "mark": {
+    "type": "rect",
+    "strokeWidth": 1,
+    "cursor": "pointer"
+  },
+  "encoding": {
+    "x": {
+      "field": "Subdivision_Short",
+      "type": "ordinal",
+      "sort": {
+        "field": "ANZSIC_Code",
+        "order": "ascending"
+      },
+      "axis": {
+        "title": null,
+        "labelAngle": -45,
+        "labelLimit": 100,
+        "labelFontSize": 11,
+        "labelPadding": 6
+      }
+    },
+    "y": {
+      "field": "State_Code",
+      "type": "ordinal",
+      "sort": [
+        "NSW",
+        "VIC",
+        "QLD",
+        "WA",
+        "SA",
+        "TAS",
+        "NT",
+        "ACT"
+      ],
+      "axis": {
+        "title": null,
+        "labelFontWeight": "bold",
+        "labelFontSize": 12,
+        "labelExpr": "datum.label === \"NSW\" ? \"New South Wales\" : datum.label === \"VIC\" ? \"Victoria\" : datum.label === \"QLD\" ? \"Queensland\" : datum.label === \"WA\" ? \"Western Australia\" : datum.label === \"SA\" ? \"South Australia\" : datum.label === \"TAS\" ? \"Tasmania\" : datum.label === \"NT\" ? \"Northern Territory\" : datum.label === \"ACT\" ? \"Australian Capital Territory\" : datum.label",
+        "labelLimit": 230,
+        "labelPadding": 8
+      }
+    },
+    "color": {
+      "field": "Employment_Share_pct",
+      "type": "quantitative",
+      "title": "Share within state (%)",
+      "scale": {
+        "domain": [
+          0,
+          3,
+          6,
+          10,
+          20,
+          40
+        ],
+        "range": [
+          "#f1f6fb",
+          "#d7e4ef",
+          "#adc8dc",
+          "#779cbe",
+          "#3d6d97",
+          "#12426f"
+        ]
+      },
+      "legend": {
+        "title": "Share within state (%)",
+        "titleLimit": 280,
+        "orient": "bottom",
+        "format": ".0f",
+        "gradientLength": 260,
+        "values": [
+          0,
+          5,
+          10,
+          20,
+          40
+        ]
+      },
+      "condition": {
+        "test": "!isValid(datum.Employment_Share_pct)",
+        "value": "#e4e8ec"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "State_Display",
+        "type": "nominal",
+        "title": "State / territory"
+      },
+      {
+        "field": "Subdivision",
+        "type": "nominal",
+        "title": "Manufacturing subdivision"
+      },
+      {
+        "field": "Employment_Display",
+        "type": "nominal",
+        "title": "Employment (people)"
+      },
+      {
+        "field": "Share_Display",
+        "type": "nominal",
+        "title": "Within-state share"
+      },
+      {
+        "field": "Tooltip_Period",
+        "type": "nominal",
+        "title": "Period"
+      }
+    ],
+    "opacity": {
+      "condition": {
+        "test": "(!focusState && !focusSubdivision) || (focusState && datum.State_Code===focusState) || (focusSubdivision && datum.ANZSIC_Code===focusSubdivision)",
+        "value": 1
+      },
+      "value": 0.45
+    },
+    "stroke": {
+      "condition": [
+        {
+          "test": "focusState && focusSubdivision && datum.State_Code===focusState && datum.ANZSIC_Code===focusSubdivision",
+          "value": "#A76312"
+        },
+        {
+          "param": "matrixHover",
+          "empty": false,
+          "value": "#A76312"
+        }
+      ],
+      "value": "white"
+    },
+    "strokeWidth": {
+      "condition": [
+        {
+          "test": "focusState && focusSubdivision && datum.State_Code===focusState && datum.ANZSIC_Code===focusSubdivision",
+          "value": 3
+        },
+        {
+          "param": "matrixHover",
+          "empty": false,
+          "value": 2
+        }
+      ],
+      "value": 1
+    }
+  },
+  "params": [
+    {
+      "name": "matrixCell",
+      "select": {
+        "type": "point",
+        "fields": [
+          "State_Code",
+          "ANZSIC_Code"
+        ],
+        "toggle": false,
+        "clear": false
+      }
+    },
+    {
+      "name": "matrixHover",
+      "select": {
+        "type": "point",
+        "fields": [
+          "State_Code",
+          "ANZSIC_Code"
+        ],
+        "on": "pointerover",
+        "clear": "pointerout",
+        "toggle": false
+      }
+    },
+    {
+      "name": "focusState",
+      "value": ""
+    },
+    {
+      "name": "focusSubdivision",
+      "value": ""
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "width": 560,
+  "height": 335,
+  "padding": {
+    "left": 76,
+    "right": 10,
+    "top": 14,
+    "bottom": 48
+  },
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "data": [
+    {
+      "name": "profiles",
+      "url": "work/data/vis07_parallel_coordinates.csv",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "Dimension_Order": "number",
+          "Normalised_Value": "number",
+          "Employment_2024_25": "number",
+          "Wages_2024_25_millions": "number",
+          "Sales_2024_25_millions": "number",
+          "IVA_2024_25_millions": "number"
+        }
+      },
+      "transform": [
+        {
+          "type": "collect",
+          "sort": {
+            "field": [
+              "ANZSIC_Code",
+              "Dimension_Order"
+            ],
+            "order": [
+              "ascending",
+              "ascending"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "signals": [
+    {
+      "name": "hoveredSubdivision",
+      "value": null,
+      "on": [
+        {
+          "events": "@profilePoints:mouseover, @profileLine:mouseover",
+          "update": "datum.Subdivision"
+        },
+        {
+          "events": "@profilePoints:mouseout, @profileLine:mouseout",
+          "update": "null"
+        }
+      ]
+    },
+    {
+      "name": "focusSubdivision",
+      "value": null
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "point",
+      "domain": [
+        "Employment",
+        "Wages and salaries",
+        "Sales and service income",
+        "Industry value added"
+      ],
+      "range": "width",
+      "padding": 0.2
+    },
+    {
+      "name": "y",
+      "type": "linear",
+      "domain": [
+        0,
+        1
+      ],
+      "range": "height",
+      "nice": false,
+      "zero": false
+    }
+  ],
+  "axes": [
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "labelFont": "Arial, sans-serif",
+      "labelFontSize": 13,
+      "labelColor": "#43596c",
+      "labelPadding": 10,
+      "tickSize": 0,
+      "domainColor": "#ccd6de"
+    },
+    {
+      "scale": "y",
+      "orient": "left",
+      "title": "Normalised position (0\u20131)",
+      "titleFont": "Arial, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#43596c",
+      "labelFont": "Arial, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#43596c",
+      "grid": true,
+      "gridColor": "#edf1f4",
+      "tickCount": 5,
+      "domainColor": "#ccd6de"
+    }
+  ],
+  "marks": [
+    {
+      "type": "group",
+      "from": {
+        "facet": {
+          "name": "series",
+          "data": "profiles",
+          "groupby": [
+            "ANZSIC_Code",
+            "Subdivision"
+          ]
+        }
+      },
+      "marks": [
+        {
+          "name": "profileLine",
+          "type": "line",
+          "from": {
+            "data": "series"
+          },
+          "sort": {
+            "field": "Dimension_Order",
+            "order": "ascending"
+          },
+          "encode": {
+            "update": {
+              "x": {
+                "scale": "x",
+                "field": "Dimension"
+              },
+              "y": {
+                "scale": "y",
+                "field": "Normalised_Value"
+              },
+              "stroke": {
+                "signal": "(hoveredSubdivision || focusSubdivision) === datum.Subdivision ? '#D8891C' : '#8fa9bb'"
+              },
+              "strokeWidth": {
+                "signal": "(hoveredSubdivision || focusSubdivision) === null ? 1.5 : (hoveredSubdivision || focusSubdivision) === datum.Subdivision ? 3 : 1"
+              },
+              "opacity": {
+                "signal": "(hoveredSubdivision || focusSubdivision) === null ? 0.62 : (hoveredSubdivision || focusSubdivision) === datum.Subdivision ? 1 : 0.45"
+              },
+              "tooltip": {
+                "signal": "{Subdivision: datum.Subdivision, 'Period': '2024\u201325', 'Employment (people)': format(datum.Employment_2024_25, ',.0f'), 'Wages and salaries (A$ million)': format(datum.Wages_2024_25_millions, ',.0f'), 'Sales and service income (A$ million)': format(datum.Sales_2024_25_millions, ',.0f'), 'Industry value added (A$ million)': format(datum.IVA_2024_25_millions, ',.0f')}"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "profilePoints",
+      "type": "symbol",
+      "from": {
+        "data": "profiles"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "scale": "x",
+            "field": "Dimension"
+          },
+          "y": {
+            "scale": "y",
+            "field": "Normalised_Value"
+          },
+          "size": {
+            "signal": "(hoveredSubdivision || focusSubdivision) === datum.Subdivision ? 52 : 30"
+          },
+          "fill": {
+            "signal": "(hoveredSubdivision || focusSubdivision) === datum.Subdivision ? '#D8891C' : '#8fa9bb'"
+          },
+          "stroke": {
+            "value": "#ffffff"
+          },
+          "strokeWidth": {
+            "value": 0.7
+          },
+          "opacity": {
+            "signal": "(hoveredSubdivision || focusSubdivision) === null ? 0.84 : (hoveredSubdivision || focusSubdivision) === datum.Subdivision ? 1 : 0.35"
+          },
+          "tooltip": {
+            "signal": "{Subdivision: datum.Subdivision, 'Period': '2024\u201325', 'Employment (people)': format(datum.Employment_2024_25, ',.0f'), 'Wages and salaries (A$ million)': format(datum.Wages_2024_25_millions, ',.0f'), 'Sales and service income (A$ million)': format(datum.Sales_2024_25_millions, ',.0f'), 'Industry value added (A$ million)': format(datum.IVA_2024_25_millions, ',.0f')}"
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "background": "transparent",
+    "font": "Arial, sans-serif",
+    "axis": {
+      "labelColor": "#43596c",
+      "titleColor": "#43596c"
+    }
+  }
+}

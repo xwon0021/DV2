@@ -1,0 +1,127 @@
+[
+  {
+    "Country": "Belgium",
+    "Longitude": 4.842477663218122,
+    "Latitude": 50.4982105
+  },
+  {
+    "Country": "Canada",
+    "Longitude": -110.43087416114284,
+    "Latitude": 56.83692
+  },
+  {
+    "Country": "China",
+    "Longitude": 98.603916726155,
+    "Latitude": 36.903673
+  },
+  {
+    "Country": "Germany",
+    "Longitude": 10.48122641050086,
+    "Latitude": 51.085126
+  },
+  {
+    "Country": "Hong Kong (SAR of China)",
+    "Longitude": 114.0559971563725,
+    "Latitude": 22.4112
+  },
+  {
+    "Country": "India",
+    "Longitude": 80.2265066642212,
+    "Latitude": 21.7867495
+  },
+  {
+    "Country": "Indonesia",
+    "Longitude": 113.32522939651643,
+    "Latitude": 0.1049055
+  },
+  {
+    "Country": "Italy",
+    "Longitude": 12.692034656122244,
+    "Latitude": 42.4924865
+  },
+  {
+    "Country": "Japan",
+    "Longitude": 139.83685527015206,
+    "Latitude": 37.496925000000005
+  },
+  {
+    "Country": "Malaysia",
+    "Longitude": 114.61303041372067,
+    "Latitude": 3.937319
+  },
+  {
+    "Country": "Netherlands",
+    "Longitude": 5.516406825024923,
+    "Latitude": 52.105632
+  },
+  {
+    "Country": "New Zealand",
+    "Longitude": 171.2343512211096,
+    "Latitude": -43.595473
+  },
+  {
+    "Country": "Papua New Guinea",
+    "Longitude": 144.3617871447388,
+    "Latitude": -6.6399035
+  },
+  {
+    "Country": "Philippines",
+    "Longitude": 120.73289441577094,
+    "Latitude": 15.583889
+  },
+  {
+    "Country": "Republic of Korea",
+    "Longitude": 128.01105076761786,
+    "Latitude": 36.4604515
+  },
+  {
+    "Country": "Singapore",
+    "Longitude": 103.83054181081911,
+    "Latitude": 1.364549
+  },
+  {
+    "Country": "Spain",
+    "Longitude": -3.4765254824881637,
+    "Latitude": 39.8994765
+  },
+  {
+    "Country": "Switzerland",
+    "Longitude": 8.427000864027601,
+    "Latitude": 46.811949999999996
+  },
+  {
+    "Country": "Taiwan",
+    "Longitude": 120.8279180795297,
+    "Latitude": 23.6166495
+  },
+  {
+    "Country": "Thailand",
+    "Longitude": 101.69302326657181,
+    "Latitude": 13.032381
+  },
+  {
+    "Country": "Timor-Leste",
+    "Longitude": 125.76397869670151,
+    "Latitude": -8.8810765
+  },
+  {
+    "Country": "United Arab Emirates",
+    "Longitude": 55.1371142644784,
+    "Latitude": 24.352618
+  },
+  {
+    "Country": "United Kingdom",
+    "Longitude": -1.9116522800980051,
+    "Latitude": 54.3140935
+  },
+  {
+    "Country": "United States",
+    "Longitude": -99.69842767199692,
+    "Latitude": 37.2463645
+  },
+  {
+    "Country": "Vietnam",
+    "Longitude": 107.8528546123636,
+    "Latitude": 15.962429
+  }
+]

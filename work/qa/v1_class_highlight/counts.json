@@ -1,0 +1,20 @@
+{
+  "class_counts": [
+    605,
+    604,
+    604,
+    363,
+    121,
+    96,
+    25
+  ],
+  "thresholds": [
+    16.619744185432076,
+    25.69467417275979,
+    38.732133634894126,
+    58.332291739375385,
+    89.35125844791428,
+    6010.714285714259
+  ],
+  "boundary_policy": "threshold scale / bisect_right; equality enters upper class"
+}

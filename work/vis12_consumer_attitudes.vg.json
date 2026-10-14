@@ -1,0 +1,167 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 230,
+  "data": {
+    "url": "work/data/vis12_consumer_attitudes.json"
+  },
+  "encoding": {
+    "x": {
+      "field": "Percentage",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          100
+        ]
+      },
+      "axis": {
+        "title": "Australians reporting each statement (%)",
+        "values": [
+          0,
+          20,
+          40,
+          60,
+          80,
+          100
+        ],
+        "labelExpr": "datum.value + '%'",
+        "grid": true
+      }
+    },
+    "y": {
+      "field": "Label",
+      "type": "nominal",
+      "sort": {
+        "field": "Order"
+      },
+      "axis": {
+        "title": null,
+        "labelLimit": 260,
+        "labelPadding": 12,
+        "labelFontSize": 13
+      }
+    }
+  },
+  "layer": [
+    {
+      "params": [
+        {
+          "name": "dotHover",
+          "select": {
+            "type": "point",
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "color": "#8E3FA9"
+      },
+      "encoding": {
+        "size": {
+          "condition": {
+            "param": "dotHover",
+            "value": 160
+          },
+          "value": 100
+        },
+        "tooltip": [
+          {
+            "field": "Statement",
+            "title": "Full survey statement",
+            "type": "nominal"
+          },
+          {
+            "field": "Percentage",
+            "title": "Percentage (%)",
+            "type": "quantitative",
+            "format": ".0f"
+          },
+          {
+            "field": "Period",
+            "title": "Study period",
+            "type": "nominal"
+          },
+          {
+            "field": "Source",
+            "title": "Source",
+            "type": "nominal"
+          },
+          {
+            "field": "Qualifier",
+            "title": "Qualifier",
+            "type": "nominal"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "calculate": "datum.Percentage + '%'",
+          "as": "PercentLabel"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 12,
+        "color": "#8E3FA9",
+        "fontSize": 13,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": {
+          "field": "PercentLabel"
+        },
+        "tooltip": [
+          {
+            "field": "Statement",
+            "title": "Full survey statement",
+            "type": "nominal"
+          },
+          {
+            "field": "Percentage",
+            "title": "Percentage (%)",
+            "type": "quantitative",
+            "format": ".0f"
+          },
+          {
+            "field": "Period",
+            "title": "Study period",
+            "type": "nominal"
+          },
+          {
+            "field": "Source",
+            "title": "Source",
+            "type": "nominal"
+          },
+          {
+            "field": "Qualifier",
+            "title": "Qualifier",
+            "type": "nominal"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "background": "transparent",
+    "view": {
+      "stroke": null
+    },
+    "font": "Arial, sans-serif",
+    "axis": {
+      "labelColor": "#43596c",
+      "titleColor": "#43596c",
+      "gridColor": "#edf1f4",
+      "domainColor": "#ccd6de",
+      "tickColor": "#ccd6de",
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    }
+  }
+}

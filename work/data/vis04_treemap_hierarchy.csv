@@ -1,0 +1,17 @@
+id,parent,ANZSIC_Code,Subdivision,Subdivision_Short,IVA_2024_25_millions,IVA_share_pct
+manufacturing,,,Manufacturing,Manufacturing,0,100
+11,manufacturing,11,Food product manufacturing,Food,31279,22.031498725118684
+12,manufacturing,12,Beverage and tobacco product manufacturing,Beverage/tobacco,6124,4.313465845859101
+13,manufacturing,13,"Textile, leather, clothing and footwear manufacturing",Textiles/clothing,2216,1.5608491695662587
+14,manufacturing,14,Wood product manufacturing,Wood,6543,4.608590305267161
+15,manufacturing,15,"Pulp, paper and converted paper product manufacturing",Pulp/paper,2774,1.9538788792314088
+16,manufacturing,16,Printing (including the reproduction of recorded media),Printing,2880,2.028540436981419
+17,manufacturing,17,Petroleum and coal product manufacturing,Petroleum/coal,1323,0.9318607632383393
+18,manufacturing,18,Basic chemical and chemical product manufacturing,Basic chemicals,10986,7.738036541902038
+19,manufacturing,19,Polymer product and rubber product manufacturing,Polymer/rubber,5909,4.162029667403891
+20,manufacturing,20,Non-metallic mineral product manufacturing,Non-metal minerals,8822,6.2138137968923886
+21,manufacturing,21,Primary metal and metal product manufacturing,Primary metals,9378,6.605434797920746
+22,manufacturing,22,Fabricated metal product manufacturing,Fabricated metals,15972,11.24994717342612
+23,manufacturing,23,Transport equipment manufacturing,Transport equip.,13955,9.829264513220732
+24,manufacturing,24,Machinery and equipment manufacturing,Machinery equip.,20100,14.157521799766155
+25,manufacturing,25,Furniture and other manufacturing,Furniture/other,3713,2.615267584205559

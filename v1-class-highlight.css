@@ -1,0 +1,5 @@
+#rate-legend button.legend-item{min-height:44px;padding:5px;border:2px solid transparent;border-radius:3px;background:transparent;font:inherit;font-size:10px;text-align:left;cursor:pointer;color:#43596c}
+#rate-legend button.legend-item[aria-pressed="true"]{border-color:#A76312;font-weight:700;background:#fffaf1}
+#rate-legend button.legend-item:focus-visible,#rate-show-all:focus-visible{outline:2px solid #A76312;outline-offset:2px}
+.rate-legend-wrap[data-class-active="true"] .swatch.missing{background:#BCC4CC;border-color:#8d99a6}
+#map1 svg .role-mark path:hover{stroke:#A76312}
