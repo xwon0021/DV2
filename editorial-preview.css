@@ -1,0 +1,93 @@
+/* Preview only: editorial composition; production chart encodings are untouched. */
+.editorial-preview { --paper:#FAF9F5; --ink:#20312F; --muted:#64706A; background:var(--paper); }
+html:has(.editorial-preview) { background:#FAF9F5; }
+.preview-band { width:min(1120px,calc(100% - 64px)); margin:22px auto 0; display:flex;justify-content:space-between;gap:20px;font-size:10px;letter-spacing:.14em;color:#64706A; }
+.preview-band a { letter-spacing:0;font-size:12px;color:inherit; }
+.editorial-preview .masthead,.editorial-preview main,.editorial-preview .page-footer { width:min(1120px,calc(100% - 64px)); }
+.editorial-masthead { display:grid;grid-template-columns:1.15fr 1fr;column-gap:80px;padding:80px 0 34px;border-bottom:1px solid #20312F; }
+.editorial-masthead > .eyebrow { grid-column:1/-1;font-size:10px;color:#64706A;margin-bottom:24px; }
+.editorial-masthead h1 { grid-column:1;font-size:clamp(4rem,8.5vw,7.4rem);line-height:.94;letter-spacing:-.055em; }
+.editorial-masthead .hero-copy { grid-column:2;grid-row:2/4;align-self:end; }
+.hero-copy .standfirst { margin:0 0 24px;font-family:Georgia,serif;font-size:23px;line-height:1.45;color:var(--ink); }
+.hero-copy .method-note { font-size:12px;max-width:45ch; }
+.editorial-masthead .byline { margin-top:24px;font-size:11px; }
+.chapter-index { grid-column:1/-1;display:flex;gap:36px;margin-top:50px;flex-wrap:wrap;font-size:11px; }
+.chapter-index a { color:var(--ink);text-decoration:none; }
+.editorial-preview .story-section { padding:110px 0 0; }
+.editorial-preview .section-heading { border:0;gap:20px;max-width:850px;padding:0; }
+.editorial-preview .section-number { font-size:15px;margin-top:8px;opacity:.75; }
+.editorial-preview .section-heading h2 { font-size:clamp(2.3rem,4.4vw,3.7rem);line-height:1.05;letter-spacing:-.035em;max-width:20ch; }
+.editorial-preview .section-heading .eyebrow { font-size:10px;margin-bottom:12px; }
+.editorial-preview .section-intro { margin:25px 0 65px 35px;max-width:600px;font-family:Georgia,serif;font-size:18px;line-height:1.6; }
+.editorial-preview .editorial-figure { margin:0 0 76px;padding:0;border:0;background:none;box-shadow:none;min-width:0; }
+.editorial-heading { max-width:720px;margin-bottom:24px; }
+.editorial-heading h3 { font-family:Georgia,serif;font-weight:400;font-size:clamp(1.8rem,3.1vw,2.65rem);line-height:1.12;letter-spacing:-.025em; }
+.editorial-preview .chart-number { font-size:10px;font-weight:400;color:var(--muted);letter-spacing:.15em;margin-bottom:12px; }
+.editorial-preview .chart-deck { margin-top:12px;max-width:62ch;font-size:14px;line-height:1.6; }
+.editorial-preview .story-transition { max-width:620px;margin:26px 0 80px 15%;font-family:Georgia,serif;color:var(--ink);font-size:20px;line-height:1.6; }
+.feature-composition { display:grid;grid-template-columns:minmax(0,2.8fr) minmax(210px,1fr);gap:42px;align-items:start; }
+.feature-visual,.editorial-margin { min-width:0; }
+.editorial-margin { padding-top:25px; }
+.editorial-margin .caveat,.editorial-margin .insight-note { background:none;border:0;padding:0;font-size:13px;line-height:1.75;margin:0 0 24px; }
+.editorial-margin .caveat strong { display:block;font-family:Georgia,serif;font-size:23px;font-weight:400;margin-bottom:12px;color:var(--ink); }
+.editorial-preview .supporting-view { background:none;border:0;padding:0;margin:0 0 24px; }
+.editorial-margin .summary-row { grid-template-columns:minmax(65px,1fr) minmax(45px,1fr) 72px;gap:8px;font-size:11px; }
+.editorial-margin .summary-value { font-size:10px; }
+.editorial-margin .selection-detail { font-size:12px; }
+.editorial-preview .rate-legend-wrap { margin:20px 0 0; }
+.treemap-composition { display:grid;grid-template-columns:1fr 2.8fr;gap:50px;align-items:start; }
+.treemap-composition .chart-heading h3 { font-size:34px; }
+.editorial-preview .figure-5 { margin-top:100px; }
+.editorial-preview .figure-6 { max-width:940px;margin-left:auto; }
+.editorial-preview .figure-7 { max-width:970px;margin-right:auto; }
+.editorial-preview .figure-7 .editorial-heading { margin-left:45px; }
+.editorial-preview .figure-8 { margin-top:30px; }
+.editorial-preview .employment-pullquote { font-family:Georgia,serif;font-size:clamp(1.35rem,2.3vw,1.95rem);line-height:1.5;color:var(--ink);background:none;border:0;padding:0;max-width:800px;margin:32px 0; }
+.editorial-preview .figure-9 { margin-top:80px; }
+.editorial-preview .figure-11 .editorial-heading { margin-left:12%; }
+.editorial-preview .figure-11 #vis11 { margin:20px 0; }
+.editorial-preview .paired-summary { padding-top:25px;border-top:1px solid #d8ddd7; }
+.editorial-preview .figure-13 { max-width:1020px;margin-inline:auto; }
+.editorial-preview .figure-10 { margin-top:110px; }
+.editorial-preview .figure-12 { max-width:930px;margin:110px auto 90px; }
+.editorial-preview .figure-12 .editorial-heading { max-width:650px;margin:0 auto 40px;text-align:center; }
+.editorial-preview .insight-note:not(.employment-pullquote),.editorial-preview .caveat { background:none;border:0;padding:0;line-height:1.7; }
+.editorial-preview .inline-finding { max-width:620px;font-family:Georgia,serif;font-size:20px;margin:30px 0; }
+.explore-controls,.reading-notes { margin:12px 0 24px;font-size:12px;color:var(--muted); }
+.explore-controls > summary,.reading-notes > summary { cursor:pointer;min-height:44px;display:list-item;padding:10px 0;width:fit-content; }
+.explore-controls[open] { padding:10px 18px;border-left:1px solid #c7d0c6;background:#f4f4ef; }
+.reading-notes { max-width:880px;margin:18px 0; }
+.reading-notes .source-note { border:0;padding-top:0; }
+.editorial-preview .version-link { border:0;padding:0;margin-right:20px;font-size:12px;text-decoration:underline;background:none; }
+.editorial-preview .map-navigation button,.quiet-reset { background:transparent;border:1px solid #c7d0c6;border-radius:0;font-size:12px;min-height:44px;padding:7px 12px; }
+.editorial-preview .map-navigation { gap:6px;margin:12px 0; }
+.editorial-preview .v1-navigation-hint,.editorial-preview .interaction-hint { font-size:11px;line-height:1.6;max-width:700px; }
+.editorial-preview summary:focus-visible,.chapter-index a:focus-visible { outline:2px solid #A76312;outline-offset:4px; }
+.editorial-preview .page-footer { padding:30px 0 70px;margin-top:90px;font-size:11px; }
+@media(max-width:850px) {
+ .editorial-masthead { gap:32px; }.hero-copy .standfirst { font-size:20px; }
+ .feature-composition { grid-template-columns:minmax(0,2fr) minmax(190px,1fr);gap:24px; }
+ .treemap-composition { gap:25px;grid-template-columns:1fr 2fr; }
+}
+@media(max-width:620px) {
+ .editorial-preview .masthead,.editorial-preview main,.editorial-preview .page-footer,.preview-band { width:calc(100% - 32px); }
+ .preview-band { margin-top:16px;font-size:9px; }.preview-band a { font-size:10px; }
+ .editorial-masthead { display:block;padding-top:54px; }.editorial-masthead h1 { font-size:72px; }.hero-copy { margin-top:30px; }
+ .chapter-index { gap:12px 20px;margin-top:30px; }.hero-copy .standfirst { font-size:20px; }
+ .editorial-preview .story-section { padding-top:75px; }.editorial-preview .section-heading h2 { font-size:37px; }
+ .editorial-preview .section-intro { margin:22px 0 42px;font-size:17px; }
+ .feature-composition,.treemap-composition { display:block; }.editorial-margin { padding-top:24px; }
+ .editorial-figure { margin-bottom:55px!important; }.editorial-heading { margin-bottom:22px; }
+ .editorial-preview .figure-7 .editorial-heading,.editorial-preview .figure-11 .editorial-heading { margin-left:0; }
+ .editorial-preview .story-transition { margin:25px 0 55px;font-size:18px; }
+ .editorial-preview .figure-5,.editorial-preview .figure-9,.editorial-preview .figure-10,.editorial-preview .figure-12 { margin-top:65px; }
+ .editorial-preview .figure-12 .editorial-heading { text-align:left; }
+ .editorial-margin .summary-row { grid-template-columns:minmax(95px,1fr) minmax(70px,1.5fr) 80px; }
+ .editorial-preview .chart { max-width:100%; }.editorial-preview #heatmap,.editorial-preview #vis09 { overflow-x:auto; }
+ .quiet-reset { margin-bottom:12px; }
+}
+
+/* Render 2: long export caveat reads across the page, rather than stretching the rail. */
+.editorial-preview .figure-10 > .insight-note { max-width:1000px;font-size:12px;line-height:1.7;margin:24px 0; }
+.editorial-preview #facility-summary,.editorial-preview #export-summary,.editorial-preview #industry-summary { background:transparent; }
+.editorial-preview .figure-10 .feature-composition { align-items:start; }

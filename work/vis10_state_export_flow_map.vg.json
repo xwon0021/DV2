@@ -120,6 +120,10 @@
       "url": "work/data/vis10_state_export_flows.json",
       "transform": [
         {
+          "type": "filter",
+          "expr": "datum.Source !== 'Australian Capital Territory'"
+        },
+        {
           "type": "formula",
           "expr": "datum.Source+'|'+datum.Target",
           "as": "Key"
@@ -147,6 +151,10 @@
       "name": "origins",
       "url": "work/data/vis10_origins.json",
       "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.State !== 'Australian Capital Territory'"
+        },
         {
           "type": "geopoint",
           "projection": "worldProjection",
@@ -360,7 +368,7 @@
             "signal": "isValid(datum.Rate) ? scale('stateRate',datum.Rate) : '#d9dde2'"
           },
           "tooltip": {
-            "signal": "{'State':datum.State,'Manufacturing employment per 10,000 residents':format(datum.Rate,'.1f'),'Reference':'2024–25 employment / 2025 population'}"
+            "signal": "{'State':datum.State,'Manufacturing employment per 10,000 residents':format(datum.Rate,'.1f'),'Reference':'2024\u201325 employment / 2025 population'}"
           }
         }
       },
@@ -405,7 +413,7 @@
             "signal": "datum.Source + ' to ' + datum.Target + ', 2025 manufactured exports'"
           },
           "tooltip": {
-            "signal": "{'Connection': datum.Source + ' → ' + datum.Target, 'Export value': 'A$' + format(datum.Value_AUD_thousands / 1000000, '.3f') + 'bn', 'Period / classification': '2025 · STM + ETM manufactured merchandise', 'Basis': 'Recorded state-of-origin Export; source A$000', 'Geography': 'Area anchors, not ports; connections, not shipping routes'}"
+            "signal": "{'Connection': datum.Source + ' \u2192 ' + datum.Target, 'Export value': 'A$' + format(datum.Value_AUD_thousands / 1000000, '.3f') + 'bn', 'Period / classification': '2025 \u00b7 STM + ETM manufactured merchandise', 'Basis': 'Recorded state-of-origin Export; source A$000', 'Geography': 'Area anchors, not ports; connections, not shipping routes'}"
           }
         }
       }
@@ -440,7 +448,7 @@
             "value": false
           },
           "tooltip": {
-            "signal": "{'Connection': datum.Source + ' → ' + datum.Target, 'Export value': 'A$' + format(datum.Value_AUD_thousands / 1000000, '.3f') + 'bn', 'Period / classification': '2025 · STM + ETM manufactured merchandise', 'Basis': 'Recorded state-of-origin Export; source A$000', 'Geography': 'Area anchors, not ports; connections, not shipping routes'}"
+            "signal": "{'Connection': datum.Source + ' \u2192 ' + datum.Target, 'Export value': 'A$' + format(datum.Value_AUD_thousands / 1000000, '.3f') + 'bn', 'Period / classification': '2025 \u00b7 STM + ETM manufactured merchandise', 'Basis': 'Recorded state-of-origin Export; source A$000', 'Geography': 'Area anchors, not ports; connections, not shipping routes'}"
           }
         }
       }
@@ -581,7 +589,7 @@
             "value": 0.5
           },
           "tooltip": {
-            "signal": "{'Direction':datum.Source+' → '+datum.Target,'Export value (A$ billion)':format(datum.Value_AUD_thousands/1e6,'.3f'),'Year':2025,'Meaning':'Origin → destination direction, not a shipping route'}"
+            "signal": "{'Direction':datum.Source+' \u2192 '+datum.Target,'Export value (A$ billion)':format(datum.Value_AUD_thousands/1e6,'.3f'),'Year':2025,'Meaning':'Origin \u2192 destination direction, not a shipping route'}"
           }
         }
       }

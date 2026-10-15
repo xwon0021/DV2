@@ -1,0 +1,349 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "width": 1000,
+  "height": 680,
+  "padding": 5,
+  "autosize": {
+    "type": "none",
+    "contains": "padding"
+  },
+  "signals": [
+    {
+      "name": "yearIndex",
+      "value": 0
+    },
+    {
+      "name": "previousYearIndex",
+      "value": 0
+    },
+    {
+      "name": "transitionT",
+      "value": 1
+    },
+    {
+      "name": "mobile",
+      "value": false
+    },
+    {
+      "name": "focusCode",
+      "value": "",
+      "on": [
+        {
+          "events": "@bars:click, @names:click",
+          "update": "focusCode===datum.Code?'':datum.Code"
+        }
+      ]
+    },
+    {
+      "name": "hoverCode",
+      "value": "",
+      "on": [
+        {
+          "events": "@bars:pointerover",
+          "update": "datum.Code"
+        },
+        {
+          "events": "@bars:pointerout",
+          "update": "''"
+        }
+      ]
+    },
+    {
+      "name": "plotLeft",
+      "update": "mobile?8:230"
+    },
+    {
+      "name": "plotRight",
+      "update": "width-68"
+    },
+    {
+      "name": "rowHeight",
+      "update": "mobile?54:36"
+    }
+  ],
+  "data": [
+    {
+      "name": "allYears",
+      "url": "work/experiments/race_isotype/race.json"
+    },
+    {
+      "name": "current",
+      "source": "allYears",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.Year_Order===yearIndex"
+        },
+        {
+          "type": "formula",
+          "as": "Previous_Key",
+          "expr": "previousYearIndex+':'+datum.Code"
+        },
+        {
+          "type": "lookup",
+          "from": "allYears",
+          "key": "Key",
+          "fields": [
+            "Previous_Key"
+          ],
+          "values": [
+            "Employment_Thousands",
+            "Position"
+          ],
+          "as": [
+            "Previous_Value",
+            "Previous_Position"
+          ]
+        },
+        {
+          "type": "formula",
+          "as": "Visual_Value",
+          "expr": "datum.Previous_Value+(datum.Employment_Thousands-datum.Previous_Value)*transitionT"
+        },
+        {
+          "type": "formula",
+          "as": "Visual_Position",
+          "expr": "datum.Previous_Position+(datum.Position-datum.Previous_Position)*transitionT"
+        }
+      ]
+    },
+    {
+      "name": "years",
+      "url": "work/experiments/race_isotype/years.json"
+    },
+    {
+      "name": "currentYear",
+      "source": "years",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.Year_Order===yearIndex"
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "industryColour",
+      "type": "ordinal",
+      "domain": [
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25"
+      ],
+      "range": [
+        "#52ADDA",
+        "#C5B1D8",
+        "#DDB35F",
+        "#BB843F",
+        "#7791C5",
+        "#DE9CD3",
+        "#228BA0",
+        "#9473CB",
+        "#866547",
+        "#369ACA",
+        "#D8CBA7",
+        "#67CFE4",
+        "#6274CB",
+        "#CA72BB",
+        "#386889"
+      ]
+    },
+    {
+      "name": "employment",
+      "type": "linear",
+      "domain": [
+        0,
+        260
+      ],
+      "range": [
+        {
+          "signal": "plotLeft"
+        },
+        {
+          "signal": "plotRight"
+        }
+      ],
+      "zero": true
+    }
+  ],
+  "axes": [
+    {
+      "scale": "employment",
+      "orient": "top",
+      "offset": -75,
+      "title": "Employment (thousand people)",
+      "tickCount": 5,
+      "grid": false,
+      "format": ".0f",
+      "labelFontSize": 11,
+      "titleFontSize": 11
+    }
+  ],
+  "marks": [
+    {
+      "name": "bars",
+      "type": "rect",
+      "from": {
+        "data": "current"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "plotLeft"
+          },
+          "x2": {
+            "scale": "employment",
+            "field": "Visual_Value"
+          },
+          "y": {
+            "signal": "80+datum.Visual_Position*rowHeight+(mobile?23:3)"
+          },
+          "height": {
+            "signal": "mobile?20:26"
+          },
+          "fill": {
+            "scale": "industryColour",
+            "field": "Code"
+          },
+          "opacity": {
+            "signal": "!focusCode && !hoverCode || datum.Code===focusCode || datum.Code===hoverCode ? 1 : .4"
+          },
+          "stroke": {
+            "signal": "datum.Code===(hoverCode||focusCode)?'#A76312':'transparent'"
+          },
+          "strokeWidth": {
+            "value": 2
+          },
+          "tooltip": {
+            "signal": "transitionT<1 ? null : {'Subdivision':datum.Subdivision,'Financial year':datum.Financial_Year,'Employment (thousand people)':format(datum.Employment_Thousands,',.1f'),'Rank among all 15':datum.Rank,'Share of all15 employment':format(datum.Share_pct,'.2f')+'%'}"
+          },
+          "cursor": {
+            "value": "pointer"
+          }
+        }
+      }
+    },
+    {
+      "name": "names",
+      "type": "text",
+      "from": {
+        "data": "current"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "mobile?8:plotLeft-12"
+          },
+          "y": {
+            "signal": "80+datum.Visual_Position*rowHeight+(mobile?13:15)"
+          },
+          "text": {
+            "signal": "datum.Rank+'. '+datum.Short"
+          },
+          "align": {
+            "signal": "mobile?'left':'right'"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "fontSize": {
+            "signal": "mobile?13:13"
+          },
+          "fill": {
+            "value": "#243C50"
+          },
+          "opacity": {
+            "signal": "!focusCode && !hoverCode || datum.Code===focusCode || datum.Code===hoverCode ? 1 : .4"
+          },
+          "tooltip": {
+            "signal": "transitionT<1 ? null : {'Subdivision':datum.Subdivision,'Financial year':datum.Financial_Year,'Employment (thousand people)':format(datum.Employment_Thousands,',.1f'),'Rank among all 15':datum.Rank,'Share of all15 employment':format(datum.Share_pct,'.2f')+'%'}"
+          },
+          "cursor": {
+            "value": "pointer"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "current"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "scale('employment',datum.Visual_Value)+7"
+          },
+          "y": {
+            "signal": "80+datum.Visual_Position*rowHeight+(mobile?32:15)"
+          },
+          "text": {
+            "signal": "format(datum.Employment_Thousands,',.1f')+'k'"
+          },
+          "fontSize": {
+            "value": 13
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "fill": {
+            "value": "#243C50"
+          },
+          "opacity": {
+            "signal": "!focusCode && !hoverCode || datum.Code===focusCode || datum.Code===hoverCode ? 1 : .4"
+          },
+          "tooltip": {
+            "signal": "transitionT<1 ? null : {'Subdivision':datum.Subdivision,'Financial year':datum.Financial_Year,'Employment (thousand people)':format(datum.Employment_Thousands,',.1f'),'Rank among all 15':datum.Rank,'Share of all15 employment':format(datum.Share_pct,'.2f')+'%'}"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "currentYear"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "width-16"
+          },
+          "y": {
+            "value": 8
+          },
+          "baseline": {
+            "value": "top"
+          },
+          "text": {
+            "field": "Financial_Year"
+          },
+          "align": {
+            "value": "right"
+          },
+          "fontSize": {
+            "signal": "mobile?28:36"
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "value": "#243C50"
+          }
+        }
+      }
+    }
+  ]
+}

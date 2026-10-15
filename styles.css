@@ -179,3 +179,9 @@ button.summary-row { cursor: pointer; min-height: 44px; }
 
 /* Version navigation */
 .version-link{display:inline-flex;align-items:center;min-height:44px;margin:0 0 8px;padding:0 12px;border:1px solid #CBD3DB;border-radius:4px;color:#334B61;font-size:13px;text-decoration:none;background:transparent}.version-link:hover,.version-link:focus-visible{border-color:#A76312;color:#75460E}
+
+/* V1 only: vertical touch scroll remains native; horizontal gestures pan. */
+#map1.v1-native-navigation { touch-action: pan-y; cursor: grab; }
+#map1.v1-native-navigation:active { cursor: grabbing; }
+[data-map="map1"] button:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; }
+.v1-navigation-hint { font-size: 0.875rem; color: var(--muted); margin: 8px 0; }

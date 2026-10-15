@@ -1,0 +1,164 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 650,
+  "projection": {
+    "type": "mercator"
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "work/data/SA2_2021_AUST_GDA2020_web.json",
+        "format": {
+          "type": "topojson",
+          "feature": "SA2_2021_AUST_GDA2020"
+        }
+      },
+      "transform": [
+        {
+          "lookup": "properties.SA2_CODE21",
+          "from": {
+            "data": {
+              "url": "work/data/vis02_sa2_count_points.csv",
+              "format": {
+                "type": "csv",
+                "parse": {
+                  "SA2_Code": "string",
+                  "Manufacturing_Businesses": "number",
+                  "Year": "number"
+                }
+              }
+            },
+            "key": "SA2_Code",
+            "fields": [
+              "SA2_Name",
+              "State",
+              "Manufacturing_Businesses",
+              "Year"
+            ]
+          }
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": "#f0f3f6",
+        "stroke": "#c9d2dc",
+        "strokeWidth": 0.25
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "SA2_Name",
+            "type": "nominal",
+            "title": "SA2"
+          },
+          {
+            "field": "State",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "Manufacturing_Businesses",
+            "type": "quantitative",
+            "title": "Manufacturing businesses",
+            "format": ",d"
+          },
+          {
+            "field": "Year",
+            "type": "quantitative",
+            "title": "Year",
+            "format": "d"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "work/data/vis02_sa2_count_points.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "Manufacturing_Businesses": "number",
+            "Longitude": "number",
+            "Latitude": "number",
+            "Year": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.Manufacturing_Businesses > 0"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "color": "#A855D6",
+        "opacity": 0.42,
+        "stroke": "#ffffff",
+        "strokeWidth": 0.2
+      },
+      "encoding": {
+        "longitude": {
+          "field": "Longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "Latitude",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "Manufacturing_Businesses",
+          "type": "quantitative",
+          "scale": {
+            "type": "linear",
+            "domain": [
+              0,
+              826
+            ],
+            "range": [
+              0,
+              900
+            ]
+          },
+          "legend": null
+        },
+        "order": {
+          "field": "Manufacturing_Businesses",
+          "type": "quantitative",
+          "sort": "descending"
+        },
+        "tooltip": [
+          {
+            "field": "SA2_Name",
+            "type": "nominal",
+            "title": "SA2"
+          },
+          {
+            "field": "State",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "Manufacturing_Businesses",
+            "type": "quantitative",
+            "title": "Manufacturing businesses",
+            "format": ",d"
+          },
+          {
+            "field": "Year",
+            "type": "quantitative",
+            "title": "Year",
+            "format": "d"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "background": "transparent",
+    "view": {
+      "stroke": null
+    },
+    "font": "Arial, sans-serif"
+  }
+}
