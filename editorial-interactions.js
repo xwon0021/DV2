@@ -26,7 +26,7 @@ function addMapNavigation(spec, target, container) {
     delete p.size;
     p.extent={signal:'[[width/2+(12-width/2)*mapZoom+mapPan[0],height/2+(12-height/2)*mapZoom+mapPan[1]],[width/2+(width-12-width/2)*mapZoom+mapPan[0],height/2+(height-12-height/2)*mapZoom+mapPan[1]]]'};
   }
-  if (["map1","map2"].includes(target)) {
+  if (["map1","map2","map3"].includes(target)) {
     // Fit unchanged geography only when size/coverage changes, not for every gesture.
     const bases = spec.projections.map(p => ({
       ...p, name: p.name + "_base", extent: {signal:'[[12,12],[width-12,height-12]]'}
@@ -40,11 +40,11 @@ function addMapNavigation(spec, target, container) {
     spec.projections.unshift(...bases);
 
   }
-  if (["map1","map2"].includes(target)) spec = addV1Navigation(spec);
+  if (["map1","map2","map3"].includes(target)) spec = addV1Navigation(spec);
   return spec;
 }
 function setupMapNavigation(target,view) {
-  if (["map1","map2"].includes(target)) return setupV1Navigation(view,target);
+  if (["map1","map2","map3"].includes(target)) return setupV1Navigation(view,target);
   const box=document.getElementById(target),toolbar=document.querySelector(`[data-map="${target}"]`);
   toolbar.querySelector('output').textContent='1.0×'; box.classList.remove('drag-enabled'); toolbar.querySelector('[data-action="drag"]').setAttribute('aria-pressed','false');
   toolbar.querySelectorAll('button').forEach(b => b.onclick=async()=> {

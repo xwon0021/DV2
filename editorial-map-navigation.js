@@ -70,7 +70,7 @@ function setupV1Navigation(view, target='map1') {
       view.signal('mapPan',view.signal('mapPan').map(value=>value*next/zoom)).signal('mapZoom',next);
     }
     if(action==='reset'||action==='all') {
-      if(target!=='vis10')view.signal('fullMapExtent',action==='all');
+      if(['map1','map2'].includes(target))view.signal('fullMapExtent',action==='all');
       view.signal('mapZoom',1).signal('mapPan',[0,0]).signal('v1Dragging',false);
     }
     await view.runAsync();
