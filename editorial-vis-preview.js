@@ -1,11 +1,11 @@
 // Preview-only geometry dimensions and axis-label wrapping; quantitative encodings stay intact.
 function editorialFigureDimensions(spec,target,container) {
-  const mobile=innerWidth<=620, paired=innerWidth>=1100;
+  const mobile=innerWidth<=620, paired=innerWidth>=900;
   if(target==='map1'){spec=JSON.parse(JSON.stringify(spec).replaceAll('#F1F5F9','#D9E7F4'));if(!mobile)spec.height=Math.min(800,Math.round(container.clientWidth*.88));}
   if(target==='map2'&&!mobile)spec.height=400;
-  if(target==='vis06'&&paired)spec.height=540;
+  if(target==='vis06'&&paired){spec.height=520;spec.encoding.y.axis.labelLimit=155;spec.encoding.y.axis.labelFontSize=11;spec.encoding.color.legend.direction='vertical';spec.encoding.color.legend.columns=1;}
   if(target==='vis07'&&paired){
-    spec.height=610;
+    spec.height=580;
     spec.axes[0].encode={labels:{update:{text:{signal:"datum.value === 'Wages and salaries' ? ['Wages and','salaries'] : datum.value === 'Sales and service income' ? ['Sales and','service income'] : datum.value === 'Industry value added' ? ['Industry value','added'] : datum.value"}}}};
   }
   if(target==='vis12'){spec.width=Math.max(180,container.clientWidth-10);spec.autosize={type:'fit',contains:'padding'};}

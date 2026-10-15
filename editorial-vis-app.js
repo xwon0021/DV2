@@ -84,7 +84,7 @@ async function loadSpec(target, url) {
     }
     if (target === "map3" || target === "vis10") {
       spec.width = container.clientWidth;
-      spec.height = window.innerWidth <= 620 ? (target === "map3" ? 320 : 290) : (target === "vis10" ? 520 : 470);
+      spec.height = window.innerWidth <= 620 ? (target === "map3" ? 320 : 290) : (target === "vis10" ? 440 : 470);
     }
     if (target === "vis12" && window.innerWidth <= 620) {
       spec.width = Math.max(180, container.clientWidth - 10);
@@ -99,7 +99,7 @@ async function loadSpec(target, url) {
     if (target === "vis08") spec = addEmploymentBrushBindings(spec);
     if (["map1", "map2", "map3"].includes(target)) spec = addMapNavigation(spec, target, container);
     if (target === "map1") { window.v1NavigationCleanup?.(); window.v1TooltipLeaderCleanup?.(); }
-    if (["map2","vis10"].includes(target)) window[target+"NavigationCleanup"]?.();
+    if (["map2","map3","vis10"].includes(target)) window[target+"NavigationCleanup"]?.();
     chartViews.get(target)?.finalize();
     const result = await vegaEmbed(container, spec, { actions: false, renderer: ["map1", "map2", "map3", "heatmap", "vis07", "vis09", "vis10", "vis11", "vis13"].includes(target) ? "svg" : "canvas" });
     chartViews.set(target, result.view);
