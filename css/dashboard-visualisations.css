@@ -89,8 +89,8 @@
 /* Sleek Navigation Hint Badge */
 .navigation-badge {
   display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  align-items: baseline;
+  gap: 6px;
   padding: 6px 12px;
   border-radius: 6px;
   background: #f1f5f9;
@@ -102,9 +102,10 @@
   margin: 4px 0 14px;
 }
 
-.navigation-badge .badge-icon {
-  font-size: 13px;
-  opacity: 0.8;
+.navigation-badge .tip-label {
+  font-weight: 700;
+  color: #1e293b;
+  white-space: nowrap;
 }
 
 /* Secondary Methodological and Context Notes */
@@ -130,29 +131,47 @@
 /* ==========================================================================
    FIGURE 01 & 02: CHOROPLETH LEGEND & LINKED MAP
    ========================================================================== */
+.map-with-legend {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 250px;
+  gap: 24px;
+  align-items: center;
+}
+
+.map-with-legend #map1 {
+  min-width: 0;
+  width: 100%;
+}
+
 .rate-legend-wrap {
-  margin: 14px 0 10px;
+  margin: 0;
+  background: #f8fafc;
+  padding: 16px 18px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
 }
 
 .legend-title {
-  margin: 0 0 8px;
-  font-size: 12.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
   font-weight: 700;
-  color: #334e68;
+  color: #1e293b;
+  line-height: 1.35;
 }
 
 .rate-legend {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 6px;
 }
 
 .rate-legend button.legend-item {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 6px;
-  min-height: 38px;
-  padding: 4px 10px;
+  gap: 8px;
+  width: 100%;
+  min-height: 34px;
+  padding: 5px 10px;
   border: 1px solid #cbd5e1;
   border-radius: 6px;
   background: #ffffff;
@@ -160,6 +179,8 @@
   color: #334e68;
   cursor: pointer;
   transition: all 0.15s ease;
+  justify-content: flex-start;
+  box-sizing: border-box;
 }
 
 .rate-legend button.legend-item[aria-pressed="true"] {
@@ -172,7 +193,35 @@
 
 .rate-legend button.legend-item:hover {
   border-color: #94a3b8;
-  background: #f8fafc;
+  background: #f1f5f9;
+}
+
+.map-with-legend .interaction-hint {
+  font-size: 11px;
+  line-height: 1.4;
+  color: #64748b;
+  margin: 10px 0 4px;
+}
+
+.map-with-legend .method-note {
+  font-size: 11px;
+  line-height: 1.4;
+  color: #475569;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .map-with-legend {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .rate-legend {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .rate-legend button.legend-item {
+    width: auto;
+  }
 }
 
 .swatch {
@@ -353,6 +402,14 @@
   border-radius: 10px;
   background: #f8fafc;
   border: 1px solid #e2e8f0;
+  box-sizing: border-box;
+}
+
+.chord-insight .stat-number {
+  font-size: clamp(1.8rem, 2.5vw, 2.35rem);
+  white-space: nowrap;
+  letter-spacing: -0.02em;
+  margin: 0 0 6px;
 }
 
 .insight-label {

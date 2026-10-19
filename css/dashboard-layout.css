@@ -216,7 +216,7 @@
 /* Domestic Chord Insight Composition */
 .chord-insight-composition {
   display: grid;
-  grid-template-columns: minmax(0, 2.3fr) minmax(240px, 1fr);
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
   gap: 32px;
   align-items: center;
 }
