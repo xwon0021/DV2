@@ -24,15 +24,15 @@ button {
 .direct-controls {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: 18px;
+  gap: 10px;
+  margin-bottom: 12px;
 }
 
 .chart-controls {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
-  gap: 14px;
+  gap: 12px;
   width: 100%;
   min-width: 0;
   margin: 0;
@@ -43,10 +43,10 @@ button {
   flex: 1 1 180px;
   flex-direction: column;
   align-items: stretch;
-  gap: 5px;
+  gap: 4px;
   min-width: 0;
   margin: 0;
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 600;
   color: #334e68;
 }
@@ -58,12 +58,14 @@ button {
   width: 100%;
   min-width: 0;
   max-width: 100%;
-  min-height: 40px;
-  padding: 6px 10px;
+  min-height: 36px;
+  height: 36px;
+  padding: 4px 10px;
   border: 1px solid #cbd5e1;
   border-radius: 6px;
   background-color: #ffffff;
   color: var(--ink);
+  font-size: 13px;
 }
 
 .chart-controls select:hover,
@@ -73,14 +75,16 @@ button {
 
 .chart-controls > button {
   flex: 0 0 auto;
-  min-height: 40px;
-  padding: 6px 14px;
+  min-height: 36px;
+  height: 36px;
+  padding: 4px 14px;
   border: 1px solid #cbd5e1;
   border-radius: 6px;
   background-color: #f8fafc;
   font-weight: 600;
   color: #334e68;
   white-space: nowrap;
+  font-size: 13px;
 }
 
 .chart-controls > button:hover {
@@ -138,43 +142,76 @@ button {
   min-width: 32px;
 }
 
+/* Inline Map Navigation inside Chart Controls */
+.chart-controls > .map-navigation {
+  flex: 0 0 auto;
+  min-height: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chart-controls > .map-navigation button {
+  height: 28px;
+  padding: 0 10px;
+  display: inline-flex;
+  align-items: center;
+}
+
 /* V2 Linked Map Filters */
 .v2-c .filters {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) auto;
-  gap: 12px;
+  display: flex;
+  flex-wrap: wrap;
   align-items: end;
-  margin: 10px 0 16px;
+  gap: 10px;
+  margin: 6px 0 12px;
 }
 
 .v2-c .filters label {
   display: flex;
+  flex: 1 1 180px;
   flex-direction: column;
-  gap: 5px;
+  gap: 4px;
+  min-width: 0;
   font-size: 12px;
   font-weight: 600;
   color: #334e68;
+}
+
+.v2-c .filters label.lookup-label {
+  flex: 1.4 1 240px;
 }
 
 .v2-c .filters select,
 .v2-c .filters input {
   display: block;
   width: 100%;
-  min-height: 40px;
-  padding: 6px 10px;
+  min-height: 36px;
+  height: 36px;
+  padding: 4px 10px;
   border: 1px solid #cbd5e1;
   border-radius: 6px;
   background: #ffffff;
+  font-size: 13px;
 }
 
 .v2-c .filters button {
-  min-height: 40px;
-  padding: 6px 14px;
+  flex: 0 0 auto;
+  min-height: 36px;
+  height: 36px;
+  padding: 4px 14px;
   border: 1px solid #cbd5e1;
   border-radius: 6px;
   background: #f8fafc;
   font-weight: 600;
   color: #334e68;
+  white-space: nowrap;
+  font-size: 13px;
 }
 
 .v2-c .filters button:hover:not(:disabled) {
@@ -271,7 +308,17 @@ button {
   .chart-controls > button {
     width: 100%;
   }
+  .chart-controls > .map-navigation {
+    width: 100%;
+    justify-content: space-between;
+  }
   .v2-c .filters {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .v2-c .filters > label,
+  .v2-c .filters > button {
+    width: 100%;
+    flex-basis: 100%;
   }
 }

@@ -2,12 +2,12 @@
  "$schema": "https://vega.github.io/schema/vega/v5.json",
  "description": "V4 connected dot plot comparing employment and IVA shares across all 15 Australian manufacturing subdivisions, 2024-25.",
  "width": 720,
- "height": 540,
+ "height": 410,
  "padding": {
-  "left": 220,
-  "right": 112,
-  "top": 48,
-  "bottom": 46
+  "left": 230,
+  "right": 132,
+  "top": 34,
+  "bottom": 48
  },
  "autosize": {
   "type": "none",
@@ -205,7 +205,7 @@
    "labelLimit": {
     "signal": "compact ? 112 : 205"
    },
-   "labelPadding": 10
+   "labelPadding": 26
   }
  ],
  "legends": [
@@ -307,7 +307,7 @@
       "field": "share"
      },
      "dx": {
-      "signal": "datum.measureKey === 'employmentShare' ? -8 : 8"
+      "signal": "datum.share < (datum.measureKey === 'employmentShare' ? datum.ivaShare : datum.employmentShare) || (datum.share === datum.ivaShare && datum.measureKey === 'employmentShare') ? -8 : 8"
      },
      "y": {
       "scale": "y",
@@ -318,7 +318,7 @@
       "value": 0
      },
      "align": {
-      "signal": "datum.measureKey === 'employmentShare' ? 'right' : 'left'"
+      "signal": "datum.share < (datum.measureKey === 'employmentShare' ? datum.ivaShare : datum.employmentShare) || (datum.share === datum.ivaShare && datum.measureKey === 'employmentShare') ? 'right' : 'left'"
      },
      "baseline": {
       "value": "middle"
@@ -348,7 +348,7 @@
    "encode": {
     "update": {
      "x": {
-      "signal": "width + 20"
+      "signal": "width + 16"
      },
      "y": {
       "scale": "y",
@@ -362,7 +362,7 @@
       "value": "middle"
      },
      "fill": {
-      "signal": "datum.difference >= 0 ? '#8A4600' : '#44515C'"
+      "signal": "datum.difference >= 0 ? '#0F766E' : '#86198F'"
      },
      "fontSize": {
       "value": 11
@@ -385,7 +385,7 @@
    "encode": {
     "update": {
      "x": {
-      "signal": "width + 20"
+      "signal": "width + 16"
      },
      "y": {
       "value": -18

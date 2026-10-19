@@ -39,7 +39,7 @@
       "on": [
         {
           "events": "@flowLines:click, @flowHitTarget:click",
-          "update": "datum.Key"
+          "update": "selectedFlow === datum.Key ? '' : datum.Key"
         },
         {
           "events": "@originDots:click",
@@ -327,7 +327,7 @@
         3666953.4660000005
       ],
       "range": [
-        0,
+        1.4,
         9
       ],
       "zero": true
@@ -462,7 +462,7 @@
       "name": "flowHitTarget",
       "type": "path",
       "from": {
-        "data": "selectedFlowHit"
+        "data": "visibleFlows"
       },
       "encode": {
         "update": {
@@ -473,13 +473,13 @@
             "value": null
           },
           "stroke": {
-            "value": "#ffffff"
+            "value": "#000000"
           },
           "strokeWidth": {
-            "value": 8
+            "value": 16
           },
           "strokeOpacity": {
-            "value": 0
+            "value": 0.0001
           },
           "cursor": {
             "value": "pointer"
@@ -507,7 +507,7 @@
             "field": "py"
           },
           "size": {
-            "value": 18
+            "signal": "18 * sqrt(mapZoom)"
           },
           "fill": {
             "value": "#596b7a"
@@ -539,7 +539,7 @@
             "field": "py"
           },
           "size": {
-            "value": 40
+            "signal": "40 * sqrt(mapZoom)"
           },
           "fill": {
             "signal": "datum.State === activeState ? '#D8891C' : '#173b5e'"
@@ -617,7 +617,7 @@
             "signal": "atan2(datum.tipY-datum.prevY,datum.tipX-datum.prevX)*180/PI+90"
           },
           "size": {
-            "value": 100
+            "signal": "100 * sqrt(mapZoom)"
           },
           "fill": {
             "value": "#D8891C"

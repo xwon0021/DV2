@@ -5,19 +5,13 @@
 
 /* Editorial Figure Card Container */
 .editorial-figure {
-  margin: 0 0 64px;
-  padding: clamp(20px, 3.2vw, 32px);
+  margin: 0 0 44px;
+  padding: clamp(16px, 2.2vw, 24px);
   border: 1px solid #e2e8f0;
   border-radius: 12px;
   background: var(--card);
   box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
   min-width: 0;
-  transition: box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.editorial-figure:hover {
-  box-shadow: 0 6px 22px rgba(15, 23, 42, 0.06);
-  border-color: #cbd5e1;
 }
 
 .hero-figure {
@@ -30,11 +24,11 @@
 
 /* Figure Headings */
 .editorial-heading {
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .editorial-heading .chart-number {
-  margin: 0 0 6px;
+  margin: 0 0 4px;
   color: var(--muted);
   font-size: 11px;
   font-weight: 700;
@@ -45,7 +39,7 @@
 .editorial-heading h3 {
   margin: 0;
   font-family: var(--font-serif);
-  font-size: clamp(1.45rem, 2.6vw, 2.05rem);
+  font-size: clamp(1.35rem, 2.3vw, 1.85rem);
   font-weight: 500;
   line-height: 1.2;
   color: var(--ink);
@@ -53,10 +47,10 @@
 }
 
 .editorial-heading .chart-deck {
-  margin: 8px 0 0;
+  margin: 5px 0 0;
   color: #486581;
-  font-size: 14.5px;
-  line-height: 1.5;
+  font-size: 13.5px;
+  line-height: 1.45;
   max-width: 70ch;
 }
 
@@ -100,11 +94,11 @@
 }
 
 .heatmap-chart {
-  min-height: 380px;
+  min-height: 240px;
 }
 
 .connected-dot-chart {
-  min-height: 480px;
+  min-height: 300px;
 }
 
 .parallel-chart {
@@ -145,23 +139,6 @@
   margin: 24px 0 32px;
 }
 
-.performance-pair {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
-  align-items: stretch;
-}
-
-.performance-pair .compact-companion {
-  margin-bottom: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.performance-pair .compact-companion .chart {
-  flex: 1 1 auto;
-}
-
 /* V2 Linked Map Composition */
 .v2-c {
   min-width: 0;
@@ -170,7 +147,7 @@
 
 .v2-c .composition {
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 1fr);
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 1fr);
   gap: 28px;
   align-items: start;
 }
@@ -216,19 +193,30 @@
 /* Domestic Chord Insight Composition */
 .chord-insight-composition {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 1fr);
   gap: 32px;
-  align-items: center;
+  align-items: start;
+}
+
+.chord-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+  width: 100%;
 }
 
 /* Export Flow Map Below Composition */
 .export-below {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   gap: 20px;
+  width: 100%;
 }
 
-.export-below .feature-visual {
+.export-below .feature-visual,
+.export-below .editorial-margin {
   width: 100%;
 }
 
@@ -248,9 +236,6 @@
    Responsive Breakpoints
    ========================================================================== */
 @media (max-width: 960px) {
-  .performance-pair {
-    grid-template-columns: 1fr;
-  }
   .feature-composition {
     grid-template-columns: 1fr;
   }

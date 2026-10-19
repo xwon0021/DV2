@@ -1,7 +1,7 @@
 (function(root){
 'use strict';
 const PURPLE='#A855D6', HIGHLIGHT='#C62828', MAX_COUNT=826;
-const modes={current:{title:'National display · enlarged circles',description:'Larger circles, a national view and manual map scale. Circle diameters are 50% larger than the earlier comparison; dense symbols may still overlap at 12×.'},detail:{title:'Inspect one place at a time',description:'Choose a state or SA2. The map fits the chosen area directly, with no continuous zoom gesture. The detail circles are enlarged too, while remaining smaller than the national reference circles.'},ranking:{title:'See the location. Compare the count.',description:'Choose an area or ranked bar, then drag to explore it. The map and ranked bars share a red selection; bars keep count comparisons readable.'}};
+const modes={current:{title:'National display · enlarged circles',description:'Larger circles, a national view and manual map scale. Circle diameters are 50% larger than the earlier comparison; dense symbols may still overlap at 15×.'},detail:{title:'Inspect one place at a time',description:'Choose a state or SA2. The map fits the chosen area directly, with no continuous zoom gesture. The detail circles are enlarged too, while remaining smaller than the national reference circles.'},ranking:{title:'See the location. Compare the count.',description:'Choose an area or ranked bar, then drag to explore it. The map and ranked bars share a red selection; bars keep count comparisons readable.'}};
 function distanceKm(a,b){const rad=Math.PI/180,dlat=(b.Latitude-a.Latitude)*rad,dlon=(b.Longitude-a.Longitude)*rad;const h=Math.sin(dlat/2)**2+Math.cos(a.Latitude*rad)*Math.cos(b.Latitude*rad)*Math.sin(dlon/2)**2;return 6371*2*Math.asin(Math.sqrt(Math.min(1,h)));}
 function pointFeature(r){return {type:'Feature',geometry:{type:'Point',coordinates:[r.Longitude,r.Latitude]},properties:{}};}
 function buildModel(rows,features,state,code,method){
@@ -23,7 +23,8 @@ function buildModel(rows,features,state,code,method){
  return {points,land,fit,selected,scope,ranking,state,method,areaMax:all?2025:810};
 }
 function makeMapSpec(model,width,mobile){
- const height=mobile?360:500,manual=['current','ranking'].includes(model.method);
+ const laptopMapHeight = Math.max(340, Math.min(410, Math.round(window.innerHeight * 0.44)));
+ const height=mobile?340:laptopMapHeight,manual=['current','ranking'].includes(model.method);
  const down={type:'pointerdown',filter:['event.button === 0']};
  const spec={$schema:'https://vega.github.io/schema/vega/v5.json',width,height,padding:{left:0,right:0,top:0,bottom:0},autosize:{type:'pad',contains:'padding'},background:'transparent',
  signals:[{name:'mapZoom',value:1},{name:'mapPan',value:[0,0]}, {name:'selectedCode',value:model.selected?.SA2_Code||'',on:[{events:'@dots:click',update:'datum.SA2_Code'}]}, {name:'hoveredCode',value:'',on:[{events:'@dots:mouseover',update:'datum.SA2_Code'},{events:'@dots:mouseout',update:"''"}]}],
@@ -51,7 +52,7 @@ function captureNavigation(){if(view&&navigation[viewMethod])navigation[viewMeth
 const state={region:embedded?'':'New South Wales',code:''};
 function scopeRows(){return method==='current'?rows:rows.filter(r=>!state.region||r.State===state.region);}
 function populateLookup(){
- const query=method==='ranking'?'':$('search').value.trim().toLocaleLowerCase(),list=scopeRows().filter(r=>r.SA2_Name.toLocaleLowerCase().includes(query)).sort((a,b)=>a.SA2_Name.localeCompare(b.SA2_Name));
+ const query=$('search')?$('search').value.trim().toLocaleLowerCase():'',list=scopeRows().filter(r=>r.SA2_Name.toLocaleLowerCase().includes(query)).sort((a,b)=>a.SA2_Name.localeCompare(b.SA2_Name));
  $('sa2').replaceChildren(new Option('All SA2s in study area',''));
  for(const r of list)$('sa2').add(new Option(`${r.SA2_Name} · ${r.Manufacturing_Businesses.toLocaleString('en-AU')}`,r.SA2_Code));
  const selected=scopeRows().find(r=>r.SA2_Code===state.code);
@@ -78,7 +79,7 @@ async function render({refit=false}={}){
  if(!embedded){$('method-label').textContent='METHOD '+({current:'A',detail:'B',ranking:'C'})[method];$('method-title').textContent=modes[method].title;$('method-description').textContent=modes[method].description;}
  $('comparison').setAttribute('aria-labelledby',embedded?'editorial-v2-title':'tab-'+method);
  for(const b of uiRoot.querySelectorAll('[data-method]'))b.setAttribute('aria-selected',String(b.dataset.method===method));
- $('composition').classList.toggle('with-ranking',ranking);$('ranking').hidden=!ranking;$('manual-controls').hidden=!manual;$('region').disabled=overview;$('map').classList.toggle('manual',manual);$('zoom-control').hidden=ranking;$('search-control').hidden=ranking;uiRoot.querySelector('.filters').classList.toggle('without-search',ranking);
+ $('composition').classList.toggle('with-ranking',ranking);$('ranking').hidden=!ranking;$('manual-controls').hidden=!manual;$('region').disabled=overview;$('map').classList.toggle('manual',manual);$('zoom-control').hidden=ranking;if($('search-control'))$('search-control').hidden=true;uiRoot.querySelector('.filters').classList.toggle('without-search',ranking);
  if(ranking)uiRoot.querySelector('.filters').append($('reset'));
  else $('manual-controls').insertBefore($('reset'),$('manual-hint'));
  $('scope').textContent=model.scope;$('size-note').textContent=overview?'Enlarged reference circles: diameters are 50% larger than before. Counts use the same fixed 0–826 domain; the size legend matches.':'Enlarged detail circles: diameters are 50% larger than before. Same fixed 0–826 count domain; the size legend matches. Remaining overlaps are possible.';
@@ -98,7 +99,7 @@ async function render({refit=false}={}){
  }catch(error){console.error(error);$('load-status').textContent=(embedded?'V2 could not render: ':'Comparison could not render: ')+error.message;$('load-status').classList.add('load-error');}
  finally{if(token===generation)$('comparison').setAttribute('aria-busy','false');}
 }
-$('region').onchange=()=>{state.region=$('region').value;state.code='';$('search').value='';populateLookup();render({refit:method==='ranking'});};$('search').oninput=populateLookup;$('sa2').onchange=()=>select($('sa2').value);$('clear').onclick=()=>{state.region='';$('region').value='';$('search').value='';if(navigation[method]){navigation[method]={zoom:1,pan:[0,0]};if(view&&viewMethod===method)view.signal('mapZoom',1).signal('mapPan',[0,0]);}select('');};
+$('region').onchange=()=>{state.region=$('region').value;state.code='';if($('search'))$('search').value='';populateLookup();render({refit:method==='ranking'});};if($('search'))$('search').oninput=populateLookup;$('sa2').onchange=()=>select($('sa2').value);$('clear').onclick=()=>{state.region='';$('region').value='';if($('search'))$('search').value='';if(navigation[method]){navigation[method]={zoom:1,pan:[0,0]};if(view&&viewMethod===method)view.signal('mapZoom',1).signal('mapPan',[0,0]);}select('');};
 for(const button of uiRoot.querySelectorAll('[data-method]')){button.onclick=()=>{captureNavigation();method=button.dataset.method;if(method!=='current'&&state.code){const row=rows.find(r=>r.SA2_Code===state.code);if(row&&state.region&&row.State!==state.region){state.region=row.State;$('region').value=state.region;}}populateLookup();render({refit:method==='ranking'});};button.onkeydown=event=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;event.preventDefault();const list=[...uiRoot.querySelectorAll('[data-method]')],i=list.indexOf(button),next=event.key==='Home'?0:event.key==='End'?2:(i+(event.key==='ArrowRight'?1:-1)+3)%3;list[next].focus();list[next].click();};}
 let pendingZoom=null,zoomFrame=0;
 $('zoom').oninput=()=>{const next=Number($('zoom').value);$('zoom-label').textContent=next.toFixed(1)+'×';pendingZoom=next;if(zoomFrame)return;zoomFrame=requestAnimationFrame(async()=>{zoomFrame=0;if(!view||method!=='current')return;const prior=view.signal('mapZoom'),z=pendingZoom;pendingZoom=null;await view.signal('mapPan',view.signal('mapPan').map(v=>v*z/prior)).signal('mapZoom',z).runAsync();captureNavigation();});};
@@ -111,6 +112,6 @@ Promise.all([fetch('work/data/vis02_sa2_count_points.csv').then(r=>{if(!r.ok)thr
  for(const name of [...new Set(rows.map(r=>r.State))].sort())$('region').add(new Option(name,name));
  if(!rows.some(r=>r.State===state.region))state.region='';$('region').value=state.region;
  if(!embedded)state.code=rows.find(r=>r.State===state.region&&r.SA2_Name==='Sydney (North) - Millers Point')?.SA2_Code||'';
- for(const id of ['search','sa2','clear','region'])$(id).disabled=false;ready=true;populateLookup();render();
+ for(const id of ['search','sa2','clear','region'])if($(id))$(id).disabled=false;ready=true;populateLookup();render();
 }).catch(error=>{console.error(error);$('load-status').textContent='Data could not load: '+error.message;$('load-status').classList.add('load-error');$('comparison').setAttribute('aria-busy','false');});
 })(typeof window!=='undefined'?window:globalThis);

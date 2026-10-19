@@ -42,7 +42,7 @@ function setupV1Navigation(view, target='map1') {
     event.preventDefault(); // Cmd-wheel over V1 zooms the map; ordinary wheel scrolls the page.
     const current=pendingZoom ?? view.signal('mapZoom');
     const factor=Math.pow(1.0005,-event.deltaY*Math.pow(16,event.deltaMode));
-    const next=Math.max(1,Math.min(12,current*factor));
+    const next=Math.max(1,Math.min(15,current*factor));
     const now=performance.now(), idle=now-lastWheelAt>150;lastWheelAt=now;
     if(next===current)return;
     pendingZoom=next;
@@ -54,7 +54,7 @@ function setupV1Navigation(view, target='map1') {
     if(event.target!==host || !['+','=','-'].includes(event.key))return;
     event.preventDefault();
     const current=pendingZoom ?? view.signal('mapZoom');
-    pendingZoom=Math.max(1,Math.min(12,event.key==='-'?current/1.6:current*1.6));
+    pendingZoom=Math.max(1,Math.min(15,event.key==='-'?current/1.6:current*1.6));
     if(!running && !frame)flush();else requestFrame();
   }
   host.addEventListener('keydown',keyboard);
@@ -67,7 +67,7 @@ function setupV1Navigation(view, target='map1') {
   host.classList.add('v1-native-navigation');
   const slider=target==='map1'?toolbar.querySelector('#v1-zoom-scale'):null;
   if(slider)slider.oninput=()=>{
-    pendingZoom=Math.max(1,Math.min(12,Number(slider.value)));
+    pendingZoom=Math.max(1,Math.min(15,Number(slider.value)));
     requestFrame();
   };
   const output=toolbar.querySelector('output');
@@ -76,7 +76,7 @@ function setupV1Navigation(view, target='map1') {
     cancelAnimationFrame(frame);frame=0;pendingZoom=null;
     const action=button.dataset.action, zoom=view.signal('mapZoom');
     if(action==='in'||action==='out') {
-      const next=Math.max(1,Math.min(12,action==='in'?zoom*1.6:zoom/1.6));
+      const next=Math.max(1,Math.min(15,action==='in'?zoom*1.6:zoom/1.6));
       view.signal('mapPan',view.signal('mapPan').map(value=>value*next/zoom)).signal('mapZoom',next);
     }
     if(action==='reset'||action==='all') {
@@ -120,7 +120,7 @@ function addMapNavigation(spec, target, container) {
   }
   spec.signals ||= [];
   spec.signals.push(
-    {name:'mapZoom',value:1,on:[{events:{type:'wheel',filter:['event.ctrlKey'],consume:true},update:'clamp(mapZoom * pow(1.001, -event.deltaY), 1, 12)'}]},
+    {name:'mapZoom',value:1,on:[{events:{type:'wheel',filter:['event.ctrlKey'],consume:true},update:'clamp(mapZoom * pow(1.001, -event.deltaY), 1, 15)'}]},
     {name:'panEnabled',value:false},
     {name:'panStart',value:[0,0,0,0],on:[{events:'pointerdown',update:'[x(),y(),mapPan[0],mapPan[1]]'}]},
     {name:'mapPan',value:[0,0],on:[{events:'[pointerdown, window:pointerup] > window:pointermove',update:'panEnabled ? [panStart[2]+x()-panStart[0],panStart[3]+y()-panStart[1]] : mapPan'}]}
@@ -164,7 +164,7 @@ function setupMapNavigation(target,view) {
     const z=view.signal('mapZoom'),p=view.signal('mapPan'),a=b.dataset.action;
     if(a==='all'){view.signal('fullMapExtent',true).signal('mapZoom',1).signal('mapPan',[0,0]);}
     if(a==='reset' && ['map1','map2'].includes(target))view.signal('fullMapExtent',false);
-    if(a==='in')view.signal('mapZoom',Math.min(12,z*1.6)).signal('mapPan',p.map(v=>v*1.6));
+    if(a==='in')view.signal('mapZoom',Math.min(15,z*1.6)).signal('mapPan',p.map(v=>v*1.6));
     if(a==='out')view.signal('mapZoom',Math.max(1,z/1.6)).signal('mapPan',p.map(v=>v/1.6));
     if(a==='reset'){view.signal('mapZoom',1).signal('mapPan',[0,0]).signal('panEnabled',false);box.classList.remove('drag-enabled');toolbar.querySelector('[data-action="drag"]').setAttribute('aria-pressed','false');}
     if(a==='drag'){const on=!view.signal('panEnabled');view.signal('panEnabled',on);box.classList.toggle('drag-enabled',on);b.setAttribute('aria-pressed',String(on));}
@@ -178,10 +178,12 @@ function summaryBars(host, title, rows, max, format, select, onSelect) {
   if(!rows.length){const p=document.createElement('p');p.textContent='No matching records in the validated selection.';host.append(p);return;}
   const list=document.createElement('div');list.className='summary-bars';host.append(list);
   rows.forEach(r=>{
+    const isSelected = r.key === select;
     const button=document.createElement(onSelect?'button':'div');button.className='summary-row';button.dataset.key=r.key;button.dataset.value=r.value;button.setAttribute('aria-label',`${r.label}: ${format(r.value)}`);
-    if(onSelect){button.type='button';button.onclick=()=>onSelect(r.key);}
+    if(isSelected) button.classList.add('selected');
+    if(onSelect){button.type='button';button.setAttribute('aria-pressed',String(isSelected));button.onclick=()=>onSelect(r.key);}
     const label=document.createElement('span');label.className='summary-label';label.textContent=r.label;
-    const track=document.createElement('span');track.className='bar-track';const fill=document.createElement('span');fill.className='bar-fill';fill.style.width=`${max ? r.value/max*100 : 0}%`;fill.classList.toggle('selected',r.key===select);track.append(fill);
+    const track=document.createElement('span');track.className='bar-track';const fill=document.createElement('span');fill.className='bar-fill';fill.style.width=`${max ? r.value/max*100 : 0}%`;fill.classList.toggle('selected',isSelected);track.append(fill);
     const value=document.createElement('span');value.className='summary-value';value.textContent=format(r.value);button.append(label,track,value);button.title=r.context||`${r.label}: ${format(r.value)}`;list.append(button);
   });
 }
@@ -191,18 +193,19 @@ function setupFacilityFilters(view) {
   populateSelect(state,[...new Set(rows.map(r=>r.State))].sort().map(x=>({x})),r=>r.x,r=>r.x);
   populateSelect(industry,[...new Set(rows.map(r=>r.Industry))].sort().map(x=>({x})),r=>r.x,r=>r.x);
   const update=async()=>{
-    view.signal('stateFilter',state.value).signal('industryFilter',industry.value).signal('searchName',search.value.trim()).signal('selectedFacility',null);
+    view.signal('stateFilter',state.value).signal('industryFilter',industry.value).signal('searchName',search?search.value.trim():'').signal('selectedFacility',null);
     await view.runAsync();
     const shown=rows.filter(r=>(!state.value||r.State===state.value)&&(!industry.value||r.Industry===industry.value));
     populateSelect(lookup,shown.slice().sort((a,b)=>a.Facility_Name.localeCompare(b.Facility_Name)),r=>String(r.Facility_ID),r=>`${r.Facility_Name} · ${r.State} · ${r.Facility_ID}`);
-    const matches=shown.filter(r=>r.Facility_Name.toLowerCase().includes(search.value.trim().toLowerCase())).length;
-    document.getElementById('facility-count').textContent=`${shown.length.toLocaleString()} of 1,210 facilities match the filters.${search.value.trim()?` ${matches} name matches highlighted; search does not remove dots.`:''}`;
+    const matches=search?shown.filter(r=>r.Facility_Name.toLowerCase().includes(search.value.trim().toLowerCase())).length:0;
+    document.getElementById('facility-count').textContent=`${shown.length.toLocaleString()} of 1,210 facilities match the filters.${search&&search.value.trim()?` ${matches} name matches highlighted; search does not remove dots.`:''}`;
     const states=[...new Set(rows.map(r=>r.State))].sort();
     const bars=states.map(s=>({key:s,label:s,value:rows.filter(r=>r.State===s&&(!industry.value||r.Industry===industry.value)).length}));
     summaryBars(document.getElementById('facility-summary'),'Reporting facilities by state',bars,354,v=>v.toLocaleString(),state.value,s=>{state.value=state.value===s?'':s;update();});
   };
-  state.onchange=industry.onchange=update;search.oninput=update;
-  document.getElementById('facility-reset').onclick=()=>{state.value='';industry.value='';search.value='';update();};
+  state.onchange=industry.onchange=update;
+  if(search) search.oninput=update;
+  document.getElementById('facility-reset').onclick=()=>{state.value='';industry.value='';if(search)search.value='';update();};
   update();
 }
 function setupDestinationSummary(view) {
@@ -210,8 +213,7 @@ function setupDestinationSummary(view) {
   const update=key=>{
     const values=new Map();const selected=rows.filter(r=>!key||r.Source===key);selected.forEach(r=>values.set(r.Target,(values.get(r.Target)||0)+r.Value_AUD_thousands*1000));
     const bars=[...values].map(([label,value])=>({key:label,label,value})).sort((a,b)=>b.value-a.value);
-    const host=document.getElementById('export-summary');summaryBars(host,key?`Top destinations · ${key}`:'Top destinations · all retained origins',bars.slice(0,8),max,billions,'');
-    const note=document.createElement('p');note.className='method-note';note.textContent=`Largest ${Math.min(8,bars.length)} of ${bars.length} retained destinations. Retained flows for this view total ${billions(selected.reduce((n,r)=>n+r.Value_AUD_thousands*1000,0))}. Displayed coverage remains 85.21% of the original eight-origin total; ACT is excluded from this display. These are not all state exports. Common bar scale across states.`;host.append(note);
+    const host=document.getElementById('export-summary');summaryBars(host,key?`Top 8 destinations · ${key}`:'Top 8 export destinations',bars.slice(0,8),max,billions,'');
   };
   view.addSignalListener('selectedState',(_,key)=>update(key));update(view.signal('selectedState'));
 }
@@ -236,7 +238,35 @@ function setupProfileFocus(target,view) {
   if(target==='vis07'){rows=view.data('profiles');sig='focusSubdivision';key=label='Subdivision';}
   if(target==='vis13'){rows=view.data('iva');sig='focusCode';key='Code';label='Subdivision';}
   if(target==='vis09'){rows=view.data('source_0');sig='focusSubdivision';key=label='Subdivision';}
-  const unique=[...new Map(rows.map(r=>[r[key],r])).values()].sort((a,b)=>a[label].localeCompare(b[label]));populateSelect(select,unique,r=>r[key],r=>r[label]);select.onchange=()=>view.signal(sig,select.value||null).runAsync();select.onchange();
+  const unique=[...new Map(rows.map(r=>[r[key],r])).values()].sort((a,b)=>a[label].localeCompare(b[label]));
+  populateSelect(select,unique,r=>r[key],r=>r[label]);
+
+  if (target === 'vis07') {
+    const resetBtn = document.getElementById('vis07-reset');
+
+    select.onchange = () => {
+      const val = select.value || null;
+      view.signal(sig, val).runAsync();
+    };
+
+    if (resetBtn) {
+      resetBtn.onclick = () => {
+        select.value = '';
+        view.signal(sig, null).runAsync();
+      };
+    }
+
+    view.addSignalListener('focusSubdivision', (_, sub) => {
+      if (select.value !== (sub || '')) {
+        select.value = sub || '';
+      }
+    });
+
+    return;
+  }
+
+  select.onchange=()=>view.signal(sig,select.value||null).runAsync();
+  select.onchange();
 }
 // V9 only: observed-year emphasis; original histories, ranks and tooltips remain intact.
 let v9Playback = null;
@@ -319,9 +349,27 @@ function fullFinancialYearLabel(value) {
 }
 function addEmploymentBrushBindings(spec) {
   const compiled=vegaLite.compile(spec).spec;
-  const overview=compiled.marks.find(m=>m.name==='employmentOverview_group');
-  const brush=overview.signals.find(s=>s.name==='brush_x');
-  brush.on.push({events:[{signal:'periodStart'},{signal:'periodEnd'}],update:'isValid(periodStart) && isValid(periodEnd) ? [scale("employmentOverview_x", periodStart), scale("employmentOverview_x", periodEnd)] : [0,0]'});
+  compiled.signals = compiled.signals || [];
+  if (!compiled.signals.some(s => s.name === 'brushReset')) {
+    compiled.signals.push({ name: 'brushReset', value: 0 });
+  }
+  const overview=compiled.marks.find(m=>m.name==='employmentOverview_group'||m.name==='concat_1_group');
+  if (overview && overview.signals) {
+    const brush=overview.signals.find(s=>s.name==='brush_x');
+    const brushTuple=overview.signals.find(s=>s.name==='brush_tuple');
+    const xScale = (overview.scales && overview.scales.find(s => s.name.endsWith('_x') || s.name === 'x'))
+      || (compiled.scales && compiled.scales.find(s => s.name.includes('overview') || s.name.includes('concat_1')));
+    const scaleName = xScale ? xScale.name : 'concat_1_x';
+    if (brush) {
+      brush.on = brush.on || [];
+      brush.on.push({ events: [{ signal: 'brushReset' }], update: '[0, 0]' });
+      brush.on.push({ events: [{ signal: 'periodStart' }, { signal: 'periodEnd' }], update: `isValid(periodStart) && isValid(periodEnd) ? [scale("${scaleName}", periodStart), scale("${scaleName}", periodEnd)] : [0, 0]` });
+    }
+    if (brushTuple) {
+      brushTuple.on = brushTuple.on || [];
+      brushTuple.on.push({ events: [{ signal: 'brushReset' }], update: 'null' });
+    }
+  }
   return compiled;
 }
 // Supporting controls for V5/V8 only; chart selection and brushing remain native Vega-Lite.
@@ -347,7 +395,33 @@ async function setupEmploymentPolish(view) {
   view.addSignalListener('brush',(_,b)=>feedback(b));view.addSignalListener('employmentPoint',(_,p)=>{if(p.Financial_Year?.length)showYear(rows.findIndex(r=>r.Financial_Year===p.Financial_Year[0]));});
   async function applyRange(){let a=+start.value,b=+end.value;if(a>b){if(document.activeElement===start)end.value=String(a);else start.value=String(b);a=+start.value;b=+end.value;}const bounds=[stamp(rows[a])-1,stamp(rows[b])+1];await view.signal('periodStart',bounds[0]).signal('periodEnd',bounds[1]).runAsync();}
   start.onchange=applyRange;end.onchange=applyRange;inspect.onchange=()=>{if(inspect.value===''){detail.hidden=true;return;}showYear(+inspect.value);};
-  document.getElementById('employment-reset').onclick=async()=>{await view.signal('periodStart',null).signal('periodEnd',null).runAsync();feedback({});};feedback({});
+  const resetHandler=async()=>{
+    start.value='0';
+    end.value='18';
+    inspect.value='';
+    selectedBounds=null;
+    if(detail){detail.hidden=true;detail.textContent='';}
+    if(period){period.textContent='Showing full history · 2006–2007 to 2024–2025';}
+    try{view.data('brush_store',[]);}catch(_){}
+    try{view.data('employmentPoint_store',[]);}catch(_){}
+    try{
+      const nextReset=(view.signal('brushReset')||0)+1;
+      await view
+        .signal('brushReset',nextReset)
+        .signal('periodStart',null)
+        .signal('periodEnd',null)
+        .signal('brush',{})
+        .signal('employmentPoint',{})
+        .runAsync();
+    }catch(_){
+      try{await view.signal('periodStart',null).signal('periodEnd',null).runAsync();}catch(_){}
+    }
+    const clear=view.tooltip();
+    if(typeof clear==='function')clear(view,{},null,null);
+    feedback({});
+  };
+  document.getElementById('employment-reset').onclick=resetHandler;
+  feedback({});
 }
 let v1HighlightedClass=-1;
 async function setupV1ClassHighlight(view) {

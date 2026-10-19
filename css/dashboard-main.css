@@ -51,7 +51,7 @@ a:hover {
 
 /* Base Container Widths */
 .masthead, main, .page-footer {
-  width: min(1120px, calc(100% - 48px));
+  width: min(1100px, calc(100% - 48px));
   margin-inline: auto;
 }
 
@@ -114,12 +114,27 @@ a:hover {
   font-weight: 500;
 }
 
-/* Chapter Navigation Index */
+/* Sticky Chapter Navigation Bar */
+.chapter-nav-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(250, 249, 245, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.03);
+}
+
 .chapter-index {
-  grid-column: 1 / -1;
+  width: min(1100px, calc(100% - 48px));
+  margin: 0 auto;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 32px;
-  margin-top: 44px;
+  padding: 13px 0;
   flex-wrap: wrap;
   font-size: 12px;
   font-weight: 600;
@@ -128,14 +143,15 @@ a:hover {
 }
 
 .chapter-index a {
-  color: var(--ink);
+  color: #334e68;
   text-decoration: none;
-  padding: 6px 0;
+  padding: 4px 0;
   border-bottom: 2px solid transparent;
   transition: border-color 0.15s ease, color 0.15s ease;
 }
 
-.chapter-index a:hover {
+.chapter-index a:hover,
+.chapter-index a.active {
   color: var(--purple-primary);
   border-bottom-color: var(--purple-primary);
 }

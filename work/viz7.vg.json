@@ -50,18 +50,24 @@
       "value": null,
       "on": [
         {
-          "events": "@profilePoints:mouseover, @profileLine:mouseover",
+          "events": "@profilePoints:mouseover, @profileLine:mouseover, @profileHitLine:mouseover",
           "update": "datum.Subdivision"
         },
         {
-          "events": "@profilePoints:mouseout, @profileLine:mouseout",
+          "events": "@profilePoints:mouseout, @profileLine:mouseout, @profileHitLine:mouseout",
           "update": "null"
         }
       ]
     },
     {
       "name": "focusSubdivision",
-      "value": null
+      "value": null,
+      "on": [
+        {
+          "events": "@profilePoints:click, @profileHitLine:click",
+          "update": "focusSubdivision === datum.Subdivision ? null : datum.Subdivision"
+        }
+      ]
     }
   ],
   "scales": [
@@ -131,6 +137,41 @@
       },
       "marks": [
         {
+          "name": "profileHitLine",
+          "type": "line",
+          "from": {
+            "data": "series"
+          },
+          "sort": {
+            "field": "Dimension_Order",
+            "order": "ascending"
+          },
+          "encode": {
+            "update": {
+              "x": {
+                "scale": "x",
+                "field": "Dimension"
+              },
+              "y": {
+                "scale": "y",
+                "field": "Normalised_Value"
+              },
+              "stroke": {
+                "value": "transparent"
+              },
+              "strokeWidth": {
+                "value": 16
+              },
+              "cursor": {
+                "value": "pointer"
+              },
+              "tooltip": {
+                "signal": "{'Subdivision': datum.Subdivision, 'Period': '2024\u201325', 'Employment (people)': format(datum.Employment_2024_25, ',.0f'), 'Wages and salaries (A$ million)': format(datum.Wages_2024_25_millions, ',.0f'), 'Sales and service income (A$ million)': format(datum.Sales_2024_25_millions, ',.0f'), 'Industry value added (A$ million)': format(datum.IVA_2024_25_millions, ',.0f')}"
+              }
+            }
+          }
+        },
+        {
           "name": "profileLine",
           "type": "line",
           "from": {
@@ -159,8 +200,11 @@
               "opacity": {
                 "signal": "(hoveredSubdivision || focusSubdivision) === null ? 0.62 : (hoveredSubdivision || focusSubdivision) === datum.Subdivision ? 1 : 0.45"
               },
+              "cursor": {
+                "value": "pointer"
+              },
               "tooltip": {
-                "signal": "{Subdivision: datum.Subdivision, 'Period': '2024\u201325', 'Employment (people)': format(datum.Employment_2024_25, ',.0f'), 'Wages and salaries (A$ million)': format(datum.Wages_2024_25_millions, ',.0f'), 'Sales and service income (A$ million)': format(datum.Sales_2024_25_millions, ',.0f'), 'Industry value added (A$ million)': format(datum.IVA_2024_25_millions, ',.0f')}"
+                "signal": "{'Subdivision': datum.Subdivision, 'Period': '2024\u201325', 'Employment (people)': format(datum.Employment_2024_25, ',.0f'), 'Wages and salaries (A$ million)': format(datum.Wages_2024_25_millions, ',.0f'), 'Sales and service income (A$ million)': format(datum.Sales_2024_25_millions, ',.0f'), 'Industry value added (A$ million)': format(datum.IVA_2024_25_millions, ',.0f')}"
               }
             }
           }
@@ -198,8 +242,11 @@
           "opacity": {
             "signal": "(hoveredSubdivision || focusSubdivision) === null ? 0.84 : (hoveredSubdivision || focusSubdivision) === datum.Subdivision ? 1 : 0.35"
           },
+          "cursor": {
+            "value": "pointer"
+          },
           "tooltip": {
-            "signal": "{Subdivision: datum.Subdivision, 'Period': '2024\u201325', 'Employment (people)': format(datum.Employment_2024_25, ',.0f'), 'Wages and salaries (A$ million)': format(datum.Wages_2024_25_millions, ',.0f'), 'Sales and service income (A$ million)': format(datum.Sales_2024_25_millions, ',.0f'), 'Industry value added (A$ million)': format(datum.IVA_2024_25_millions, ',.0f')}"
+            "signal": "{'Subdivision': datum.Subdivision, 'Period': '2024\u201325', 'Employment (people)': format(datum.Employment_2024_25, ',.0f'), 'Wages and salaries (A$ million)': format(datum.Wages_2024_25_millions, ',.0f'), 'Sales and service income (A$ million)': format(datum.Sales_2024_25_millions, ',.0f'), 'Industry value added (A$ million)': format(datum.IVA_2024_25_millions, ',.0f')}"
           }
         }
       }

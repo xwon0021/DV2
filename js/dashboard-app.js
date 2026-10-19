@@ -8,9 +8,10 @@ function editorialFigureDimensions(spec,target,container) {
     if(!mobile)spec.height=Math.min(540,Math.round(container.clientWidth*.65));
   }
   if(target==='map2'&&!mobile)spec.height=400;
-  if(target==='vis06'&&paired){spec.height=520;spec.encoding.y.axis.labelLimit=155;spec.encoding.y.axis.labelFontSize=11;spec.encoding.color.legend.direction='vertical';spec.encoding.color.legend.columns=1;}
-  if(target==='vis07'&&paired){
-    spec.height=580;
+  if(target==='vis06'&&!mobile){spec.height=540;spec.encoding.y.axis.labelLimit=240;spec.encoding.y.axis.labelFontSize=12;spec.encoding.color.legend.orient='top';spec.encoding.color.legend.direction='horizontal';spec.encoding.color.legend.columns=2;}
+  if(target==='vis07'&&!mobile){
+    spec.height=440;
+    spec.padding={left:76,right:60,top:14,bottom:48};
     spec.axes[0].encode={labels:{update:{text:{signal:"datum.value === 'Wages and salaries' ? ['Wages and','salaries'] : datum.value === 'Sales and service income' ? ['Sales and','service income'] : datum.value === 'Industry value added' ? ['Industry value','added'] : datum.value"}}}};
   }
   if(target==='vis12'){spec.width=Math.max(180,container.clientWidth-10);spec.autosize={type:'fit',contains:'padding'};}
@@ -87,7 +88,11 @@ function addEditorialFlowNavigation(spec) {
    update.scaleX={signal:'mapZoom'};update.scaleY={signal:'mapZoom'};
    update.x={signal:'width/2*(1-mapZoom)+mapPan[0]'};
    update.y={signal:'height/2*(1-mapZoom)+mapPan[1]'};
-   update.strokeWidth=mark.name==='flowLines'?{signal:"scale('flowWidth',datum.Value_AUD_thousands)/mapZoom"}:{signal:'8/mapZoom'};
+   if(mark.name==='flowLines'){
+    update.strokeWidth={signal:"(max(1.6, scale('flowWidth',datum.Value_AUD_thousands)) * (datum.Key === hoverFlow || datum.Key === selectedFlow ? 1.5 : 1)) / sqrt(mapZoom)"};
+   }else{
+    update.strokeWidth={signal:"max(22, max(1.6, scale('flowWidth',datum.Value_AUD_thousands)) * sqrt(mapZoom) + 16) / mapZoom"};
+   }
   }else if(mark.encode?.update?.x?.field==='px'||mark.encode?.update?.x?.field==='tipX'){
    const update=mark.encode.update,xf=update.x.field,yf=update.y.field;
    update.x={signal:`width/2*(1-mapZoom)+mapPan[0]+datum.${xf}*mapZoom`};
@@ -118,13 +123,15 @@ function editorialChordFit(spec,container){
 }
 function editorialSlopeFit(spec,container){
  spec.width=container.clientWidth;const compact=spec.width<760;
+ const marginSig=compact?'min(115,width*.22)':'240';
+ const leaderSig=compact?'min(97,width*.22-18)':'218';
  for(const mark of spec.marks){const u=mark.encode?.update;if(!u)continue;
   for(const key of ['x','x2']){
-   if(u[key]?.value===240)u[key]={signal:'min(240,width*.34)'};
-   if(u[key]?.signal)u[key].signal=u[key].signal.replace(/width-240/g,'width-min(240,width*.34)').replace(/width-218/g,'width-min(240,width*.34)+22').replace(/^240$/,'min(240,width*.34)').replace(/^218/,'min(240,width*.34)-22');
+   if(u[key]?.value===240)u[key]={signal:marginSig};
+   if(u[key]?.signal)u[key].signal=u[key].signal.replace(/width-240/g,`width-${marginSig}`).replace(/width-218/g,`width-${leaderSig}`).replace(/^240$/,marginSig).replace(/^218/,leaderSig);
   }
   if(mark.type==='text'&&['labels','rightLabels'].includes(mark.name)){
-   u.limit={signal:'min(195,width*.34-23)'};
+   u.limit={signal:compact?'min(95,width*.22-20)':'195'};
    if(compact){const value=mark.name==='labels'?'IVA_2023_24':'IVA_2024_25';u.text={signal:`[datum.Short,format(datum.${value},',.0f')]`};u.fontSize={value:10};u.lineHeight={value:11};}
   }
   if(mark.type==='text'&&u.text?.value?.includes('common vertical scale')&&compact){u.text.value='IVA · A$ million · common vertical scale';u.fontSize={value:10};}
@@ -134,34 +141,96 @@ function editorialSlopeFit(spec,container){
 
 // Navigate to the normal-flow chapter start, never a sticky heading's current box.
 (() => {
-  const nav=document.querySelector('.chapter-index');
-  function showChapter(hash){
-    const section=document.getElementById(hash.slice(1));
-    if(!section?.matches('main > .story-section'))return;
-    const top=window.scrollY+section.getBoundingClientRect().top
-      +parseFloat(getComputedStyle(section).paddingTop)-nav.getBoundingClientRect().height-12;
-    window.scrollTo({top:Math.max(0,top),behavior:'instant'});
+  const nav = document.querySelector('.chapter-index');
+  if (!nav) return;
+
+  const chapterTitles = {
+    '#place': '01 / Place · Australian Made Products',
+    '#industry': '02 / Industry · Australian Made Products',
+    '#change': '03 / Change · Australian Made Products',
+    '#connections': '04 / Connections · Australian Made Products'
+  };
+  const baseTitle = document.title;
+
+  function updateActiveLink(hash) {
+    nav.querySelectorAll('a').forEach(a => {
+      const match = a.getAttribute('href') === hash;
+      a.classList.toggle('active', match);
+      if (match) {
+        a.setAttribute('aria-current', 'true');
+      } else {
+        a.removeAttribute('aria-current');
+      }
+    });
+    if (chapterTitles[hash]) {
+      document.title = chapterTitles[hash];
+    } else if (!hash || hash === '#') {
+      document.title = baseTitle;
+    }
   }
-  nav.addEventListener('click',event=>{
-    const link=event.target.closest('a[href^="#"]');
-    if(!link||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;
+
+  function showChapter(hash){
+    const section = document.getElementById(hash.slice(1));
+    if (!section?.matches('main > .story-section')) return;
+    const top = window.scrollY + section.getBoundingClientRect().top
+      + parseFloat(getComputedStyle(section).paddingTop) - nav.getBoundingClientRect().height - 12;
+    window.scrollTo({ top: Math.max(0, top), behavior: 'instant' });
+    updateActiveLink(hash);
+  }
+
+  nav.addEventListener('click', event => {
+    const link = event.target.closest('a[href^="#"]');
+    if (!link || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
-    history.pushState(null,'',link.hash);
+    history.pushState(null, '', link.hash);
     showChapter(link.hash);
   });
-  window.addEventListener('hashchange',()=>showChapter(location.hash));
+
+  window.addEventListener('hashchange', () => showChapter(location.hash));
+
+  if (location.hash) {
+    updateActiveLink(location.hash);
+  }
+
+  // Scroll spy to keep active tab, URL hash, and page title corresponding to the section in view
+  const sections = document.querySelectorAll('main > .story-section');
+  if ('IntersectionObserver' in window && sections.length) {
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter(e => e.isIntersecting)
+        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+
+      if (visible.length > 0) {
+        const id = '#' + visible[0].target.id;
+        updateActiveLink(id);
+        if (location.hash !== id) {
+          history.replaceState(null, '', id);
+        }
+      } else if (window.scrollY < 200) {
+        updateActiveLink('');
+        if (location.hash) {
+          history.replaceState(null, '', window.location.pathname + window.location.search);
+        }
+      }
+    }, {
+      rootMargin: '-20% 0px -60% 0px',
+      threshold: 0
+    });
+
+    sections.forEach(sec => observer.observe(sec));
+  }
 })();
 const rateColors = ["#F6F1DE", "#C9DBC5", "#86BCBB", "#4795B1", "#286B9A", "#254573", "#191E43"];
 const chartViews = new Map();
 const specTargets = [
   ["map1", "work/viz1.vg.json?v=final"],
   ["map3", "work/viz3.vg.json?v=final"],
-  ["vis04", "work/viz4.vg.json?v=final"],
+  ["vis04", "work/viz4.vg.json?v=tealplum"],
   ["heatmap", "work/viz5.vg.json?v=final"],
   ["vis06", "work/viz6.vg.json?v=final"],
   ["vis07", "work/viz7.vg.json?v=final"],
   ["vis08", "work/viz8.vg.json?v=final"],
-  ["vis10", "work/viz10.vg.json?v=final"],
+  ["vis10", "work/viz10.vg.json?v=zoomflow"],
   ["vis11", "work/viz11.vg.json?v=final"],
   ["vis13", "work/viz13.vg.json?v=final"]
 ];
@@ -219,13 +288,18 @@ async function loadSpec(target, url) {
     }
     if (target === "vis04") {
       const compact = container.clientWidth < 620;
+      const laptopAdaptHeight = Math.max(340, Math.min(410, Math.round(window.innerHeight * 0.44)));
       spec.padding = compact
-        ? { left: 118, right: 16, top: 48, bottom: 46 }
-        : { left: 220, right: 112, top: 48, bottom: 46 };
+        ? { left: 118, right: 16, top: 32, bottom: 44 }
+        : { left: 230, right: 132, top: 34, bottom: 48 };
       spec.width = Math.max(185, container.clientWidth - spec.padding.left - spec.padding.right);
-      spec.height = compact ? 570 : 620;
+      spec.height = compact ? 430 : laptopAdaptHeight;
     }
-    if (target === "heatmap" && window.innerWidth < 720) spec.width = { step: 48 };
+    if (target === "heatmap") {
+      const laptopHeatmapHeight = Math.max(250, Math.min(290, Math.round(window.innerHeight * 0.32)));
+      spec.height = window.innerWidth <= 620 ? 300 : laptopHeatmapHeight;
+      if (window.innerWidth < 720) spec.width = { step: 48 };
+    }
     if (target === "vis13") spec = editorialSlopeFit(spec,container);
     if (target === "vis11") {
       spec.width = container.clientWidth;
@@ -239,7 +313,7 @@ async function loadSpec(target, url) {
     }
     if (target === "map3" || target === "vis10") {
       spec.width = container.clientWidth;
-      spec.height = window.innerWidth <= 620 ? (target === "map3" ? 320 : 290) : (target === "vis10" ? Math.min(440, Math.round(container.clientWidth * 0.49)) : 470);
+      spec.height = window.innerWidth <= 620 ? (target === "map3" ? 320 : 290) : (target === "vis10" ? Math.min(440, Math.round(container.clientWidth * 0.49)) : 420);
     }
     if (target === "vis12" && window.innerWidth <= 620) {
       spec.width = Math.max(180, container.clientWidth - 10);
@@ -309,7 +383,7 @@ function setupRedesignControls(target, view) {
     const showFlows = () => populateSelect(flow, rows.filter(r => !state.value || r.Source === state.value), r => r.Key, r => `${r.Source} → ${r.Target}`);
     const show = key => {
       const row = rows.find(r => r.Key === key);
-      detail.textContent = row ? `${row.Source} → ${row.Target}: ${aud(row.Value_AUD_thousands * 1000)}. STM + ETM (Simply + Elaborately Transformed Manufactures), 2025. Recorded state-of-origin Export basis; representative areas, not ports or shipping routes.` : "Hover or tap a connection, or choose an origin and destination above.";
+      detail.textContent = row ? `${row.Source} → ${row.Target}: ${aud(row.Value_AUD_thousands * 1000)} (2025 manufactured exports)` : "Hover or tap a connection, or choose an origin and destination above.";
     };
     state.onchange = () => { view.signal("selectedState", state.value).signal("selectedFlow", "").runAsync(); flow.value = ""; showFlows(); show(""); };
     flow.onchange = () => { view.signal("selectedFlow", flow.value).runAsync(); show(flow.value); };
@@ -350,11 +424,13 @@ async function start() {
   }
   await Promise.all(specTargets.map(([target, url]) => loadSpec(target, url)));
   let previousWidth = window.innerWidth;
+  let previousHeight = window.innerHeight;
   let resizeTimer;
   let resizeQueue = Promise.resolve();
   window.addEventListener("resize", () => {
-    if (window.innerWidth === previousWidth) return;
+    if (window.innerWidth === previousWidth && Math.abs(window.innerHeight - previousHeight) < 30) return;
     previousWidth = window.innerWidth;
+    previousHeight = window.innerHeight;
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
       resizeQueue = resizeQueue.then(() =>
