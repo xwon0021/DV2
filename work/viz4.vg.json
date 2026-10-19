@@ -1,418 +1,418 @@
 {
- "$schema": "https://vega.github.io/schema/vega/v5.json",
- "description": "V4 connected dot plot comparing employment and IVA shares across all 15 Australian manufacturing subdivisions, 2024-25.",
- "width": 720,
- "height": 410,
- "padding": {
-  "left": 230,
-  "right": 132,
-  "top": 34,
-  "bottom": 48
- },
- "autosize": {
-  "type": "none",
-  "contains": "content"
- },
- "background": "transparent",
- "config": {
-  "text": {
-   "font": "Inter, Arial, sans-serif"
-  },
-  "axis": {
-   "labelFont": "Inter, Arial, sans-serif",
-   "titleFont": "Inter, Arial, sans-serif"
-  },
-  "legend": {
-   "labelFont": "Inter, Arial, sans-serif",
-   "titleFont": "Inter, Arial, sans-serif"
-  }
- },
- "signals": [
-  {
-   "name": "compact",
-   "update": "width < 420"
-  }
- ],
- "data": [
-  {
-   "name": "rows",
-   "url": "work/data/vis06_sales_vs_iva_growth.csv",
-   "format": {
-    "type": "csv",
-    "parse": {
-     "Employment_2024_25": "number",
-     "IVA_2024_25_millions": "number",
-     "ANZSIC_Code": "string"
-    }
-   },
-   "transform": [
-    {
-     "type": "joinaggregate",
-     "fields": [
-      "Employment_2024_25",
-      "IVA_2024_25_millions"
-     ],
-     "ops": [
-      "sum",
-      "sum"
-     ],
-     "as": [
-      "totalEmployment",
-      "totalIVA"
-     ]
+    "$schema": "https://vega.github.io/schema/vega/v5.json",
+    "description": "V4 connected dot plot comparing employment and IVA shares across all 15 Australian manufacturing subdivisions, 2024-25.",
+    "width": 720,
+    "height": 410,
+    "padding": {
+        "left": 230,
+        "right": 132,
+        "top": 34,
+        "bottom": 48
     },
-    {
-     "type": "formula",
-     "as": "employmentShare",
-     "expr": "datum.Employment_2024_25 / datum.totalEmployment * 100"
+    "autosize": {
+        "type": "none",
+        "contains": "content"
     },
-    {
-     "type": "formula",
-     "as": "ivaShare",
-     "expr": "datum.IVA_2024_25_millions / datum.totalIVA * 100"
+    "background": "transparent",
+    "config": {
+        "text": {
+            "font": "Inter, Arial, sans-serif"
+        },
+        "axis": {
+            "labelFont": "Inter, Arial, sans-serif",
+            "titleFont": "Inter, Arial, sans-serif"
+        },
+        "legend": {
+            "labelFont": "Inter, Arial, sans-serif",
+            "titleFont": "Inter, Arial, sans-serif"
+        }
     },
-    {
-     "type": "formula",
-     "as": "difference",
-     "expr": "datum.ivaShare - datum.employmentShare"
-    },
-    {
-     "type": "formula",
-     "as": "ivaPerWorker",
-     "expr": "datum.IVA_2024_25_millions * 1000000 / datum.Employment_2024_25"
-    },
-    {
-     "type": "collect",
-     "sort": {
-      "field": "ivaShare",
-      "order": "descending"
-     }
-    }
-   ]
-  },
-  {
-   "name": "points",
-   "source": "rows",
-   "transform": [
-    {
-     "type": "fold",
-     "fields": [
-      "employmentShare",
-      "ivaShare"
-     ],
-     "as": [
-      "measureKey",
-      "share"
-     ]
-    },
-    {
-     "type": "formula",
-     "as": "measure",
-     "expr": "datum.measureKey === 'employmentShare' ? 'Employment share' : 'IVA share'"
-    }
-   ]
-  }
- ],
- "scales": [
-  {
-   "name": "x",
-   "type": "linear",
-   "domain": [
-    0,
-    28
-   ],
-   "range": "width",
-   "zero": true,
-   "nice": false
-  },
-  {
-   "name": "y",
-   "type": "band",
-   "domain": {
-    "data": "rows",
-    "field": "Subdivision_Short"
-   },
-   "range": "height",
-   "paddingInner": 0.18,
-   "paddingOuter": 0.08
-  },
-  {
-   "name": "measureColour",
-   "type": "ordinal",
-   "domain": [
-    "Employment share",
-    "IVA share"
-   ],
-   "range": [
-    "#2C7FB8",
-    "#D95F02"
-   ]
-  },
-  {
-   "name": "measureShape",
-   "type": "ordinal",
-   "domain": [
-    "Employment share",
-    "IVA share"
-   ],
-   "range": [
-    "circle",
-    "diamond"
-   ]
-  }
- ],
- "axes": [
-  {
-   "orient": "bottom",
-   "scale": "x",
-   "values": [
-    0,
-    4,
-    8,
-    12,
-    16,
-    20,
-    24,
-    28
-   ],
-   "labelExpr": "datum.value + '%'",
-   "title": "Share of manufacturing total (%)",
-   "grid": true,
-   "gridColor": "#E3E6EA",
-   "gridOpacity": 1,
-   "domainColor": "#8995A0",
-   "tickColor": "#8995A0",
-   "labelColor": "#5B6670",
-   "titleColor": "#172C3F",
-   "labelFontSize": {
-    "signal": "compact ? 10 : 11"
-   },
-   "titleFontSize": {
-    "signal": "compact ? 11 : 12"
-   },
-   "titlePadding": 10
-  },
-  {
-   "orient": "left",
-   "scale": "y",
-   "domain": false,
-   "ticks": false,
-   "labelColor": "#172C3F",
-   "labelFontSize": {
-    "signal": "compact ? 10 : 12"
-   },
-   "labelFontWeight": 600,
-   "labelLimit": {
-    "signal": "compact ? 112 : 205"
-   },
-   "labelPadding": 26
-  }
- ],
- "legends": [
-  {
-   "fill": "measureColour",
-   "shape": "measureShape",
-   "orient": "top",
-   "direction": "horizontal",
-   "title": null,
-   "symbolSize": 120,
-   "symbolStrokeColor": "#FFFFFF",
-   "symbolStrokeWidth": 1,
-   "labelColor": "#172C3F",
-   "labelFontSize": 12,
-   "columnPadding": 24,
-   "offset": 8
-  }
- ],
- "marks": [
-  {
-   "type": "rule",
-   "from": {
-    "data": "rows"
-   },
-   "encode": {
-    "update": {
-     "x": {
-      "scale": "x",
-      "field": "employmentShare"
-     },
-     "x2": {
-      "scale": "x",
-      "field": "ivaShare"
-     },
-     "y": {
-      "scale": "y",
-      "field": "Subdivision_Short",
-      "band": 0.5
-     },
-     "stroke": {
-      "value": "#AAB3BA"
-     },
-     "strokeWidth": {
-      "value": 1.5
-     }
-    }
-   }
-  },
-  {
-   "name": "sharePoints",
-   "type": "symbol",
-   "from": {
-    "data": "points"
-   },
-   "encode": {
-    "update": {
-     "x": {
-      "scale": "x",
-      "field": "share"
-     },
-     "y": {
-      "scale": "y",
-      "field": "Subdivision_Short",
-      "band": 0.5
-     },
-     "shape": {
-      "scale": "measureShape",
-      "field": "measure"
-     },
-     "size": {
-      "value": 125
-     },
-     "fill": {
-      "scale": "measureColour",
-      "field": "measure"
-     },
-     "stroke": {
-      "value": "#FFFFFF"
-     },
-     "strokeWidth": {
-      "value": 1.2
-     },
-     "tooltip": {
-      "signal": "{'Subdivision': datum.Subdivision, 'Employment': format(datum.Employment_2024_25, ',.0f') + ' workers', 'Employment share': format(datum.employmentShare, '.2f') + '%', 'IVA': 'A$' + format(datum.IVA_2024_25_millions, ',.0f') + ' million', 'IVA share': format(datum.ivaShare, '.2f') + '%', 'IVA per worker': 'A$' + format(datum.ivaPerWorker, ',.0f'), 'Difference': (datum.difference >= 0 ? '+' : '') + format(datum.difference, '.2f') + ' pp', 'Period': '2024–25'}"
-     }
-    }
-   }
-  },
-  {
-   "type": "text",
-   "from": {
-    "data": "points"
-   },
-   "interactive": false,
-   "encode": {
-    "update": {
-     "x": {
-      "scale": "x",
-      "field": "share"
-     },
-     "dx": {
-      "signal": "datum.share < (datum.measureKey === 'employmentShare' ? datum.ivaShare : datum.employmentShare) || (datum.share === datum.ivaShare && datum.measureKey === 'employmentShare') ? -8 : 8"
-     },
-     "y": {
-      "scale": "y",
-      "field": "Subdivision_Short",
-      "band": 0.5
-     },
-     "dy": {
-      "value": 0
-     },
-     "align": {
-      "signal": "datum.share < (datum.measureKey === 'employmentShare' ? datum.ivaShare : datum.employmentShare) || (datum.share === datum.ivaShare && datum.measureKey === 'employmentShare') ? 'right' : 'left'"
-     },
-     "baseline": {
-      "value": "middle"
-     },
-     "fill": {
-      "scale": "measureColour",
-      "field": "measure"
-     },
-     "fontSize": {
-      "signal": "compact ? 9 : 10.5"
-     },
-     "fontWeight": {
-      "value": 700
-     },
-     "text": {
-      "signal": "format(datum.share, '.1f') + '%'"
-     }
-    }
-   }
-  },
-  {
-   "type": "text",
-   "from": {
-    "data": "rows"
-   },
-   "interactive": false,
-   "encode": {
-    "update": {
-     "x": {
-      "signal": "width + 16"
-     },
-     "y": {
-      "scale": "y",
-      "field": "Subdivision_Short",
-      "band": 0.5
-     },
-     "align": {
-      "value": "left"
-     },
-     "baseline": {
-      "value": "middle"
-     },
-     "fill": {
-      "signal": "datum.difference >= 0 ? '#0F766E' : '#86198F'"
-     },
-     "fontSize": {
-      "value": 11
-     },
-     "fontWeight": {
-      "value": 700
-     },
-     "opacity": {
-      "signal": "compact ? 0 : 1"
-     },
-     "text": {
-      "signal": "'Δ ' + (datum.difference >= 0 ? '+' : '') + format(datum.difference, '.1f') + ' pp'"
-     }
-    }
-   }
-  },
-  {
-   "type": "text",
-   "interactive": false,
-   "encode": {
-    "update": {
-     "x": {
-      "signal": "width + 16"
-     },
-     "y": {
-      "value": -18
-     },
-     "align": {
-      "value": "left"
-     },
-     "baseline": {
-      "value": "bottom"
-     },
-     "fill": {
-      "value": "#5B6670"
-     },
-     "fontSize": {
-      "value": 10.5
-     },
-     "fontWeight": {
-      "value": 700
-     },
-     "opacity": {
-      "signal": "compact ? 0 : 1"
-     },
-     "text": {
-      "value": "IVA − employment"
-     }
-    }
-   }
-  }
- ]
+    "signals": [
+        {
+            "name": "compact",
+            "update": "width < 420"
+        }
+    ],
+    "data": [
+        {
+            "name": "rows",
+            "url": "work/data/vis06_sales_vs_iva_growth.csv",
+            "format": {
+                "type": "csv",
+                "parse": {
+                    "Employment_2024_25": "number",
+                    "IVA_2024_25_millions": "number",
+                    "ANZSIC_Code": "string"
+                }
+            },
+            "transform": [
+                {
+                    "type": "joinaggregate",
+                    "fields": [
+                        "Employment_2024_25",
+                        "IVA_2024_25_millions"
+                    ],
+                    "ops": [
+                        "sum",
+                        "sum"
+                    ],
+                    "as": [
+                        "totalEmployment",
+                        "totalIVA"
+                    ]
+                },
+                {
+                    "type": "formula",
+                    "as": "employmentShare",
+                    "expr": "datum.Employment_2024_25 / datum.totalEmployment * 100"
+                },
+                {
+                    "type": "formula",
+                    "as": "ivaShare",
+                    "expr": "datum.IVA_2024_25_millions / datum.totalIVA * 100"
+                },
+                {
+                    "type": "formula",
+                    "as": "difference",
+                    "expr": "datum.ivaShare - datum.employmentShare"
+                },
+                {
+                    "type": "formula",
+                    "as": "ivaPerWorker",
+                    "expr": "datum.IVA_2024_25_millions * 1000000 / datum.Employment_2024_25"
+                },
+                {
+                    "type": "collect",
+                    "sort": {
+                        "field": "ivaShare",
+                        "order": "descending"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "points",
+            "source": "rows",
+            "transform": [
+                {
+                    "type": "fold",
+                    "fields": [
+                        "employmentShare",
+                        "ivaShare"
+                    ],
+                    "as": [
+                        "measureKey",
+                        "share"
+                    ]
+                },
+                {
+                    "type": "formula",
+                    "as": "measure",
+                    "expr": "datum.measureKey === 'employmentShare' ? 'Employment share' : 'IVA share'"
+                }
+            ]
+        }
+    ],
+    "scales": [
+        {
+            "name": "x",
+            "type": "linear",
+            "domain": [
+                0,
+                28
+            ],
+            "range": "width",
+            "zero": true,
+            "nice": false
+        },
+        {
+            "name": "y",
+            "type": "band",
+            "domain": {
+                "data": "rows",
+                "field": "Subdivision_Short"
+            },
+            "range": "height",
+            "paddingInner": 0.18,
+            "paddingOuter": 0.08
+        },
+        {
+            "name": "measureColour",
+            "type": "ordinal",
+            "domain": [
+                "Employment share",
+                "IVA share"
+            ],
+            "range": [
+                "#2C7FB8",
+                "#D95F02"
+            ]
+        },
+        {
+            "name": "measureShape",
+            "type": "ordinal",
+            "domain": [
+                "Employment share",
+                "IVA share"
+            ],
+            "range": [
+                "circle",
+                "diamond"
+            ]
+        }
+    ],
+    "axes": [
+        {
+            "orient": "bottom",
+            "scale": "x",
+            "values": [
+                0,
+                4,
+                8,
+                12,
+                16,
+                20,
+                24,
+                28
+            ],
+            "labelExpr": "datum.value + '%'",
+            "title": "Share of manufacturing total (%)",
+            "grid": true,
+            "gridColor": "#E3E6EA",
+            "gridOpacity": 1,
+            "domainColor": "#8995A0",
+            "tickColor": "#8995A0",
+            "labelColor": "#5B6670",
+            "titleColor": "#172C3F",
+            "labelFontSize": {
+                "signal": "compact ? 10 : 11"
+            },
+            "titleFontSize": {
+                "signal": "compact ? 11 : 12"
+            },
+            "titlePadding": 10
+        },
+        {
+            "orient": "left",
+            "scale": "y",
+            "domain": false,
+            "ticks": false,
+            "labelColor": "#172C3F",
+            "labelFontSize": {
+                "signal": "compact ? 10 : 12"
+            },
+            "labelFontWeight": 600,
+            "labelLimit": {
+                "signal": "compact ? 112 : 205"
+            },
+            "labelPadding": 26
+        }
+    ],
+    "legends": [
+        {
+            "fill": "measureColour",
+            "shape": "measureShape",
+            "orient": "top",
+            "direction": "horizontal",
+            "title": null,
+            "symbolSize": 120,
+            "symbolStrokeColor": "#FFFFFF",
+            "symbolStrokeWidth": 1,
+            "labelColor": "#172C3F",
+            "labelFontSize": 12,
+            "columnPadding": 24,
+            "offset": 8
+        }
+    ],
+    "marks": [
+        {
+            "type": "rule",
+            "from": {
+                "data": "rows"
+            },
+            "encode": {
+                "update": {
+                    "x": {
+                        "scale": "x",
+                        "field": "employmentShare"
+                    },
+                    "x2": {
+                        "scale": "x",
+                        "field": "ivaShare"
+                    },
+                    "y": {
+                        "scale": "y",
+                        "field": "Subdivision_Short",
+                        "band": 0.5
+                    },
+                    "stroke": {
+                        "value": "#AAB3BA"
+                    },
+                    "strokeWidth": {
+                        "value": 1.5
+                    }
+                }
+            }
+        },
+        {
+            "name": "sharePoints",
+            "type": "symbol",
+            "from": {
+                "data": "points"
+            },
+            "encode": {
+                "update": {
+                    "x": {
+                        "scale": "x",
+                        "field": "share"
+                    },
+                    "y": {
+                        "scale": "y",
+                        "field": "Subdivision_Short",
+                        "band": 0.5
+                    },
+                    "shape": {
+                        "scale": "measureShape",
+                        "field": "measure"
+                    },
+                    "size": {
+                        "value": 125
+                    },
+                    "fill": {
+                        "scale": "measureColour",
+                        "field": "measure"
+                    },
+                    "stroke": {
+                        "value": "#FFFFFF"
+                    },
+                    "strokeWidth": {
+                        "value": 1.2
+                    },
+                    "tooltip": {
+                        "signal": "{'Subdivision': datum.Subdivision, 'Employment': format(datum.Employment_2024_25, ',.0f') + ' workers', 'Employment share': format(datum.employmentShare, '.2f') + '%', 'IVA': 'A$' + format(datum.IVA_2024_25_millions, ',.0f') + ' million', 'IVA share': format(datum.ivaShare, '.2f') + '%', 'IVA per worker': 'A$' + format(datum.ivaPerWorker, ',.0f'), 'Difference': (datum.difference >= 0 ? '+' : '') + format(datum.difference, '.2f') + ' pp', 'Period': '2024–25'}"
+                    }
+                }
+            }
+        },
+        {
+            "type": "text",
+            "from": {
+                "data": "points"
+            },
+            "interactive": false,
+            "encode": {
+                "update": {
+                    "x": {
+                        "scale": "x",
+                        "field": "share"
+                    },
+                    "dx": {
+                        "signal": "datum.share < (datum.measureKey === 'employmentShare' ? datum.ivaShare : datum.employmentShare) || (datum.share === datum.ivaShare && datum.measureKey === 'employmentShare') ? -8 : 8"
+                    },
+                    "y": {
+                        "scale": "y",
+                        "field": "Subdivision_Short",
+                        "band": 0.5
+                    },
+                    "dy": {
+                        "value": 0
+                    },
+                    "align": {
+                        "signal": "datum.share < (datum.measureKey === 'employmentShare' ? datum.ivaShare : datum.employmentShare) || (datum.share === datum.ivaShare && datum.measureKey === 'employmentShare') ? 'right' : 'left'"
+                    },
+                    "baseline": {
+                        "value": "middle"
+                    },
+                    "fill": {
+                        "scale": "measureColour",
+                        "field": "measure"
+                    },
+                    "fontSize": {
+                        "signal": "compact ? 9 : 10.5"
+                    },
+                    "fontWeight": {
+                        "value": 700
+                    },
+                    "text": {
+                        "signal": "format(datum.share, '.1f') + '%'"
+                    }
+                }
+            }
+        },
+        {
+            "type": "text",
+            "from": {
+                "data": "rows"
+            },
+            "interactive": false,
+            "encode": {
+                "update": {
+                    "x": {
+                        "signal": "width + 16"
+                    },
+                    "y": {
+                        "scale": "y",
+                        "field": "Subdivision_Short",
+                        "band": 0.5
+                    },
+                    "align": {
+                        "value": "left"
+                    },
+                    "baseline": {
+                        "value": "middle"
+                    },
+                    "fill": {
+                        "signal": "datum.difference >= 0 ? '#0F766E' : '#86198F'"
+                    },
+                    "fontSize": {
+                        "value": 11
+                    },
+                    "fontWeight": {
+                        "value": 700
+                    },
+                    "opacity": {
+                        "signal": "compact ? 0 : 1"
+                    },
+                    "text": {
+                        "signal": "'Δ ' + (datum.difference >= 0 ? '+' : '') + format(datum.difference, '.1f') + ' pp'"
+                    }
+                }
+            }
+        },
+        {
+            "type": "text",
+            "interactive": false,
+            "encode": {
+                "update": {
+                    "x": {
+                        "signal": "width + 16"
+                    },
+                    "y": {
+                        "value": -18
+                    },
+                    "align": {
+                        "value": "left"
+                    },
+                    "baseline": {
+                        "value": "bottom"
+                    },
+                    "fill": {
+                        "value": "#5B6670"
+                    },
+                    "fontSize": {
+                        "value": 10.5
+                    },
+                    "fontWeight": {
+                        "value": 700
+                    },
+                    "opacity": {
+                        "signal": "compact ? 0 : 1"
+                    },
+                    "text": {
+                        "value": "IVA − employment"
+                    }
+                }
+            }
+        }
+    ]
 }

@@ -14,7 +14,7 @@ function editorialFigureDimensions(spec,target,container) {
     spec.padding={left:76,right:60,top:14,bottom:48};
     spec.axes[0].encode={labels:{update:{text:{signal:"datum.value === 'Wages and salaries' ? ['Wages and','salaries'] : datum.value === 'Sales and service income' ? ['Sales and','service income'] : datum.value === 'Industry value added' ? ['Industry value','added'] : datum.value"}}}};
   }
-  if(target==='vis12'){spec.width=Math.max(180,container.clientWidth-10);spec.autosize={type:'fit',contains:'padding'};}
+  if(target==='vis13'){spec.width=Math.max(180,container.clientWidth-10);spec.autosize={type:'fit',contains:'padding'};}
   if(target==='vis09'&&!mobile)spec.height=350;
   return spec;
 }
@@ -230,9 +230,9 @@ const specTargets = [
   ["vis06", "work/viz6.vg.json?v=final"],
   ["vis07", "work/viz7.vg.json?v=final"],
   ["vis08", "work/viz8.vg.json?v=final"],
-  ["vis10", "work/viz10.vg.json?v=zoomflow"],
+  ["vis10", "work/viz10.vg.json?v=final"],
   ["vis11", "work/viz11.vg.json?v=final"],
-  ["vis13", "work/viz13.vg.json?v=final"]
+  ["vis12", "work/viz12.vg.json?v=zoomflow"]
 ];
 function getBoundaryUrl() {
   return "work/data/SA2_2021_AUST_GDA2020_web.json";
@@ -300,8 +300,8 @@ async function loadSpec(target, url) {
       spec.height = window.innerWidth <= 620 ? 300 : laptopHeatmapHeight;
       if (window.innerWidth < 720) spec.width = { step: 48 };
     }
-    if (target === "vis13") spec = editorialSlopeFit(spec,container);
-    if (target === "vis11") {
+    if (target === "vis11") spec = editorialSlopeFit(spec,container);
+    if (target === "vis10") {
       spec.width = container.clientWidth;
       spec = editorialChordFit(spec,container);
     }
@@ -311,37 +311,28 @@ async function loadSpec(target, url) {
       spec.vconcat[0].height = window.innerWidth <= 620 ? 240 : 300;
       if (window.innerWidth <= 620) { spec.vconcat[0].layer[3].mark.align = "right"; spec.vconcat[0].layer[3].encoding.text.datum = "2019–2020 low: 830.2k"; }
     }
-    if (target === "map3" || target === "vis10") {
+    if (target === "map3" || target === "vis12") {
       spec.width = container.clientWidth;
-      spec.height = window.innerWidth <= 620 ? (target === "map3" ? 320 : 290) : (target === "vis10" ? Math.min(440, Math.round(container.clientWidth * 0.49)) : 420);
+      spec.height = window.innerWidth <= 620 ? (target === "map3" ? 320 : 290) : (target === "vis12" ? Math.min(440, Math.round(container.clientWidth * 0.49)) : 420);
     }
-    if (target === "vis12" && window.innerWidth <= 620) {
-      spec.width = Math.max(180, container.clientWidth - 10);
-      spec.height = 280;
-      spec.encoding.x.axis.title = "Reported share (%)";
-      spec.encoding.x.axis.values = [0, 50, 100];
-      spec.encoding.y.axis.labelExpr = "datum.label === 'Have been looking to buy more' ? ['Have been looking', 'to buy more'] : datum.label === 'More likely with known origin' ? ['More likely with', 'known origin'] : datum.label";
-      spec.encoding.y.axis.labelLimit = 155;
-      spec.encoding.y.axis.labelFontSize = 12;
-    }
-    if (target === "vis10") spec = addEditorialFlowNavigation(spec);
+    if (target === "vis12") spec = addEditorialFlowNavigation(spec);
     if (target === "vis08") spec = addEmploymentBrushBindings(spec);
     if (["map1", "map2", "map3"].includes(target)) spec = addMapNavigation(spec, target, container);
     if (target === "map1") { window.v1NavigationCleanup?.(); window.v1TooltipLeaderCleanup?.(); }
-    if (["map2","map3","vis10"].includes(target)) window[target+"NavigationCleanup"]?.();
+    if (["map2","map3","vis12"].includes(target)) window[target+"NavigationCleanup"]?.();
     chartViews.get(target)?.finalize();
-    const result = await vegaEmbed(container, spec, { actions: true, renderer: ["map1", "map2", "map3", "vis04", "heatmap", "vis07", "vis09", "vis10", "vis11", "vis13"].includes(target) ? "svg" : "canvas" });
+    const result = await vegaEmbed(container, spec, { actions: true, renderer: ["map1", "map2", "map3", "vis04", "heatmap", "vis07", "vis09", "vis10", "vis11", "vis12"].includes(target) ? "svg" : "canvas" });
     chartViews.set(target, result.view);
     if (target === "map1") { await setupV1ClassHighlight(result.view); await setupV1TooltipLeader(result.view); setupV1Performance(result.view); }
-    if (["map3", "vis10", "vis11"].includes(target)) setupRedesignControls(target, result.view);
+    if (["map3", "vis10", "vis12"].includes(target)) setupRedesignControls(target, result.view);
     if (["map1", "map2", "map3"].includes(target)) setupMapNavigation(target, result.view);
-    if (target === "vis10") setupV1Navigation(result.view,target);
+    if (target === "vis12") setupV1Navigation(result.view,target);
     if (target === "vis08") setupEmploymentPolish(result.view);
     if (target === "heatmap") setupMatrixPolish(result.view);
     if (target === "map3") setupFacilityFilters(result.view);
-    if (target === "vis10") setupDestinationSummary(result.view);
-    if (target === "vis11") setupIndustrySummary(result.view);
-    if (["vis07", "vis09", "vis13"].includes(target)) setupProfileFocus(target, result.view);
+    if (target === "vis12") setupDestinationSummary(result.view);
+    if (target === "vis10") setupIndustrySummary(result.view);
+    if (["vis07", "vis09", "vis11"].includes(target)) setupProfileFocus(target, result.view);
     if (target === "vis09") setupV9Playback(result.view);
   } catch (error) {
     container.replaceChildren();
@@ -376,7 +367,7 @@ function setupRedesignControls(target, view) {
     view.addSignalListener("selectedFacility", (_, key) => { select.value = key == null ? "" : String(key); show(key); });
     select.onchange();
   }
-  if (target === "vis10") {
+  if (target === "vis12") {
     const state = document.getElementById("export-state-select"), flow = document.getElementById("export-flow-select"), reset = document.getElementById("export-filter-reset"), detail = document.getElementById("export-flow-detail");
     const rows = view.data("flows"), origins = view.data("origins");
     populateSelect(state, origins, r => r.State, r => r.State);
@@ -398,7 +389,7 @@ function setupRedesignControls(target, view) {
     view.addSignalListener("selectedFlow", (_, key) => { flow.value = key; show(key); });
     showFlows(); view.signal("selectedState", state.value).signal("selectedFlow", flow.value).runAsync(); show(flow.value);
   }
-  if (target === "vis11") {
+  if (target === "vis10") {
     const industry = document.getElementById("industry-select"), relationship = document.getElementById("relationship-select"), detail = document.getElementById("relationship-detail");
     const nodes = view.data("nodes"), rows = view.data("edges");
     populateSelect(industry, nodes, r => r.Code, r => r.Name);

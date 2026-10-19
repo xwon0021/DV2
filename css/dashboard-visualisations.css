@@ -113,7 +113,7 @@
 /* Sleek Navigation Hint Badge */
 .navigation-badge {
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
   gap: 6px;
   padding: 6px 12px;
   border-radius: 6px;
@@ -1096,6 +1096,7 @@ button.summary-row:hover .bar-fill:not(.selected) {
   width: 100%;
 }
 
+.v13-chart-column #vis11,
 .v13-chart-column #vis13 {
   width: 100%;
   min-width: 0;

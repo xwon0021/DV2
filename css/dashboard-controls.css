@@ -93,6 +93,24 @@ button {
   color: var(--ink);
 }
 
+/* Map Controls Row (Places Map Navigation & Tip on the same horizontal row) */
+.map-controls-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 4px 0 10px;
+}
+
+.map-controls-row .map-navigation {
+  flex: 0 0 auto;
+}
+
+.map-controls-row .navigation-badge {
+  margin: 0;
+  white-space: nowrap;
+}
+
 /* Map Navigation Bar (Zoom Slider, Reset, Scale indicator) */
 .map-navigation {
   display: flex;

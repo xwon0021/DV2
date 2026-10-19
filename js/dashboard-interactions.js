@@ -236,7 +236,7 @@ function setupIndustrySummary(view) {
 function setupProfileFocus(target,view) {
   const select=document.getElementById(target+'-focus');let rows,sig,key,label;
   if(target==='vis07'){rows=view.data('profiles');sig='focusSubdivision';key=label='Subdivision';}
-  if(target==='vis13'){rows=view.data('iva');sig='focusCode';key='Code';label='Subdivision';}
+  if(target==='vis11'||target==='vis13'){rows=view.data('iva');sig='focusCode';key='Code';label='Subdivision';}
   if(target==='vis09'){rows=view.data('source_0');sig='focusSubdivision';key=label='Subdivision';}
   const unique=[...new Map(rows.map(r=>[r[key],r])).values()].sort((a,b)=>a[label].localeCompare(b[label]));
   populateSelect(select,unique,r=>r[key],r=>r[label]);

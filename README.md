@@ -29,10 +29,10 @@ The dashboard is structured into four narrative chapters featuring 13 cohesive, 
 - **V9 — Employment Ranking & Size (Interactive Timeline Race)**: 18-year animated ranking progression across all manufacturing subdivisions (`work/viz9.vg.json`).
 
 ### 04 / Beyond the Factory
-- **V10 — State Manufactured Exports (Geographic Flow Map)**: 81 state-origin export flows to global trading partners (`work/viz10.vg.json`).
-- **V11 — Domestic Economic Connections (Directed Chord Diagram)**: Inter-industry intermediate supply relationships (`work/viz11.vg.json`).
-- **V12 — Consumer Attitudes on Buying Local (Isotype Pictogram / Dot Plot)**: Stated Australian Made consumer purchasing preferences (`work/viz12.vg.json`).
-- **V13 — Industry Value Added Trajectory (Slopegraph)**: Sectoral gains and contractions between 2023–24 and 2024–25 (`work/viz13.vg.json`).
+- **V10 — Domestic Economic Connections (Directed Chord Diagram)**: Inter-industry intermediate supply relationships (`work/viz11.vg.json`).
+- **V11 — Industry Value Added Trajectory (Slopegraph)**: Sectoral gains and contractions between 2023–24 and 2024–25 (`work/viz13.vg.json`).
+- **V12 — State Manufactured Exports (Geographic Flow Map)**: 81 state-origin export flows to global trading partners (`work/viz10.vg.json`).
+- **V13 — Consumer Attitudes on Buying Local (Isotype Pictogram / Dot Plot)**: Stated Australian Made consumer purchasing preferences (`work/viz12.vg.json`).
 
 ---
 
@@ -54,7 +54,7 @@ The dashboard is structured into four narrative chapters featuring 13 cohesive, 
 │   ├── dashboard-interactions.js# Coordinated cross-filtering, map panning & tooltips
 │   ├── viz2-controller.js       # Linked map and live business ranking logic
 │   ├── viz9-controller.js       # Playback animation timeline controller
-│   ├── viz12-controller.js      # Interactive isotype pictogram controller
+│   ├── viz13-controller.js      # Interactive isotype pictogram controller
 │   └── paragraph-line-limit.js  # Text balance and line clamp utility
 │
 └── work/                        # Official standardised visualisation specs & data
