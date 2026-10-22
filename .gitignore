@@ -20,3 +20,10 @@ __pycache__/
 # Local backup / temp
 *.tmp
 *.bak
+
+# Raw GIS Shapefiles (website uses work/data/SA2_2021_AUST_GDA2020_web.json)
+SA2_2021_AUST_SHP_GDA2020/
+*.shp
+*.dbf
+*.shx
+*.prj

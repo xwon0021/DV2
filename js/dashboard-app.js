@@ -222,6 +222,8 @@ function editorialSlopeFit(spec,container){
 })();
 const rateColors = ["#F6F1DE", "#C9DBC5", "#86BCBB", "#4795B1", "#286B9A", "#254573", "#191E43"];
 const chartViews = new Map();
+// Each pair connects a space in index.html to the chart file it should show.
+// The number in a filename may differ from the V number shown on the page.
 const specTargets = [
   ["map1", "work/viz1.vg.json?v=final"],
   ["map3", "work/viz3.vg.json?v=final"],
@@ -250,6 +252,7 @@ function showRateLegend(breaks) {
 }
 
 async function loadSpec(target, url) {
+  // Get the chart instructions, adjust the size, then ask Vega to draw it.
   const container = document.getElementById(target);
   if (target === "vis09") { v9Playback?.dispose(); v9Playback = null; }
   try {
@@ -321,6 +324,7 @@ async function loadSpec(target, url) {
     if (target === "map1") { window.v1NavigationCleanup?.(); window.v1TooltipLeaderCleanup?.(); }
     if (["map2","map3","vis12"].includes(target)) window[target+"NavigationCleanup"]?.();
     chartViews.get(target)?.finalize();
+    // Keep the view so the buttons below can change the chart's signals.
     const result = await vegaEmbed(container, spec, { actions: true, renderer: ["map1", "map2", "map3", "vis04", "heatmap", "vis07", "vis09", "vis10", "vis11", "vis12"].includes(target) ? "svg" : "canvas" });
     chartViews.set(target, result.view);
     if (target === "map1") { await setupV1ClassHighlight(result.view); await setupV1TooltipLeader(result.view); setupV1Performance(result.view); }
@@ -404,6 +408,7 @@ function setupRedesignControls(target, view) {
 }
 
 async function start() {
+  // Load the legend values first, then load the main charts together.
   try {
     const response = await fetch("work/data/validation.json");
     if (!response.ok) throw new Error("Validation metadata is unavailable");
@@ -418,6 +423,7 @@ async function start() {
   let previousHeight = window.innerHeight;
   let resizeTimer;
   let resizeQueue = Promise.resolve();
+  // Redraw after a real size change so charts fit smaller screens.
   window.addEventListener("resize", () => {
     if (window.innerWidth === previousWidth && Math.abs(window.innerHeight - previousHeight) < 30) return;
     previousWidth = window.innerWidth;
