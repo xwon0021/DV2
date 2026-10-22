@@ -37,7 +37,7 @@
         {
             "name": "rows",
             "notes": "Read one CSV row for each manufacturing industry.",
-            "url": "work/data/vis06_sales_vs_iva_growth.csv",
+            "url": "work/data/vis04_sales_vs_iva_growth.csv",
             "format": {
                 "type": "csv",
                 "parse": {

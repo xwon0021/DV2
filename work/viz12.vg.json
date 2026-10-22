@@ -134,12 +134,12 @@
     {
       "name": "geometry",
       "notes": "Prepared lines from Australian state area points to destination country area points.",
-      "url": "work/data/vis10_flow_geometry.json"
+      "url": "work/data/vis12_flow_geometry.json"
     },
     {
       "name": "flows",
       "notes": "DFAT export values by origin state and destination country. The chart omits ACT's one recorded route.",
-      "url": "work/data/vis10_state_export_flows.json",
+      "url": "work/data/vis12_state_export_flows.json",
       "transform": [
         {
           "type": "filter",
@@ -173,7 +173,7 @@
     {
       "name": "origins",
       "notes": "Australian origin points. geopoint puts longitude and latitude on the map.",
-      "url": "work/data/vis10_origins.json",
+      "url": "work/data/vis12_origins.json",
       "transform": [
         {
           "type": "filter",
@@ -196,7 +196,7 @@
     {
       "name": "destinations",
       "notes": "Destination country points for the ends of the curves.",
-      "url": "work/data/vis10_destinations.json",
+      "url": "work/data/vis12_destinations.json",
       "transform": [
         {
           "type": "geopoint",
@@ -235,7 +235,7 @@
     },
     {
       "name": "rateLookup",
-      "url": "work/data/vis10_state_rate_lookup.json"
+      "url": "work/data/vis12_state_rate_lookup.json"
     },
     {
       "name": "stateRates",

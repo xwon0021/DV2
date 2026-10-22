@@ -90,12 +90,12 @@
     {
       "name": "layout",
       "notes": "Prepared ribbon shapes. These paths show the direction and size of each relationship.",
-      "url": "work/data/vis11_directed_layout.json"
+      "url": "work/data/vis10_directed_layout.json"
     },
     {
       "name": "edges",
       "notes": "One row per supplier to user connection, with value in A$ million.",
-      "url": "work/data/vis11_domestic_edges.json",
+      "url": "work/data/vis10_domestic_edges.json",
       "transform": [
         {
           "type": "formula",
@@ -120,7 +120,7 @@
     {
       "name": "nodes",
       "notes": "The 19 industry divisions and where their outside arcs go.",
-      "url": "work/data/vis11_division_nodes.json"
+      "url": "work/data/vis10_division_nodes.json"
     }
   ],
   "marks": [
