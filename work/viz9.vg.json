@@ -10,14 +10,17 @@
   "signals": [
     {
       "name": "yearIndex",
+      "notes": "Which observed year to show. The slider or Play changes it.",
       "value": 0
     },
     {
       "name": "previousYearIndex",
+      "notes": "Keep the last year so a bar can move from its old position.",
       "value": 0
     },
     {
       "name": "transitionT",
+      "notes": "Move smoothly from last year (0) to the chosen year (1).",
       "value": 1
     },
     {
@@ -26,6 +29,7 @@
     },
     {
       "name": "focusCode",
+      "notes": "Click a bar or name to focus that industry. Click again to clear.",
       "value": "",
       "on": [
         {
@@ -36,6 +40,7 @@
     },
     {
       "name": "hoverCode",
+      "notes": "Remember which bar the pointer is over.",
       "value": "",
       "on": [
         {
@@ -64,14 +69,17 @@
   "data": [
     {
       "name": "allYears",
+      "notes": "One JSON row per industry and year: 15 industries times 19 years.",
       "url": "work/data/viz9.json"
     },
     {
       "name": "current",
+      "notes": "Keep the selected year's industry rows and find each industry's previous position.",
       "source": "allYears",
       "transform": [
         {
           "type": "filter",
+          "notes": "Show only the year selected by the slider or Play.",
           "expr": "datum.Year_Order===yearIndex"
         },
         {
@@ -81,6 +89,7 @@
         },
         {
           "type": "lookup",
+          "notes": "Match the same industry in the previous year for the animation.",
           "from": "allYears",
           "key": "Key",
           "fields": [
@@ -98,17 +107,20 @@
         {
           "type": "formula",
           "as": "Visual_Value",
+          "notes": "Move bar length between the previous and current employment values.",
           "expr": "datum.Previous_Value+(datum.Employment_Thousands-datum.Previous_Value)*transitionT"
         },
         {
           "type": "formula",
           "as": "Visual_Position",
+          "notes": "Move each bar between its previous and current row positions.",
           "expr": "datum.Previous_Position+(datum.Position-datum.Previous_Position)*transitionT"
         }
       ]
     },
     {
       "name": "years",
+      "notes": "This small JSON file gives each year's label and total.",
       "url": "work/data/viz9-years.json"
     },
     {
@@ -163,6 +175,7 @@
     },
     {
       "name": "employment",
+      "notes": "Keep the same 0 to 260 thousand scale for every year, so bar lengths can be compared.",
       "type": "linear",
       "domain": [
         0,
@@ -195,6 +208,7 @@
   "marks": [
     {
       "name": "bars",
+      "notes": "Draw the bars: length is employment; vertical position is the rank order.",
       "type": "rect",
       "from": {
         "data": "current"
@@ -238,6 +252,7 @@
     },
     {
       "name": "names",
+      "notes": "Write the rank and industry name beside each bar.",
       "type": "text",
       "from": {
         "data": "current"

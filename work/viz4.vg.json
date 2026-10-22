@@ -36,6 +36,7 @@
     "data": [
         {
             "name": "rows",
+            "notes": "Read one CSV row for each manufacturing industry.",
             "url": "work/data/vis06_sales_vs_iva_growth.csv",
             "format": {
                 "type": "csv",
@@ -48,6 +49,7 @@
             "transform": [
                 {
                     "type": "joinaggregate",
+                    "notes": "Add up all employment and all IVA to get two totals.",
                     "fields": [
                         "Employment_2024_25",
                         "IVA_2024_25_millions"
@@ -64,16 +66,19 @@
                 {
                     "type": "formula",
                     "as": "employmentShare",
+                    "notes": "This industry's workers divided by all manufacturing workers, times 100.",
                     "expr": "datum.Employment_2024_25 / datum.totalEmployment * 100"
                 },
                 {
                     "type": "formula",
                     "as": "ivaShare",
+                    "notes": "This industry's IVA divided by all manufacturing IVA, times 100.",
                     "expr": "datum.IVA_2024_25_millions / datum.totalIVA * 100"
                 },
                 {
                     "type": "formula",
                     "as": "difference",
+                    "notes": "IVA share minus employment share, in percentage points.",
                     "expr": "datum.ivaShare - datum.employmentShare"
                 },
                 {
@@ -83,6 +88,7 @@
                 },
                 {
                     "type": "collect",
+                    "notes": "Put industries with the largest IVA share first.",
                     "sort": {
                         "field": "ivaShare",
                         "order": "descending"
@@ -92,10 +98,12 @@
         },
         {
             "name": "points",
+            "notes": "Make two dots for each industry: employment share and IVA share.",
             "source": "rows",
             "transform": [
                 {
                     "type": "fold",
+                    "notes": "Turn the two share columns into two dot records.",
                     "fields": [
                         "employmentShare",
                         "ivaShare"
@@ -116,6 +124,7 @@
     "scales": [
         {
             "name": "x",
+            "notes": "Place each percentage along the horizontal axis.",
             "type": "linear",
             "domain": [
                 0,
@@ -127,6 +136,7 @@
         },
         {
             "name": "y",
+            "notes": "Give each industry its own row.",
             "type": "band",
             "domain": {
                 "data": "rows",
@@ -138,6 +148,7 @@
         },
         {
             "name": "measureColour",
+            "notes": "Blue is employment share. Orange is IVA share.",
             "type": "ordinal",
             "domain": [
                 "Employment share",
@@ -150,6 +161,7 @@
         },
         {
             "name": "measureShape",
+            "notes": "Employment uses circles. IVA uses diamonds.",
             "type": "ordinal",
             "domain": [
                 "Employment share",
@@ -227,6 +239,7 @@
     "marks": [
         {
             "type": "rule",
+            "notes": "Join this industry's two dots. The line shows their gap, not a time change.",
             "from": {
                 "data": "rows"
             },
@@ -256,6 +269,7 @@
         },
         {
             "name": "sharePoints",
+            "notes": "Draw both dots. Hover a dot to see the exact values.",
             "type": "symbol",
             "from": {
                 "data": "points"
@@ -299,6 +313,7 @@
             "from": {
                 "data": "points"
             },
+            "notes": "Write the percentage next to each dot.",
             "interactive": false,
             "encode": {
                 "update": {
@@ -344,6 +359,7 @@
             "from": {
                 "data": "rows"
             },
+            "notes": "Show IVA share minus employment share on the right.",
             "interactive": false,
             "encode": {
                 "update": {

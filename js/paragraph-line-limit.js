@@ -8,7 +8,7 @@
   const htmlNamespace = 'http://www.w3.org/1999/xhtml';
 
   function format(paragraph) {
-    paragraph.querySelectorAll(`br[${marker}]`).forEach(br => br.remove());
+    paragraph.querySelectorAll(`br[${marker}]`).forEach((br) => br.remove());
     if (paragraph.closest('.page-footer')) return;
     const runs = [];
     let text = '';
@@ -33,7 +33,7 @@
     }
     // Work backwards so splitting a text node cannot invalidate earlier offsets.
     for (const offset of breaks.reverse()) {
-      const run = runs.find(run => offset > run.start && offset <= run.end);
+      const run = runs.find((run) => offset > run.start && offset <= run.end);
       if (!run) continue;
       const after = run.node.splitText(offset - run.start);
       const br = document.createElement('br');
@@ -43,7 +43,7 @@
   }
 
   const options = { childList: true, characterData: true, subtree: true };
-  const observer = new MutationObserver(records => {
+  const observer = new MutationObserver((records) => {
     if (!root.isConnected) return;
     const changed = new Set();
     function include(node) {
@@ -51,7 +51,7 @@
       if (!element || element.namespaceURI !== htmlNamespace) return;
       const paragraph = element.closest(selector);
       if (paragraph) changed.add(paragraph);
-      element.querySelectorAll(selector).forEach(p => changed.add(p));
+      element.querySelectorAll(selector).forEach((p) => changed.add(p));
     }
     for (const record of records) {
       // Chart SVG updates do not require formatting or a document-wide scan.
@@ -63,10 +63,12 @@
     }
     if (!changed.size) return;
     observer.disconnect();
-    changed.forEach(p => { if (p.isConnected) format(p); });
+    changed.forEach((p) => {
+      if (p.isConnected) format(p);
+    });
     // V12 measures its tooltip before this observer runs; keep the taller box visible.
     const tip = document.getElementById('people-tip');
-    if (tip && !tip.hidden && Array.from(changed).some(p => tip.contains(p))) {
+    if (tip && !tip.hidden && Array.from(changed).some((p) => tip.contains(p))) {
       const rect = tip.getBoundingClientRect();
       tip.style.top = Math.max(12, Math.min(rect.top, innerHeight - rect.height - 12)) + 'px';
     }

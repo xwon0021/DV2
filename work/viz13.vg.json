@@ -3,10 +3,12 @@
   "width": "container",
   "height": 230,
   "data": {
+    "notes": "Reference dot plot only. The dashboard uses viz13-controller.js and viz13.json for its live icon chart.",
     "url": "work/data/vis13_consumer_attitudes.json"
   },
   "encoding": {
     "x": {
+      "notes": "Put each survey percentage on a 0 to 100 line.",
       "field": "Percentage",
       "type": "quantitative",
       "scale": {
@@ -30,6 +32,7 @@
       }
     },
     "y": {
+      "notes": "Give each survey statement its own row.",
       "field": "Label",
       "type": "nominal",
       "sort": {
@@ -48,6 +51,7 @@
       "params": [
         {
           "name": "dotHover",
+          "notes": "Make a dot larger when the pointer is over it.",
           "select": {
             "type": "point",
             "on": "pointerover",
@@ -56,6 +60,7 @@
         }
       ],
       "mark": {
+        "notes": "Draw one purple dot per survey finding.",
         "type": "point",
         "filled": true,
         "color": "#8E3FA9"
@@ -101,6 +106,7 @@
     {
       "transform": [
         {
+          "notes": "Turn the number into a percentage label, such as 73%.",
           "calculate": "datum.Percentage + '%'",
           "as": "PercentLabel"
         }

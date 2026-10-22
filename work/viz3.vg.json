@@ -11,6 +11,7 @@
   "signals": [
     {
       "name": "selectedFacility",
+      "notes": "Click a dot to choose that facility.",
       "value": null,
       "on": [
         {
@@ -21,6 +22,7 @@
     },
     {
       "name": "hoverFacility",
+      "notes": "Remember the dot under the pointer.",
       "value": null,
       "on": [
         {
@@ -35,20 +37,24 @@
     },
     {
       "name": "stateFilter",
+      "notes": "JavaScript sets this when you choose a state.",
       "value": ""
     },
     {
       "name": "industryFilter",
+      "notes": "JavaScript sets this when you choose an industry.",
       "value": ""
     },
     {
       "name": "searchName",
+      "notes": "JavaScript sets this when you search a facility name.",
       "value": ""
     }
   ],
   "data": [
     {
       "name": "land",
+      "notes": "GeoJSON gives the map background shape.",
       "url": "work/data/australia_display.geojson",
       "format": {
         "type": "json",
@@ -57,10 +63,12 @@
     },
     {
       "name": "facilities",
+      "notes": "NPI JSON gives the facility names and locations.",
       "url": "work/data/vis03_npi_facilities.json"
     },
     {
       "name": "visibleFacilities",
+      "notes": "Only the facilities matching the chosen state and industry become dots.",
       "source": "facilities",
       "transform": [
         {
@@ -69,6 +77,7 @@
         },
         {
           "type": "geopoint",
+          "notes": "Change longitude and latitude into x and y positions on the map.",
           "projection": "australia",
           "fields": [
             "Longitude",
@@ -85,6 +94,7 @@
   "projections": [
     {
       "name": "australia",
+      "notes": "Fit the map to the Australia shape. Zoom and drag are added in dashboard-interactions.js.",
       "type": "mercator",
       "fit": {
         "signal": "data('land')"
@@ -97,6 +107,7 @@
   "marks": [
     {
       "type": "shape",
+      "notes": "Draw Australia as the pale map background.",
       "from": {
         "data": "land"
       },
@@ -122,6 +133,7 @@
     },
     {
       "name": "facilityDots",
+      "notes": "Draw one small circle for each reporting facility. Hover or click changes its colour and shows details.",
       "type": "symbol",
       "from": {
         "data": "visibleFacilities"

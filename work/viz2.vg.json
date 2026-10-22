@@ -1,21 +1,23 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "description": "Proportional-symbol map of manufacturing business counts by SA2. The companion controller injects the selected study-area data, fitted geography and responsive dimensions.",
+  "description": "Reference layout for the V2 proportional-symbol map. The dashboard builds its live Vega spec in js/viz2-controller.js.",
   "width": 720,
   "height": 500,
   "padding": { "left": 0, "right": 0, "top": 0, "bottom": 0 },
   "autosize": { "type": "pad", "contains": "padding" },
   "background": "transparent",
   "signals": [
-    { "name": "mapZoom", "value": 1 },
-    { "name": "mapPan", "value": [0, 0] },
+    { "name": "mapZoom", "notes": "1 is normal size. Bigger numbers enlarge the map.", "value": 1 },
+    { "name": "mapPan", "notes": "Move the map left, right, up or down by this many pixels.", "value": [0, 0] },
     {
       "name": "selectedCode",
+      "notes": "Click a circle to remember that SA2's code.",
       "value": "",
       "on": [{ "events": "@dots:click", "update": "datum.SA2_Code" }]
     },
     {
       "name": "hoveredCode",
+      "notes": "Remember the circle under the pointer.",
       "value": "",
       "on": [
         { "events": "@dots:mouseover", "update": "datum.SA2_Code" },
@@ -26,15 +28,18 @@
   "data": [
     {
       "name": "land",
+      "notes": "SA2 boundaries go here. This reference file leaves them empty; the live JS loads TopoJSON.",
       "values": [],
       "transform": [{ "type": "geopath", "projection": "base", "as": "cachedPath" }]
     },
     {
       "name": "points",
+      "notes": "SA2 counts and their inside-the-area map points go here. The live JS loads the CSV.",
       "values": [],
       "transform": [
         {
           "type": "geopoint",
+          "notes": "Turn each longitude and latitude into a map x and y position.",
           "projection": "projection",
           "fields": ["Longitude", "Latitude"],
           "as": ["px", "py"]
@@ -49,12 +54,14 @@
   "projections": [
     {
       "name": "base",
+      "notes": "Fit the map to the chosen SA2 area.",
       "type": "mercator",
       "fit": { "type": "FeatureCollection", "features": [] },
       "extent": [[28, 28], [692, 472]]
     },
     {
       "name": "projection",
+      "notes": "Use mapZoom to resize and mapPan to move the circle positions.",
       "type": "mercator",
       "scale": {
         "signal": "(scale('base',[1,0])[0]-scale('base',[0,0])[0])*180/PI*mapZoom"
@@ -67,6 +74,7 @@
   "scales": [
     {
       "name": "countSize",
+      "notes": "More manufacturing businesses means a bigger circle area.",
       "type": "linear",
       "domain": [0, 826],
       "range": [0, 810],
@@ -91,6 +99,7 @@
   "marks": [
     {
       "type": "path",
+      "notes": "Draw SA2 outlines. mapZoom and mapPan resize and move them.",
       "from": { "data": "land" },
       "clip": true,
       "encode": {
@@ -109,6 +118,7 @@
     {
       "type": "symbol",
       "name": "dots",
+      "notes": "Draw one circle per SA2. Click it to select; hover to see the exact count.",
       "from": { "data": "points" },
       "clip": true,
       "encode": {
@@ -131,6 +141,7 @@
     {
       "type": "symbol",
       "name": "selectionOutline",
+      "notes": "Put a red ring around the selected circle.",
       "from": { "data": "points" },
       "clip": true,
       "interactive": false,

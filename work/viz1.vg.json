@@ -5,6 +5,9 @@
   "projection": {
     "type": "mercator"
   },
+  "usermeta": {
+    "notes": "Zoom: Mercator turns SA2 coordinates into map shapes. After this JSON loads, addMapNavigation adds mapZoom and mapPan; the shapes scale and move with these signals. Reset sets them to 1 and [0, 0]."
+  },
   "data": {
     "url": "work/data/SA2_2021_AUST_GDA2020_web.json",
     "format": {
@@ -87,6 +90,7 @@
   },
   "layer": [
     {
+      "description": "Notes: Draw SA2 areas without a valid rate in grey so missing data is not shown as a real value.",
       "mark": {
         "type": "geoshape",
         "stroke": "#ffffff",
@@ -140,6 +144,7 @@
       ]
     },
     {
+      "description": "Notes: Draw valid SA2 rates. The threshold scale chooses the colour.\nselectedRateClass fades other Rate_Class groups; rateHover highlights the hovered area.",
       "transform": [
         {
           "filter": "isValid(datum.Businesses_per_10000)"

@@ -3,6 +3,7 @@
   "width": "container",
   "height": 650,
   "data": {
+    "notes": "One industry per CSV row. Growth rates compare 2023–24 with 2024–25.",
     "url": "work/data/vis06_sales_vs_iva_growth.csv",
     "format": {
       "type": "csv",
@@ -15,6 +16,7 @@
   },
   "transform": [
     {
+      "notes": "Make one sales bar and one IVA bar from each CSV row.",
       "fold": [
         "Sales_Growth_pct",
         "IVA_Growth_pct"
@@ -25,6 +27,7 @@
       ]
     },
     {
+      "notes": "Do not draw a bar when the growth value is missing.",
       "filter": "isValid(datum.Growth)"
     },
     {
@@ -33,11 +36,13 @@
     }
   ],
   "mark": {
+    "notes": "Draw a bar for each available growth value.",
     "type": "bar",
     "cornerRadiusEnd": 2
   },
   "encoding": {
     "x": {
+      "notes": "Growth below zero goes left; growth above zero goes right.",
       "field": "Growth",
       "type": "quantitative",
       "scale": {
@@ -49,6 +54,7 @@
       "title": "Year-on-year growth (%)"
     },
     "y": {
+      "notes": "Put each manufacturing industry on a separate row.",
       "field": "Subdivision_Short",
       "type": "nominal",
       "sort": {
@@ -62,6 +68,7 @@
       }
     },
     "yOffset": {
+      "notes": "Place its sales and IVA bars side by side.",
       "field": "Measure_Label",
       "sort": [
         "Sales / service income",
@@ -69,6 +76,7 @@
       ]
     },
     "color": {
+      "notes": "Blue is sales growth. Pink is IVA growth.",
       "field": "Measure_Label",
       "type": "nominal",
       "scale": {
@@ -88,6 +96,7 @@
     },
     "tooltip": [
       {
+        "notes": "Hover a bar for the exact industry, measure and growth rate.",
         "field": "Subdivision",
         "title": "Subdivision"
       },

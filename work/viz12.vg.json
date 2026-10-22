@@ -11,6 +11,7 @@
   "signals": [
     {
       "name": "selectedState",
+      "notes": "Click an Australian origin dot to choose that state.",
       "value": "",
       "on": [
         {
@@ -35,6 +36,7 @@
     },
     {
       "name": "selectedFlow",
+      "notes": "Click a curve to choose one origin to destination connection.",
       "value": "",
       "on": [
         {
@@ -67,6 +69,7 @@
     },
     {
       "name": "mapZoom",
+      "notes": "1 is the normal map size. JavaScript changes this when you zoom.",
       "value": 1
     },
     {
@@ -90,6 +93,7 @@
     },
     {
       "name": "mapPan",
+      "notes": "Two pixel numbers move the map when you drag.",
       "value": [
         0,
         0
@@ -113,6 +117,7 @@
     },
     {
       "name": "world",
+      "notes": "GeoJSON gives the world country shapes behind the flows.",
       "url": "work/data/world_display.geojson",
       "format": {
         "type": "json",
@@ -128,10 +133,12 @@
     },
     {
       "name": "geometry",
+      "notes": "Prepared lines from Australian state area points to destination country area points.",
       "url": "work/data/vis10_flow_geometry.json"
     },
     {
       "name": "flows",
+      "notes": "DFAT export values by origin state and destination country. The chart omits ACT's one recorded route.",
       "url": "work/data/vis10_state_export_flows.json",
       "transform": [
         {
@@ -145,6 +152,7 @@
         },
         {
           "type": "lookup",
+          "notes": "Match each export value to its prepared line by state and country.",
           "from": "geometry",
           "key": "Key",
           "fields": [
@@ -164,6 +172,7 @@
     },
     {
       "name": "origins",
+      "notes": "Australian origin points. geopoint puts longitude and latitude on the map.",
       "url": "work/data/vis10_origins.json",
       "transform": [
         {
@@ -186,6 +195,7 @@
     },
     {
       "name": "destinations",
+      "notes": "Destination country points for the ends of the curves.",
       "url": "work/data/vis10_destinations.json",
       "transform": [
         {
@@ -204,6 +214,7 @@
     },
     {
       "name": "visibleFlows",
+      "notes": "If a state is selected, show only its export connections.",
       "source": "flows",
       "transform": [
         {
@@ -228,6 +239,7 @@
     },
     {
       "name": "stateRates",
+      "notes": "SA2 TopoJSON draws the Australian background; the lookup adds employment per 10,000 residents.",
       "url": "work/data/SA2_2021_AUST_GDA2020_web.json",
       "format": {
         "type": "topojson",
@@ -304,6 +316,7 @@
   "projections": [
     {
       "name": "worldProjection",
+      "notes": "Place the world map on screen. JavaScript also adds zoom and drag movement.",
       "type": "equalEarth",
       "rotate": [
         -150,
@@ -321,6 +334,7 @@
   "scales": [
     {
       "name": "flowWidth",
+      "notes": "Higher export value means a thicker curve.",
       "type": "linear",
       "domain": [
         0,
@@ -421,6 +435,7 @@
     },
     {
       "name": "flowLines",
+      "notes": "Draw state to country curves. They show connections, not real shipping routes.",
       "type": "path",
       "from": {
         "data": "visibleFlows"
@@ -460,6 +475,7 @@
     },
     {
       "name": "flowHitTarget",
+      "notes": "A wider almost invisible line makes thin curves easier to click.",
       "type": "path",
       "from": {
         "data": "visibleFlows"
@@ -526,6 +542,7 @@
     },
     {
       "name": "originDots",
+      "notes": "Draw the state origin dots. Click one to filter its flows.",
       "type": "symbol",
       "from": {
         "data": "origins"
@@ -598,6 +615,7 @@
     },
     {
       "name": "selectedDirection",
+      "notes": "Put an arrowhead on the selected curve toward its destination.",
       "type": "symbol",
       "from": {
         "data": "arrowFlow"

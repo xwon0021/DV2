@@ -23,6 +23,7 @@
     },
     {
       "name": "selectedIndustry",
+      "notes": "Click an outside arc or label to choose one industry.",
       "value": "",
       "on": [
         {
@@ -33,6 +34,7 @@
     },
     {
       "name": "hoverIndustry",
+      "notes": "Remember the industry under the pointer.",
       "value": "",
       "on": [
         {
@@ -51,6 +53,7 @@
     },
     {
       "name": "selectedEdge",
+      "notes": "Click a ribbon to choose its Supplier to User relationship.",
       "value": "",
       "on": [
         {
@@ -65,6 +68,7 @@
     },
     {
       "name": "hoverEdge",
+      "notes": "Remember the ribbon under the pointer.",
       "value": "",
       "on": [
         {
@@ -85,19 +89,23 @@
   "data": [
     {
       "name": "layout",
+      "notes": "Prepared ribbon shapes. These paths show the direction and size of each relationship.",
       "url": "work/data/vis11_directed_layout.json"
     },
     {
       "name": "edges",
+      "notes": "One row per supplier to user connection, with value in A$ million.",
       "url": "work/data/vis11_domestic_edges.json",
       "transform": [
         {
           "type": "formula",
+          "notes": "Join the supplier and user codes into one key, like C|E.",
           "expr": "datum.Source+'|'+datum.Target",
           "as": "Key"
         },
         {
           "type": "lookup",
+          "notes": "Use that key to attach the prepared ribbon shape to the value.",
           "from": "layout",
           "key": "Key",
           "fields": [
@@ -111,12 +119,14 @@
     },
     {
       "name": "nodes",
+      "notes": "The 19 industry divisions and where their outside arcs go.",
       "url": "work/data/vis11_division_nodes.json"
     }
   ],
   "marks": [
     {
       "name": "directedRibbons",
+      "notes": "Draw the connections. Wider ribbons mean more domestic intermediate use; tips point to the user.",
       "type": "path",
       "from": {
         "data": "edges"
@@ -167,6 +177,7 @@
     },
     {
       "name": "industryArcs",
+      "notes": "Draw the outside arcs for the industries. Click one to trace its connections.",
       "type": "arc",
       "from": {
         "data": "nodes"
@@ -230,6 +241,7 @@
     },
     {
       "name": "industryLabels",
+      "notes": "Write the industry names beside their arcs.",
       "type": "text",
       "from": {
         "data": "nodes"

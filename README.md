@@ -15,7 +15,7 @@ The dashboard is structured into four narrative chapters featuring 13 cohesive, 
 
 ### 01 / Place and Concentration
 - **V1 — Manufacturing Concentration (Choropleth Map)**: Business count per 10,000 residents across Australian SA2 areas (`work/viz1.vg.json`).
-- **V2 — Absolute Business Clusters (Proportional Symbol Map & Ranking)**: National counts and regional cluster ranking (`work/viz2.vg.json`).
+- **V2 — Absolute Business Clusters (Proportional Symbol Map & Ranking)**: National counts and regional cluster ranking. The live map spec is built in `js/viz2-controller.js`; `work/viz2.vg.json` is a reference layout.
 - **V3 — Reporting Manufacturing Facilities (Dot Map)**: 1,210 National Pollutant Inventory (NPI) manufacturing locations (`work/viz3.vg.json`).
 
 ### 02 / Sector Structure

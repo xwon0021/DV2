@@ -3,6 +3,7 @@
   "width": "container",
   "height": 280,
   "data": {
+    "notes": "One row is one state and one manufacturing industry. The CSV already has the percentage.",
     "url": "work/data/vis05_state_subdivision_employment.csv",
     "format": {
       "type": "csv",
@@ -19,6 +20,7 @@
   },
   "transform": [
     {
+      "notes": "An empty employment count becomes null, meaning unavailable.",
       "calculate": "datum.Employment_2024_25 === '' || !isValid(datum.Employment_2024_25) ? null : toNumber(datum.Employment_2024_25)",
       "as": "Employment_2024_25"
     },
@@ -27,6 +29,7 @@
       "as": "State_Total_Employment_2024_25"
     },
     {
+      "notes": "An empty percentage also becomes null. It is not zero.",
       "calculate": "datum.Employment_Share_pct === '' || !isValid(datum.Employment_Share_pct) ? null : toNumber(datum.Employment_Share_pct)",
       "as": "Employment_Share_pct"
     },
@@ -48,12 +51,14 @@
     }
   ],
   "mark": {
+    "notes": "Draw one square for each state and industry.",
     "type": "rect",
     "strokeWidth": 1,
     "cursor": "pointer"
   },
   "encoding": {
     "x": {
+      "notes": "Put the industries across the top.",
       "field": "Subdivision_Short",
       "type": "ordinal",
       "sort": {
@@ -69,6 +74,7 @@
       }
     },
     "y": {
+      "notes": "Put the states down the side.",
       "field": "State_Code",
       "type": "ordinal",
       "sort": [
@@ -91,6 +97,7 @@
       }
     },
     "color": {
+      "notes": "Darker blue means a larger share of that state's manufacturing workers. Grey means missing data.",
       "field": "Employment_Share_pct",
       "type": "quantitative",
       "title": "Share within state (%)",
@@ -133,6 +140,7 @@
     },
     "tooltip": [
       {
+        "notes": "Hover a square to see its state, industry, count and percentage.",
         "field": "State_Display",
         "type": "nominal",
         "title": "State / territory"
@@ -159,6 +167,7 @@
       }
     ],
     "opacity": {
+      "notes": "Keep the chosen state row and industry column clear. Fade the other squares.",
       "condition": {
         "test": "(!focusState && !focusSubdivision) || (focusState && datum.State_Code===focusState) || (focusSubdivision && datum.ANZSIC_Code===focusSubdivision)",
         "value": 1
@@ -166,6 +175,7 @@
       "value": 0.45
     },
     "stroke": {
+      "notes": "Outline the chosen square or the one under the pointer.",
       "condition": [
         {
           "test": "focusState && focusSubdivision && datum.State_Code===focusState && datum.ANZSIC_Code===focusSubdivision",
@@ -197,6 +207,7 @@
   "params": [
     {
       "name": "matrixCell",
+      "notes": "Remember the state and industry when you click a square.",
       "select": {
         "type": "point",
         "fields": [
@@ -209,6 +220,7 @@
     },
     {
       "name": "matrixHover",
+      "notes": "Remember which square the pointer is over.",
       "select": {
         "type": "point",
         "fields": [
@@ -222,10 +234,12 @@
     },
     {
       "name": "focusState",
+      "notes": "JavaScript sets this from the State dropdown or a clicked square.",
       "value": ""
     },
     {
       "name": "focusSubdivision",
+      "notes": "JavaScript sets this from the Industry dropdown or a clicked square.",
       "value": ""
     }
   ]

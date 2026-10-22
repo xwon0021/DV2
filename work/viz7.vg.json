@@ -15,6 +15,7 @@
   "data": [
     {
       "name": "profiles",
+      "notes": "The CSV has four rows per industry, one for each measure. Only 13 industries have all four values.",
       "url": "work/data/vis07_parallel_coordinates.csv",
       "format": {
         "type": "csv",
@@ -30,6 +31,7 @@
       "transform": [
         {
           "type": "collect",
+          "notes": "Keep the four points of each industry in the right order.",
           "sort": {
             "field": [
               "ANZSIC_Code",
@@ -47,6 +49,7 @@
   "signals": [
     {
       "name": "hoveredSubdivision",
+      "notes": "Remember which industry line the pointer is over.",
       "value": null,
       "on": [
         {
@@ -61,6 +64,7 @@
     },
     {
       "name": "focusSubdivision",
+      "notes": "Click a line or dot to focus it. Click it again to clear the focus.",
       "value": null,
       "on": [
         {
@@ -73,6 +77,7 @@
   "scales": [
     {
       "name": "x",
+      "notes": "The four positions are employment, wages, sales and IVA.",
       "type": "point",
       "domain": [
         "Employment",
@@ -85,6 +90,7 @@
     },
     {
       "name": "y",
+      "notes": "Each measure was scaled separately: 0 is lowest, 1 is highest.",
       "type": "linear",
       "domain": [
         0,
@@ -125,6 +131,7 @@
   "marks": [
     {
       "type": "group",
+      "notes": "Group the four rows for one industry into one line.",
       "from": {
         "facet": {
           "name": "series",
@@ -138,6 +145,7 @@
       "marks": [
         {
           "name": "profileHitLine",
+          "notes": "This invisible wide line makes a thin line easier to hover or click.",
           "type": "line",
           "from": {
             "data": "series"
@@ -173,6 +181,7 @@
         },
         {
           "name": "profileLine",
+          "notes": "Draw the industry line. Make the focused line orange and fade the others.",
           "type": "line",
           "from": {
             "data": "series"
@@ -213,6 +222,7 @@
     },
     {
       "name": "profilePoints",
+      "notes": "Draw the four dots on each line. Hover to see the original numbers.",
       "type": "symbol",
       "from": {
         "data": "profiles"

@@ -47,9 +47,9 @@
                 <p class="section-intro">A strong manufacturing presence can mean two different things: many businesses,
                     or many businesses relative to the local population. Start with that distinction before looking at
                     individual facilities.</p>
-                <p class="section-intro">The maps use ABS local areas called SA2s. The first compares businesses per
-                    10,000 residents; the second shows business counts. Together, they distinguish relative
-                    concentration from cluster size.</p>
+                <p class="section-intro">The maps use Australian Bureau of Statistics (ABS) local areas called
+                    Statistical Areas Level 2 (SA2s). The first compares businesses per 10,000 residents; the second
+                    shows business counts. Together, they distinguish relative concentration from cluster size.</p>
             </div>
             <section aria-label="Concentration and clusters answer different questions"
                 class="analytical-scene place-scene">
@@ -81,7 +81,11 @@
                         <div class="feature-visual map-with-legend">
                             <div aria-label="Interactive choropleth map showing manufacturing businesses per 10,000 residents across Australian SA2 areas"
                                 class="chart map-chart" id="map1" role="img"></div>
-                            <div class="rate-legend-wrap">
+                            <!-- ============================================================== -->
+                            <!-- V1 LEGEND: Manufacturing businesses per 10,000 residents       -->
+                            <!-- (Interactive HTML class-filter buttons generated via JS)      -->
+                            <!-- ============================================================== -->
+                            <div class="rate-legend-wrap" id="v1-legend">
                                 <p class="legend-title">Manufacturing businesses per 10,000 residents</p>
                                 <div aria-label="Map class legend" class="rate-legend" id="rate-legend"></div>
                                 <div class="missing-key"><span class="swatch missing"></span>No valid rate</div>
@@ -130,6 +134,7 @@
                         <p aria-live="polite" class="scope" id="v2-scope">Loading the original V2 data…</p>
                         <div class="composition with-ranking" id="v2-composition">
                             <div class="map-column">
+                                <!-- V2 CHART & LEGEND: Proportional symbol circle size legend ("countSize") is drawn inside #map2 canvas/SVG by work/viz2.vg.json -->
                                 <div aria-label="SA2 manufacturing business count map" id="map2"></div>
                                 <p class="note" id="v2-size-note"></p>
                             </div>
@@ -162,8 +167,8 @@
                     <div>
                         <p class="chart-number">V3</p>
                         <h3>Where reporting manufacturing facilities are located</h3>
-                        <p class="chart-deck">One fixed-size dot per NPI reporting facility; 1,210 primary manufacturing
-                            reporters in 2024–25.</p>
+                        <p class="chart-deck">One fixed-size dot per National Pollutant Inventory (NPI) reporting
+                            facility; 1,210 primary manufacturing reporters in 2024–25.</p>
                     </div>
                 </div>
                 <div class="direct-controls">
@@ -203,6 +208,7 @@
                             Made certified facilities.</p>
                     </aside>
                     <div class="feature-visual facility-map-wrap">
+                        <!-- V3 CHART & KEY: Dot map of reporting facilities rendered in #map3 (filtered by State & Industry dropdowns above) -->
                         <div aria-label="Actual-location dot map of 1210 NPI primary manufacturing reporting facilities across Australia in 2024–25"
                             class="chart map-chart" id="map3" role="img"></div>
                     </div>
@@ -232,12 +238,13 @@
                         <p class="chart-deck connected-dot-deck">Australian manufacturing subdivisions, 2024–25</p>
                     </div>
                 </div>
+                <!-- V4 CHART & KEY: Connected dot plot rendered in #vis04 (Blue circle: Employment share, Orange diamond: IVA share) -->
                 <div aria-describedby="vis04-desc"
                     aria-label="Connected dot plot comparing employment share and industry value added share for all 15 Australian manufacturing subdivisions in 2024–25"
                     class="chart connected-dot-chart" id="vis04" role="img"></div>
                 <div class="connected-dot-prose">
                     <p id="vis04-desc">Each horizontal row is one manufacturing subdivision. A blue circle shows
-                        employment share and an orange diamond shows industry value added share. A neutral line connects
+                        employment share and an orange diamond shows industry value added (IVA) share. A neutral line connects
                         the two percentages and represents their difference, not change over time. Rows are ordered by
                         industry value added share.</p>
                     <p>Blue circles show workforce share; orange diamonds show IVA share. The connector shows the
@@ -273,6 +280,7 @@
                             concentration nationwide.</p>
                     </div><button id="inspect-tasmania-food" type="button">Inspect Tasmania × Food →</button>
                 </div>
+                <!-- V5 CHART & LEGEND: Heatmap rendered in #heatmap; continuous gradient legend ("Share within state %") drawn inside canvas/SVG by work/viz5.vg.json -->
                 <div aria-label="Interactive heatmap of employment shares across manufacturing subdivisions and Australian states"
                     class="chart heatmap-chart" id="heatmap" role="img"></div>
                 <p class="mobile-scroll-note">Scroll sideways to view all 15 subdivisions.</p>
@@ -295,6 +303,7 @@
                                 2023–24 to 2024–25.</p>
                         </div>
                     </div>
+                    <!-- V6 CHART & LEGEND: Paired bar chart rendered in #vis06; categorical color legend (Blue: Sales, Coral: IVA) drawn by work/viz6.vg.json -->
                     <div aria-label="Interactive paired horizontal bar chart comparing sales and service income growth with industry value added growth by manufacturing subdivision"
                         class="chart comparison-chart" id="vis06" role="img"></div>
                     <div class="figure-notes-row">
@@ -326,6 +335,7 @@
                                 </select></label><button id="vis07-reset" type="button"
                                 title="Reset focus to display all 13 manufacturing profiles">Reset focus</button></div>
                     </div>
+                    <!-- V7 CHART & KEY: Parallel coordinates plot rendered in #vis07 across 4 normalized economic axes by work/viz7.vg.json -->
                     <div aria-label="Interactive parallel-coordinates chart comparing four normalised economic measures across manufacturing subdivisions"
                         class="chart parallel-chart" id="vis07" role="img"></div>
                     <p class="method-note">Each measure is scaled separately from 0 (lowest) to 1 (highest). Line
@@ -388,6 +398,7 @@
                         2006–2007 to 2024–2025</p>
                     <p class="interaction-hint">Drag across the lower overview to inspect a period; double-click the
                         overview or reset to restore the full history.</p>
+                    <!-- V8 CHART & BRUSH: Overview + Detail time series rendered in #vis08 (interactive brush selection box in lower overview) -->
                     <div aria-label="Interactive overview and detail of Australian manufacturing employment at the end of June from 2006–2007 to 2024–2025"
                         class="chart time-series-chart" id="vis08" role="img"></div>
                     <div aria-live="polite" class="selection-detail" hidden="" id="employment-detail"></div>
@@ -414,6 +425,7 @@
                                     </select></label><button id="race-clear">Clear selection</button></div>
                         </div>
                         <p class="note" id="race-frame-note" role="status"></p>
+                        <!-- V9 CHART & RACE PLAYBACK: Dynamic ranking bars rendered in #vis09 by work/viz9.vg.json & js/viz9-controller.js -->
                         <div class="donut-host" id="vis09"></div>
                         <aside class="race-callout-panel" aria-label="Subdivision tracking and playback notes">
                             <div class="race-callout-header">Tracked subdivision</div>
@@ -468,6 +480,7 @@
                                 </select></label></div>
                     </div>
                     <div class="chord-insight-composition">
+                        <!-- V10 CHART & GUIDE: Directed chord diagram rendered in #vis10 (ribbon width represents intermediate use; outer arcs represent industry divisions) -->
                         <div aria-label="Directed chord of 19 industry divisions and 37 domestic intermediate-use relationships involving manufacturing; outward arrow tips point at the using division"
                             class="chart new-detail-chart" id="vis10" role="img"></div>
                         <aside aria-label="Domestic connections context and summary" class="chord-sidebar">
@@ -516,6 +529,7 @@
                             </div>
                         </div>
                         <div class="v13-chart-column">
+                            <!-- V11 CHART & LABELS: Slopegraph rendered in #vis11 comparing 2023-24 vs 2024-25 IVA values with collision-avoided endpoints -->
                             <div aria-label="Slopegraph showing industry value added in Australian dollar millions for all fifteen manufacturing subdivisions in 2023–24 and 2024–25"
                                 class="chart new-detail-chart" id="vis11" role="img"></div>
                         </div>
@@ -552,7 +566,10 @@
                     <div class="feature-visual">
                         <div aria-label="Geographic origin–destination map of 81 displayed 2025 manufactured export flows from seven Australian states and territories to 25 destination countries; line width proportional to value"
                             class="chart" id="vis12" role="img"></div>
-                        <div class="flow-route-legend" aria-label="Export route and value legend">
+                        <!-- ============================================================== -->
+                        <!-- V12 LEGEND: Manufactured export route status, value & nodes   -->
+                        <!-- ============================================================== -->
+                        <div class="flow-route-legend" id="v12-legend" aria-label="Export route and value legend">
                             <div class="route-legend-group"><span class="route-legend-title">Export Value
                                     (Width):</span>
                                 <div class="route-legend-items">
@@ -629,6 +646,7 @@
                                 confidence intervals.</p>
                         </div>
                     </aside>
+                    <!-- V13 CHART & ISOTYPE KEY: 20-icon people array rendered by js/viz13-controller.js in #people-rows (Purple = filled %, 1 icon = 5 percentage points) -->
                     <div aria-label="Four consumer survey findings represented by people icons" class="people-isotype"
                         id="vis13">
                         <section id="people-chart">
