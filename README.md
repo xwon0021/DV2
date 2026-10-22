@@ -70,9 +70,9 @@ Because Vega loads external geographic boundaries and tabular data via `fetch()`
 
 ```bash
 # Start a local server (Python 3):
-python3 -m http.server 3000
+python3 -m http.server 8080
 ```
-Open **`http://localhost:3000/index.html`** in your browser.
+Open **`http://localhost:8080/index.html`** in your browser.
 
 ---
 

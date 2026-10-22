@@ -376,13 +376,24 @@ function setupFacilityFilters(view) {
     (r) => r.x,
     (r) => r.x
   );
-  populateSelect(
-    industry,
-    [...new Set(rows.map((r) => r.Industry))].sort().map((x) => ({ x })),
-    (r) => r.x,
-    (r) => r.x
-  );
+  let lastState = null;
+  const updateIndustryOptions = () => {
+    if (state.value === lastState) return;
+    lastState = state.value;
+    const validRows = state.value ? rows.filter((r) => r.State === state.value) : rows;
+    const availableIndustries = [...new Set(validRows.map((r) => r.Industry))]
+      .filter(Boolean)
+      .sort()
+      .map((x) => ({ x }));
+    populateSelect(
+      industry,
+      availableIndustries,
+      (r) => r.x,
+      (r) => r.x
+    );
+  };
   const update = async () => {
+    updateIndustryOptions();
     // The state and industry values go to V3's visibleFacilities filter.
     view
       .signal('stateFilter', state.value)
@@ -435,6 +446,7 @@ function setupFacilityFilters(view) {
     state.value = '';
     industry.value = '';
     if (search) search.value = '';
+    lastState = null;
     update();
   };
   update();
