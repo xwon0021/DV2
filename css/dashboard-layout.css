@@ -145,6 +145,42 @@
   width: 100%;
 }
 
+/* V2 Linked Map Status Header Row (Scope on Left, Tip Badge on Right) */
+.v2-c .v2-status-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 1fr);
+  gap: 28px;
+  align-items: center;
+  margin: 6px 0 12px;
+}
+
+.v2-c .v2-status-row .scope {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #475569;
+}
+
+.v2-c .v2-status-row #v2-manual-controls {
+  padding-left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-start;
+}
+
+.v2-c .v2-status-row #v2-manual-controls[hidden] {
+  display: none !important;
+}
+
+.v2-c .v2-status-row .navigation-badge {
+  display: block;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .v2-c .composition {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(320px, 1fr);
@@ -161,6 +197,7 @@
 }
 
 .v2-c #map2 {
+  position: relative;
   overflow: hidden;
   cursor: grab;
   touch-action: pan-y;
@@ -170,6 +207,56 @@
 
 .v2-c #map2:active {
   cursor: grabbing;
+}
+
+.v2-c #map2 .vega-embed,
+.v2-c #map2 .vega-embed.has-actions {
+  padding-right: 0 !important;
+  display: block;
+}
+
+.v2-c #map2 details {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 0;
+  z-index: 1000;
+}
+
+.v2-c #map2 summary {
+  list-style: none;
+  position: relative;
+  top: 0;
+  right: 0;
+  opacity: 0.75;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.v2-c #map2 summary:hover,
+.v2-c #map2 summary:focus,
+.v2-c #map2 details[open] summary {
+  opacity: 1 !important;
+}
+
+.v2-c #map2 .vega-actions {
+  position: absolute;
+  top: 36px;
+  right: 0;
+  z-index: 1001;
+}
+
+.v2-c #map2 .vega-actions a {
+  cursor: pointer;
 }
 
 .v2-c #map2 svg {
@@ -188,6 +275,31 @@
   font-size: 15px;
   color: var(--ink);
   margin: 0 0 10px;
+}
+
+/* V10 Header Row (Title & Deck on Left, Controls on Right) */
+.v10-header-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 1fr);
+  gap: 32px;
+  align-items: start;
+  margin-bottom: 18px;
+}
+
+.v10-header-row .editorial-heading {
+  margin-bottom: 0;
+}
+
+.v10-header-row .direct-controls {
+  margin: 18px 0 0;
+}
+
+.v10-header-row .chart-controls {
+  justify-content: flex-start;
+}
+
+.v10-header-row .chart-controls > label {
+  flex: 1 1 150px;
 }
 
 /* Domestic Chord Insight Composition */
@@ -220,6 +332,36 @@
   width: 100%;
 }
 
+/* V12 Status Row: Tip Badge & Export Flow Detail Side-by-Side */
+.v12-status-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 14px;
+  margin: 6px 0 8px;
+}
+
+.v12-status-row .navigation-badge {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  flex: 0 1 auto;
+}
+
+.v12-status-row .selection-detail {
+  margin: 0;
+  flex: 1 1 320px;
+  display: flex;
+  align-items: center;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 12px;
+  color: #334e68;
+  line-height: 1.4;
+}
+
 /* Isotype Conclusion Layout */
 .isotype-conclusion {
   display: grid;
@@ -242,8 +384,23 @@
   .chord-insight-composition {
     grid-template-columns: 1fr;
   }
+  .v10-header-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    align-items: start;
+  }
+  .v10-header-row .direct-controls {
+    margin-top: 0;
+  }
   .isotype-conclusion {
     grid-template-columns: 1fr;
+  }
+  .v2-c .v2-status-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .v2-c .v2-status-row #v2-manual-controls {
+    padding-left: 0;
   }
   .v2-c .composition {
     grid-template-columns: 1fr;

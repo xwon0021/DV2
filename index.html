@@ -8,10 +8,10 @@
     <meta content="An evidence-led look at where Australian manufacturing happens and what the sector makes."
         name="description" />
     <title>Australian Made Products · Data visualisation</title>
-    <link href="css/dashboard-main.css" rel="stylesheet" />
-    <link href="css/dashboard-layout.css" rel="stylesheet" />
-    <link href="css/dashboard-controls.css" rel="stylesheet" />
-    <link href="css/dashboard-visualisations.css" rel="stylesheet" />
+    <link href="css/dashboard-main.css?v=20261023e" rel="stylesheet" />
+    <link href="css/dashboard-layout.css?v=20261023e" rel="stylesheet" />
+    <link href="css/dashboard-controls.css?v=20261023e" rel="stylesheet" />
+    <link href="css/dashboard-visualisations.css?v=20261023e" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
@@ -44,12 +44,13 @@
                 </div>
             </div>
             <div class="story-prose-columns">
-                <p class="section-intro">A strong manufacturing presence can mean two different things: many businesses,
-                    or many businesses relative to the local population. Start with that distinction before looking at
-                    individual facilities.</p>
-                <p class="section-intro">The maps use Australian Bureau of Statistics (ABS) local areas called
-                    Statistical Areas Level 2 (SA2s). The first compares businesses per 10,000 residents; the second
-                    shows business counts. Together, they distinguish relative concentration from cluster size.</p>
+                <p class="section-intro">A strong manufacturing presence can mean two different things:<br />many
+                    businesses, or many businesses relative to the local population.<br />Start with that distinction
+                    before looking at individual facilities.</p>
+                <p class="section-intro">The maps use Australian Bureau of Statistics (ABS) local areas<br />called
+                    Statistical Areas Level 2 (SA2s). The first compares businesses<br />per 10,000 residents; the
+                    second shows business counts.<br />Together, they distinguish relative concentration from cluster
+                    size.</p>
             </div>
             <section aria-label="Concentration and clusters answer different questions"
                 class="analytical-scene place-scene">
@@ -72,7 +73,7 @@
                                 data-action="reset" type="button">Reset map view</button><button data-action="all"
                                 type="button">All regions</button><output>1.0×</output></div>
                         <p class="navigation-badge"><span class="tip-label">Tip:</span> <span class="tip-body">Hold
-                                ⌘/Ctrl while scrolling to zoom · <span class="nowrap">Drag to pan</span> · Reset
+                                ⌘/Ctrl while scrolling to zoom<br /><span class="nowrap">Drag to pan</span> · Reset
                                 restores view</span></p>
                     </div>
                     <p class="interaction-hint">Initial view focuses on mainland Australia and Tasmania. Choose "All
@@ -125,20 +126,20 @@
                                     id="v2-sa2">
                                     <option value="">All SA2s in study area</option>
                                 </select></label><button disabled="" id="v2-clear">Clear selection</button></div>
-                        <div hidden="" id="v2-manual-controls"><label hidden="" id="v2-zoom-control">Map scale <input
-                                    id="v2-zoom" max="15" min="1" step="0.1" type="range" value="1" /><output
-                                    id="v2-zoom-label">1.0×</output></label><button id="v2-reset">Reset map
-                                view</button><span class="navigation-badge" id="v2-manual-hint"><span
-                                    class="tip-label">Tip:</span> Drag to pan map</span></div>
                         <p aria-live="polite" class="note" id="v2-lookup-status"></p>
-                        <p aria-live="polite" class="scope" id="v2-scope">Loading the original V2 data…</p>
+                        <div class="v2-status-row">
+                            <p aria-live="polite" class="scope" id="v2-scope">Loading the original V2 data…</p>
+                            <div hidden="" id="v2-manual-controls"><label hidden="" id="v2-zoom-control">Map scale <input
+                                        id="v2-zoom" max="15" min="1" step="0.1" type="range" value="1" /><output
+                                        id="v2-zoom-label">1.0×</output></label><button id="v2-reset">Reset map
+                                    view</button><p class="navigation-badge" id="v2-manual-hint"><span
+                                        class="tip-label">Tip:</span> Drag to pan map</p></div>
+                        </div>
                         <div class="composition with-ranking" id="v2-composition">
                             <div class="map-column">
                                 <!-- V2 CHART & LEGEND: Proportional symbol circle size legend ("countSize") is drawn inside #map2 canvas/SVG by work/viz2.vg.json -->
                                 <div aria-label="SA2 manufacturing business count map" id="map2"></div>
                                 <p class="note" id="v2-size-note"></p>
-                            </div>
-                            <aside aria-labelledby="v2-ranking-title" id="v2-ranking">
                                 <div class="v2-selected-card">
                                     <div aria-live="polite" class="selected" id="v2-selected"><strong>Choose an SA2 to
                                             inspect its exact count.</strong></div>
@@ -147,6 +148,8 @@
                                         output. Points are existing SA2 point-on-surface anchors, not factory addresses.
                                     </p>
                                 </div>
+                            </div>
+                            <aside aria-labelledby="v2-ranking-title" id="v2-ranking">
                                 <div class="v2-ranking-section">
                                     <h3 id="v2-ranking-title">Largest business counts</h3>
                                     <p class="note" id="v2-ranking-scope"></p>
@@ -186,11 +189,11 @@
                     </div>
                 </div>
                 <div class="story-prose-columns">
+                    <p class="navigation-badge"><span class="tip-label">Tip:</span> <span class="tip-body">Hold ⌘/Ctrl
+                            while scrolling to zoom<br /><span class="nowrap">Drag to pan</span> · Reset restores
+                            view</span></p>
                     <p class="interaction-hint">Choose a state or industry, then select a facility from the lookup.
                         Facilities sharing coordinates remain available in the lookup.</p>
-                    <p class="navigation-badge"><span class="tip-label">Tip:</span> <span class="tip-body">Hold ⌘/Ctrl
-                            while scrolling to zoom · <span class="nowrap">Drag to pan</span> · Reset restores
-                            view</span></p>
                 </div>
                 <div class="facility-composition">
                     <aside aria-label="Reporting facilities statistics and state breakdown" class="facility-sidebar">
@@ -225,10 +228,10 @@
                 </div>
             </div>
             <div class="story-prose-columns">
-                <p class="section-intro">Food is the largest contributor to manufacturing value added. Its A$31.279bn
-                    contribution accounts for 22.03% of the combined subdivision total in 2024–25.</p>
-                <p class="section-intro">But economic contribution and workforce mix answer different questions. Compare
-                    the national picture with each state, then examine whether sales and value added grew together.</p>
+                <p class="section-intro">Food is the largest contributor to manufacturing value added.<br />Its
+                    A$31.279bn contribution accounts for 22.03% of the<br />combined subdivision total in 2024–25.</p>
+                <p class="section-intro">But economic contribution and workforce mix answer different<br />questions.
+                    Compare the national picture with each state,<br />then examine whether sales and value added grew together.</p>
             </div>
             <article class="editorial-figure figure-4 support-figure" id="editorial-v4">
                 <div class="chart-heading editorial-heading">
@@ -462,22 +465,24 @@
                     <h3>Connected across the economy; changing within the sector</h3>
                 </header>
                 <article class="editorial-figure figure-10 support-figure" id="editorial-v10">
-                    <div class="chart-heading editorial-heading">
-                        <div>
-                            <p class="chart-number">V10</p>
-                            <h3>Manufacturing’s domestic economic connections</h3>
-                            <p class="chart-deck">Supplying industry → using industry, 2023–24. Ribbon width represents
-                                domestic intermediate-use value.</p>
+                    <div class="v10-header-row">
+                        <div class="chart-heading editorial-heading">
+                            <div>
+                                <p class="chart-number">V10</p>
+                                <h3>Manufacturing’s domestic economic connections</h3>
+                                <p class="chart-deck">Supplying industry → using industry, 2023–24.<br />Ribbon width
+                                    represents domestic intermediate-use value.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="direct-controls">
-                        <div class="chart-controls"><label for="industry-select">Trace a division<select
-                                    id="industry-select">
-                                    <option value="">All relationships</option>
-                                </select></label><label for="relationship-select">Inspect a directed relationship<select
-                                    id="relationship-select">
-                                    <option value="">Choose Supplier → User</option>
-                                </select></label></div>
+                        <div class="direct-controls">
+                            <div class="chart-controls"><label for="industry-select">Trace a division<select
+                                        id="industry-select">
+                                        <option value="">All relationships</option>
+                                    </select></label><label for="relationship-select">Inspect a directed relationship<select
+                                        id="relationship-select">
+                                        <option value="">Choose Supplier → User</option>
+                                    </select></label><button id="chord-reset" type="button">Reset</button></div>
+                        </div>
                     </div>
                     <div class="chord-insight-composition">
                         <!-- V10 CHART & GUIDE: Directed chord diagram rendered in #vis10 (ribbon width represents intermediate use; outer arcs represent industry divisions) -->
@@ -558,9 +563,13 @@
                         <div aria-label="Export map view controls" class="map-navigation" data-map="vis12"><button
                                 data-action="reset" type="button">Reset map view</button><output>1.0×</output></div>
                     </div>
-                    <p class="navigation-badge"><span class="tip-label">Tip:</span> <span class="tip-body">Hold ⌘/Ctrl
-                            while scrolling to zoom · <span class="nowrap">Drag to pan</span> · Reset restores
-                            view</span></p>
+                    <div class="v12-status-row">
+                        <p class="navigation-badge"><span class="tip-label">Tip:</span> <span class="tip-body">Hold ⌘/Ctrl
+                                while scrolling to zoom<br /><span class="nowrap">Drag to pan</span> · Reset restores
+                                view</span></p>
+                        <p aria-live="polite" class="selection-detail" id="export-flow-detail">Hover or tap a
+                            connection, or choose an origin and destination above.</p>
+                    </div>
                 </div>
                 <div class="feature-composition export-below">
                     <div class="feature-visual">
@@ -615,8 +624,6 @@
                     <aside aria-label="Context for this figure" class="editorial-margin">
                         <div aria-label="Retained export destination values" class="supporting-view"
                             id="export-summary"></div>
-                        <p aria-live="polite" class="selection-detail" id="export-flow-detail">Hover or tap a
-                            connection, or choose an origin and destination above.</p>
                     </aside>
                 </div>
                 <p class="export-caption">Curves show origin–destination connections, not shipping routes. ACT is
@@ -664,9 +671,7 @@
                     </div>
                 </div>
             </article>
-            <p class="story-transition">Australian-made products sit within an uneven manufacturing landscape: different
-                local clusters, industry strengths and employment paths. Interest in buying local adds a consumer
-                perspective, while actual purchases remain a separate question.</p>
+            <p class="story-transition">Australian-made products sit within an uneven manufacturing landscape:<br />different local clusters, industry strengths and employment paths.<br />Interest in buying local adds a consumer perspective,<br />while actual purchases remain a separate question.</p>
         </section>
     </main>
     <footer class="page-footer">
@@ -711,11 +716,11 @@
             materials.</p>
     </footer>
     <script src="js/dashboard-interactions.js"></script>
-    <script src="js/dashboard-app.js"></script>
-    <script src="js/viz9-controller.js"></script>
+    <script src="js/dashboard-app.js?v=align2024"></script>
+    <script src="js/viz9-controller.js?v=actions"></script>
     <div hidden="" id="people-tip" role="tooltip"></div>
     <script src="js/viz13-controller.js"></script>
-    <script src="js/viz2-controller.js"></script>
+    <script src="js/viz2-controller.js?v=actions"></script>
     <script src="js/paragraph-line-limit.js"></script>
 </body>
 

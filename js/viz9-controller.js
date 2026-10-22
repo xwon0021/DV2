@@ -187,7 +187,7 @@
 
       let result = await vegaEmbed('#vis09', s, {
         renderer: 'svg',
-        actions: document.body.classList.contains('editorial-vis-preview')
+        actions: true
       });
       if (g !== generation) {
         result.view.finalize();

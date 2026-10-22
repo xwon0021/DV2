@@ -365,7 +365,7 @@ const specTargets = [
   ['vis07', 'work/viz7.vg.json?v=final'],
   ['vis08', 'work/viz8.vg.json?v=final'],
   ['vis10', 'work/viz10.vg.json?v=final'],
-  ['vis11', 'work/viz11.vg.json?v=final'],
+  ['vis11', 'work/viz11.vg.json?v=align2024'],
   ['vis12', 'work/viz12.vg.json?v=zoomflow']
 ];
 function getBoundaryUrl() {
@@ -670,7 +670,8 @@ function setupRedesignControls(target, view) {
     // V10: the dropdowns and chord clicks share the same industry and ribbon signals.
     const industry = document.getElementById('industry-select'),
       relationship = document.getElementById('relationship-select'),
-      detail = document.getElementById('relationship-detail');
+      detail = document.getElementById('relationship-detail'),
+      resetBtn = document.getElementById('chord-reset');
     const nodes = view.data('nodes'),
       rows = view.data('edges');
     populateSelect(
@@ -704,6 +705,15 @@ function setupRedesignControls(target, view) {
       view.signal('selectedEdge', relationship.value).runAsync();
       show(relationship.value);
     };
+    if (resetBtn) {
+      resetBtn.onclick = () => {
+        industry.value = '';
+        relationship.value = '';
+        showEdges();
+        show('');
+        view.signal('selectedIndustry', '').signal('selectedEdge', '').runAsync();
+      };
+    }
     view.addSignalListener('selectedIndustry', (_, key) => {
       industry.value = key;
       showEdges();

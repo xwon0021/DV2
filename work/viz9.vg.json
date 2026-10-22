@@ -334,7 +334,7 @@
       "encode": {
         "update": {
           "x": {
-            "signal": "width-16"
+            "signal": "width-54"
           },
           "y": {
             "value": 8

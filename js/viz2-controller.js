@@ -482,7 +482,7 @@
       $('map').append(canvas);
       const result = await vegaEmbed(canvas, makeMapSpec(model, width, innerWidth < 620), {
         renderer: 'svg',
-        actions: document.body.classList.contains('editorial-vis-preview')
+        actions: true
       });
       if (token !== generation) {
         result.view.finalize();

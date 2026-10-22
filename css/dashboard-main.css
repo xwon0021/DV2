@@ -201,7 +201,7 @@ a:hover {
 .story-prose-columns {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px 40px;
+  gap: 24px 28px;
   margin: 24px 0 36px;
 }
 
@@ -214,7 +214,7 @@ a:hover {
 }
 
 .story-transition {
-  max-width: 680px;
+  max-width: 760px;
   margin: 40px auto 60px 5%;
   font-family: var(--font-serif);
   color: var(--ink);

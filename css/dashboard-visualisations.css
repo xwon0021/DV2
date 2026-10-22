@@ -694,6 +694,63 @@ button.summary-row:hover .bar-fill:not(.selected) {
   width: 100%;
 }
 
+#vis09 {
+  position: relative;
+  width: 100%;
+}
+
+#vis09 .vega-embed,
+#vis09 .vega-embed.has-actions {
+  padding-right: 0 !important;
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+#vis09 details {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 0;
+  z-index: 1000;
+}
+
+#vis09 summary {
+  list-style: none;
+  position: relative;
+  top: 0;
+  right: 0;
+  opacity: 0.75;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+#vis09 summary:hover,
+#vis09 summary:focus,
+#vis09 details[open] summary {
+  opacity: 1 !important;
+}
+
+#vis09 .vega-actions {
+  position: absolute;
+  top: 34px;
+  right: 0;
+  z-index: 1001;
+}
+
+#vis09 .vega-actions a {
+  cursor: pointer;
+}
+
 .race-callout-panel {
   position: absolute;
   right: 28px;
@@ -1079,7 +1136,7 @@ button.summary-row:hover .bar-fill:not(.selected) {
    ========================================================================== */
 .v13-split-layout {
   display: grid;
-  grid-template-columns: minmax(280px, 0.7fr) minmax(0, 1.35fr);
+  grid-template-columns: minmax(280px, 0.55fr) minmax(0, 1.45fr);
   gap: 28px;
   align-items: start;
 }

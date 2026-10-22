@@ -403,7 +403,10 @@
             "signal": "240"
           },
           "y": {
-            "value": 18
+            "value": 24
+          },
+          "baseline": {
+            "value": "top"
           },
           "align": {
             "value": "center"
@@ -528,7 +531,10 @@
             "signal": "width-240"
           },
           "y": {
-            "value": 18
+            "value": 24
+          },
+          "baseline": {
+            "value": "top"
           },
           "align": {
             "value": "center"

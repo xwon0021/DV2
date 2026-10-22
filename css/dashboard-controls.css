@@ -85,6 +85,7 @@ button {
   color: #334e68;
   white-space: nowrap;
   font-size: 13px;
+  cursor: pointer;
 }
 
 .chart-controls > button:hover {
@@ -97,18 +98,35 @@ button {
 .map-controls-row {
   display: flex;
   align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin: 4px 0 10px;
+  gap: 14px;
+  width: 100%;
+  margin: 4px 0 12px;
 }
 
 .map-controls-row .map-navigation {
   flex: 0 0 auto;
+  gap: 14px;
+  padding: 8px 16px;
+}
+
+.map-controls-row .map-navigation input[type="range"] {
+  width: 175px;
 }
 
 .map-controls-row .navigation-badge {
+  flex: 1;
+  min-width: 0;
   margin: 0;
-  white-space: nowrap;
+  white-space: normal;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+.map-controls-row .navigation-badge .tip-body {
+  display: block;
+  line-height: 1.45;
 }
 
 /* Map Navigation Bar (Zoom Slider, Reset, Scale indicator) */
