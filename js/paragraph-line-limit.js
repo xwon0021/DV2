@@ -1,4 +1,4 @@
-/* Preview prose only: preserve text and inline markup, cap lines at ten words. */
+/* Preview prose only: cap lines at ten words, counting hyphenated parts separately. */
 (() => {
   'use strict';
   const root = document.body;
@@ -9,10 +9,10 @@
 
   function format(paragraph) {
     paragraph.querySelectorAll(`br[${marker}]`).forEach((br) => br.remove());
-    if (paragraph.closest('.page-footer')) return;
     // Let narrow columns wrap naturally. Add a break only when an actual
     // rendered line exceeds ten words, so we do not create short orphan lines.
-    for (let pass = 0; pass < 20; pass++) {
+    const maxPasses = paragraph.textContent.split(/\s+/).length;
+    for (let pass = 0; pass < maxPasses; pass++) {
       const runs = [];
       let text = '';
       function collect(node) {
@@ -41,7 +41,12 @@
           top = rect.top;
           count = 0;
         }
-        if (++count > 10) {
+        // Keep a connected token intact, but count each hyphenated part.
+        // Word joiners protect wrapping and must not affect the word count.
+        const wordCount = word[0].replace(/\u2060/g, '').split(/[-‐‑‒–—]+/u)
+          .filter(part => /[\p{L}\p{N}]/u.test(part)).length;
+        count += wordCount;
+        if (count > 10 && count > wordCount) {
           breakAt = previousEnd;
           break;
         }
@@ -81,7 +86,7 @@
     changed.forEach((p) => {
       if (p.isConnected) format(p);
     });
-    // V12 measures its tooltip before this observer runs; keep the taller box visible.
+    // V13 measures its tooltip before this observer runs; keep the taller box visible.
     const tip = document.getElementById('people-tip');
     if (tip && !tip.hidden && Array.from(changed).some((p) => tip.contains(p))) {
       const rect = tip.getBoundingClientRect();
@@ -100,4 +105,16 @@
   });
   document.querySelectorAll(selector).forEach(format);
   observer.observe(root, options);
+  root.addEventListener('toggle', event => {
+    if (event.target.tagName !== 'DETAILS' || !event.target.open) return;
+    observer.disconnect();
+    event.target.querySelectorAll(selector).forEach(format);
+    observer.observe(root, options);
+  }, true);
+  // A web font can change the line lengths after initial formatting.
+  document.fonts?.ready.then(() => {
+    observer.disconnect();
+    document.querySelectorAll(selector).forEach(format);
+    observer.observe(root, options);
+  });
 })();

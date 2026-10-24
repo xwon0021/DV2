@@ -125,14 +125,37 @@
 }
 
 .matrix-selection[data-active="true"] {
-  border-left-color: var(--purple-primary);
-  background: #f7f0fc;
+  border-left-color: var(--description-card-accent);
+  background: var(--description-card-bg);
 }
 
 .matrix-selection p { margin: 0; }
 .matrix-selection-subdivision { font-weight: 600; }
 
 #editorial-v5 .matrix-finding { margin: 8px 0 10px; }
+
+.matrix-info-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 8px 0 10px;
+}
+
+#editorial-v5 .matrix-info-row > div {
+  min-width: 0;
+  margin: 0;
+}
+
+#editorial-v5 .matrix-info-row .matrix-finding {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+@media (max-width: 640px) {
+  .matrix-info-row { grid-template-columns: 1fr; }
+}
 
 .matrix-footer {
   display: flex;
@@ -312,7 +335,7 @@
 }
 
 .swatch.missing {
-  background: #e2e8f0;
+  background: #e4e8ec;
 }
 
 /* Tooltip Connector for Choropleth */
@@ -394,6 +417,10 @@
 }
 
 .v2-c .v2-selected-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  gap: 16px;
+  align-items: start;
   background: #f8fafc;
   border: 1px solid #e2e8f0;
   border-left: 3.5px solid var(--highlight-red);
@@ -427,9 +454,24 @@
   font-size: 11px;
   line-height: 1.45;
   color: #64748b;
-  margin: 8px 0 0;
-  padding-top: 8px;
-  border-top: 1px solid #e2e8f0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.v2-c .v2-selected-card .selected {
+  min-width: 0;
+  padding-left: 16px;
+  border-left: 1px solid var(--description-card-border);
+}
+
+@media (max-width: 620px) {
+  .v2-c .v2-selected-card { grid-template-columns: 1fr; gap: 10px; }
+  .v2-c .v2-selected-card .selected {
+    padding: 10px 0 0;
+    border-left: 0;
+    border-top: 1px solid var(--description-card-border);
+  }
 }
 
 .v2-c #v2-load-status {
@@ -507,7 +549,7 @@
 }
 
 /* ==========================================================================
-   SUPPORTING VIEWS & SUMMARY BARS (V3, V5, V10)
+   SUPPORTING VIEWS & SUMMARY BARS (V3, V5, V11)
    ========================================================================== */
 .supporting-view {
   margin-bottom: 12px;
@@ -651,6 +693,11 @@ button.summary-row:focus-visible {
 
 .bar-fill.selected {
   background: #D8891C;
+}
+
+#facility-summary .bar-fill:not(.selected),
+#facility-summary button.summary-row:hover .bar-fill:not(.selected) {
+  background: var(--purple-primary);
 }
 
 button.summary-row:hover .bar-fill:not(.selected) {
@@ -1066,7 +1113,7 @@ button.summary-row:hover .bar-fill:not(.selected) {
 
 .connected-dot-prose p {
   margin: 0;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.55;
   color: #486581;
 }
@@ -1079,7 +1126,7 @@ button.summary-row:hover .bar-fill:not(.selected) {
 }
 
 /* ==========================================================================
-   V10: MANUFACTURED EXPORT FLOW ROUTE LEGEND
+   V12: MANUFACTURED EXPORT FLOW ROUTE LEGEND
    ========================================================================== */
 .flow-route-legend {
   display: flex;
@@ -1174,57 +1221,56 @@ button.summary-row:hover .bar-fill:not(.selected) {
 /* ==========================================================================
    V13: TWO-COLUMN LAYOUT (LEFT IDIOM, RIGHT TITLE & CONTENT)
    ========================================================================== */
-.v13-split-layout {
+.v10-split-layout {
   display: grid;
   grid-template-columns: minmax(280px, 0.55fr) minmax(0, 1.45fr);
   gap: 28px;
   align-items: start;
 }
 
-.v13-side-column {
+.v10-side-column {
   min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.v13-chart-column {
+.v10-chart-column {
   min-width: 0;
   width: 100%;
 }
 
-.v13-chart-column #vis11,
-.v13-chart-column #vis13 {
+.v10-chart-column #vis10 {
   width: 100%;
   min-width: 0;
 }
 
-.v13-side-column .editorial-heading {
+.v10-side-column .editorial-heading {
   margin-bottom: 0;
 }
 
-.v13-side-column .direct-controls {
+.v10-side-column .direct-controls {
   margin: 0;
 }
 
-.v13-side-column .chart-controls {
+.v10-side-column .chart-controls {
   width: 100%;
 }
 
-.v13-side-column .chart-controls > label {
+.v10-side-column .chart-controls > label {
   width: 100%;
 }
 
-.v13-side-column .chart-controls select {
+.v10-side-column .chart-controls select {
   width: 100%;
 }
 
-.v13-side-column .key-finding-card {
+.v10-side-column .key-finding-card {
   margin: 4px 0 0;
 }
 
 @media (max-width: 900px) {
-  .v13-split-layout {
+  .v10-split-layout {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -1251,8 +1297,12 @@ button.summary-row:hover .bar-fill:not(.selected) {
 .race-callout-panel .race-guide-note { font-size: 15px; line-height: 1.45; }
 .editorial-figure .selection-detail,
 .editorial-figure .interaction-hint,
-#editorial-v2 .v2-status-row .scope,
-#editorial-v2 .v2-selected-card .note { font-size: 15px; line-height: 1.45; }
+#editorial-v2 .v2-status-row .scope { font-size: 15px; line-height: 1.45; }
+/* Primary descriptions lead; legend explanations remain supporting text. */
+#editorial-v2 .chart-deck { font-size: 16px; line-height: 1.5; }
+#editorial-v2 .selected strong { font-size: 17px; line-height: 1.4; }
+#editorial-v2 .selected p { font-size: 15px; line-height: 1.45; }
+#editorial-v2 .v2-selected-card .note { font-size: 14px; line-height: 1.45; }
 #editorial-v2 select, #editorial-v2 button.bar-row,
 .editorial-figure .matrix-finding button,
 .editorial-figure .race-controls button { font-size: 14px; }
@@ -1266,14 +1316,70 @@ button.summary-row:hover .bar-fill:not(.selected) {
 .employment-stats .stat-label { font-size: 13px; }
 .editorial-figure .stat-label, .editorial-figure .caveat,
 .editorial-figure .legend-title { font-size: 14px; }
+.editorial-figure .stat-caveat,
+.editorial-figure .summary-label,
+.editorial-figure .summary-value,
+.v2-c .bar-value,
+.v2-c #v2-load-status { font-size: 14px; line-height: 1.45; }
+.v2-c .bar-row { font-size: 14px; }
 .key-finding-card { margin-bottom: 0; }
-.v6-chart-story { grid-template-columns: minmax(0, 2fr) minmax(270px, 1fr); gap: 20px; align-items: center; }
+.v6-chart-story { grid-template-columns: minmax(0, 1fr); gap: 12px; align-items: start; }
 .v6-chart-story .figure-notes-row { gap: 10px; padding-top: 0; }
 .v6-chart-story .key-finding-card { margin-top: 0; }
 .v2-c button.bar-row { grid-template-columns: minmax(0, 1fr) 65px 40px; }
 #editorial-v12 .export-below { display: flex; flex-direction: column; }
 #editorial-v12 .export-below .feature-visual,
 #editorial-v12 .export-below .editorial-margin { width: 100%; }
+/* Small cards use colour by purpose across all figures. */
+.editorial-figure .matrix-selection,
+.editorial-figure .matrix-selection[data-active="true"],
+.editorial-figure .selection-detail,
+.v2-c .v2-selected-card,
+.editorial-figure .employment-stats,
+.editorial-figure .race-callout-panel {
+  background: var(--description-card-bg);
+  border: 1px solid var(--description-card-border);
+  border-left: 3px solid var(--description-card-accent);
+  color: var(--ink);
+}
+
+.editorial-figure .race-callout-header,
+.editorial-figure .employment-stats .stat-number {
+  color: var(--navy);
+}
+
+.editorial-figure .key-finding-card:not(.caveat-card),
+.employment-reading .period-feedback,
+.editorial-figure .chord-insight {
+  background: var(--insight-card-bg);
+  border: 1px solid var(--insight-card-border);
+  border-left: 4px solid var(--purple-primary);
+}
+
+.editorial-figure .chord-insight .insight-label,
+.editorial-figure .chord-insight .stat-number {
+  color: var(--purple-primary);
+}
+
+/* Teal identifies instructions; blue-grey remains for descriptions and selected data. */
+.editorial-figure .navigation-badge,
+.editorial-figure .interaction-hint:not(#facility-count),
+.editorial-figure .race-guide-note,
+.editorial-figure .instruction-card,
+.editorial-figure .selection-detail.instruction-card,
+.editorial-figure .matrix-selection.instruction-card,
+.editorial-figure .selected.instruction-card {
+  background: var(--instruction-card-bg);
+  border: 1px solid var(--instruction-card-border);
+  border-left: 3px solid var(--instruction-card-accent);
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: #24594f;
+}
+
+.editorial-figure .navigation-badge .tip-label {
+  color: var(--instruction-card-accent);
+}
 @media (max-width: 760px) {
   .v6-chart-story { grid-template-columns: 1fr; }
 }

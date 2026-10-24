@@ -51,8 +51,9 @@
     }
   ],
   "mark": {
-    "notes": "Draw one square for each state and industry.",
+    "notes": "Keep unavailable values as grey squares so they still support hover and click.",
     "type": "rect",
+    "invalid": null,
     "strokeWidth": 1,
     "cursor": "pointer"
   },

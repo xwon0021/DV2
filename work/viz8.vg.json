@@ -61,7 +61,7 @@
         {
           "mark": {
             "type": "area",
-            "color": "#0C92C4",
+            "color": "#2C7FB8",
             "opacity": 0.09,
             "clip": true
           }
@@ -69,7 +69,7 @@
         {
           "mark": {
             "type": "line",
-            "color": "#0C92C4",
+            "color": "#2C7FB8",
             "strokeWidth": 2.5,
             "clip": true
           }
@@ -79,11 +79,28 @@
             "type": "point",
             "notes": "Draw each observed year as a dot. Hover for the value or click to inspect that year.",
             "filled": true,
-            "color": "#0C92C4",
-            "size": 50,
+            "color": "#2C7FB8",
+            "size": 160,
+            "opacity": 1,
             "clip": true
           },
           "encoding": {
+            "size": {
+              "condition": {
+                "param": "employmentPoint",
+                "empty": false,
+                "value": 360
+              },
+              "value": 160
+            },
+            "fill": {
+              "condition": {
+                "param": "employmentPoint",
+                "empty": false,
+                "value": "#A76312"
+              },
+              "value": "#2C7FB8"
+            },
             "tooltip": [
               {
                 "field": "Financial_Year_Display",
@@ -101,7 +118,7 @@
                 "empty": false,
                 "value": "#A76312"
               },
-              "value": "#0C92C4"
+              "value": "#ffffff"
             },
             "strokeWidth": {
               "condition": {
@@ -109,7 +126,7 @@
                 "empty": false,
                 "value": 3
               },
-              "value": 1
+              "value": 1.5
             }
           },
           "params": [
@@ -194,7 +211,7 @@
       ],
       "mark": {
         "type": "area",
-        "color": "#0C92C4",
+        "color": "#2C7FB8",
         "opacity": 0.25
       },
       "encoding": {

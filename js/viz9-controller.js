@@ -33,6 +33,7 @@
     const box = document.getElementById('race-selected');
     box.replaceChildren();
     let r = rows.find((r) => r.Year_Order === index && r.Code === focus);
+    box.classList.toggle('instruction-card', !r);
 
     if (!r) {
       box.textContent =

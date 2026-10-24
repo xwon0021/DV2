@@ -7,7 +7,7 @@
     "type": "none",
     "contains": "padding"
   },
-  "background": "transparent",
+  "background": "#EAF2F6",
   "signals": [
     {
       "name": "selectedFacility",

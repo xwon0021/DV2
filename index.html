@@ -8,10 +8,10 @@
     <meta content="An evidence-led look at where Australian manufacturing happens and what the sector makes."
         name="description" />
     <title>Australian Made Products · Data visualisation</title>
-    <link href="css/dashboard-main.css?v=readableCards3" rel="stylesheet" />
-    <link href="css/dashboard-layout.css?v=centredLargeMaps" rel="stylesheet" />
-    <link href="css/dashboard-controls.css?v=readableCards3" rel="stylesheet" />
-    <link href="css/dashboard-visualisations.css?v=v5ShortLines" rel="stylesheet" />
+    <link href="css/dashboard-main.css?v=compactSourcesDivider" rel="stylesheet" />
+    <link href="css/dashboard-layout.css?v=finalReviewRenumbered" rel="stylesheet" />
+    <link href="css/dashboard-controls.css?v=finalReviewRenumbered" rel="stylesheet" />
+    <link href="css/dashboard-visualisations.css?v=instructionStateColours" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
@@ -23,15 +23,11 @@
                 href="#change">03 / Change</a><a href="#connections">04 / Connections</a></div>
     </nav>
     <header class="masthead editorial-masthead">
-        <p class="eyebrow">FIT3179 · Data Visualisation 2</p>
+        <p class="eyebrow">FIT3179 Data Visualisation 2</p>
         <h1>Australian<br />Made Products</h1>
-        <div class="byline">A data visualisation by Wong Xin Thung <span aria-hidden="true">·</span> 9 October 2026
-        </div>
         <div class="hero-copy">
-            <p class="standfirst">Behind Australian-made products are local businesses, specialised industries and a
-                changing workforce. Where are they concentrated, and how does their contribution reach beyond the
-                factory?</p>
-            <p class="method-note">Manufacturing data provide context for Australian-made products; they do not identify
+            <p class="standfirst">What sits behind an Australian-made product? Local businesses, people at work and connections across Australia and overseas. Their story begins with where manufacturing happens, then follows the industries and changes that shape it.</p>
+            <p class="method-note">Manufacturing data provide context for Australian-made products. They do not identify
                 every locally made product or establish Australian Made certification.</p>
         </div>
     </header>
@@ -44,13 +40,12 @@
                 </div>
             </div>
             <div class="story-prose-columns">
-                <p class="section-intro">Australian-made products begin with local businesses. But a large manufacturing cluster and a high concentration are different things: one counts businesses, while the other compares them with the resident population.</p>
-                <p class="section-intro">These maps move from local areas to individual reporting facilities. ABS Statistical Areas Level 2 (SA2s) show business rates and counts; NPI locations then show where reporting facilities operate.</p>
+                <p class="section-intro">Australian-made products begin in real places, from busy industrial areas to smaller regional centres. A place can have many manufacturing businesses, or a high number compared with its population. Those are two different stories.</p>
+                <p class="section-intro">The first map shows where manufacturing stands out relative to the number of residents. Business counts then reveal the largest clusters, while reporting facilities give a closer view of individual locations.</p>
             </div>
             <section aria-label="Concentration and clusters answer different questions"
                 class="analytical-scene place-scene">
                 <header class="scene-heading">
-                    <p class="scene-kicker">RELATIVE / ABSOLUTE</p>
                     <h3>Concentration and clusters answer different questions</h3>
                 </header>
                 <article class="editorial-figure figure-1 hero-figure" id="editorial-v1">
@@ -58,7 +53,7 @@
                         <div>
                             <p class="chart-number">V1</p>
                             <h3>Manufacturing concentration by SA2</h3>
-                            <p class="chart-deck">Businesses per 10,000 residents in 2025. Darker areas have more businesses relative to their residential population, not necessarily larger business clusters.</p>
+                            <p class="chart-deck">SA2 means Statistical Area Level 2, a local statistical area. Businesses per 10,000 residents in 2025. Darker areas have more businesses relative to their residential population, not necessarily larger business clusters.</p>
                         </div>
                     </div>
                     <div class="map-controls-row">
@@ -67,12 +62,14 @@
                                     id="v1-zoom-scale" max="15" min="1" step="0.1" type="range" value="1" /></label><button
                                 data-action="reset" type="button">Reset map view</button><button data-action="all"
                                 type="button">All regions</button><output>1.0×</output></div>
+                    </div>
+                    <div class="v1-instructions-row">
                         <p class="navigation-badge"><span class="tip-label">Tip:</span> <span class="tip-body">Hold
                                 ⌘/Ctrl while scrolling to zoom<br /><span class="nowrap">Drag to pan</span> · Reset
                                 restores view</span></p>
-                    </div>
                     <p class="interaction-hint">All regions clears the colour-range highlight without changing your
                         zoom or position. Reset map view restores the initial map framing.</p>
+                    </div>
                     <div class="feature-composition insight-below">
                         <div class="feature-visual map-with-legend">
                             <div aria-label="Interactive choropleth map showing manufacturing businesses per 10,000 residents across Australian SA2 areas"
@@ -103,13 +100,13 @@
                         </aside>
                     </div>
                 </article>
-                <p class="story-transition scene-bridge">A high rate can reflect very few residents. Business counts reveal which SA2s actually contain the largest clusters.</p>
+                <p class="story-transition scene-bridge">A dark area on the map can have a high rate simply because few people live there. Counting businesses gives a clearer view of the largest clusters, rather than their size relative to the local population.</p>
                 <article class="editorial-figure figure-2 support-figure" id="editorial-v2">
                     <div class="chart-heading editorial-heading">
                         <div>
                             <p class="chart-number">SUPPORTING VIEW · V2</p>
                             <h3 id="editorial-v2-title">Absolute business clusters</h3>
-                            <p class="chart-deck">Dandenong – South has the largest count: 826 businesses. Circle area shows business count; the linked ranking makes crowded locations easier to compare.</p>
+                            <p class="chart-deck">Dandenong – South has the largest count: 826 businesses. Circle area shows business count. The linked ranking makes crowded locations easier to compare.</p>
                         </div>
                     </div>
                     <section aria-busy="true" aria-labelledby="editorial-v2-title" class="v2-c" data-v2-overlap=""
@@ -134,33 +131,33 @@
                                 <!-- V2 CHART & LEGEND: Proportional symbol circle size legend ("countSize") is drawn inside #map2 canvas/SVG by work/viz2.vg.json -->
                                 <div aria-label="SA2 manufacturing business count map" id="map2"></div>
                                 <p class="note" id="v2-size-note"></p>
-                                <div class="v2-selected-card">
-                                    <div aria-live="polite" class="selected" id="v2-selected"><strong>Choose an SA2 to
-                                            inspect its exact count.</strong></div>
-                                    <p class="note">Red marks the selected SA2. Circles represent businesses, not employment or output. Locations mark SA2 areas, not factory addresses.
-                                    </p>
-                                </div>
                             </div>
                             <aside aria-labelledby="v2-ranking-title" id="v2-ranking">
                                 <div class="v2-ranking-section">
                                     <h3 id="v2-ranking-title">Largest business counts</h3>
                                     <p class="note" id="v2-ranking-scope"></p>
                                     <div id="v2-bars"></div>
-                                    <p class="note">Bars share a fixed 0–826 scale. Select a bar to fit its location on
+                                    <p class="note instruction-card">Bars share a fixed 0–826 scale. Select a bar to fit its location on
                                         the map. Hover or focus highlights circles currently in view.</p>
                                 </div>
                                 <p class="note" id="v2-load-status" role="status"></p>
                             </aside>
+                            <div class="v2-selected-card">
+                                <p class="note">Red marks the selected SA2. Circles represent businesses, not employment or output. Locations mark SA2 areas, not factory addresses.
+                                </p>
+                                <div aria-live="polite" class="selected instruction-card" id="v2-selected"><strong>Choose an SA2 to
+                                        inspect its exact count.</strong></div>
+                            </div>
                         </div>
                     </section>
                 </article>
             </section>
-            <p class="story-transition">Dandenong – South leads the business counts with 826. The next map moves from area totals to individual NPI reporting facilities.</p>
+            <p class="story-transition">Dandenong – South stands out with 826 manufacturing businesses. These area totals show the size of a cluster. Individual NPI reporting facilities offer a closer view, although they cover only part of manufacturing.</p>
             <article class="editorial-figure figure-3 support-figure" id="editorial-v3">
                 <div class="chart-heading editorial-heading">
                     <div>
                         <p class="chart-number">V3</p>
-                        <h3>Where reporting manufacturing facilities are located</h3>
+                        <h3>Where reporting manufacturing facilities are located?</h3>
                         <p class="chart-deck">Victoria has the most NPI manufacturing reporters: 354 of 1,210 in 2024–25. Each fixed-size dot marks one reporting facility, not its size or output.</p>
                     </div>
                 </div>
@@ -191,7 +188,7 @@
                         <div class="facility-stat">
                             <p class="stat-number">1,210</p>
                             <p class="stat-label">NPI primary manufacturing reporters<br />2024–25 · full source</p>
-                            <p aria-live="polite" class="selection-detail" id="facility-detail">Hover or tap a dot for
+                            <p aria-live="polite" class="selection-detail instruction-card" id="facility-detail">Hover or tap a dot for
                                 its name and primary industry. The lookup also reaches facilities sharing coordinates.
                             </p>
                         </div>
@@ -207,7 +204,7 @@
                     </div>
                 </div>
             </article>
-            <p class="story-transition">These locations show where manufacturing operates. Next, compare what different industries contribute to jobs and economic value.</p>
+            <p class="story-transition">The maps reveal where manufacturing operates. But a location alone cannot tell us what is made there, or how different industries contribute to jobs and economic value.</p>
         </section>
         <section aria-labelledby="industry-heading" class="story-section" id="industry">
             <div class="section-heading"><span class="section-number">02</span>
@@ -217,15 +214,15 @@
                 </div>
             </div>
             <div class="story-prose-columns">
-                <p class="section-intro">Location is only the beginning. Food contributes A$31.279bn, or 22.03% of the combined manufacturing subdivision value added in 2024–25. Its role in employment is even larger.</p>
-                <p class="section-intro">Compare workforce share with economic contribution, then explore each state’s industry mix. Sales growth and economic profiles show why a large industry is not necessarily a fast-growing one.</p>
+                <p class="section-intro">The places on the maps do not all make the same things. Food manufacturing contributed A$31.279bn in industry value added (IVA) in 2024–25. IVA measures value produced minus goods and services used. Food’s share of manufacturing jobs exceeds its share of IVA.</p>
+                <p class="section-intro">Workforce size and economic contribution do not always move together. Each state has its own industry mix, and a large industry can have slower growth than a smaller one.</p>
             </div>
             <article class="editorial-figure figure-4 support-figure" id="editorial-v4">
                 <div class="chart-heading editorial-heading">
                     <div>
                         <p class="chart-number">V4</p>
-                        <h3>Does workforce share translate into industry value?</h3>
-                        <p class="chart-deck connected-dot-deck">Australian manufacturing subdivisions, 2024–25</p>
+                        <h3>Does a larger workforce mean a larger share of economic value?</h3>
+                        <p class="chart-deck connected-dot-deck">Australian manufacturing industry groups (called subdivisions), 2024–25</p>
                     </div>
                 </div>
                 <!-- V4 CHART & KEY: Connected dot plot rendered in #vis04 (Blue circle: Employment share, Orange diamond: IVA share) -->
@@ -233,11 +230,11 @@
                     aria-label="Connected dot plot comparing employment share and industry value added share for all 15 Australian manufacturing subdivisions in 2024–25"
                     class="chart connected-dot-chart" id="vis04" role="img"></div>
                 <div class="connected-dot-prose">
-                    <p id="vis04-desc">Blue circles show employment share; orange diamonds show industry value added (IVA) share. Each connector compares two 2024–25 shares, not change over time. Positive Δ means IVA share is larger; negative Δ means employment share is larger.</p>
-                    <p><strong>Food provides 25.7% of manufacturing employment but 22.0% of IVA.</strong> Machinery and equipment shows the reverse: 11.8% of employment and 14.2% of IVA. Workforce size and economic contribution do not follow the same pattern; IVA is not sales or profit.</p>
+                    <p id="vis04-desc">Blue circles show employment share. Orange diamonds show industry value added (IVA) share. Each connector compares two 2024–25 shares, not change over time. Positive Δ means IVA share is larger. A negative Δ means employment share is larger.</p>
+                    <p><strong>Food provides 25.7% of manufacturing employment but 22.0% of IVA.</strong> Machinery and equipment shows the reverse: 11.8% of employment and 14.2% of IVA. Workforce size and economic contribution do not follow the same pattern. IVA is not sales or profit.</p>
                 </div>
             </article>
-            <p class="story-transition">Food leads nationally, but its importance varies by state. Tasmania’s workforce shows a particularly strong specialisation.</p>
+            <p class="story-transition">The national picture hides local differences. Each state has its own manufacturing mix, and some depend more heavily on particular industries.</p>
             <article class="editorial-figure figure-5 hero-figure" id="editorial-v5">
                 <div class="chart-heading editorial-heading">
                     <div>
@@ -254,20 +251,22 @@
                                 <option value="">All subdivisions</option>
                             </select></label><button id="matrix-reset" type="button">Reset selection</button></div>
                 </div>
-                <div aria-live="polite" class="matrix-selection" id="matrix-detail"></div>
-                <div class="matrix-finding key-finding-card">
-                    <div>
-                        <div class="finding-tag">Key Insight · Regional Specialisation</div>
-                        <p><strong>Food employs 37.45% of Tasmania’s manufacturing workforce</strong>
-                            (7,439 people, June 2025), the largest share of any cell shown.</p>
-                    </div><button id="inspect-tasmania-food" type="button">Inspect Tasmania × Food →</button>
-                </div>
                 <!-- V5 CHART & LEGEND: Heatmap rendered in #heatmap; continuous gradient legend ("Share within state %") drawn inside canvas/SVG by work/viz5.vg.json -->
                 <div aria-label="Interactive heatmap of employment shares across manufacturing subdivisions and Australian states"
                     class="chart heatmap-chart" id="heatmap" role="img"></div>
                 <div class="matrix-footer"><div class="missing-key"><span class="swatch missing"></span>Suppressed or unavailable, not zero</div><span class="mobile-scroll-note">Scroll sideways for all 15 subdivisions.</span></div>
+                <div class="matrix-info-row">
+                <div aria-live="polite" class="matrix-selection" id="matrix-detail"></div>
+                <div class="matrix-finding key-finding-card">
+                    <div>
+                        <div class="finding-tag">What the data shows · Regional Specialisation</div>
+                        <p><strong>Food employs 37.45% of Tasmania’s manufacturing workforce</strong>
+                            (7,439 people, June 2025), the largest share of any cell shown.</p>
+                    </div><button id="inspect-tasmania-food" type="button">Show Tasmania’s food manufacturing →</button>
+                </div>
+                </div>
             </article>
-            <p class="story-transition">A large employment share describes today’s structure. Growth rates reveal whether sales and value added are moving together.</p>
+            <p class="story-transition">Employment shares describe each state’s industry mix. Growth rates add another perspective, showing whether sales and value added are moving together.</p>
             <section aria-label="Growth, scale and sector profile do not move together"
                 class="analytical-scene performance-scene">
                 <header class="scene-heading">
@@ -284,12 +283,12 @@
                         </div>
                     </div>
                     <div class="v6-chart-story">
-                    <!-- V6 CHART & LEGEND: Paired bar chart rendered in #vis06; categorical color legend (Blue: Sales, Coral: IVA) drawn by work/viz6.vg.json -->
+                    <!-- V6 CHART & LEGEND: Paired bar chart rendered in #vis06; categorical color legend (Teal: Sales, Orange: IVA) drawn by work/viz6.vg.json -->
                     <div aria-label="Interactive paired horizontal bar chart comparing sales and service income growth with industry value added growth by manufacturing subdivision"
                         class="chart comparison-chart" id="vis06" role="img"></div>
                     <div class="figure-notes-row">
                         <div class="key-finding-card">
-                            <div class="finding-tag">Key Finding · Income vs Value Added Divergence</div>
+                            <div class="finding-tag">What the data shows · Income vs Value Added Divergence</div>
                             <p><strong>Primary metals sales grew 23.8%, while IVA fell 3.1%.</strong> The 26.9 percentage point gap shows that higher sales did not translate into higher value added. The chart shows the difference, but does not establish its cause.</p>
                         </div>
                         <p class="method-note">Sales growth is nominal and includes price changes. IVA reflects net
@@ -297,7 +296,7 @@
                     </div>
                     </div>
                 </article>
-                <p class="story-transition">Primary metals show that sales and value added can diverge. Compare all four measures next to see each industry’s broader profile.</p>
+                <p class="story-transition">Sales and value added capture different parts of industry performance. Bringing jobs and wages into the comparison gives a fuller picture.</p>
                 <article class="editorial-figure figure-7 support-figure" id="editorial-v7">
                     <div class="chart-heading editorial-heading">
                         <div>
@@ -316,9 +315,10 @@
                     <!-- V7 CHART & KEY: Parallel coordinates plot rendered in #vis07 across 4 normalized economic axes by work/viz7.vg.json -->
                     <div aria-label="Interactive parallel-coordinates chart comparing four normalised economic measures across manufacturing subdivisions"
                         class="chart parallel-chart" id="vis07" role="img"></div>
-                    <p class="method-note">Each axis runs from 0 (lowest) to 1 (highest), using its own scale. Heights compare relative positions, not original units or productivity. Thirteen complete profiles are shown; pulp/paper and petroleum/coal are omitted because sales values are unavailable.</p>
+                    <p class="method-note">Each axis runs from 0 (lowest) to 1 (highest), using its own scale. Heights compare relative positions, not original units or productivity. Thirteen complete profiles are shown. Pulp/paper and petroleum/coal are omitted because sales values are unavailable.</p>
                 </article>
             </section>
+            <p class="story-transition">These profiles describe manufacturing today. The employment history shows how its workforce has changed over time.</p>
         </section>
         <section aria-labelledby="change-heading" class="story-section" id="change">
             <div class="section-heading"><span class="section-number">03</span>
@@ -328,8 +328,8 @@
                 </div>
             </div>
             <div class="story-prose-columns">
-                <p class="section-intro">Manufacturing employment recovered from 830.2 thousand in 2019–20 to 900.8 thousand in 2024–25. Yet it remained 10.4% below its 2006–07 level of 1,005.5 thousand.</p>
-                <p class="section-intro">The national total hides different industry paths. Start with the employment trend, then follow the rankings: food remained the largest manufacturing employer throughout the period shown.</p>
+                <p class="section-intro">Today’s industry mix is only a snapshot. Manufacturing employment fell to 830,200 in 2019–20 before recovering to 900,800 in 2024–25. Even after that recovery, it was still 10.4% below the 2006–07 level.</p>
+                <p class="section-intro">Industries followed different paths within that national trend. Food remained the largest employer throughout the period shown, although a steady rank can hide changes in job numbers. Recent changes in value added show another side of industry performance.</p>
             </div>
             <section aria-label="A partial recovery, with changing industry positions"
                 class="analytical-scene time-scene">
@@ -348,16 +348,18 @@
                     <div class="employment-composition">
                         <aside class="employment-reading" aria-label="Employment selection and explanation">
                     <div class="direct-controls">
-                        <div class="chart-controls employment-controls"><label>Year details (keeps period) <select
+                        <div class="chart-controls employment-controls">
+                            <label>Start financial year <select id="employment-start" aria-label="Start financial year"></select></label>
+                            <label>End financial year <select id="employment-end" aria-label="End financial year"></select></label>
+                            <label>Year details (keeps period) <select
                                     id="employment-inspect">
                                     <option value="">Choose observed year</option>
                                 </select></label><button class="quiet-reset" id="employment-reset" type="button">Reset
                                 full history</button></div>
                     </div>
+                    <p class="interaction-hint">Each dot shows employment at the end of June in that financial year. Choose start and end financial years, or drag across the lower chart. Both charts and the takeaway update together.</p>
                     <p aria-live="polite" class="period-feedback" id="employment-period">Showing full history ·
                         2006–2007 to 2024–2025</p>
-                    <p class="interaction-hint">Drag across the lower chart to choose a period. The upper chart and takeaway update together. Choose a year for its exact value.</p>
-                    <div aria-live="polite" class="selection-detail" hidden="" id="employment-detail"></div>
                         </aside>
                         <div class="employment-visual">
                     <div aria-label="Observed employment milestones" class="employment-stats">
@@ -376,11 +378,13 @@
                     </div>
                     <!-- V8 CHART & BRUSH: Overview + Detail time series rendered in #vis08 (interactive brush selection box in lower overview) -->
                     <div aria-label="Interactive overview and detail of Australian manufacturing employment at the end of June from 2006–2007 to 2024–2025"
-                        class="chart time-series-chart" id="vis08" role="img"></div>                        </div>
+                        class="chart time-series-chart" id="vis08" role="img"></div>
+                    <div aria-live="polite" class="selection-detail" hidden="" id="employment-detail"></div>
+                        </div>
                     </div>
 
                 </article>
-                <p class="story-transition">The national recovery was incomplete. Follow individual industries next: a stable rank can still hide a change in employment.</p>
+                <p class="story-transition">The recovery brought jobs back, but did not restore the earlier national total. The industry breakdown shows how employment changed within the sector. Bar lengths reveal changes that rankings alone can miss.</p>
                 <article class="editorial-figure figure-9 support-figure" id="editorial-v9">
                     <div class="chart-heading editorial-heading">
                         <div>
@@ -405,16 +409,46 @@
                         <div class="donut-host" id="vis09"></div>
                         <aside class="race-callout-panel" aria-label="Subdivision tracking and playback notes">
                             <div class="race-callout-header">Tracked subdivision</div>
-                            <div class="selected-detail" id="race-selected">Select an industry to keep its exact
+                            <div class="selected-detail instruction-card" id="race-selected">Select an industry to keep its exact
                                 employment, share and rank visible during playback.</div>
                             <p class="race-guide-note">Choose a year or press Play to follow industries. Labels show
-                                observed annual values; colours identify industries. Equal values share a rank. The
+                                observed annual values. Colours identify industries. Equal values share a rank. The
                                 length scale stays fixed.</p>
                         </aside>
                     </section>
                     <p class="method-note" id="race-load-status" role="status"></p>
                 </article>
             </section>
+            <p class="story-transition">Employment is one measure of change. Comparing value added in dollars shows the scale of recent gains and declines across industries.</p>
+                <article class="editorial-figure figure-10 support-figure" id="editorial-v10">
+                    <div class="v10-split-layout">
+                        <div class="v10-side-column">
+                            <div class="chart-heading editorial-heading">
+                                <div>
+                                    <p class="chart-number">V10</p>
+                                    <h3>Industry value added: 2023–24 versus 2024–25</h3>
+                                    <p class="chart-deck">Food recorded the largest dollar gain in value added from 2023–24 to 2024–25, while some industries declined. These dollar changes add context to the growth percentages shown earlier.</p>
+                                </div>
+                            </div>
+                            <div class="direct-controls">
+                                <div class="chart-controls"><label for="vis10-focus">Focus a subdivision<select
+                                            id="vis10-focus">
+                                            <option value="">All subdivisions</option>
+                                        </select></label></div>
+                            </div>
+                            <div class="key-finding-card">
+                                <div class="finding-tag">What the data shows · Industry Value Added Trajectory</div>
+                                <p><strong style="color: #A76312;">Food recorded the largest absolute IVA gain: A$2.348bn</strong>, reaching A$31.279bn. <strong style="color: #C62828;">Textiles, leather, clothing and footwear fell A$336m</strong> to A$2.216bn. A sector’s overall performance can hide very different industry outcomes.</p>
+                            </div>
+                        </div>
+                        <div class="v10-chart-column">
+                            <!-- V10 CHART & LABELS: Slopegraph rendered in #vis10 comparing 2023-24 vs 2024-25 IVA values with collision-avoided endpoints -->
+                            <div aria-label="Slopegraph showing industry value added in Australian dollar millions for all fifteen manufacturing subdivisions in 2023–24 and 2024–25"
+                                class="chart new-detail-chart" id="vis10" role="img"></div>
+                        </div>
+                    </div>
+                </article>
+            <p class="story-transition">Manufacturing’s role extends beyond its own workforce and economic value. Other Australian industries use the materials and goods it produces.</p>
         </section>
         <section aria-labelledby="connections-heading" class="story-section new-section" id="connections">
             <div class="section-heading"><span class="section-number">04</span>
@@ -424,20 +458,20 @@
                 </div>
             </div>
             <div class="story-prose-columns">
-                <p class="section-intro">Manufacturing reaches beyond finished consumer goods. In 2023–24, construction received A$74.215bn in domestic intermediate inputs from manufacturing, its largest outward relationship shown here.</p>
-                <p class="section-intro">Follow these domestic links, compare recent changes in industry value added, then look overseas. Finish with consumers: how does the economic picture connect with stated interest in buying Australian-made products?</p>
+                <p class="section-intro">Jobs and industry totals capture only part of manufacturing’s role. Manufacturers also supply materials and goods that other industries rely on. In 2023–24, construction used A$74.215bn in domestic manufacturing inputs, the largest outward connection shown here.</p>
+                <p class="section-intro">Those connections extend overseas through exports. Back at home, consumers also express interest in buying Australian-made products. These are different views of manufacturing’s place in the economy, from industry supply chains to what shoppers say matters to them.</p>
             </div>
-            <section aria-label="Connected across the economy; changing within the sector"
+            <section aria-label="Manufacturing reaches beyond the factory"
                 class="analytical-scene domestic-scene">
                 <header class="scene-heading">
                     <p class="scene-kicker">DOMESTIC CONNECTIONS</p>
-                    <h3>Connected across the economy; changing within the sector</h3>
+                    <h3>Manufacturing reaches beyond the factory</h3>
                 </header>
-                <article class="editorial-figure figure-10 support-figure" id="editorial-v10">
-                    <div class="v10-header-row">
+                <article class="editorial-figure figure-11 support-figure" id="editorial-v11">
+                    <div class="v11-header-row">
                         <div class="chart-heading editorial-heading">
                             <div>
-                                <p class="chart-number">V10</p>
+                                <p class="chart-number">V11</p>
                                 <h3>Manufacturing’s domestic economic connections</h3>
                                 <p class="chart-deck">Supplying industry → using industry, 2023–24.<br />Ribbon width
                                     represents domestic intermediate-use value.</p>
@@ -454,9 +488,9 @@
                         </div>
                     </div>
                     <div class="chord-insight-composition">
-                        <!-- V10 CHART & GUIDE: Directed chord diagram rendered in #vis10 (ribbon width represents intermediate use; outer arcs represent industry divisions) -->
-                        <div aria-label="Directed chord of 19 industry divisions and 37 domestic intermediate-use relationships involving manufacturing; outward arrow tips point at the using division"
-                            class="chart new-detail-chart" id="vis10" role="img"></div>
+                        <!-- V11 CHART & GUIDE: Directed chord diagram rendered in #vis11 (ribbon width represents intermediate use; outer arcs represent industry divisions) -->
+                        <div aria-label="Directed chord of 19 industry divisions and 37 domestic intermediate-use relationships involving manufacturing. Outward arrow tips point at the using division"
+                            class="chart new-detail-chart" id="vis11" role="img"></div>
                         <aside aria-label="Domestic connections context and summary" class="chord-sidebar">
                             <div class="chord-insight">
                                 <p class="insight-label">Largest outward relationship shown</p>
@@ -467,48 +501,19 @@
                             </div>
                             <div aria-label="Selected industry supplies and receives"
                                 class="supporting-view paired-summary" id="industry-summary"></div>
-                            <p aria-live="polite" class="selection-detail" id="relationship-detail">Arrow tips point to
-                                the using division. Manufacturing → Manufacturing is self-use, not a reciprocal pair.
+                            <p aria-live="polite" class="selection-detail instruction-card" id="relationship-detail">Arrow tips point to
+                                the using division.<br />Manufacturing → Manufacturing is self-use, not a reciprocal pair.
                             </p>
                         </aside>
                     </div>
                 </article>
-                <p class="story-transition">These supply links show manufacturing’s wider role. Within the sector, recent gains in value added were uneven too.</p>
-                <article class="editorial-figure figure-11 support-figure" id="editorial-v11">
-                    <div class="v13-split-layout">
-                        <div class="v13-side-column">
-                            <div class="chart-heading editorial-heading">
-                                <div>
-                                    <p class="chart-number">V11</p>
-                                    <h3>Industry value added: 2023–24 versus 2024–25</h3>
-                                    <p class="chart-deck">Compare each subdivision’s IVA across two years on the same dollar scale. The slope shows an absolute change, complementing the percentage growth in V6.</p>
-                                </div>
-                            </div>
-                            <div class="direct-controls">
-                                <div class="chart-controls"><label for="vis11-focus">Focus a subdivision<select
-                                            id="vis11-focus">
-                                            <option value="">All subdivisions</option>
-                                        </select></label></div>
-                            </div>
-                            <div class="key-finding-card">
-                                <div class="finding-tag">Key Takeaway · Industry Value Added Trajectory</div>
-                                <p><strong>Food recorded the largest absolute IVA gain: A$2.348bn</strong>, reaching A$31.279bn. Textiles, leather, clothing and footwear fell A$336m to A$2.216bn. A sector’s overall performance can hide very different industry outcomes.</p>
-                            </div>
-                        </div>
-                        <div class="v13-chart-column">
-                            <!-- V11 CHART & LABELS: Slopegraph rendered in #vis11 comparing 2023-24 vs 2024-25 IVA values with collision-avoided endpoints -->
-                            <div aria-label="Slopegraph showing industry value added in Australian dollar millions for all fifteen manufacturing subdivisions in 2023–24 and 2024–25"
-                                class="chart new-detail-chart" id="vis11" role="img"></div>
-                        </div>
-                    </div>
-                </article>
             </section>
-            <p class="story-transition">Industry changes affect the domestic picture. Export connections add another perspective: which overseas markets receive manufactured merchandise?</p>
+            <p class="story-transition">Domestic supply links are one part of manufacturing’s reach. Exports connect Australian producers with overseas markets too.</p>
             <article class="editorial-figure figure-12 hero-figure" id="editorial-v12">
                 <div class="chart-heading editorial-heading">
                     <div>
                         <p class="chart-number">V12</p>
-                        <h3>Where states export manufactured merchandise</h3>
+                        <h3>Where states export manufactured merchandise?</h3>
                         <p class="chart-deck">The United States leads the displayed destination totals. Explore 2025 state-origin exports of Simply Transformed Manufactures (STM) and Elaborately Transformed Manufactures (ETM).</p>
                     </div>
                 </div>
@@ -527,13 +532,13 @@
                         <p class="navigation-badge"><span class="tip-label">Tip:</span> <span class="tip-body">Hold ⌘/Ctrl
                                 while scrolling to zoom<br /><span class="nowrap">Drag to pan</span> · Reset restores
                                 view</span></p>
-                        <p aria-live="polite" class="selection-detail" id="export-flow-detail">Hover or tap a
+                        <p aria-live="polite" class="selection-detail instruction-card" id="export-flow-detail">Hover or tap a
                             connection, or choose an origin and destination above.</p>
                     </div>
                 </div>
                 <div class="feature-composition export-below">
                     <div class="feature-visual">
-                        <div aria-label="Geographic origin–destination map of 81 displayed 2025 manufactured export flows from seven Australian states and territories to 25 destination countries; line width proportional to value"
+                        <div aria-label="Geographic origin–destination map of 81 displayed 2025 manufactured export flows from seven Australian states and territories to 25 destination countries. Line width proportional to value"
                             class="chart" id="vis12" role="img"></div>
                         <!-- ============================================================== -->
                         <!-- V12 LEGEND: Manufactured export route status, value & nodes   -->
@@ -589,12 +594,12 @@
                 <p class="export-caption">Curves show origin–destination connections, not shipping routes. ACT is
                     excluded due to suppressed state data.</p>
             </article>
-            <p class="story-transition">Overseas markets are one audience for Australian-made products. At home, the final chart asks what consumers say about buying local.</p>
+            <p class="story-transition">Exports show manufacturing’s reach beyond Australia. At home, survey respondents also express interest in buying local, with many reporting that knowing a product’s Australian origin makes them more likely to buy it.</p>
             <article class="editorial-figure figure-13 support-figure" id="editorial-v13">
                 <div class="chart-heading editorial-heading">
                     <div>
                         <p class="chart-number">V13</p>
-                        <h3>What Australians say about buying local</h3>
+                        <h3>What Australians say about buying local?</h3>
                         <p class="chart-deck">Roy Morgan’s March 2025 findings distinguish wanting, intending and looking to buy local, alongside the importance of knowing a product’s origin.</p>
                     </div>
                 </div>
@@ -619,7 +624,7 @@
                             <div id="people-rows"></div>
                             <div class="v12-interpretation-row">
                                 <div class="key-finding-card">
-                                    <div class="finding-tag">Key Takeaway · Consumer Sentiment</div>
+                                    <div class="finding-tag">Main message · Consumer Sentiment</div>
                                     <p><strong>Knowing a product’s origin matters to respondents.</strong> While 84% report greater likelihood of buying Australian Made, 67% intend to buy more in the next year. These are separate, overlapping findings, not steps in a purchasing funnel.</p>
                                 </div>
                             </div>
@@ -627,7 +632,7 @@
                     </div>
                 </div>
             </article>
-            <p class="story-transition">Australian-made products connect local clusters, specialised industries and changing jobs with domestic and overseas demand. Consumers report strong interest in local origin; actual purchasing behaviour remains a separate question.</p>
+            <p class="story-transition">Behind Australian-made products are local business clusters, industries with different strengths and a workforce that has changed over time. Their reach extends into other Australian industries and overseas markets. Consumers’ interest in local origin adds a human perspective, although what people say they would buy is not the same as what they actually purchase.</p>
         </section>
     </main>
     <footer class="page-footer">
@@ -643,7 +648,7 @@
                         SA2 Boundaries</a>. Reporting facility locations from DCCEEW <a
                         href="https://www.dcceew.gov.au/environment/protection/npi/data">National Pollutant Inventory
                         (NPI)</a> (2024–25).</p>
-                <p><strong>Industry · V4–V7 &amp; V11.</strong> ABS <a
+                <p><strong>Industry · V4–V7 &amp; V10.</strong> ABS <a
                         href="https://www.abs.gov.au/statistics/industry/industry-overview/australian-industry/latest-release">Australian
                         Industry, 2024–25</a> (Tables 1–2). Supplies subdivision industry value added (IVA), sales and
                     service income, wages, and June-end employment.</p>
@@ -651,7 +656,7 @@
                         href="https://www.abs.gov.au/statistics/industry/industry-overview/australian-industry/latest-release">Australian
                         Industry Time Series</a>. Tracks employment levels and annual rankings across all 15
                     manufacturing subdivisions from 2006–07 to 2024–25.</p>
-                <p><strong>Domestic connections · V10.</strong> ABS <a
+                <p><strong>Domestic connections · V11.</strong> ABS <a
                         href="https://www.abs.gov.au/statistics/economy/national-accounts/australian-national-accounts-input-output-tables/2023-24">Input-Output
                         Tables, 2023–24</a> (Table 5) and <a
                         href="https://www.abs.gov.au/methodologies/australian-national-accounts-input-output-tables-methodology/2023-24">Division
@@ -666,18 +671,19 @@
                     attitudes and preferences toward purchasing local products.</p>
             </div>
         </section>
-        <p>Data visualisation and analysis: Wong Xin Thung · Visualisation date: 9 October 2026.</p>
+        <p>Data visualisation and analysis: Wong Xin Thung</p>
+        <p>Last updated: 24 October 2026.</p>
         <p>Generative AI supported coding, data validation, visualisation design, idiom selection, and grammar
             refinement. All data, calculations, joins, and chart outputs were checked against the original source
             materials.</p>
     </footer>
-    <script src="js/dashboard-interactions.js?v=v5ShortLines"></script>
-    <script src="js/dashboard-app.js?v=centredLargeMaps"></script>
-    <script src="js/viz9-controller.js?v=readableCards3"></script>
+    <script src="js/dashboard-interactions.js?v=instructionStateColours"></script>
+    <script src="js/dashboard-app.js?v=instructionStateColours"></script>
+    <script src="js/viz9-controller.js?v=instructionStateColours"></script>
     <div hidden="" id="people-tip" role="tooltip"></div>
-    <script src="js/viz13-controller.js?v=noClick"></script>
-    <script src="js/viz2-controller.js?v=v2ReuseView2"></script>
-    <script src="js/paragraph-line-limit.js?v=20261024story"></script>
+    <script src="js/viz13-controller.js?v=finalReviewRenumbered"></script>
+    <script src="js/viz2-controller.js?v=instructionStateColours"></script>
+    <script src="js/paragraph-line-limit.js?v=finalReviewRenumbered"></script>
 </body>
 
 </html>

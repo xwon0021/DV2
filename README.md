@@ -1,6 +1,6 @@
 # Australian Made Products · Visualising Local Manufacturing
 
-**FIT3179 · Data Visualisation 2**  
+**FIT3179 Data Visualisation 2**  
 *A data-led exploration of where Australian manufacturing happens, what the sector produces, how it has transformed over time, and how consumer sentiment connects to local products.*
 
 - **Author**: Wong Xin Thung
@@ -25,14 +25,15 @@ The dashboard is structured into four narrative chapters featuring 13 cohesive, 
 - **V7 — Multi-Dimensional Economic Profiles (Parallel Coordinates)**: Normalised comparison of employment, wages, sales, and IVA (`work/viz7.vg.json`).
 
 ### 03 / Change Over Time
-- **V8 — National Manufacturing Employment History (Overview + Detail Time Series)**: Track employment from 2006–07 through 2024–25 with interactive brush zoom (`work/viz8.vg.json`).
-- **V9 — Employment Ranking & Size (Interactive Timeline Race)**: 18-year animated ranking progression across all manufacturing subdivisions (`work/viz9.vg.json`).
+- **V8 — National Manufacturing Employment History (Overview + Detail Time Series)**: 19 June-end observations from 2006–07 through 2024–25, with linked start/end selectors and overview brush (`work/viz8.vg.json`).
+- **V9 — Employment Ranking & Size (Interactive Timeline Race)**: Employment changes across 19 annual observations (`work/viz9.vg.json`, `js/viz9-controller.js`).
+- **V10 — Industry Value Added Trajectory (Slopegraph)**: Industry gains and declines between 2023–24 and 2024–25 (`work/viz10.vg.json`, `work/data/vis10_industry_value_added.json`).
 
 ### 04 / Beyond the Factory
-- **V10 — Domestic Economic Connections (Directed Chord Diagram)**: Inter-industry intermediate supply relationships (`work/viz11.vg.json`).
-- **V11 — Industry Value Added Trajectory (Slopegraph)**: Sectoral gains and contractions between 2023–24 and 2024–25 (`work/viz13.vg.json`).
-- **V12 — State Manufactured Exports (Geographic Flow Map)**: 81 state-origin export flows to global trading partners (`work/viz10.vg.json`).
-- **V13 — Consumer Attitudes on Buying Local (Isotype Pictogram / Dot Plot)**: Stated Australian Made consumer purchasing preferences (`work/viz12.vg.json`).
+- **V11 — Domestic Economic Connections (Directed Chord Diagram)**: Domestic intermediate-use relationships involving manufacturing (`work/viz11.vg.json`, `work/data/vis11_domestic_edges.json`, `work/data/vis11_division_nodes.json`, `work/data/vis11_directed_layout.json`).
+- **V12 — State Manufactured Exports (Geographic Flow Map)**: 81 displayed state-origin export flows (`work/viz12.vg.json`).
+- **V13 — Consumer Attitudes on Buying Local (Isotype Pictogram)**: Stated consumer preferences, rendered by `js/viz13-controller.js`. `work/viz13.vg.json` is the reference spec.
+
 
 ---
 
@@ -41,7 +42,6 @@ The dashboard is structured into four narrative chapters featuring 13 cohesive, 
 ```text
 ├── index.html                   # Main dashboard entry page
 ├── README.md                    # Project documentation
-├── DEPLOYMENT_FILES.txt         # Clean whitelist of deployment files
 │
 ├── css/                         # Modular, cleanly separated styles
 │   ├── dashboard-main.css       # Typography, tokens, masthead, story prose
@@ -55,24 +55,14 @@ The dashboard is structured into four narrative chapters featuring 13 cohesive, 
 │   ├── viz2-controller.js       # Linked map and live business ranking logic
 │   ├── viz9-controller.js       # Playback animation timeline controller
 │   ├── viz13-controller.js      # Interactive isotype pictogram controller
-│   └── paragraph-line-limit.js  # Text balance and line clamp utility
+│   └── paragraph-line-limit.js  # Paragraph line limit, including hyphenated word counts
 │
 └── work/                        # Official standardised visualisation specs & data
     ├── viz1.vg.json to viz13.vg.json # Official Vega specifications
     └── data/                    # Clean, validated GeoJSON, JSON & CSV datasets
 ```
 
----
 
-## 🚀 Running Locally
-
-Because Vega loads external geographic boundaries and tabular data via `fetch()`, this dashboard must be served over a local web server (not `file://`):
-
-```bash
-# Start a local server (Python 3):
-python3 -m http.server 8080
-```
-Open **`http://localhost:8080/index.html`** in your browser.
 
 ---
 
@@ -82,3 +72,11 @@ Open **`http://localhost:8080/index.html`** in your browser.
 - **Department of Climate Change, Energy, the Environment and Water (DCCEEW)**: National Pollutant Inventory (NPI) reporting facility database.
 - **Department of Foreign Affairs and Trade (DFAT)**: Merchandise Trade Pivot Tables (2025).
 - **Roy Morgan Research / Australian Made Campaign Ltd**: Consumer Research Study (March 2025).
+---
+
+## 🚀 Running Locally
+```bash
+# Start a local server (Python 3):
+python3 -m http.server 8080
+```
+Open **`http://localhost:8080/index.html`** in your browser.

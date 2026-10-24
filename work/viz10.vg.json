@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "width": 900,
-  "height": 710,
+  "height": 600,
   "padding": 5,
   "autosize": {
     "type": "none",
@@ -10,276 +10,360 @@
   "background": "transparent",
   "signals": [
     {
-      "name": "radius",
-      "update": "min(230,(width-500)/2)"
-    },
-    {
-      "name": "cx",
-      "update": "width/2"
-    },
-    {
-      "name": "cy",
-      "update": "height/2"
-    },
-    {
-      "name": "selectedIndustry",
-      "notes": "Click an outside arc or label to choose one industry.",
-      "value": "",
+      "name": "hoverCode",
+      "value": null,
       "on": [
         {
-          "events": "@industryArcs:click, @industryLabels:click",
-          "update": "datum.Code"
-        }
-      ]
-    },
-    {
-      "name": "hoverIndustry",
-      "notes": "Remember the industry under the pointer.",
-      "value": "",
-      "on": [
-        {
-          "events": "@industryArcs:mouseover, @industryLabels:mouseover",
+          "events": "@slopes:mouseover, @endpoints:mouseover, @labels:mouseover, @rightEndpoints:mouseover, @rightLabels:mouseover",
           "update": "datum.Code"
         },
         {
-          "events": "@industryArcs:mouseout, @industryLabels:mouseout",
-          "update": "''"
+          "events": "@slopes:mouseout, @endpoints:mouseout, @labels:mouseout, @rightEndpoints:mouseout, @rightLabels:mouseout",
+          "update": "null"
         }
       ]
     },
     {
-      "name": "activeIndustry",
-      "update": "hoverIndustry || selectedIndustry"
-    },
-    {
-      "name": "selectedEdge",
-      "notes": "Click a ribbon to choose its Supplier to User relationship.",
-      "value": "",
-      "on": [
-        {
-          "events": "@directedRibbons:click",
-          "update": "datum.Key"
-        },
-        {
-          "events": "@industryArcs:click, @industryLabels:click",
-          "update": "''"
-        }
-      ]
-    },
-    {
-      "name": "hoverEdge",
-      "notes": "Remember the ribbon under the pointer.",
-      "value": "",
-      "on": [
-        {
-          "events": "@directedRibbons:mouseover",
-          "update": "datum.Key"
-        },
-        {
-          "events": "@directedRibbons:mouseout",
-          "update": "''"
-        }
-      ]
-    },
-    {
-      "name": "activeEdge",
-      "update": "hoverEdge || (hoverIndustry ? '' : selectedEdge)"
+      "name": "focusCode",
+      "value": null
     }
   ],
   "data": [
     {
-      "name": "layout",
-      "notes": "Prepared ribbon shapes. These paths show the direction and size of each relationship.",
-      "url": "work/data/vis10_directed_layout.json"
-    },
+      "name": "iva",
+      "url": "work/data/vis10_industry_value_added.json"
+    }
+  ],
+  "scales": [
     {
-      "name": "edges",
-      "notes": "One row per supplier to user connection, with value in A$ million.",
-      "url": "work/data/vis10_domestic_edges.json",
-      "transform": [
-        {
-          "type": "formula",
-          "notes": "Join the supplier and user codes into one key, like C|E.",
-          "expr": "datum.Source+'|'+datum.Target",
-          "as": "Key"
-        },
-        {
-          "type": "lookup",
-          "notes": "Use that key to attach the prepared ribbon shape to the value.",
-          "from": "layout",
-          "key": "Key",
-          "fields": [
-            "Key"
-          ],
-          "values": [
-            "Path"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "nodes",
-      "notes": "The 19 industry divisions and where their outside arcs go.",
-      "url": "work/data/vis10_division_nodes.json"
+      "name": "y",
+      "type": "linear",
+      "domain": [
+        0,
+        34000
+      ],
+      "range": [
+        540,
+        40
+      ],
+      "zero": true
     }
   ],
   "marks": [
     {
-      "name": "directedRibbons",
-      "notes": "Draw the connections. Wider ribbons mean more domestic intermediate use; tips point to the user.",
-      "type": "path",
+      "name": "slopes",
+      "type": "rule",
       "from": {
-        "data": "edges"
-      },
-      "encode": {
-        "update": {
-          "path": {
-            "field": "Path"
-          },
-          "x": {
-            "signal": "cx"
-          },
-          "y": {
-            "signal": "cy"
-          },
-          "scaleX": {
-            "signal": "radius"
-          },
-          "scaleY": {
-            "signal": "radius"
-          },
-          "fill": {
-            "signal": "datum.Key === activeEdge || (activeIndustry && (datum.Source === activeIndustry || datum.Target === activeIndustry)) ? '#D8891C' : '#526e84'"
-          },
-          "fillOpacity": {
-            "signal": "activeEdge ? (datum.Key === activeEdge ? .9 : .25) : activeIndustry ? (datum.Source === activeIndustry || datum.Target === activeIndustry ? .8 : .25) : .5"
-          },
-          "stroke": {
-            "value": "#ffffff"
-          },
-          "strokeWidth": {
-            "value": 0.45
-          },
-          "zindex": {
-            "signal": "datum.Key === selectedEdge ? 1 : 0"
-          },
-          "cursor": {
-            "value": "pointer"
-          },
-          "description": {
-            "signal": "'Supplier ' + datum.Source_Name + ' to user ' + datum.Target_Name + (datum.Source === datum.Target ? ', manufacturing self-use' : '')"
-          },
-          "tooltip": {
-            "signal": "{'Supplier \u2192 User': datum.Source_Name + ' \u2192 ' + datum.Target_Name, 'Domestic intermediate use': 'A$' + format(datum.Value_AUD_millions / 1000, '.3f') + 'bn', 'Period / prices': '2023\u201324 \u00b7 basic prices', 'Scope': datum.Source === datum.Target ? 'Manufacturing self-use; domestic industry accounting' : 'Domestic industry accounting; not company supply chains', 'Source unit': 'A$ million'}"
-          }
-        }
-      }
-    },
-    {
-      "name": "industryArcs",
-      "notes": "Draw the outside arcs for the industries. Click one to trace its connections.",
-      "type": "arc",
-      "from": {
-        "data": "nodes"
+        "data": "iva"
       },
       "encode": {
         "update": {
           "x": {
-            "signal": "cx"
+            "value": 240
+          },
+          "x2": {
+            "signal": "width-240"
           },
           "y": {
-            "signal": "cy"
+            "scale": "y",
+            "field": "IVA_2023_24"
           },
-          "innerRadius": {
-            "signal": "radius*1.08"
+          "y2": {
+            "scale": "y",
+            "field": "IVA_2024_25"
           },
-          "outerRadius": {
-            "signal": "radius*1.14"
+          "stroke": {
+            "signal": "((hoverCode || focusCode) ? datum.Code === (hoverCode || focusCode) : datum.Highlight) ? (datum.Code === '13' ? '#C62828' : '#D8891C') : '#718699'"
           },
-          "startAngle": {
-            "field": "Start"
+          "strokeWidth": {
+            "signal": "((hoverCode || focusCode) ? datum.Code === (hoverCode || focusCode) : datum.Highlight) ? 3 : 1.5"
           },
-          "endAngle": {
-            "field": "End"
-          },
-          "fill": {
-            "signal": "datum.Code === activeIndustry ? '#D8891C' : '#173b5e'"
-          },
-          "cursor": {
-            "value": "pointer"
-          },
-          "description": {
-            "signal": "datum.Name + ' industry division'"
+          "opacity": {
+            "signal": "!(hoverCode || focusCode) || datum.Code === (hoverCode || focusCode) ? 1 : 0.45"
           },
           "tooltip": {
-            "signal": "{'Division': datum.Name, 'Supplies in this scope': 'A$' + format(datum.Out_AUD_millions / 1000, '.3f') + 'bn', 'Uses in this scope': 'A$' + format(datum.In_AUD_millions / 1000, '.3f') + 'bn', 'Year': '2023\u201324', 'Arc': 'Space allocated to ribbon endpoints, not industry output'}"
+            "signal": "{'Subdivision':datum.Subdivision,'2023\u201324 IVA (A$ million)':format(datum.IVA_2023_24,',.0f'),'2024\u201325 IVA (A$ million)':format(datum.IVA_2024_25,',.0f'),'Absolute change (A$ million)':format(datum.Absolute_Change,'+,.0f'),'Percentage change':datum.Percentage_Display,'Unit':datum.Unit}"
           }
         }
       }
     },
     {
-      "type": "path",
+      "type": "rule",
       "from": {
-        "data": "nodes"
+        "data": "iva"
       },
       "encode": {
         "update": {
-          "path": {
-            "signal": "'M'+(cx+sin(datum.Mid)*radius*1.16)+','+(cy-cos(datum.Mid)*radius*1.16)+'L'+(cx+datum.Side*(radius*1.22))+','+(cy+datum.LabelY*radius)+'L'+(datum.Side > 0 ? width-208 : 208)+','+(cy+datum.LabelY*radius)"
+          "x": {
+            "signal": "240"
+          },
+          "x2": {
+            "signal": "218"
+          },
+          "y": {
+            "scale": "y",
+            "field": "IVA_2023_24"
+          },
+          "y2": {
+            "field": "LeftLabelY"
           },
           "stroke": {
-            "value": "#aab8c4"
+            "signal": "((hoverCode || focusCode) ? datum.Code === (hoverCode || focusCode) : datum.Highlight) ? (datum.Code === '13' ? '#C62828' : '#D8891C') : '#718699'"
           },
-          "strokeWidth": {
-            "value": 0.7
-          },
-          "fill": {
-            "value": null
+          "opacity": {
+            "signal": "!(hoverCode || focusCode) || datum.Code === (hoverCode || focusCode) ? 1 : 0.45"
           }
         }
       }
     },
     {
-      "name": "industryLabels",
-      "notes": "Write the industry names beside their arcs.",
+      "name": "endpoints",
+      "type": "symbol",
+      "from": {
+        "data": "iva"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "240"
+          },
+          "y": {
+            "scale": "y",
+            "field": "IVA_2023_24"
+          },
+          "size": {
+            "value": 45
+          },
+          "fill": {
+            "signal": "((hoverCode || focusCode) ? datum.Code === (hoverCode || focusCode) : datum.Highlight) ? (datum.Code === '13' ? '#C62828' : '#D8891C') : '#718699'"
+          },
+          "opacity": {
+            "signal": "!(hoverCode || focusCode) || datum.Code === (hoverCode || focusCode) ? 1 : 0.45"
+          },
+          "tooltip": {
+            "signal": "{'Subdivision':datum.Subdivision,'2023\u201324 IVA (A$ million)':format(datum.IVA_2023_24,',.0f'),'2024\u201325 IVA (A$ million)':format(datum.IVA_2024_25,',.0f'),'Absolute change (A$ million)':format(datum.Absolute_Change,'+,.0f'),'Percentage change':datum.Percentage_Display,'Unit':datum.Unit}"
+          }
+        }
+      }
+    },
+    {
+      "name": "labels",
       "type": "text",
       "from": {
-        "data": "nodes"
+        "data": "iva"
       },
       "encode": {
         "update": {
           "x": {
-            "signal": "datum.Side > 0 ? width-203 : 203"
+            "signal": "218-5"
           },
           "y": {
-            "signal": "cy+datum.LabelY*radius"
+            "field": "LeftLabelY"
           },
           "align": {
-            "signal": "datum.Side > 0 ? 'left' : 'right'"
+            "value": "right"
           },
           "baseline": {
             "value": "middle"
           },
           "text": {
-            "field": "Short"
+            "signal": "datum.Short + ' \u00b7 ' + format(datum.IVA_2023_24,',.0f')"
           },
           "fontSize": {
-            "value": 13
-          },
-          "fontWeight": {
-            "signal": "datum.Code === 'C' ? 'bold' : 'normal'"
+            "value": 12
           },
           "fill": {
-            "signal": "datum.Code === activeIndustry ? '#A76312' : '#24394c'"
+            "signal": "((hoverCode || focusCode) ? datum.Code === (hoverCode || focusCode) : datum.Highlight) ? (datum.Code === '13' ? '#C62828' : '#A76312') : '#718699'"
           },
-          "cursor": {
-            "value": "pointer"
-          },
-          "description": {
-            "signal": "datum.Name"
+          "opacity": {
+            "signal": "!(hoverCode || focusCode) || datum.Code === (hoverCode || focusCode) ? 1 : 0.45"
           },
           "tooltip": {
-            "signal": "{'Division': datum.Name, 'Scope': 'Domestic intermediate-use connections with manufacturing, 2023\u201324'}"
+            "signal": "{'Subdivision':datum.Subdivision,'2023\u201324 IVA (A$ million)':format(datum.IVA_2023_24,',.0f'),'2024\u201325 IVA (A$ million)':format(datum.IVA_2024_25,',.0f'),'Absolute change (A$ million)':format(datum.Absolute_Change,'+,.0f'),'Percentage change':datum.Percentage_Display,'Unit':datum.Unit}"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "240"
+          },
+          "y": {
+            "value": 24
+          },
+          "baseline": {
+            "value": "top"
+          },
+          "align": {
+            "value": "center"
+          },
+          "text": {
+            "value": "2023\u201324"
+          },
+          "fontSize": {
+            "value": 15
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "value": "#173b5e"
+          }
+        }
+      }
+    },
+    {
+      "type": "rule",
+      "from": {
+        "data": "iva"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "width-240"
+          },
+          "x2": {
+            "signal": "width-218"
+          },
+          "y": {
+            "scale": "y",
+            "field": "IVA_2024_25"
+          },
+          "y2": {
+            "field": "RightLabelY"
+          },
+          "stroke": {
+            "signal": "((hoverCode || focusCode) ? datum.Code === (hoverCode || focusCode) : datum.Highlight) ? (datum.Code === '13' ? '#C62828' : '#D8891C') : '#718699'"
+          },
+          "opacity": {
+            "signal": "!(hoverCode || focusCode) || datum.Code === (hoverCode || focusCode) ? 1 : 0.45"
+          }
+        }
+      }
+    },
+    {
+      "name": "rightEndpoints",
+      "type": "symbol",
+      "from": {
+        "data": "iva"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "width-240"
+          },
+          "y": {
+            "scale": "y",
+            "field": "IVA_2024_25"
+          },
+          "size": {
+            "value": 45
+          },
+          "fill": {
+            "signal": "((hoverCode || focusCode) ? datum.Code === (hoverCode || focusCode) : datum.Highlight) ? (datum.Code === '13' ? '#C62828' : '#D8891C') : '#718699'"
+          },
+          "opacity": {
+            "signal": "!(hoverCode || focusCode) || datum.Code === (hoverCode || focusCode) ? 1 : 0.45"
+          },
+          "tooltip": {
+            "signal": "{'Subdivision':datum.Subdivision,'2023\u201324 IVA (A$ million)':format(datum.IVA_2023_24,',.0f'),'2024\u201325 IVA (A$ million)':format(datum.IVA_2024_25,',.0f'),'Absolute change (A$ million)':format(datum.Absolute_Change,'+,.0f'),'Percentage change':datum.Percentage_Display,'Unit':datum.Unit}"
+          }
+        }
+      }
+    },
+    {
+      "name": "rightLabels",
+      "type": "text",
+      "from": {
+        "data": "iva"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "width-218+5"
+          },
+          "y": {
+            "field": "RightLabelY"
+          },
+          "align": {
+            "value": "left"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "text": {
+            "signal": "datum.Short + ' \u00b7 ' + format(datum.IVA_2024_25,',.0f')"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fill": {
+            "signal": "((hoverCode || focusCode) ? datum.Code === (hoverCode || focusCode) : datum.Highlight) ? (datum.Code === '13' ? '#C62828' : '#A76312') : '#718699'"
+          },
+          "opacity": {
+            "signal": "!(hoverCode || focusCode) || datum.Code === (hoverCode || focusCode) ? 1 : 0.45"
+          },
+          "tooltip": {
+            "signal": "{'Subdivision':datum.Subdivision,'2023\u201324 IVA (A$ million)':format(datum.IVA_2023_24,',.0f'),'2024\u201325 IVA (A$ million)':format(datum.IVA_2024_25,',.0f'),'Absolute change (A$ million)':format(datum.Absolute_Change,'+,.0f'),'Percentage change':datum.Percentage_Display,'Unit':datum.Unit}"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "width-240"
+          },
+          "y": {
+            "value": 24
+          },
+          "baseline": {
+            "value": "top"
+          },
+          "align": {
+            "value": "center"
+          },
+          "text": {
+            "value": "2024\u201325"
+          },
+          "fontSize": {
+            "value": 15
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "value": "#173b5e"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "width/2"
+          },
+          "y": {
+            "value": 584
+          },
+          "align": {
+            "value": "center"
+          },
+          "text": {
+            "value": "Industry value added \u00b7 A$ million \u00b7 common vertical scale"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fill": {
+            "value": "#173b5e"
           }
         }
       }

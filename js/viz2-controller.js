@@ -105,7 +105,7 @@
       height,
       padding: { left: 0, right: 0, top: 0, bottom: 0 },
       autosize: { type: 'pad', contains: 'padding' },
-      background: 'transparent',
+      background: '#EAF2F6',
       // These values remember zoom, pan, the clicked SA2 and the hovered SA2.
       signals: [
         { name: 'mapZoom', value: 1 },
@@ -369,6 +369,7 @@
   }
   function describeSelection(model) {
     const host = $('selected');
+    host.classList.toggle('instruction-card', !model.selected);
     host.replaceChildren();
     const title = document.createElement('strong');
     title.textContent = model.selected

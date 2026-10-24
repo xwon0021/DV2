@@ -76,7 +76,7 @@
       ]
     },
     "color": {
-      "notes": "Blue is sales growth. Pink is IVA growth.",
+      "notes": "Teal is sales growth. Orange is IVA growth, matching V4.",
       "field": "Measure_Label",
       "type": "nominal",
       "scale": {
@@ -85,8 +85,8 @@
           "Industry value added"
         ],
         "range": [
-          "#188FB8",
-          "#C77570"
+          "#16877B",
+          "#D95F02"
         ]
       },
       "legend": {

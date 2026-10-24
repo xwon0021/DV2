@@ -41,7 +41,7 @@ function editorialFigureDimensions(spec, target, container) {
   if (target === 'map2' && !mobile) spec.height = 400;
   // V6: give the paired bars and industry names room on a wide screen.
   if (target === 'vis06' && !mobile) {
-    spec.height = 320;
+    spec.height = Math.max(300, Math.min(330, Math.round(window.innerHeight * 0.43)));
     spec.encoding.y.axis.labelLimit = 240;
     spec.encoding.y.axis.labelFontSize = 12;
     spec.encoding.color.legend.orient = 'top';
@@ -215,7 +215,7 @@ function addEditorialFlowNavigation(spec) {
   return spec;
 }
 function editorialChordFit(spec, container) {
-  // V10: move the chord and its labels so they fit the screen width.
+  // V11: move the chord and its labels so they fit the screen width.
   const width = container.clientWidth,
     compact = width < 760;
   spec.width = width;
@@ -240,7 +240,7 @@ function editorialChordFit(spec, container) {
     labels.x = { signal: 'datum.Side > 0 ? width*.67 : cx' };
     labels.y = { signal: 'datum.Side > 0 ? cy+datum.LabelY*160 : cy+radius*1.4' };
     labels.align = { signal: "datum.Side > 0 ? 'left' : 'center'" };
-    labels.fontSize = { value: width < 450 ? 10 : 12 };
+    labels.fontSize = { value: 13 };
     for (const mark of spec.marks) {
       const u = mark.encode?.update;
       if (u?.path?.signal?.includes('datum.Mid'))
@@ -253,8 +253,11 @@ function editorialChordFit(spec, container) {
 function editorialSlopeFit(spec, container) {
   spec.width = container.clientWidth;
   const compact = spec.width < 760;
-  const marginSig = compact ? 'min(115,width*.22)' : '240';
-  const leaderSig = compact ? 'min(97,width*.22-18)' : '218';
+  // Medium-width charts still have room for a single-line name and value.
+  // Two-line labels need more vertical space than these nearby endpoints allow.
+  const narrow = spec.width < 540;
+  const marginSig = narrow ? 'min(115,width*.22)' : compact ? 'min(185,width*.30)' : '240';
+  const leaderSig = narrow ? 'min(97,width*.22-18)' : compact ? 'min(167,width*.30-18)' : '218';
   for (const mark of spec.marks) {
     const u = mark.encode?.update;
     if (!u) continue;
@@ -268,12 +271,13 @@ function editorialSlopeFit(spec, container) {
           .replace(/^218/, leaderSig);
     }
     if (mark.type === 'text' && ['labels', 'rightLabels'].includes(mark.name)) {
-      u.limit = { signal: compact ? 'min(95,width*.22-20)' : '195' };
-      if (compact) {
+      u.limit = { signal: narrow ? 'min(95,width*.22-20)' : compact ? 'min(160,width*.30-25)' : '195' };
+      if (compact && !narrow) u.fontSize = { value: 13 };
+      if (narrow) {
         const value = mark.name === 'labels' ? 'IVA_2023_24' : 'IVA_2024_25';
         u.text = { signal: `[datum.Short,format(datum.${value},',.0f')]` };
-        u.fontSize = { value: 10 };
-        u.lineHeight = { value: 11 };
+        u.fontSize = { value: 13 };
+        u.lineHeight = { value: 15 };
       }
     }
     if (mark.type === 'text' && u.text?.value?.includes('common vertical scale') && compact) {
@@ -375,18 +379,18 @@ function editorialSlopeFit(spec, container) {
 const rateColors = ['#F6F1DE', '#C9DBC5', '#86BCBB', '#4795B1', '#286B9A', '#254573', '#191E43'];
 const chartViews = new Map();
 // Each pair connects a space in index.html to the chart file it should show.
-// The number in a filename may differ from the V number shown on the page.
+// Spec filenames and target numbers follow the page's reading order.
 const specTargets = [
-  ['map1', 'work/viz1.vg.json?v=final'],
-  ['map3', 'work/viz3.vg.json?v=final'],
-  ['vis04', 'work/viz4.vg.json?v=tealplum'],
-  ['heatmap', 'work/viz5.vg.json?v=thinSelection2'],
-  ['vis06', 'work/viz6.vg.json?v=final'],
-  ['vis07', 'work/viz7.vg.json?v=final'],
-  ['vis08', 'work/viz8.vg.json?v=final'],
-  ['vis10', 'work/viz10.vg.json?v=final'],
-  ['vis11', 'work/viz11.vg.json?v=align2024'],
-  ['vis12', 'work/viz12.vg.json?v=zoomflow']
+  ['map1', 'work/viz1.vg.json?v=finalReviewRenumbered'],
+  ['map3', 'work/viz3.vg.json?v=finalReviewRenumbered'],
+  ['vis04', 'work/viz4.vg.json?v=finalReviewRenumbered'],
+  ['heatmap', 'work/viz5.vg.json?v=finalReviewRenumbered'],
+  ['vis06', 'work/viz6.vg.json?v=finalReviewRenumbered'],
+  ['vis07', 'work/viz7.vg.json?v=finalReviewRenumbered'],
+  ['vis08', 'work/viz8.vg.json?v=finalReviewRenumbered'],
+  ['vis10', 'work/viz10.vg.json?v=finalReviewRenumbered'],
+  ['vis11', 'work/viz11.vg.json?v=finalReviewRenumbered'],
+  ['vis12', 'work/viz12.vg.json?v=finalReviewRenumbered']
 ];
 function getBoundaryUrl() {
   return 'work/data/SA2_2021_AUST_GDA2020_web.json';
@@ -423,7 +427,7 @@ async function loadSpec(target, url) {
     if (!response.ok) throw new Error(`Could not load ${url} (${response.status})`);
     let spec = await response.json();
     if (
-      ['map3', 'vis04', 'heatmap', 'vis06', 'vis07', 'vis08', 'vis10', 'vis12'].includes(target)
+      ['map3', 'vis04', 'heatmap', 'vis06', 'vis07', 'vis08', 'vis11', 'vis12'].includes(target)
     ) {
       // These charts have study notes beside their code. Remove them before Vega reads the charts.
       const removeNotes = (part) => {
@@ -490,15 +494,12 @@ async function loadSpec(target, url) {
       spec.height = compact ? 350 : laptopAdaptHeight;
     }
     if (target === 'heatmap') {
-      const laptopHeatmapHeight = Math.max(
-        250,
-        Math.min(290, Math.round(window.innerHeight * 0.32))
-      );
-      spec.height = window.innerWidth <= 620 ? 300 : laptopHeatmapHeight;
+      // Eight rows at 26px remain compact while giving each cell a useful hit area.
+      spec.height = 208;
       if (window.innerWidth < 720) spec.width = { step: 48 };
     }
-    if (target === 'vis11') spec = editorialSlopeFit(spec, container);
-    if (target === 'vis10') {
+    if (target === 'vis10') spec = editorialSlopeFit(spec, container);
+    if (target === 'vis11') {
       spec.width = container.clientWidth;
       spec = editorialChordFit(spec, container);
     }
@@ -548,8 +549,8 @@ async function loadSpec(target, url) {
         'heatmap',
         'vis07',
         'vis09',
-        'vis10',
         'vis11',
+        'vis10',
         'vis12'
       ].includes(target)
         ? 'svg'
@@ -561,15 +562,15 @@ async function loadSpec(target, url) {
       await setupV1TooltipLeader(result.view);
       setupV1Performance(result.view);
     }
-    if (['map3', 'vis10', 'vis12'].includes(target)) setupRedesignControls(target, result.view);
+    if (['map3', 'vis11', 'vis12'].includes(target)) setupRedesignControls(target, result.view);
     if (['map1', 'map2', 'map3'].includes(target)) setupMapNavigation(target, result.view);
     if (target === 'vis12') setupV1Navigation(result.view, target);
     if (target === 'vis08') setupEmploymentPolish(result.view);
     if (target === 'heatmap') setupMatrixPolish(result.view);
     if (target === 'map3') setupFacilityFilters(result.view);
     if (target === 'vis12') setupDestinationSummary(result.view);
-    if (target === 'vis10') setupIndustrySummary(result.view);
-    if (['vis07', 'vis09', 'vis11'].includes(target)) setupProfileFocus(target, result.view);
+    if (target === 'vis11') setupIndustrySummary(result.view);
+    if (['vis07', 'vis09', 'vis10'].includes(target)) setupProfileFocus(target, result.view);
     if (target === 'vis09') setupV9Playback(result.view);
   } catch (error) {
     container.replaceChildren();
@@ -614,6 +615,7 @@ function setupRedesignControls(target, view) {
     );
     const show = (key) => {
       const row = rows.find((r) => String(r.Facility_ID) === String(key));
+      detail.classList.toggle('instruction-card', !row);
       detail.textContent = row
         ? `${row.Facility_Name} · ${row.State} · ${row.Industry} · ${row.Reporting_Period}. Source: NPI reporting facilities; not all manufacturers or Australian Made certified facilities.`
         : 'Hover or tap a dot for its name and primary industry. The lookup also reaches facilities sharing coordinates.';
@@ -652,6 +654,7 @@ function setupRedesignControls(target, view) {
       );
     const show = (key) => {
       const row = rows.find((r) => r.Key === key);
+      detail.classList.toggle('instruction-card', !row);
       detail.textContent = row
         ? `${row.Source} → ${row.Target}: ${aud(row.Value_AUD_thousands * 1000)} (2025 manufactured exports)`
         : 'Hover or tap a connection, or choose an origin and destination above.';
@@ -686,8 +689,8 @@ function setupRedesignControls(target, view) {
     view.signal('selectedState', state.value).signal('selectedFlow', flow.value).runAsync();
     show(flow.value);
   }
-  if (target === 'vis10') {
-    // V10: the dropdowns and chord clicks share the same industry and ribbon signals.
+  if (target === 'vis11') {
+    // V11: the dropdowns and chord clicks share the same industry and ribbon signals.
     const industry = document.getElementById('industry-select'),
       relationship = document.getElementById('relationship-select'),
       detail = document.getElementById('relationship-detail'),
@@ -711,9 +714,16 @@ function setupRedesignControls(target, view) {
       );
     const show = (key) => {
       const row = rows.find((r) => r.Key === key);
-      detail.textContent = row
-        ? `Supplier → User: ${row.Source_Name} → ${row.Target_Name}. ${aud(row.Value_AUD_millions * 1000000)} (source A$ million), 2023–24 domestic intermediate use at basic prices.${row.Source === row.Target ? ' Manufacturing self-use.' : ''}`
-        : 'Arrow tips point to the using division. Manufacturing → Manufacturing is self-use, not a reciprocal pair.';
+      detail.classList.toggle('instruction-card', !row);
+      if (row) {
+        detail.textContent = `Supplier → User: ${row.Source_Name} → ${row.Target_Name}. ${aud(row.Value_AUD_millions * 1000000)} (source A$ million), 2023–24 domestic intermediate use at basic prices.${row.Source === row.Target ? ' Manufacturing self-use.' : ''}`;
+      } else {
+        detail.replaceChildren(
+          'Arrow tips point to the using division.',
+          document.createElement('br'),
+          'Manufacturing → Manufacturing is self-use, not a reciprocal pair.'
+        );
+      }
     };
     industry.onchange = () => {
       view.signal('selectedIndustry', industry.value).signal('selectedEdge', '').runAsync();
@@ -782,5 +792,37 @@ async function start() {
     }, 180);
   });
 }
+
+// Keep financial years and hyphenated words together in page text,
+// including descriptions that update after a selection.
+function keepConnectedTextTogether(root) {
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  const nodes = root.nodeType === Node.TEXT_NODE ? [root] : [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  for (const node of nodes) {
+    if (!node.parentElement || node.parentElement.closest(
+      'script, style, svg, canvas, select, textarea, input, [contenteditable]'
+    )) continue;
+    const text = node.nodeValue.replace(
+      /\b(\d{4})[\t \n]*([-–—])[\t \n]*(\d{2,4})\b/g,
+      '$1\u2060$2\u2060$3'
+    ).replace(
+      /([\p{L}\p{N}])([-–‑/])(?=[\p{L}\p{N}])/gu,
+      '$1\u2060$2\u2060'
+    );
+    if (text !== node.nodeValue) node.nodeValue = text;
+  }
+}
+
+keepConnectedTextTogether(document.body);
+const connectedTextObserver = new MutationObserver(records => {
+  for (const record of records) {
+    if (record.type === 'characterData') keepConnectedTextTogether(record.target);
+    else for (const node of record.addedNodes) keepConnectedTextTogether(node);
+  }
+});
+connectedTextObserver.observe(document.body, {
+  childList: true, characterData: true, subtree: true
+});
 
 start();

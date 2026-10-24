@@ -487,7 +487,7 @@ function setupDestinationSummary(view) {
   update(view.signal('selectedState'));
 }
 function setupIndustrySummary(view) {
-  // V10: show what the selected industry supplies and what it receives.
+  // V11: show what the selected industry supplies and what it receives.
   const rows = view.data('edges'),
     max = Math.max(...rows.map((r) => r.Value_AUD_millions * 1e6));
   const update = (key) => {
@@ -564,7 +564,7 @@ function setupProfileFocus(target, view) {
     sig = 'focusSubdivision';
     key = label = 'Subdivision';
   }
-  if (target === 'vis11' || target === 'vis13') {
+  if (target === 'vis10') {
     rows = view.data('iva');
     sig = 'focusCode';
     key = 'Code';
@@ -793,6 +793,7 @@ function addEmploymentBrushBindings(spec) {
   if (!compiled.signals.some((s) => s.name === 'brushReset')) {
     compiled.signals.push({ name: 'brushReset', value: 0 });
   }
+  compiled.signals.push({ name: 'periodRevision', value: 0 });
   const overview = compiled.marks.find(
     (m) => m.name === 'employmentOverview_group' || m.name === 'concat_1_group'
   );
@@ -808,7 +809,7 @@ function addEmploymentBrushBindings(spec) {
       brush.on = brush.on || [];
       brush.on.push({ events: [{ signal: 'brushReset' }], update: '[0, 0]' });
       brush.on.push({
-        events: [{ signal: 'periodStart' }, { signal: 'periodEnd' }],
+        events: [{ signal: 'periodStart' }, { signal: 'periodEnd' }, { signal: 'periodRevision' }],
         update: `isValid(periodStart) && isValid(periodEnd) ? [scale("${scaleName}", periodStart), scale("${scaleName}", periodEnd)] : [0, 0]`
       });
     }
@@ -852,6 +853,7 @@ async function setupMatrixPolish(view) {
     state.dataset.active = String(Boolean(state.value));
     sub.dataset.active = String(Boolean(sub.value));
     const r = rows.find((r) => r.State_Code === state.value && r.ANZSIC_Code === sub.value);
+    detail.classList.toggle('instruction-card', !r);
     let title = document.createElement('strong');
     title.textContent = states[state.value] || 'All states';
     detail.append(title);
@@ -886,12 +888,16 @@ async function setupMatrixPolish(view) {
     describe();
     await view.signal('focusState', state.value).signal('focusSubdivision', sub.value).runAsync();
   }
-  view.addSignalListener('matrixCell', (_, cell) => {
-    if (cell.State_Code?.length && cell.ANZSIC_Code?.length) {
-      state.value = String(cell.State_Code[0]);
-      sub.value = String(cell.ANZSIC_Code[0]);
-      apply();
-    }
+  // Handle every click, including a repeat click on the same cell.
+  view.addEventListener('click', (_, item) => {
+    const cell = item?.datum;
+    if (!cell?.State_Code || cell.ANZSIC_Code == null) return;
+    const nextState = String(cell.State_Code);
+    const nextSubdivision = String(cell.ANZSIC_Code);
+    const alreadySelected = state.value === nextState && sub.value === nextSubdivision;
+    state.value = alreadySelected ? '' : nextState;
+    sub.value = alreadySelected ? '' : nextSubdivision;
+    apply();
   });
   state.onchange = apply;
   sub.onchange = apply;
@@ -907,9 +913,11 @@ async function setupEmploymentPolish(view) {
   // V8: fill the year dropdowns and keep them in sync with the chart.
   const rows = await (await fetch('work/data/vis08_national_employment_overview.json')).json();
   const inspect = document.getElementById('employment-inspect'),
+    start = document.getElementById('employment-start'),
+    end = document.getElementById('employment-end'),
     period = document.getElementById('employment-period'),
     detail = document.getElementById('employment-detail');
-  for (const select of [inspect]) {
+  for (const select of [start, end, inspect]) {
     select.replaceChildren();
     if (select === inspect) select.add(new Option('Choose observed year', ''));
     rows.forEach((r, i) =>
@@ -932,6 +940,9 @@ async function setupEmploymentPolish(view) {
       return;
     }
     const first = selected[0], last = selected.at(-1);
+    // Dragging the overview also updates the year controls.
+    start.value = String(rows.indexOf(first));
+    end.value = String(rows.indexOf(last));
     const delta = last.Employment_Thousands - first.Employment_Thousands;
     const number = (n) => n.toLocaleString('en-AU', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
     const scope = first.Financial_Year + ' to ' + last.Financial_Year;
@@ -966,6 +977,24 @@ async function setupEmploymentPolish(view) {
     if (p.Financial_Year?.length)
       showYear(rows.findIndex((r) => r.Financial_Year === p.Financial_Year[0]));
   });
+  async function applyPeriod(changed) {
+    let first = +start.value, last = +end.value;
+    // Keep the interval valid when one endpoint crosses the other.
+    if (first > last) {
+      if (changed === start) last = first;
+      else first = last;
+    }
+    start.value = String(first);
+    end.value = String(last);
+    // A day of padding includes both endpoint observations and supports a single year.
+    await view
+      .signal('periodStart', stamp(rows[first]) - 86400000)
+      .signal('periodEnd', stamp(rows[last]) + 86400000)
+      .signal('periodRevision', view.signal('periodRevision') + 1)
+      .runAsync();
+  }
+  start.onchange = () => applyPeriod(start);
+  end.onchange = () => applyPeriod(end);
   inspect.onchange = async () => {
     if (inspect.value === '') {
       detail.hidden = true;
