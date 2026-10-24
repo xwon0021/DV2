@@ -10,32 +10,47 @@
   function format(paragraph) {
     paragraph.querySelectorAll(`br[${marker}]`).forEach((br) => br.remove());
     if (paragraph.closest('.page-footer')) return;
-    const runs = [];
-    let text = '';
-    function collect(node) {
-      if (node.nodeType === 3) {
-        runs.push({ node, start: text.length, end: text.length + node.length });
-        text += node.data;
-      } else if (node.nodeType === 1 && node.namespaceURI === htmlNamespace) {
-        if (node.tagName === 'BR') text += '\0';
-        else Array.from(node.childNodes).forEach(collect);
+    // Let narrow columns wrap naturally. Add a break only when an actual
+    // rendered line exceeds ten words, so we do not create short orphan lines.
+    for (let pass = 0; pass < 20; pass++) {
+      const runs = [];
+      let text = '';
+      function collect(node) {
+        if (node.nodeType === 3) {
+          runs.push({ node, start: text.length, end: text.length + node.length });
+          text += node.data;
+        } else if (node.nodeType === 1 && node.namespaceURI === htmlNamespace) {
+          if (node.tagName === 'BR') text += '\0';
+          else Array.from(node.childNodes).forEach(collect);
+        }
       }
-    }
-    collect(paragraph);
-    const breaks = [];
-    let start = 0;
-    for (const line of text.split('\0')) {
-      const words = Array.from(line.matchAll(/\S+/g));
-      for (let i = 9; i < words.length - 1; i += 10) {
-        breaks.push(start + words[i].index + words[i][0].length);
+      collect(paragraph);
+      let top = null, count = 0, previousEnd = 0, breakAt = null;
+      for (const word of text.matchAll(/[^\s\0]+/g)) {
+        const start = word.index;
+        const end = start + word[0].length;
+        const first = runs.find((run) => start >= run.start && start < run.end);
+        const last = runs.find((run) => end > run.start && end <= run.end);
+        if (!first || !last) continue;
+        const range = document.createRange();
+        range.setStart(first.node, start - first.start);
+        range.setEnd(last.node, end - last.start);
+        const rect = range.getClientRects()[0];
+        if (!rect || !rect.height) continue;
+        if (top === null || Math.abs(rect.top - top) > 5) {
+          top = rect.top;
+          count = 0;
+        }
+        if (++count > 10) {
+          breakAt = previousEnd;
+          break;
+        }
+        previousEnd = end;
       }
-      start += line.length + 1;
-    }
-    // Work backwards so splitting a text node cannot invalidate earlier offsets.
-    for (const offset of breaks.reverse()) {
-      const run = runs.find((run) => offset > run.start && offset <= run.end);
-      if (!run) continue;
-      const after = run.node.splitText(offset - run.start);
+      if (breakAt === null) break;
+      const run = runs.find((run) => breakAt > run.start && breakAt <= run.end);
+      if (!run) break;
+      const after = run.node.splitText(breakAt - run.start);
       const br = document.createElement('br');
       br.setAttribute(marker, '');
       after.before(br);
@@ -73,6 +88,15 @@
       tip.style.top = Math.max(12, Math.min(rect.top, innerHeight - rect.height - 12)) + 'px';
     }
     observer.observe(root, options);
+  });
+  let resizeFrame;
+  window.addEventListener('resize', () => {
+    cancelAnimationFrame(resizeFrame);
+    resizeFrame = requestAnimationFrame(() => {
+      observer.disconnect();
+      document.querySelectorAll(selector).forEach(format);
+      observer.observe(root, options);
+    });
   });
   document.querySelectorAll(selector).forEach(format);
   observer.observe(root, options);

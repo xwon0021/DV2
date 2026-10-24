@@ -110,6 +110,47 @@
   border-color: var(--purple-primary);
 }
 
+/* V5 keeps the active selection next to its controls, above the matrix. */
+.matrix-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  padding: 8px 12px;
+  border-left: 3px solid #cbd5e1;
+  background: #f8fafc;
+  font-size: 12.5px;
+  line-height: 1.45;
+  margin: 8px 0;
+}
+
+.matrix-selection[data-active="true"] {
+  border-left-color: var(--purple-primary);
+  background: #f7f0fc;
+}
+
+.matrix-selection p { margin: 0; }
+.matrix-selection-subdivision { font-weight: 600; }
+
+#editorial-v5 .matrix-finding { margin: 8px 0 10px; }
+
+.matrix-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+  align-items: center;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.matrix-footer .missing-key { margin: 0; }
+.matrix-footer .mobile-scroll-note { display: none; }
+
+@media (max-width: 719px) {
+  .matrix-footer .mobile-scroll-note { display: inline; }
+}
+
 /* Sleek Navigation Hint Badge */
 .navigation-badge {
   display: inline-flex;
@@ -916,12 +957,11 @@ button.summary-row:hover .bar-fill:not(.selected) {
   border-radius: 8px;
   border: 1px solid #e2e8f0;
   background: #ffffff;
-  cursor: pointer;
+  cursor: default;
   transition: all 0.15s ease;
 }
 
-.isotype-row:hover,
-.isotype-row.active {
+.isotype-row:hover {
   border-color: var(--purple-primary);
   background: #faf5ff;
   box-shadow: 0 2px 8px rgba(123, 63, 177, 0.08);
@@ -1189,4 +1229,51 @@ button.summary-row:hover .bar-fill:not(.selected) {
     flex-direction: column;
     gap: 20px;
   }
+}
+
+/* Readable text at normal browser zoom. */
+.editorial-heading .chart-deck,
+.key-finding-card p,
+.matrix-finding p,
+.interaction-hint,
+.method-note,
+.note,
+.period-feedback,
+.selection-detail,
+.selected-detail,
+.matrix-selection,
+.export-caption,
+.stat-label,
+.conclusion-notes .note,
+.v2-c .note,
+.v2-c .scope,
+.race-callout-panel #race-selected,
+.race-callout-panel .race-guide-note { font-size: 15px; line-height: 1.45; }
+.editorial-figure .selection-detail,
+.editorial-figure .interaction-hint,
+#editorial-v2 .v2-status-row .scope,
+#editorial-v2 .v2-selected-card .note { font-size: 15px; line-height: 1.45; }
+#editorial-v2 select, #editorial-v2 button.bar-row,
+.editorial-figure .matrix-finding button,
+.editorial-figure .race-controls button { font-size: 14px; }
+.finding-tag, .race-callout-header, .legend-title { font-size: 12.5px; }
+.chart-controls > label, .v2-c .filters label { font-size: 14px; }
+.chart-controls select, .chart-controls button, .v2-c select, .v2-c button,
+.map-navigation button, .map-navigation label, .navigation-badge,
+.rate-legend button.legend-item, .missing-key, .matrix-footer,
+.summary-row, .isotype-row .statement { font-size: 14px; }
+.facility-sidebar .caveat, .stat-caveat, .isotype-row .qualifier,
+.employment-stats .stat-label { font-size: 13px; }
+.editorial-figure .stat-label, .editorial-figure .caveat,
+.editorial-figure .legend-title { font-size: 14px; }
+.key-finding-card { margin-bottom: 0; }
+.v6-chart-story { grid-template-columns: minmax(0, 2fr) minmax(270px, 1fr); gap: 20px; align-items: center; }
+.v6-chart-story .figure-notes-row { gap: 10px; padding-top: 0; }
+.v6-chart-story .key-finding-card { margin-top: 0; }
+.v2-c button.bar-row { grid-template-columns: minmax(0, 1fr) 65px 40px; }
+#editorial-v12 .export-below { display: flex; flex-direction: column; }
+#editorial-v12 .export-below .feature-visual,
+#editorial-v12 .export-below .editorial-margin { width: 100%; }
+@media (max-width: 760px) {
+  .v6-chart-story { grid-template-columns: 1fr; }
 }

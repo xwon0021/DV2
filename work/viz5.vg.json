@@ -122,16 +122,18 @@
       "legend": {
         "title": "Share within state (%)",
         "titleLimit": 280,
-        "orient": "bottom",
+        "orient": "top",
         "format": ".0f",
-        "gradientLength": 260,
+        "gradientLength": 220,
         "values": [
           0,
           5,
           10,
           20,
           40
-        ]
+        ],
+        "direction": "horizontal",
+        "offset": 8
       },
       "condition": {
         "test": "!isValid(datum.Employment_Share_pct)",
@@ -167,19 +169,29 @@
       }
     ],
     "opacity": {
-      "notes": "Keep the chosen state row and industry column clear. Fade the other squares.",
-      "condition": {
-        "test": "(!focusState && !focusSubdivision) || (focusState && datum.State_Code===focusState) || (focusSubdivision && datum.ANZSIC_Code===focusSubdivision)",
-        "value": 1
-      },
-      "value": 0.45
+      "notes": "Keep the selected intersection strongest; fade unrelated cells while preserving context.",
+      "condition": [
+        {
+          "test": "!focusState && !focusSubdivision",
+          "value": 1
+        },
+        {
+          "test": "(!focusState || datum.State_Code===focusState) && (!focusSubdivision || datum.ANZSIC_Code===focusSubdivision)",
+          "value": 1
+        }
+      ],
+      "value": 0.1
     },
     "stroke": {
       "notes": "Outline the chosen square or the one under the pointer.",
       "condition": [
         {
           "test": "focusState && focusSubdivision && datum.State_Code===focusState && datum.ANZSIC_Code===focusSubdivision",
-          "value": "#A76312"
+          "value": "#A85A00"
+        },
+        {
+          "test": "(focusState && !focusSubdivision && datum.State_Code===focusState) || (!focusState && focusSubdivision && datum.ANZSIC_Code===focusSubdivision)",
+          "value": "#A85A00"
         },
         {
           "param": "matrixHover",
@@ -193,7 +205,11 @@
       "condition": [
         {
           "test": "focusState && focusSubdivision && datum.State_Code===focusState && datum.ANZSIC_Code===focusSubdivision",
-          "value": 3
+          "value": 2
+        },
+        {
+          "test": "(focusState && !focusSubdivision && datum.State_Code===focusState) || (!focusState && focusSubdivision && datum.ANZSIC_Code===focusSubdivision)",
+          "value": 2
         },
         {
           "param": "matrixHover",

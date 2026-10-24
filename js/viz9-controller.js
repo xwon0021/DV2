@@ -161,8 +161,8 @@
 
     if (view) {
       await view
-        .width(document.getElementById('vis09').parentElement.clientWidth)
-        .height(innerWidth < 700 ? 940 : 680)
+        .width(document.getElementById('vis09').clientWidth)
+        .height(innerWidth < 700 ? 820 : 460)
         .signal('mobile', innerWidth < 700)
         .resize()
         .runAsync();
@@ -179,13 +179,15 @@
     try {
       let s = await (await fetch('work/viz9.vg.json', { cache: 'no-store' })).json();
       removeNotes(s);
+      s.signals.find((x) => x.name === 'rowHeight').update = 'mobile?46:24';
+      s.marks.find((x) => x.name === 'bars').encode.update.height.signal = 'mobile?20:18';
       palette = s.scales[0].range;
       codes = s.scales[0].domain;
-      s.width = document.getElementById('vis09').parentElement.clientWidth;
-      s.height = innerWidth < 700 ? 940 : 680;
+      s.width = document.getElementById('vis09').clientWidth;
+      s.height = innerWidth < 700 ? 820 : 460;
       s.signals.find((x) => x.name === 'mobile').value = innerWidth < 700;
 
-      let result = await vegaEmbed('#vis09', s, {
+      let result = await vegaEmbed('#vis09', readableChartText(s), {
         renderer: 'svg',
         actions: true
       });

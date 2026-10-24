@@ -1,3 +1,23 @@
+// Increase chart labels as well as the surrounding HTML text.
+function readableChartText(spec) {
+  function visit(part) {
+    if (!part || typeof part !== 'object') return;
+    for (const [key, value] of Object.entries(part)) {
+      if (['labelFontSize', 'titleFontSize'].includes(key) && typeof value === 'number') {
+        part[key] = Math.max(value, 13);
+      } else if (key === 'fontSize' && typeof value === 'number') {
+        part[key] = Math.max(value, 12);
+      } else if (key === 'fontSize' && typeof value?.value === 'number') {
+        value.value = Math.max(value.value, 12);
+      } else visit(value);
+    }
+  }
+  visit(spec);
+  spec.config = spec.config || {};
+  spec.config.axis = { ...spec.config.axis, labelFontSize: 13, titleFontSize: 13 };
+  spec.config.legend = { ...spec.config.legend, labelFontSize: 13, titleFontSize: 13 };
+  return spec;
+}
 // Preview-only geometry dimensions and axis-label wrapping; quantitative encodings stay intact.
 function editorialFigureDimensions(spec, target, container) {
   const mobile = innerWidth <= 620,
@@ -16,12 +36,12 @@ function editorialFigureDimensions(spec, target, container) {
       (layer) => layer.encoding?.color?.field === 'Businesses_per_10000'
     );
     if (mapLayer?.encoding.color.scale) mapLayer.encoding.color.scale.range = selectedPalette;
-    if (!mobile) spec.height = Math.min(540, Math.round(container.clientWidth * 0.65));
+    if (!mobile) spec.height = Math.max(420, Math.min(470, Math.round(container.clientWidth * 0.78)));
   }
   if (target === 'map2' && !mobile) spec.height = 400;
   // V6: give the paired bars and industry names room on a wide screen.
   if (target === 'vis06' && !mobile) {
-    spec.height = 540;
+    spec.height = 320;
     spec.encoding.y.axis.labelLimit = 240;
     spec.encoding.y.axis.labelFontSize = 12;
     spec.encoding.color.legend.orient = 'top';
@@ -29,7 +49,7 @@ function editorialFigureDimensions(spec, target, container) {
     spec.encoding.color.legend.columns = 2;
   }
   if (target === 'vis07' && !mobile) {
-    spec.height = 440;
+    spec.height = 300;
     spec.padding = { left: 76, right: 60, top: 14, bottom: 48 };
     spec.axes[0].encode = {
       labels: {
@@ -46,7 +66,7 @@ function editorialFigureDimensions(spec, target, container) {
     spec.width = Math.max(180, container.clientWidth - 10);
     spec.autosize = { type: 'fit', contains: 'padding' };
   }
-  if (target === 'vis09' && !mobile) spec.height = 350;
+  if (target === 'vis09' && !mobile) spec.height = 310;
   return spec;
 }
 document.getElementById('inspect-tasmania-food').addEventListener('click', () => {
@@ -200,7 +220,7 @@ function editorialChordFit(spec, container) {
     compact = width < 760;
   spec.width = width;
   const radius = compact ? width * 0.24 : Math.min(190, width * 0.215);
-  spec.height = Math.max(compact ? 470 : 520, Math.ceil(radius * 2.56 + 40));
+  spec.height = Math.max(compact ? 390 : 440, Math.ceil(radius * 2.56 + 40));
   const signal = (n) => spec.signals.find((s) => s.name === n);
   signal('radius').update = compact ? 'width*.24' : 'min(190,width*.215)';
   signal('cx').update = compact ? 'width*.34' : 'width*.38';
@@ -360,7 +380,7 @@ const specTargets = [
   ['map1', 'work/viz1.vg.json?v=final'],
   ['map3', 'work/viz3.vg.json?v=final'],
   ['vis04', 'work/viz4.vg.json?v=tealplum'],
-  ['heatmap', 'work/viz5.vg.json?v=final'],
+  ['heatmap', 'work/viz5.vg.json?v=thinSelection2'],
   ['vis06', 'work/viz6.vg.json?v=final'],
   ['vis07', 'work/viz7.vg.json?v=final'],
   ['vis08', 'work/viz8.vg.json?v=final'],
@@ -467,7 +487,7 @@ async function loadSpec(target, url) {
         ? { left: 118, right: 16, top: 32, bottom: 44 }
         : { left: 230, right: 132, top: 34, bottom: 48 };
       spec.width = Math.max(185, container.clientWidth - spec.padding.left - spec.padding.right);
-      spec.height = compact ? 430 : laptopAdaptHeight;
+      spec.height = compact ? 350 : laptopAdaptHeight;
     }
     if (target === 'heatmap') {
       const laptopHeatmapHeight = Math.max(
@@ -491,11 +511,11 @@ async function loadSpec(target, url) {
             (window.innerWidth <= 620 ? 90 : 70)
         );
       });
-      spec.vconcat[0].height = window.innerWidth <= 620 ? 240 : 300;
-      if (window.innerWidth <= 620) {
-        spec.vconcat[0].layer[3].mark.align = 'right';
-        spec.vconcat[0].layer[3].encoding.text.datum = '2019–2020 low: 830.2k';
-      }
+      spec.vconcat[0].height = window.innerWidth <= 620 ? 220 : 200;
+      spec.vconcat[1].height = 60;
+      spec.vconcat[0].layer[3].mark.align = 'left';
+      spec.vconcat[0].layer[3].mark.dx = 5;
+      spec.vconcat[0].layer[3].encoding.text.datum = '2019–20 low: 830.2k';
     }
     if (target === 'map3' || target === 'vis12') {
       spec.width = container.clientWidth;
@@ -506,7 +526,7 @@ async function loadSpec(target, url) {
             : 290
           : target === 'vis12'
             ? Math.min(440, Math.round(container.clientWidth * 0.49))
-            : 420;
+            : Math.max(420, Math.min(480, Math.round(container.clientWidth * 0.85)));
     }
     if (target === 'vis12') spec = addEditorialFlowNavigation(spec);
     if (target === 'vis08') spec = addEmploymentBrushBindings(spec);
@@ -518,7 +538,7 @@ async function loadSpec(target, url) {
     if (['map2', 'map3', 'vis12'].includes(target)) window[target + 'NavigationCleanup']?.();
     chartViews.get(target)?.finalize();
     // Keep the view so the buttons below can change the chart's signals.
-    const result = await vegaEmbed(container, spec, {
+    const result = await vegaEmbed(container, readableChartText(spec), {
       actions: true,
       renderer: [
         'map1',

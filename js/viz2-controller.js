@@ -95,7 +95,7 @@
   function makeMapSpec(model, width, mobile) {
     // Turn one SA2 count into a circle: bigger count means bigger circle area.
     // The map point is an SA2 anchor, not a factory address.
-    const laptopMapHeight = Math.max(340, Math.min(410, Math.round(window.innerHeight * 0.44)));
+    const laptopMapHeight = Math.max(420, Math.min(500, Math.round(width * 0.9)));
     const height = mobile ? 340 : laptopMapHeight,
       manual = ['current', 'ranking'].includes(model.method);
     const down = { type: 'pointerdown', filter: ['event.button === 0'] };
@@ -126,6 +126,7 @@
       ],
       // geopoint turns each CSV longitude/latitude into an on-screen x/y position.
       data: [
+        { name: 'fitFeatures', values: model.fit },
         {
           name: 'land',
           values: model.land,
@@ -149,10 +150,10 @@
         {
           name: 'base',
           type: 'mercator',
-          fit: model.fit,
+          fit: { signal: "data('fitFeatures')" },
           extent: [
-            [28, 28],
-            [width - 28, height - 28]
+            [16, 16],
+            [width - 16, height - 16]
           ]
         },
         {
@@ -178,16 +179,23 @@
       legends: [
         {
           size: 'countSize',
-          title: 'Circle area · manufacturing businesses',
+          title: ['Manufacturing businesses', 'Circle area represents count'],
+          titleLimit: Math.max(220, width - 24),
+          titleLineHeight: 20,
+          titlePadding: 10,
           values: [25, 200, 800],
           orient: 'bottom',
           direction: 'horizontal',
           symbolFillColor: PURPLE,
           symbolStrokeColor: '#ffffff',
           symbolFillOpacity: 0.42,
-          labelFontSize: 11,
-          titleFontSize: 12,
-          offset: 12
+          labelFontSize: 15,
+          titleFontSize: 15,
+          labelOffset: 10,
+          columns: 3,
+          columnPadding: 28,
+          padding: 8,
+          offset: 16
         }
       ],
       marks: [
@@ -325,7 +333,8 @@
         : 'detail',
     generation = 0,
     ready = false,
-    viewMethod = null;
+    viewMethod = null,
+    renderedRegion = null;
   const navigation = { current: { zoom: 1, pan: [0, 0] }, ranking: { zoom: 1, pan: [0, 0] } };
   function captureNavigation() {
     if (view && navigation[viewMethod])
@@ -375,7 +384,13 @@
   // In the dashboard ranking view, selecting an SA2 refits the map to its neighbourhood.
   function select(code) {
     state.code = code || '';
-    populateLookup();
+    // The options only change with the study area or search, not every selection.
+    $('sa2').value = state.code;
+    if (state.code && $('sa2').value !== state.code) {
+      const row = rows.find((r) => r.SA2_Code === state.code);
+      if (row) $('sa2').add(new Option(row.SA2_Name, row.SA2_Code));
+      $('sa2').value = state.code;
+    }
     render({ refit: method === 'ranking' });
   }
   function setHover(code) {
@@ -386,12 +401,12 @@
         .catch((error) => console.error(error));
   }
   function renderRanking(model) {
-    // Show the ten highest counts. Clicking a bar selects the same SA2 on the map.
+    // Show the fifteen highest counts. Clicking a bar selects the same SA2 on the map.
     const host = $('bars');
     host.replaceChildren();
-    const top = model.ranking.slice(0, 10);
+    const top = model.ranking.slice(0, 15);
     $('ranking-scope').textContent =
-      `Top ${Math.min(10, model.ranking.length)} of ${model.ranking.length.toLocaleString('en-AU')} SA2s · ${state.region || 'Australia'}. The ranking keeps this study area while the map shows the selected neighbourhood.`;
+      `Top ${Math.min(15, model.ranking.length)} of ${model.ranking.length.toLocaleString('en-AU')} SA2s · ${state.region || 'Australia'}.`;
     function add(row) {
       const b = document.createElement('button');
       b.type = 'button';
@@ -461,9 +476,7 @@
     if (ranking) uiRoot.querySelector('.filters').append($('reset'));
     else $('manual-controls').insertBefore($('reset'), $('manual-hint'));
     $('scope').textContent = model.scope;
-    $('size-note').textContent = overview
-      ? 'Enlarged reference circles: diameters are 50% larger than before. Counts use the same fixed 0–826 domain; the size legend matches.'
-      : 'Enlarged detail circles: diameters are 50% larger than before. Same fixed 0–826 count domain; the size legend matches. Remaining overlaps are possible.';
+    $('size-note').textContent = 'Circle area shows business count on a fixed 0–826 scale. Circles can overlap.';
     describeSelection(model);
     if (ranking) renderRanking(model);
     if (manual) {
@@ -473,14 +486,29 @@
     $('manual-hint').textContent = ranking
       ? 'Drag to pan. Reset returns to the fitted area; choosing another SA2 fits its neighbourhood. Ordinary scrolling moves the page.'
       : 'Drag to pan. Ordinary scrolling moves the page.';
-    view?.finalize();
-    view = null;
-    $('map').replaceChildren();
     try {
       const width = Math.max(180, Math.floor($('map').parentElement.clientWidth));
+      if (view && viewMethod === method && view.width() === width) {
+        // Keep the parsed chart and its SVG. Only the fit and visible points change.
+        if (renderedRegion !== state.region) {
+          view.change('land', vega.changeset().remove(() => true).insert(model.land));
+        }
+        view
+          .change('fitFeatures', vega.changeset().remove(() => true).insert(model.fit))
+          .change('points', vega.changeset().remove(() => true).insert(model.points))
+          .signal('selectedCode', state.code)
+          .signal('hoveredCode', '');
+        if (manual) view.signal('mapZoom', navigation[method].zoom).signal('mapPan', navigation[method].pan.slice());
+        await view.runAsync();
+        renderedRegion = state.region;
+        return;
+      }
+      view?.finalize();
+      view = null;
+      $('map').replaceChildren();
       const canvas = document.createElement('div');
       $('map').append(canvas);
-      const result = await vegaEmbed(canvas, makeMapSpec(model, width, innerWidth < 620), {
+      const result = await vegaEmbed(canvas, readableChartText(makeMapSpec(model, width, innerWidth < 620)), {
         renderer: 'svg',
         actions: true
       });
@@ -490,6 +518,8 @@
       }
       view = result.view;
       viewMethod = method;
+      renderedRegion = state.region;
+      const liveView = view;
       if (manual)
         await view
           .signal('mapZoom', navigation[method].zoom)
@@ -497,7 +527,7 @@
           .runAsync();
       view.addSignalListener('selectedCode', (_, code) => {
         requestAnimationFrame(() => {
-          if (token === generation && code !== state.code) select(code);
+          if (view === liveView && code !== state.code) select(code);
         });
       });
       view.addSignalListener('hoveredCode', (_, code) => {
@@ -505,7 +535,7 @@
           b.classList.toggle('hovered', b.dataset.code === code);
       });
       $('load-status').textContent =
-        `${rows.length.toLocaleString('en-AU')} original SA2 count records loaded. Values, coordinates and boundaries are unchanged.`;
+        `${rows.length.toLocaleString('en-AU')} SA2s loaded.`;
     } catch (error) {
       console.error(error);
       $('load-status').textContent =
@@ -528,6 +558,7 @@
     state.region = '';
     $('region').value = '';
     if ($('search')) $('search').value = '';
+    populateLookup();
     if (navigation[method]) {
       navigation[method] = { zoom: 1, pan: [0, 0] };
       if (view && viewMethod === method) view.signal('mapZoom', 1).signal('mapPan', [0, 0]);

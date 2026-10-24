@@ -129,8 +129,10 @@ function setupV1Navigation(view, target = 'map1') {
             )
             .signal('mapZoom', next);
         }
-        // Reset fits the main map; All regions fits the wider geography as well.
-        if (action === 'reset' || action === 'all') {
+        // V1: All regions clears the range without moving or resizing the map.
+        if (target === 'map1' && action === 'all') {
+          view.signal('selectedRateClass', -1);
+        } else if (action === 'reset' || action === 'all') {
           if (['map1', 'map2'].includes(target)) view.signal('fullMapExtent', action === 'all');
           view.signal('mapZoom', 1).signal('mapPan', [0, 0]).signal('v1Dragging', false);
         }
@@ -251,7 +253,10 @@ function addMapNavigation(spec, target, container) {
     const bases = spec.projections.map((p) => ({
       ...p,
       name: p.name + '_base',
-      extent: { signal: '[[12,12],[width-12,height-12]]' }
+      // V1 fills its larger canvas at the native 1.0× scale.
+      extent: { signal: target === 'map1'
+        ? '[[4,4],[width-4,height-4]]'
+        : '[[12,12],[width-12,height-12]]' }
     }));
     spec.projections.forEach((p, i) => {
       const base = bases[i].name;
@@ -797,7 +802,7 @@ function addEmploymentBrushBindings(spec) {
     const xScale =
       (overview.scales && overview.scales.find((s) => s.name.endsWith('_x') || s.name === 'x')) ||
       (compiled.scales &&
-        compiled.scales.find((s) => s.name.includes('overview') || s.name.includes('concat_1')));
+        compiled.scales.find((s) => s.name === 'employmentOverview_x' || s.name === 'concat_1_x'));
     const scaleName = xScale ? xScale.name : 'concat_1_x';
     if (brush) {
       brush.on = brush.on || [];
@@ -842,30 +847,38 @@ async function setupMatrixPolish(view) {
     .forEach((r) => sub.add(new Option(r.Subdivision, r.ANZSIC_Code)));
   function describe() {
     detail.replaceChildren();
-    detail.hidden = !state.value && !sub.value;
-    if (detail.hidden) return;
+    const active = Boolean(state.value || sub.value);
+    detail.dataset.active = String(active);
+    state.dataset.active = String(Boolean(state.value));
+    sub.dataset.active = String(Boolean(sub.value));
     const r = rows.find((r) => r.State_Code === state.value && r.ANZSIC_Code === sub.value);
     let title = document.createElement('strong');
-    title.textContent =
-      (states[state.value] || 'All states') + ' × ' + sub.selectedOptions[0].textContent;
+    title.textContent = states[state.value] || 'All states';
     detail.append(title);
+    const subdivision = document.createElement('span');
+    subdivision.className = 'matrix-selection-subdivision';
+    subdivision.textContent = sub.selectedOptions[0].textContent;
+    detail.append(subdivision);
     let p = document.createElement('p');
     if (r) {
-      p.textContent =
-        r.Employment_Share_pct === ''
-          ? 'Employment and share are suppressed or unavailable; this is not zero.'
-          : r.Subdivision +
-            ' accounts for ' +
-            Number(r.Employment_Share_pct).toFixed(2) +
-            '% of ' +
-            states[r.State_Code] +
-            '’s manufacturing employment · ' +
-            Number(r.Employment_2024_25).toLocaleString('en-AU') +
-            ' people · June 2025.';
+      const employment = document.createElement('p');
+      if (r.Employment_Share_pct === '') {
+        p.textContent = 'Employment and share are suppressed or unavailable.';
+        employment.textContent = 'This is not zero.';
+      } else {
+        p.textContent = 'Share of the state’s manufacturing employment: ' +
+          Number(r.Employment_Share_pct).toFixed(2) + '%.';
+        employment.textContent = 'Employment: ' +
+          Number(r.Employment_2024_25).toLocaleString('en-AU') + ' people · June 2025.';
+      }
+      detail.append(p, employment);
+      return;
     } else
-      p.textContent = state.value
-        ? 'This row is highlighted; choose a subdivision for exact cell details.'
-        : 'This column is highlighted across states; choose a state for exact cell details.';
+      p.textContent = !active
+        ? 'Choose a state, subdivision or cell to focus the matrix.'
+        : state.value
+        ? 'Selected state row. Choose a subdivision for cell details.'
+        : 'Selected subdivision column. Choose a state for cell details.';
     detail.append(p);
   }
   // Vega uses these two values to keep the chosen row and column clear.
@@ -888,24 +901,21 @@ async function setupMatrixPolish(view) {
     view.data('matrixCell_store', []);
     apply();
   };
+  describe();
 }
 async function setupEmploymentPolish(view) {
   // V8: fill the year dropdowns and keep them in sync with the chart.
   const rows = await (await fetch('work/data/vis08_national_employment_overview.json')).json();
-  const start = document.getElementById('employment-start'),
-    end = document.getElementById('employment-end'),
-    inspect = document.getElementById('employment-inspect'),
+  const inspect = document.getElementById('employment-inspect'),
     period = document.getElementById('employment-period'),
     detail = document.getElementById('employment-detail');
-  for (const select of [start, end, inspect]) {
+  for (const select of [inspect]) {
     select.replaceChildren();
     if (select === inspect) select.add(new Option('Choose observed year', ''));
     rows.forEach((r, i) =>
       select.add(new Option(fullFinancialYearLabel(r.Financial_Year), String(i)))
     );
   }
-  start.value = '0';
-  end.value = '18';
   let selectedBounds = null;
   const stamp = (r) => Date.parse(r.Date + 'T00:00:00Z');
   function feedback(brush) {
@@ -914,76 +924,65 @@ async function setupEmploymentPolish(view) {
     const range = brush?.Date;
     selectedBounds = range?.length ? range : null;
     if (inspect.value !== '') showYear(+inspect.value);
-    if (!range?.length) {
-      period.textContent = 'Showing full history · 2006–2007 to 2024–2025';
-      start.value = '0';
-      end.value = '18';
-      return;
-    }
-    const selected = rows.filter((r) => stamp(r) >= +range[0] && stamp(r) <= +range[1]);
+    const selected = range?.length
+      ? rows.filter((r) => stamp(r) >= +range[0] && stamp(r) <= +range[1])
+      : rows;
     if (!selected.length) {
-      period.textContent =
-        'No observed June-end point in this interval. Widen the selection or reset.';
+      period.textContent = 'No June-end observation falls in this interval. Widen the selection to compare employment across years.';
       return;
     }
-    period.textContent =
-      'Showing ' +
-      fullFinancialYearLabel(selected[0].Financial_Year) +
-      ' to ' +
-      fullFinancialYearLabel(selected.at(-1).Financial_Year) +
-      ' · ' +
-      selected.length +
-      ' observed years';
-    start.value = String(rows.indexOf(selected[0]));
-    end.value = String(rows.indexOf(selected.at(-1)));
+    const first = selected[0], last = selected.at(-1);
+    const delta = last.Employment_Thousands - first.Employment_Thousands;
+    const number = (n) => n.toLocaleString('en-AU', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+    const scope = first.Financial_Year + ' to ' + last.Financial_Year;
+    period.textContent = selected.length === 1
+      ? fullFinancialYearLabel(first.Financial_Year) + ': ' + number(first.Employment_Thousands) + ' thousand people employed. Select at least two years to compare change.'
+      : scope + ': manufacturing ' + (delta < 0 ? 'lost ' : 'gained ') +
+        Math.round(Math.abs(delta) * 1000).toLocaleString('en-AU') + ' jobs (' +
+        (delta > 0 ? '+' : delta < 0 ? '−' : '') + number(Math.abs(delta / first.Employment_Thousands * 100)) +
+        '%), moving from ' + number(first.Employment_Thousands) + 'k to ' + number(last.Employment_Thousands) +
+        'k workers.' + (last === rows.at(-1) && first !== rows[0]
+          ? ' Employment was still ' + number((1 - last.Employment_Thousands / rows[0].Employment_Thousands) * 100) + '% below 2006–07.' : '');
   }
+
   function showYear(i) {
     const r = rows[i];
     if (!r) return;
     inspect.value = String(i);
     detail.hidden = false;
-    detail.textContent =
-      fullFinancialYearLabel(r.Financial_Year) +
-      ' · ' +
-      r.Employment_Thousands.toLocaleString('en-AU', {
-        minimumFractionDigits: 1,
-        maximumFractionDigits: 1
-      }) +
-      ' thousand people employed at June end · observed annual value.' +
+    const previous = rows[i - 1];
+    const delta = previous ? r.Employment_Thousands - previous.Employment_Thousands : null;
+    const number = (n) => n.toLocaleString('en-AU', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+    detail.textContent = r.Financial_Year + ': ' + Math.round(r.Employment_Thousands * 1000).toLocaleString('en-AU') +
+      ' people employed at June end. ' +
+      (previous ? Math.round(Math.abs(delta) * 1000).toLocaleString('en-AU') + ' ' + (delta < 0 ? 'fewer' : 'more') +
+        ' than in ' + previous.Financial_Year + '.' :
+        'This is the first observation, so no previous-year comparison is available.') +
       (selectedBounds && (stamp(r) < +selectedBounds[0] || stamp(r) > +selectedBounds[1])
-        ? ' Outside the current focused period.'
-        : '');
+        ? ' This year is outside the selected period; its value is shown for reference.' : '');
   }
   view.addSignalListener('brush', (_, b) => feedback(b));
   view.addSignalListener('employmentPoint', (_, p) => {
     if (p.Financial_Year?.length)
       showYear(rows.findIndex((r) => r.Financial_Year === p.Financial_Year[0]));
   });
-  async function applyRange() {
-    let a = +start.value,
-      b = +end.value;
-    if (a > b) {
-      if (document.activeElement === start) end.value = String(a);
-      else start.value = String(b);
-      a = +start.value;
-      b = +end.value;
-    }
-    const bounds = [stamp(rows[a]) - 1, stamp(rows[b]) + 1];
-    await view.signal('periodStart', bounds[0]).signal('periodEnd', bounds[1]).runAsync();
-  }
-  start.onchange = applyRange;
-  end.onchange = applyRange;
-  inspect.onchange = () => {
+  inspect.onchange = async () => {
     if (inspect.value === '') {
       detail.hidden = true;
+      view.data('employmentPoint_store', []);
+      await view.runAsync();
       return;
     }
     showYear(+inspect.value);
+    view.data('employmentPoint_store', [{
+      unit: 'concat_0_layer_2',
+      fields: [{ type: 'E', field: 'Financial_Year' }],
+      values: [rows[+inspect.value].Financial_Year]
+    }]);
+    await view.runAsync();
   };
   const resetHandler = async () => {
     // Clear the selected years, dot and detail text, then show the full history.
-    start.value = '0';
-    end.value = '18';
     inspect.value = '';
     selectedBounds = null;
     if (detail) {
@@ -1027,7 +1026,7 @@ async function setupV1ClassHighlight(view) {
     status = document.getElementById('rate-highlight-status');
   const buttons = Array.from(legend.querySelectorAll('[data-rate-class]'));
   const counts = await (await fetch('work/data/viz1-class-counts.json')).json();
-  async function apply() {
+  function updateLegend() {
     buttons.forEach((button, i) =>
       button.setAttribute('aria-pressed', String(i === v1HighlightedClass))
     );
@@ -1039,6 +1038,14 @@ async function setupV1ClassHighlight(view) {
           ' · ' +
           counts.class_counts[v1HighlightedClass].toLocaleString('en-AU') +
           ' matching SA2s. Other areas remain visible as context.';
+  }
+  // Keep the legend in sync when a map control clears the selected range.
+  view.addSignalListener('selectedRateClass', (_, selected) => {
+    v1HighlightedClass = selected;
+    updateLegend();
+  });
+  async function apply() {
+    updateLegend();
     // send v1 rate legend click choice to Vega
     await view.signal('selectedRateClass', v1HighlightedClass).runAsync();
   }

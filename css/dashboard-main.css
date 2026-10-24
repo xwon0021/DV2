@@ -32,7 +32,7 @@ body {
   margin: 0;
   color: var(--ink);
   font-family: var(--font-sans);
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.55;
   background: var(--paper);
   -webkit-font-smoothing: antialiased;
@@ -160,7 +160,7 @@ a:hover {
    Story Sections & Typography Hierarchy
    ========================================================================== */
 .story-section {
-  padding: 80px 0 10px;
+  padding: 56px 0 10px;
 }
 
 .section-heading {
@@ -202,7 +202,7 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px 28px;
-  margin: 24px 0 36px;
+  margin: 18px 0 24px;
 }
 
 .section-intro {
@@ -214,14 +214,14 @@ a:hover {
 }
 
 .story-transition {
-  max-width: 760px;
-  margin: 40px auto 60px 5%;
+  max-width: 900px;
+  margin: 22px 0 26px;
   font-family: var(--font-serif);
   color: var(--ink);
-  font-size: 19.5px;
+  font-size: 18px;
   line-height: 1.55;
   font-style: italic;
-  padding-left: 20px;
+  padding-left: 14px;
   border-left: 3px solid #cbd5e1;
 }
 
@@ -273,7 +273,7 @@ a:hover {
     grid-row: auto;
   }
   .story-transition {
-    margin: 30px 0 40px;
+    margin: 18px 0 24px;
     font-size: 17px;
   }
 }

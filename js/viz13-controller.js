@@ -228,7 +228,6 @@
         let row = document.createElement('article');
         row.className = 'isotype-row';
         row.tabIndex = 0;
-        row.setAttribute('role', 'button');
         row.setAttribute('aria-label', r.Statement + ' · ' + r.Period);
         let title = document.createElement('div');
         title.className = 'statement';
@@ -252,21 +251,6 @@
         row.onmouseleave = hide;
         row.onfocus = () => show(r, null, row);
         row.onblur = hide;
-        row.onclick = (e) => {
-          document.querySelectorAll('.isotype-row').forEach((e) => e.classList.remove('active'));
-          row.classList.add('active');
-          let d = document.getElementById('people-detail');
-          content(d, r);
-          d.hidden = false;
-          if (innerWidth < 700) hide();
-          else show(r, e.detail ? e : null, row);
-        };
-        row.onkeydown = (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            row.click();
-          }
-        };
         document.getElementById('people-rows').append(row);
       }
     });
