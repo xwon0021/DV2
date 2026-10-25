@@ -839,12 +839,19 @@ button.summary-row:hover .bar-fill:not(.selected) {
   cursor: pointer;
 }
 
+.race-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 250px;
+  gap: 20px;
+  align-items: start;
+}
+
+.race-content > #vis09 { min-width: 0; }
+
 .race-callout-panel {
-  position: absolute;
-  right: 28px;
-  bottom: 70px;
-  width: 330px;
-  max-width: 38%;
+  position: static;
+  width: 100%;
+  max-width: none;
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);

@@ -9,9 +9,9 @@
         name="description" />
     <title>Australian Made Products · Data visualisation</title>
     <link href="css/dashboard-main.css?v=compactSourcesDivider" rel="stylesheet" />
-    <link href="css/dashboard-layout.css?v=finalReviewRenumbered" rel="stylesheet" />
+    <link href="css/dashboard-layout.css?v=raceCardAxisAlign" rel="stylesheet" />
     <link href="css/dashboard-controls.css?v=finalReviewRenumbered" rel="stylesheet" />
-    <link href="css/dashboard-visualisations.css?v=instructionStateColours" rel="stylesheet" />
+    <link href="css/dashboard-visualisations.css?v=raceCardColumn" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
@@ -405,16 +405,18 @@
                                     </select></label><button id="race-clear">Clear selection</button></div>
                         </div>
                         <p class="note" id="race-frame-note" role="status"></p>
-                        <!-- V9 CHART & RACE PLAYBACK: Dynamic ranking bars rendered in #vis09 by work/viz9.vg.json & js/viz9-controller.js -->
-                        <div class="donut-host" id="vis09"></div>
-                        <aside class="race-callout-panel" aria-label="Subdivision tracking and playback notes">
-                            <div class="race-callout-header">Tracked subdivision</div>
-                            <div class="selected-detail instruction-card" id="race-selected">Select an industry to keep its exact
-                                employment, share and rank visible during playback.</div>
-                            <p class="race-guide-note">Choose a year or press Play to follow industries. Labels show
-                                observed annual values. Colours identify industries. Equal values share a rank. The
-                                length scale stays fixed.</p>
-                        </aside>
+                        <div class="race-content">
+                            <!-- V9 CHART & RACE PLAYBACK: Dynamic ranking bars rendered in #vis09 by work/viz9.vg.json & js/viz9-controller.js -->
+                            <div class="donut-host" id="vis09"></div>
+                            <aside class="race-callout-panel" aria-label="Subdivision tracking and playback notes">
+                                <div class="race-callout-header">Tracked subdivision</div>
+                                <div class="selected-detail instruction-card" id="race-selected">Select an industry to keep its exact
+                                    employment, share and rank visible during playback.</div>
+                                <p class="race-guide-note">Choose a year or press Play to follow industries. Labels show
+                                    observed annual values. Colours identify industries. Equal values share a rank. The
+                                    length scale stays fixed.</p>
+                            </aside>
+                        </div>
                     </section>
                     <p class="method-note" id="race-load-status" role="status"></p>
                 </article>

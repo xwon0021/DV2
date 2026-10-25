@@ -515,8 +515,13 @@
 .matrix-finding { flex-wrap: nowrap; }
 .matrix-finding > div { min-width: 0; }
 .matrix-finding button { flex-shrink: 0; }
+#race-chart .race-callout-panel { position: static; width: 100%; max-width: none; padding: 12px; margin: 0; }
+/* Match V9's x-axis: 75px plot offset plus 5px Vega padding. */
 @media (min-width: 800px) {
-  #race-chart .race-callout-panel { position: absolute; right: 68px; bottom: 16px; width: 235px; max-width: 30%; padding: 12px; margin: 0; }
+  #race-chart .race-callout-panel { margin-top: 80px; }
+}
+@media (max-width: 799px) {
+  .race-content { grid-template-columns: 1fr; }
 }
 @media (max-width: 620px) {
   .matrix-finding { flex-wrap: wrap; }

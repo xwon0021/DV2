@@ -11,7 +11,7 @@
 *.xlsx
 *.xls
 *.docx
-*.pdf
+
 
 # Python cache
 __pycache__/

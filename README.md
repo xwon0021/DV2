@@ -6,7 +6,7 @@
 - **Author**: Wong Xin Thung
 - **Unit**: FIT3179 (Data Visualisation 2), Monash University
 - **Entry Point**: `index.html`
-
+- **Github Pages Link**: `https://xwon0021.github.io/DV2/`
 ---
 
 ## 📊 Dashboard Structure & Visualisations
