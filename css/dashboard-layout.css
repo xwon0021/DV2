@@ -345,8 +345,8 @@
 /* V11 Header Row (Title & Deck on Left, Controls on Right) */
 .v11-header-row {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 1fr);
-  gap: 32px;
+  grid-template-columns: minmax(0, 1fr) minmax(520px, 1.25fr);
+  gap: 24px;
   align-items: start;
   margin-bottom: 18px;
 }
@@ -365,6 +365,18 @@
 
 .v11-header-row .chart-controls > label {
   flex: 1 1 150px;
+}
+
+.v11-header-row .chart-controls > label[for="relationship-select"] {
+  flex: 2 1 260px;
+}
+
+@media (min-width: 640px) {
+  .v11-header-row .chart-controls {
+    display: grid;
+    grid-template-columns: minmax(150px, 1fr) minmax(260px, 1.5fr) auto;
+    gap: 10px;
+  }
 }
 
 /* Domestic Chord Insight Composition */
